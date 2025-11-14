@@ -3,13 +3,24 @@
 
         let checkBanggia = false
         let checkMegamenu = false
+        let checkSearchBox = false
+        let checkLanguageBox = false
+        let checkRegisterWindow = false
 
         $(".banggia").click(function (event) {
             if (!checkBanggia) {
-                $(this).find("ul").toggleClass("open");
+                $(this).find("ul").addClass("open");
                 $(".mega_menu").removeClass("open");
-                checkMegamenu = false
+                $(".items_1work").removeClass("open");
+                $(".items_1hrm").removeClass("open");
+                $(".items_1crm").removeClass("open");
+                $(".search_box").removeClass("open")
+                $(".language_box").removeClass("open")
                 checkBanggia = true
+                checkMegamenu = false
+                checkSearchBox = false
+                checkLanguageBox = false
+                checkRegisterWindow = false
             } else {
                 $(this).find("ul").removeClass("open")
                 checkBanggia = false
@@ -20,15 +31,19 @@
 
         $(".tinhnang").click(function (event) {
             if (!checkMegamenu) {
-                $(".mega_menu").toggleClass("open");
+                $(".mega_menu").addClass("open");
                 $(".banggia ul").removeClass("open");
                 $(".items_1work").addClass("open");
                 $(".items_1hrm").removeClass("open");
                 $(".items_1wcrm").removeClass("open");
+                $(".search_box").removeClass("open")
+                $(".language_box").removeClass("open")
                 checkBanggia = false
                 checkMegamenu = true
+                checkSearchBox = false
+                checkLanguageBox = false
+                checkRegisterWindow = false
             } else {
-                $(".mega_menu").css({ 'transition': 'all 0.3s ease', })
                 $(".mega_menu").removeClass("open")
                 checkMegamenu = false
                 $(".items_1work").removeClass("open");
@@ -37,6 +52,47 @@
 
             }
         })
+
+        $(".search_btn").click(function () {
+            if (!checkSearchBox) {
+                $(".search_box").addClass("open");
+                $(".banggia ul").removeClass("open");
+                $(".mega_menu").removeClass("open");
+                $(".items_1work").removeClass("open");
+                $(".items_1hrm").removeClass("open");
+                $(".items_1crm").removeClass("open");
+                $(".language_box").removeClass("open")
+                checkBanggia = false
+                checkMegamenu = false
+                checkSearchBox = true
+                checkLanguageBox = false
+                checkRegisterWindow = false
+            } else {
+                $(".search_box").removeClass("open")
+                checkSearchBox = false
+            }
+        })
+
+        $(".language_btn").click(function () {
+            if (!checkLanguageBox) {
+                $(".language_box").addClass("open")
+                $(".search_box").removeClass("open");
+                $(".banggia ul").removeClass("open");
+                $(".mega_menu").removeClass("open");
+                $(".items_1work").removeClass("open");
+                $(".items_1hrm").removeClass("open");
+                $(".items_1crm").removeClass("open");
+                checkBanggia = false
+                checkMegamenu = false
+                checkSearchBox = false
+                checkLanguageBox = true
+                checkRegisterWindow = false
+            } else {
+                $(".language_box").removeClass("open")
+                checkSearchBox = false
+            }
+        })
+
 
         //mega menu
         function setActiveCat(active_class) {

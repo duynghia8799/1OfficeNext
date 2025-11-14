@@ -186,9 +186,54 @@ header .register_backdrop .register_window {
     height: 45rem;
     background-color: #ffffff;
     border-radius: 0.5rem;
+    position: relative;
+    box-sizing: border-box;
+    padding: 2rem;
 }
 
+header .register_backdrop .register_window .register_close {
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
 
+header .register_backdrop .register_window .register_close img {
+    width: 100%;
+    height: 100%;
+}
+
+header .register_backdrop .register_window h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    text-align: center;
+    color: #F0500A;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1.5rem;
+}
+
+header .register_backdrop .register_window p {
+    font-size: 1rem;
+    text-align: center;
+    color: #434E62;
+    margin: 0;
+    padding: 0;
+}
+
+header .register_backdrop .register_window .register_form .register_form {
+    display: grid;
+    gap: 0.5rem;
+    margin: 1rem;
+}
+
+header .register_backdrop .register_window .register_form .field {
+    height: 3.25rem;
+    width: 100%;
+    box-sizing: border-box;
+    border: #434E62 1px solid;
+}
 
 header .main-nav {
     width: 100%;

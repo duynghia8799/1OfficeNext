@@ -8,16 +8,16 @@ $menu_class = isset($menu_class) ? $menu_class : '';
 $menu_description = isset($menu_description) ? $menu_description : '';
 ?>
 
-<a href="<?php echo esc_url($menu_href); ?>" class="<?php echo 'sub_menu_link ' . esc_attr($menu_class); ?>">
-    <p class="sub_menu_content_name"><?php echo esc_html($menu_name); ?></p>
+<a href="<?= esc_url($menu_href); ?>" class="<?= 'sub_menu_link ' . esc_attr($menu_class); ?>">
+    <p class="sub_menu_content_name"><?= esc_html($menu_name); ?></p>
     <?php if (! empty($menu_description)) : ?>
-    <p class="sub_menu_content_description">
-        <?php echo esc_html($menu_description); ?>
-    </p>
+        <p class="sub_menu_content_description">
+            <?= esc_html($menu_description); ?>
+        </p>
     <?php endif; ?>
 
 
 
-    <img class="chevron_right" src="<?php  echo get_template_directory_uri()?> '/assets/images/Chevron_blue_right.svg'"
+    <img class="chevron_right" src="<?php echo get_template_directory_uri() ?> '/assets/images/Chevron_blue_right.svg'"
         alt="">
 </a>

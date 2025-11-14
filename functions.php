@@ -1,6 +1,5 @@
 <?php
 
-// Theme version used for cache-busting. Bump this when you release new CSS/JS: e.g. '1.0.0' -> '1.1.0'
 if (! defined('THEME_VERSION')) {
     define('THEME_VERSION', '1.0.0');
 }
@@ -40,54 +39,39 @@ add_action('wp_enqueue_scripts', function () {
 
 
 
-//code tham khảo
+//tham khảo
 class Custom_Nav_Walker extends Walker_Nav_Menu
 {
-    /**
-     * Start the element output.
-     *
-     * @see Walker_Nav_Menu::start_el()
-     */
-    // Trong functions.php, bên trong class Custom_Nav_Walker
     public function start_el(&$output, $item, $depth = 0, $args = null, $id = 0)
     {
         $indent = ($depth) ? str_repeat("\t", $depth) : '';
 
         if ($depth > 0) {
 
-            // ... (Logic Chuẩn bị dữ liệu và Include component sub_menu_btn.php) ...
             $menu_name = apply_filters('the_title', $item->title, $item->ID);
             $menu_href = $item->url;
             $menu_title = $item->attr_title;
 
-            // Lọc classes
+
             $custom_classes = array_filter($item->classes, function ($class) {
                 return ! in_array($class, ['menu-item', 'menu-item-type-custom', 'menu-item-object-custom', 'menu-item-has-children', 'current-menu-item', 'current_page_item']);
             });
             $menu_class = implode(' ', $custom_classes);
             $menu_description = $item->description;
 
-            // 2. Bắt đầu bộ đệm đầu ra (Output Buffer)
             ob_start();
 
-            // 3. Include component
             $component_path = get_template_directory() . '/template_parts/header/header_sub_menu_btn.php';
 
             if (file_exists($component_path)) {
                 include($component_path);
             }
 
-            // 4. Lấy nội dung buffer và thêm vào $output
             $button_html = ob_get_clean();
             $li_classes = implode(' ', $item->classes);
 
-            // Dòng 91 (hoặc tương đương) sau khi thêm $indent
             $output .= $indent . '<li class="' . esc_attr($li_classes) . '">' . $button_html;
         } else {
-            // ... (xử lý menu cha, nếu cần dùng $indent ở đây cũng phải thêm) ...
-
-            // Nếu bạn cần xử lý menu cha, bạn sẽ cần code đầy đủ của start_el cho menu cha
-            // Dưới đây là phần xử lý Menu Cha cơ bản (như trong Walker gốc)
             $attributes = '';
             $atts = array(
                 'title'  => ! empty($item->attr_title) ? $item->attr_title : '',
@@ -115,45 +99,3 @@ class Custom_Nav_Walker extends Walker_Nav_Menu
         }
     }
 }
-/*
-//hiện desc bằng thẻ <i> menu trong 1 div bên dưới
-class My_Description_Walker extends Walker_Nav_Menu
-{
-    public function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0)
-    {
-        $classes = empty($item->classes) ? array() : (array) $item->classes;
-        $class_names = join(' ', apply_filters('nav_menu_css_class', array_filter($classes), $item));
-        $class_names = $class_names ? ' class="' . esc_attr($class_names) . '"' : '';
-
-        $output .= '<li' . $class_names . '>';
-
-        $atts = array();
-        $atts['title']  = ! empty($item->attr_title) ? $item->attr_title : '';
-        $atts['target'] = ! empty($item->target) ? $item->target : '';
-        $atts['rel']    = ! empty($item->xfn) ? $item->xfn : '';
-        $atts['href']   = ! empty($item->url) ? $item->url : '';
-
-        $attributes = '';
-        foreach ($atts as $attr => $value) {
-            if (! empty($value)) {
-                $value = ('href' === $attr) ? esc_url($value) : esc_attr($value);
-                $attributes .= ' ' . $attr . '="' . $value . '"';
-            }
-        }
-
-        $title = apply_filters('the_title', $item->title, $item->ID);
-
-        $output .= '<a' . $attributes . '><span class="menu-item-title">' . $title . '</span></a>';
-
-        $desc = trim($item->description);
-        if ($desc) {
-            $output .= '<div class="menu-item-desc-wrap"><span class="menu-item-desc">' . esc_html($desc) . '</span></div>';
-        }
-    }
-
-    public function end_el(&$output, $item, $depth = 0, $args = array())
-    {
-        $output .= "</li>\n";
-    }
-}
-    */
