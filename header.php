@@ -28,26 +28,58 @@
                         'walker'         => new Custom_Nav_Walker(),
                     ));
                     ?>
-
-
                 </div>
                 <div class="col-xl-2 d-flex justify-content-end">
                     <div class="end">
-                        <button id="search_btn">
+
+                        <button class="search_btn">
                             <img src=<?php echo get_template_directory_uri() . "/assets/images/LogoSearch.svg" ?>
                                 alt="">
                         </button>
-                        <button id="language_btn">
+
+                        <div class="search_box">
+                            <button class="search_box_btn">
+                                <img src=<?php echo get_template_directory_uri() . "/assets/images/LogoSearch.svg" ?>
+                                    alt="">
+                            </button>
+                            <input class="search_box_input" type="text" placeholder="Nhập">
+                        </div>
+
+                        <button class="language_btn">
                             <img class
                                 src=<?php echo get_template_directory_uri() . "/assets/images/LogoLanguage.svg" ?>
-                                alt="">
+                                alt="icon">
                             <p>VIE</p>
                         </button>
-                        <button id="register_btn">Đăng Ký</button>
+
+                        <div class="language_box">
+                            <button class="Vietnam">
+                                <img src="<?php echo get_template_directory_uri() ?>/assets/images/flags/Vietnam.svg"
+                                    alt="icon">
+                                <p>Tiếng Việt</p>
+                                <img class="checked"
+                                    src="<?php echo get_template_directory_uri() ?>/assets/images/Vchecked.svg"
+                                    alt="icon">
+                            </button>
+                            <button class="USA">
+                                <img src="<?php echo get_template_directory_uri() ?>/assets/images/flags/USA.svg"
+                                    alt="icon">
+                                <p>English</p>
+                                <img class="checked"
+                                    src="<?php echo get_template_directory_uri() ?>/assets/images/Vchecked.svg"
+                                    alt="icon">
+                            </button>
+                        </div>
+                        <button class="register_btn">Đăng Ký</button>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="register_backdrop" style="opacity: 0; pointer-events:none;">
+            <div class="register_window">
 
-        <?php get_template_part('template_parts/mega_menu') ?>
+            </div>
+        </div>
+
+        <?php get_template_part('template_parts/header/header_mega_menu') ?>
     </header>

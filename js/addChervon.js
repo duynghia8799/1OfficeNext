@@ -13,6 +13,11 @@
 
     function setupAnchor(a) {
         injectChevron(a);
+        if (a.getAttribute('href') === '#') {
+            a.addEventListener('click', function (event) {
+                event.preventDefault();
+            });
+        }
     }
 
     function scanAndSetup(root = document) {

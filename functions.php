@@ -28,8 +28,14 @@ add_action('wp_enqueue_scripts', function () {
 add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('bootstrap-css', get_template_directory_uri() . '/assets/libs/bootstrap/css/bootstrap.min.css', array(), '5.3.8');
     wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/assets/libs/bootstrap/js/bootstrap.bundle.min.js', array('jquery'), '5.3.8', true);
+
     wp_enqueue_script('theme-menu-open', get_stylesheet_directory_uri() . '/js/menu-open.js', array('jquery'), '1.0.0', true);
-    wp_enqueue_script('oneofficenext-header', get_template_directory_uri() . '/js/addChervon.js', array(), '1.0', true);
+    $openmenu_data = array(
+        'template_uri' => get_template_directory_uri(),
+    );
+    wp_localize_script('theme-menu-open', 'openmenu_Config', $openmenu_data);
+
+    wp_enqueue_script('add-Chervon-menu', get_template_directory_uri() . '/js/addChervon.js', array(), '1.0', true);
 });
 
 
@@ -65,7 +71,7 @@ class Custom_Nav_Walker extends Walker_Nav_Menu
             ob_start();
 
             // 3. Include component
-            $component_path = get_template_directory() . '/template_parts/sub_menu_btn.php';
+            $component_path = get_template_directory() . '/template_parts/header/header_sub_menu_btn.php';
 
             if (file_exists($component_path)) {
                 include($component_path);
