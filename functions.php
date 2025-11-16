@@ -8,6 +8,7 @@ add_action('after_setup_theme', function () {
     register_nav_menus(array(
         'navbar_desktop' => esc_html__('Menu Header'),
         'footer_desktop'  => esc_html__('Menu Footer'),
+        'footer_desktop2'  => esc_html__('Menu Footer 2'),
     ));
 
     add_theme_support('html5', array(
@@ -36,6 +37,13 @@ add_action('wp_enqueue_scripts', function () {
 
     wp_enqueue_script('add-Chervon-menu', get_template_directory_uri() . '/js/addChervon.js', array(), '1.0', true);
 });
+
+$walker_file = get_template_directory() . '/template_parts/menu-walker.php';
+
+// Kiểm tra và nhúng file
+if (file_exists($walker_file)) {
+    require_once($walker_file);
+}
 
 
 
