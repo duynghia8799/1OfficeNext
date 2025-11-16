@@ -14,8 +14,7 @@
             <div class="row">
                 <div class="col-xl-2">
                     <div class="start">
-                        <img class="" src=<?= get_template_directory_uri() . "/assets/images/Logo1office.svg" ?>
-                            alt="">
+                        <img class="" src=<?= get_template_directory_uri() . "/assets/images/Logo1office.svg" ?> alt="">
                     </div>
                 </div>
                 <div class="col-xl-8">
@@ -33,14 +32,12 @@
                     <div class="end">
 
                         <button class="search_btn">
-                            <img src=<?= get_template_directory_uri() . "/assets/images/LogoSearch.svg" ?>
-                                alt="">
+                            <img src=<?= get_template_directory_uri() . "/assets/images/LogoSearch.svg" ?> alt="">
                         </button>
                         <?php get_template_part('template_parts/header/header_search_box') ?>
 
                         <button class="language_btn">
-                            <img class
-                                src=<?= get_template_directory_uri() . "/assets/images/LogoLanguage.svg" ?>
+                            <img class src=<?= get_template_directory_uri() . "/assets/images/LogoLanguage.svg" ?>
                                 alt="icon">
                             <p>VIE</p>
                         </button>
@@ -51,6 +48,8 @@
                 </div>
             </div>
         </div>
+
+        <!-- đang làm regester-->
         <div class="register_backdrop" style="opacity: 0; pointer-events:none ;">
             <div class="register_window">
                 <button class="register_close">
@@ -64,6 +63,6 @@
                 </form>
             </div>
         </div>
-
+        <!-- đang làm regester-->
         <?php get_template_part('template_parts/header/header_mega_menu') ?>
     </header>

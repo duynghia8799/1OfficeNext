@@ -1,9 +1,5 @@
 <?php
 
-if (! defined('THEME_VERSION')) {
-    define('THEME_VERSION', '1.0.0');
-}
-
 add_action('after_setup_theme', function () {
     register_nav_menus(array(
         'navbar_desktop' => esc_html__('Menu Header'),
@@ -29,7 +25,7 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('bootstrap-css', get_template_directory_uri() . '/assets/libs/bootstrap/css/bootstrap.min.css', array(), '5.3.8');
     wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/assets/libs/bootstrap/js/bootstrap.bundle.min.js', array('jquery'), '5.3.8', true);
 
-    wp_enqueue_script('theme-menu-open', get_stylesheet_directory_uri() . '/js/menu-open.js', array('jquery'), '1.0.0', true);
+    wp_enqueue_script('theme-menu-open', get_stylesheet_directory_uri() . '/js/nav.js', array('jquery'), '1.0.0', true);
     $openmenu_data = array(
         'template_uri' => get_template_directory_uri(),
     );
