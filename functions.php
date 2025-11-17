@@ -39,10 +39,9 @@ function add_description_submenu($item_output, $item, $depth, $args)
     if ($depth > 0 && !empty($item->description)) {
         $description_html = '<p class="sub_menu_content_description">' . esc_html($item->description) . '</p>';
         $title_html = '<p class="sub_menu_content_name">' . esc_html($item->title) . '</p>';
-        $new_content = $title_html . $description_html;
-        $item_output = '<a href="' . esc_url($item->url) . '" class="sub_menu_link ' . esc_attr(implode(' ', $item->classes)) . '">';
-        $item_output .= $new_content;
-        $item_output .= '</a>';
+        $chevron = "<img class='chevron_right' src='" .  get_template_directory_uri() . "/assets/images/Chevron_blue_right.svg' alt='icon'>";
+        $new_content = $title_html . $description_html . $chevron;
+        $item_output = '<a href="' . esc_url($item->url) . ' " class="sub_menu_link ' . esc_attr(implode(' ', $item->classes)) . '"> ' . $new_content . '</a>';
     }
     return $item_output;
 }
