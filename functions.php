@@ -16,12 +16,10 @@ add_action('after_setup_theme', function () {
     ));
 });
 
+
 add_action('wp_enqueue_scripts', function () {
     $ver = '1.0';
     wp_enqueue_style('theme-main-style', get_stylesheet_uri(), array(), $ver);
-});
-
-add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('bootstrap-css', get_template_directory_uri() . '/assets/libs/bootstrap/css/bootstrap.min.css', array(), '5.3.8');
     wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/assets/libs/bootstrap/js/bootstrap.bundle.min.js', array('jquery'), '5.3.8', true);
 
@@ -34,12 +32,6 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_script('add-Chervon-menu', get_template_directory_uri() . '/js/addChervon.js', array(), '1.0', true);
 });
 
-$walker_file = get_template_directory() . '/template_parts/menu-walker.php';
-
-// Kiểm tra và nhúng file
-if (file_exists($walker_file)) {
-    require_once($walker_file);
-}
 
 
 function add_description_submenu($item_output, $item, $depth, $args)
