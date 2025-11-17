@@ -32,17 +32,4 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_script('add-Chervon-menu', get_template_directory_uri() . '/js/addChervon.js', array(), '1.0', true);
 });
 
-
-
-function add_description_submenu($item_output, $item, $depth, $args)
-{
-    if ($depth > 0 && !empty($item->description)) {
-        $description_html = '<p class="sub_menu_content_description">' . esc_html($item->description) . '</p>';
-        $title_html = '<p class="sub_menu_content_name">' . esc_html($item->title) . '</p>';
-        $chevron = "<img class='chevron_right' src='" .  get_template_directory_uri() . "/assets/images/Chevron_blue_right.svg' alt='icon'>";
-        $new_content = $title_html . $description_html . $chevron;
-        $item_output = '<a href="' . esc_url($item->url) . ' " class="sub_menu_link ' . esc_attr(implode(' ', $item->classes)) . '"> ' . $new_content . '</a>';
-    }
-    return $item_output;
-}
-add_filter('walker_nav_menu_start_el', 'add_description_submenu', 10, 4);
+require_once get_template_directory() . '/template_parts/header/sub_menu_description.php';
