@@ -19,7 +19,6 @@
             });
         }
     }
-
     function scanAndSetup(root = document) {
         const anchors = root.querySelectorAll('header .menu-item > a[href="#"]');
         anchors.forEach(setupAnchor);

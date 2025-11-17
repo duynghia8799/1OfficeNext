@@ -42,64 +42,16 @@ if (file_exists($walker_file)) {
 }
 
 
-
-//tham khảo
-class Custom_Nav_Walker extends Walker_Nav_Menu
+function add_description_submenu($item_output, $item, $depth, $args)
 {
-    public function start_el(&$output, $item, $depth = 0, $args = null, $id = 0)
-    {
-        $indent = ($depth) ? str_repeat("\t", $depth) : '';
-
-        if ($depth > 0) {
-
-            $menu_name = apply_filters('the_title', $item->title, $item->ID);
-            $menu_href = $item->url;
-            $menu_title = $item->attr_title;
-
-
-            $custom_classes = array_filter($item->classes, function ($class) {
-                return ! in_array($class, ['menu-item', 'menu-item-type-custom', 'menu-item-object-custom', 'menu-item-has-children', 'current-menu-item', 'current_page_item']);
-            });
-            $menu_class = implode(' ', $custom_classes);
-            $menu_description = $item->description;
-
-            ob_start();
-
-            $component_path = get_template_directory() . '/template_parts/header/header_sub_menu_btn.php';
-
-            if (file_exists($component_path)) {
-                include($component_path);
-            }
-
-            $button_html = ob_get_clean();
-            $li_classes = implode(' ', $item->classes);
-
-            $output .= $indent . '<li class="' . esc_attr($li_classes) . '">' . $button_html;
-        } else {
-            $attributes = '';
-            $atts = array(
-                'title'  => ! empty($item->attr_title) ? $item->attr_title : '',
-                'target' => ! empty($item->target)     ? $item->target     : '',
-                'rel'    => ! empty($item->xfn)        ? $item->xfn        : '',
-                'href'   => ! empty($item->url)        ? $item->url        : '',
-            );
-
-            foreach ($atts as $attr => $value) {
-                if (! empty($value)) {
-                    $value = ('href' === $attr) ? esc_url($value) : esc_attr($value);
-                    $attributes .= ' ' . $attr . '="' . $value . '"';
-                }
-            }
-
-            $item_output = $args->before;
-            $item_output .= '<a' . $attributes . '>';
-            $item_output .= $args->link_before . apply_filters('the_title', $item->title, $item->ID) . $args->link_after;
-            $item_output .= '</a>';
-            $item_output .= $args->after;
-
-            $li_classes = implode(' ', $item->classes);
-
-            $output .= $indent . '<li class="' . esc_attr($li_classes) . '">' . $item_output;
-        }
+    if ($depth > 0 && !empty($item->description)) {
+        $description_html = '<p class="sub_menu_content_description">' . esc_html($item->description) . '</p>';
+        $title_html = '<p class="sub_menu_content_name">' . esc_html($item->title) . '</p>';
+        $new_content = $title_html . $description_html;
+        $item_output = '<a href="' . esc_url($item->url) . '" class="sub_menu_link ' . esc_attr(implode(' ', $item->classes)) . '">';
+        $item_output .= $new_content;
+        $item_output .= '</a>';
     }
+    return $item_output;
 }
+add_filter('walker_nav_menu_start_el', 'add_description_submenu', 10, 4);

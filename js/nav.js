@@ -1,6 +1,12 @@
 (function ($) {
     $(document).ready(function () {
 
+        function setActiveCatBtn(active_class) {
+            $('.mega_menu_cat_btn').removeClass('active');
+            $(`.${active_class}`).addClass('active');
+        }
+        setActiveCatBtn("cat_1work");
+
         function switchMegaMenuTab(catClass, itemsClass, accessText, accessLink = '#') {
             setActiveCatBtn(catClass);
 
@@ -12,7 +18,6 @@
             $(".truycap").attr('href', accessLink);
             $(".truycap").html(`${accessText} <img src="${chevronPath}" alt="icon"> <img class="hover" src="${chevronPathHover}" alt="icon"></img>`);
         }
-
         $(".cat_1work").click(function () {
             switchMegaMenuTab("cat_1work", "items_1work", "Truy cập 1Work", "truycap_1work");
         });
@@ -32,6 +37,7 @@
                 $targetBox = $('.mega_menu');
             } else if ($(this).parent().hasClass('menu-item-has-children')) {
                 $targetBox = $(this).siblings('ul');
+
             } else if ($(this).hasClass('search_btn')) {
                 $targetBox = $('.search_box');
             } else if ($(this).hasClass('language_btn')) {
@@ -48,14 +54,7 @@
             } else {
                 $('.items_1work, .items_1hrm, .items_1crm').removeClass("open");
             }
-
         });
-
-        function setActiveCatBtn(active_class) {
-            $('.mega_menu_cat_btn').removeClass('active');
-            $(`.${active_class}`).addClass('active');
-        }
-        setActiveCatBtn("cat_1work");
 
     });
 })(jQuery);
