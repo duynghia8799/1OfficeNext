@@ -27,12 +27,63 @@
                         </div>
                     </div>
                 </div>
-
-
-
             </div>
             <div class="col-xl-8">
-
+                <?php
+                wp_nav_menu(array(
+                    'theme_location' => 'footer_desktop',
+                    'container'      => 'div',
+                    'container_class' => 'menu_footer',
+                    'menu_class'     => 'foot_menu',
+                    'depth' => 2,
+                ));
+                ?>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="row">
+            <div class="col-2">
+                <div class="media_link_container">
+                    <a class="media_link" href="#">
+                        <img src="<?= get_template_directory_uri() . '/assets/images/Logos/facebook.svg' ?>" alt="">
+                    </a>
+                    <a class="media_link" href="#">
+                        <img src="<?= get_template_directory_uri() . '/assets/images/Logos/youtube.svg' ?>" alt="">
+                    </a>
+                    <a class="media_link" href="#">
+                        <img src="<?= get_template_directory_uri() . '/assets/images/Logos/zalo.svg' ?>" alt="">
+                    </a>
+                    <a class="media_link" href="#">
+                        <img src="<?= get_template_directory_uri() . '/assets/images/Logos/linkedin.svg' ?>" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="col-8">
+                <?php
+                wp_nav_menu(array(
+                    'theme_location' => 'footer_desktop_2',
+                    'container'      => 'div',
+                    'container_class' => 'menu_footer_2',
+                    'menu_class'     => 'foot_menu_2',
+                    'depth' => 1,
+                ));
+                ?>
+            </div>
+            <div class="col-2">
+                <div class="quality_container">
+                    <img src=" <?= get_template_directory_uri() . '/assets/images/Logos/bocongthuong.svg' ?>" alt="">
+                    <img src="<?= get_template_directory_uri() . '/assets/images/Logos/iso.svg' ?>" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="apps_store">
+                <a href="#">
+                    <img src="<?= get_template_directory_uri() . '/assets/images/googlestore_btn.svg' ?>" alt="">
+                </a>
+                <a href="#">
+                    <img src=" <?= get_template_directory_uri() . '/assets/images/applestore_btn.svg' ?>" alt="">
+                </a>
             </div>
         </div>
     </div>

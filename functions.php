@@ -4,7 +4,7 @@ add_action('after_setup_theme', function () {
     register_nav_menus(array(
         'navbar_desktop' => esc_html__('Menu Header'),
         'footer_desktop'  => esc_html__('Menu Footer'),
-        'footer_desktop2'  => esc_html__('Menu Footer 2'),
+        'footer_desktop_2'  => esc_html__('Menu Footer 2'),
     ));
 
     add_theme_support('html5', array(
