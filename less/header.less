@@ -280,6 +280,7 @@ header .menu-item a {
     color: black;
     margin: 0;
     transition: all 0.3s ease;
+    gap: 0.5rem;
 }
 
 header .menu-item a:hover {
@@ -407,6 +408,14 @@ header .menu-item .sub-menu .menu-item {
     display: flex !important;
 }
 
+.mega_menu_content {
+    display: flex !important;
+    justify-content: space-between !important;
+    padding: 2rem !important;
+    transition: all 0.3s ease !important;
+
+}
+
 .mega_menu_content .line {
     height: 100% !important;
     width: 0 !important;
@@ -464,7 +473,7 @@ header .menu-item .sub-menu .menu-item {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-right: 2.5rem !important;
+    padding-right: 2rem !important;
 }
 
 .mega_menu_cat_btn button {
@@ -529,15 +538,10 @@ header .menu-item .sub-menu .menu-item {
 
 
 
-.mega_menu_content {
-    display: flex !important;
-    justify-content: space-between !important;
-    padding: 2rem !important;
-    transition: all 0.3s ease !important;
 
-}
 
 .container_items {
+    position: relative;
     width: 100% !important;
     display: grid !important;
     grid-auto-flow: column !important;
@@ -629,14 +633,19 @@ header .menu-item .sub-menu .menu-item {
 
 .foot_menu {
     background-color: #F8F8F8;
+    height: 3.5rem;
 }
 
 .foot_menu_row {
+    position: absolute;
+    bottom: calc(-83rem /16);
+    right: 0;
     display: flex;
     background-color: #F8F8F8;
     height: calc(46rem /16);
     justify-content: end;
     align-items: center;
+    z-index: 5;
 }
 
 .foot_menu_row .line {

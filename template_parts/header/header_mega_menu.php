@@ -168,6 +168,25 @@
                                 <p>Truyền thông nội bộ và văn hoá doanh nghiệp</p>
                             </a>
 
+                            <div class="foot_menu_row">
+                                <a class="bookademo" href="#">
+                                    Book a demo
+                                    <img src="<?= get_template_directory_uri() ?>/assets/images/Chevron_right.svg"
+                                        alt="icon">
+                                    <img class="hover"
+                                        src="<?= get_template_directory_uri() ?>/assets/images/Chevron_blue_right.svg"
+                                        alt="icon">
+                                </a>
+                                <div class="line"></div>
+                                <a class="truycap" href="#">
+                                    Truy cập 1Work
+                                    <img src="<?= get_template_directory_uri() ?>/assets/images/Chevron_right.svg"
+                                        alt="icon">
+                                    <img class="hover"
+                                        src="<?= get_template_directory_uri() ?>/assets/images/Chevron_blue_right.svg"
+                                        alt="icon">
+                                </a>
+                            </div>
                         </div>
 
                         <!--1hrm mega menu-->
@@ -295,6 +314,25 @@
                                 <h2>Bảo hiểm</h2>
                                 <p>Tiện ích và liên kết với BHXH</p>
                             </a>
+                            <div class="foot_menu_row">
+                                <a class="bookademo" href="">
+                                    Book a demo
+                                    <img src="<?= get_template_directory_uri() ?>/assets/images/Chevron_right.svg"
+                                        alt="icon">
+                                    <img class="hover"
+                                        src="<?= get_template_directory_uri() ?>/assets/images/Chevron_blue_right.svg"
+                                        alt="icon">
+                                </a>
+                                <div class="line"></div>
+                                <a class="truycap" href="#">
+                                    Truy cập 1HRM
+                                    <img src="<?= get_template_directory_uri() ?>/assets/images/Chevron_right.svg"
+                                        alt="icon">
+                                    <img class="hover"
+                                        src="<?= get_template_directory_uri() ?>/assets/images/Chevron_blue_right.svg"
+                                        alt="icon">
+                                </a>
+                            </div>
                         </div>
 
                         <!--1crm mega menu-->
@@ -385,6 +423,25 @@
                                 <h2>Khuyến mãi</h2>
                                 <p>Quản lý các tiện ích và chương trình KM</p>
                             </a>
+                            <div class="foot_menu_row">
+                                <a class="bookademo" href="">
+                                    Book a demo
+                                    <img src="<?= get_template_directory_uri() ?>/assets/images/Chevron_right.svg"
+                                        alt="icon">
+                                    <img class="hover"
+                                        src="<?= get_template_directory_uri() ?>/assets/images/Chevron_blue_right.svg"
+                                        alt="icon">
+                                </a>
+                                <div class="line"></div>
+                                <a class="truycap" href="#">
+                                    Truy cập 1CRM
+                                    <img src="<?= get_template_directory_uri() ?>/assets/images/Chevron_right.svg"
+                                        alt="icon">
+                                    <img class="hover"
+                                        src="<?= get_template_directory_uri() ?>/assets/images/Chevron_blue_right.svg"
+                                        alt="icon">
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -393,24 +450,5 @@
 
     </div>
     <div class="foot_menu">
-        <div class="container">
-            <div class="row">
-                <div class="foot_menu_row">
-                    <a class="bookademo" href="">
-                        Book a demo
-                        <img src="<?= get_template_directory_uri() ?>/assets/images/Chevron_right.svg" alt="icon">
-                        <img class="hover"
-                            src="<?= get_template_directory_uri() ?>/assets/images/Chevron_blue_right.svg" alt="icon">
-                    </a>
-                    <div class="line"></div>
-                    <a class="truycap" href="#">
-                        Truy cập 1Work
-                        <img src="<?= get_template_directory_uri() ?>/assets/images/Chevron_right.svg" alt="icon">
-                        <img class="hover"
-                            src="<?= get_template_directory_uri() ?>/assets/images/Chevron_blue_right.svg" alt="icon">
-                    </a>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
