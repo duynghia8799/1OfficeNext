@@ -1,33 +1,15 @@
 header {
     width: 100%;
     height: 4.25rem;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.92);
     backdrop-filter: blur(8px);
-    position: fixed;
+    border: 1px solid var(--color-border);
+    position: sticky;
     top: 0;
-    transform: translateY(50%);
+    z-index: 999;
 }
 
-header .start {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    min-width: 11.25rem;
-    position: relative;
-
-}
-
-header .start img {
-    height: 2.1875rem;
-}
-
-header .end {
+header .group-action {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -37,13 +19,13 @@ header .end {
     position: relative;
 }
 
-header .end .search_btn {
+header .group-action .search_btn {
     width: 1.125rem;
     height: 1.125rem;
     position: relative;
 }
 
-header .end .search_btn img {
+header .group-action .search_btn img {
     width: 18px;
     height: 100%;
     position: absolute;
@@ -51,7 +33,7 @@ header .end .search_btn img {
     left: 0;
 }
 
-header .end .search_box {
+header .group-action .search_box {
     width: calc(478rem/16);
     height: calc(52rem/16);
     display: flex;
@@ -62,15 +44,15 @@ header .end .search_box {
     border-radius: 0.25rem;
     opacity: 0;
     pointer-events: none;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
 }
 
-header .end .search_box.open {
+header .group-action .search_box.open {
     opacity: 1;
     pointer-events: auto;
 }
 
-header .end .search_box_btn {
+header .group-action .search_box_btn {
     width: calc(52rem/16);
     height: calc(52rem/16);
     display: flex;
@@ -78,7 +60,7 @@ header .end .search_box_btn {
     align-items: center;
 }
 
-header .end .search_box_input {
+header .group-action .search_box_input {
     height: calc(52rem/16);
     flex-grow: 1;
     border: 0;
@@ -88,20 +70,20 @@ header .end .search_box_input {
     padding-right: 0.5rem;
 }
 
-header .end .language_btn {
+header .group-action .language_btn {
     display: flex;
     gap: 0.5rem;
     height: 1.125rem;
     align-items: center;
 }
 
-header .end .language_btn p {
+header .group-action .language_btn p {
     font-size: 0.8125rem;
     margin: 0;
     padding: 0;
 }
 
-header .end .language_box {
+header .group-action .language_box {
     box-sizing: border-box;
     padding: 1rem;
     width: calc(168rem/16);
@@ -115,15 +97,15 @@ header .end .language_box {
     right: 0;
     opacity: 0;
     pointer-events: none;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
 }
 
-header .end .language_box.open {
+header .group-action .language_box.open {
     opacity: 1;
     pointer-events: auto;
 }
 
-header .end .language_box button {
+header .group-action .language_box button {
     display: flex;
     width: 100%;
     height: max-content;
@@ -132,18 +114,18 @@ header .end .language_box button {
     overflow: visible;
 }
 
-header .end .language_box button img {
+header .group-action .language_box button img {
     width: 1rem;
     height: auto;
 }
 
-header .end .language_box button .checked {
+header .group-action .language_box button .checked {
     width: 0.875rem;
     height: 0.875rem;
     opacity: 0;
 }
 
-header .end .language_box button p {
+header .group-action .language_box button p {
     margin: 0;
     padding: 0;
     font-size: 0.875rem;
@@ -151,7 +133,7 @@ header .end .language_box button p {
     text-align: start;
 }
 
-header .end .register_btn {
+header .group-action .register_btn {
     display: flex;
     box-sizing: border-box;
     padding: 0.625rem 1rem;
@@ -163,7 +145,7 @@ header .end .register_btn {
     pointer-events: auto;
 }
 
-header .end .register_btn:hover {
+header .group-action .register_btn:hover {
     color: #ffffff;
     background-color: #F0500A;
     pointer-events: auto;
@@ -236,67 +218,73 @@ header .register_backdrop .register_window .register_form .field {
     border: #434E62 1px solid;
 }
 
-// 
-
-
-
 
 header .main-nav {
     width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 header .nav-menu {
-    height: 100%;
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 2.5rem;
-    width: auto;
     margin: 0;
     padding: 0;
+    height: 4.25rem;
 }
 
 header .menu-item {
-    height: 4.25rem;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
+    height: 100%;
+
+    &.menu-item-has-children {
+        &:after {
+            content: '';
+            background: url('../1OfficeNext/assets/images/Chevron_down.svg');
+            width: 11px;
+            height: 7px;
+            position: absolute;
+            right: -16px;
+            transition: all .5s;
+        }
+
+        &:hover {
+            &:after {
+                background: url('../1OfficeNext/assets/images/Chevron_blue_down.svg');
+            }
+        }
+
+        &.active {
+            .sub-menu {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+    &:hover {
+        >a {
+            color: var(--color-text-hover);
+        }
+    }
 }
 
-header .menu-item a {
+header .menu-item>a {
     display: flex;
     height: 100%;
     text-decoration: none;
     align-items: center;
-    color: black;
-    margin: 0;
-    transition: all 0.3s ease;
-    gap: 0.5rem;
+    color: var(--color-text);
+    transition: all 0.5s ease;
 }
 
-header .menu-item a:hover {
-    color: #2B6AD1;
-}
 
-header .menu-item a:hover .sub_menu_content_name {
-    color: #2B6AD1;
-}
-
-header .menu-item-has-children {
-    position: relative;
-}
-
-//sub menu banggia
-header .menu-item-has-children ul {
+header .menu-item .sub-menu {
     margin: 0;
     padding: 0.5rem;
     position: absolute;
@@ -305,74 +293,61 @@ header .menu-item-has-children ul {
     top: 100%;
     z-index: 3;
     box-sizing: border-box;
-    width: calc(286rem/16);
-    height: max-content;
+    width: 264px;
     display: flex;
     flex-direction: column;
     opacity: 0;
-    pointer-events: none;
-    transition: all 0.3s ease;
-}
-
-header .menu-item-has-children ul.open {
-    opacity: 1;
-    pointer-events: auto;
+    transition: all 0.5s ease;
+    box-shadow: 0px 8px 36px -4px rgba(29, 35, 46, 0.3);
+    border: 1px solid var(--color-border);
+    visibility: hidden;
 }
 
 header .menu-item .sub-menu .menu-item {
-
+    padding: 16px 0 16px 12px;
     display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-
-}
-
-.sub-menu .sub_menu_link {
-    box-sizing: border-box;
-    padding: 0.75rem;
+    transition: all .5s;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    gap: 12px;
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    gap: 0.4rem;
-    transition: all 0.3s ease;
+
+    &:hover {
+        background: #F8F8F8;
+        border-color: #F3F3F3;
+    }
+
+    a {
+        font-weight: var(--font-weight-medium);
+        line-height: 12px;
+    }
+
+    .item-description {
+        color: var(--color-text-secondary);
+        font-weight: var(--font-weight-medium);
+        font-size: 12px;
+        line-height: 9px;
+    }
+
+    &:after {
+        content: '';
+        background: url('../1OfficeNext/assets/images/Chevron_blue_right.svg');
+        width: 7px;
+        height: 11px;
+        position: absolute;
+        right: 20px;
+        opacity: 0;
+        transition: all .5s;
+    }
+
+    &:hover {
+        &:after {
+            opacity: 1;
+            right: 8px;
+        }
+    }
 }
 
-.sub_menu_content_name,
-.sub_menu_content_description {
-    padding: 0;
-    margin: 0;
-}
-
-.sub_menu_content_name {
-    font-size: 1rem;
-    font-weight: 500;
-}
-
-.sub_menu_content_description {
-    font-size: calc(12rem/16);
-}
-
-.sub_menu_link .chevron_right {
-    position: absolute;
-    width: calc(10rem/16);
-    height: 1rem;
-    right: 1.5rem;
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.3s ease;
-}
-
-.sub_menu_link:hover .chevron_right {
-    right: 0.5rem;
-    opacity: 1;
-}
-
-.sub_menu_link:hover {
-    background-color: #F8F8F8;
-}
 
 .mega_menu {
     position: absolute;
@@ -381,10 +356,10 @@ header .menu-item .sub-menu .menu-item {
     top: 100%;
     opacity: 0;
     pointer-events: none;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
 }
 
-.mega_menu.open {
+.mega_menu.active {
     opacity: 1;
     pointer-events: auto;
 }
@@ -412,7 +387,7 @@ header .menu-item .sub-menu .menu-item {
     display: flex !important;
     justify-content: space-between !important;
     padding: 2rem !important;
-    transition: all 0.3s ease !important;
+    transition: all 0.5s ease !important;
 
 }
 
@@ -436,7 +411,7 @@ header .menu-item .sub-menu .menu-item {
     position: relative !important;
     box-sizing: border-box !important;
     padding: 0.75rem 1rem !important;
-    transition: all 0.3s ease !important;
+    transition: all 0.5s ease !important;
 
 
     color: initial !important;
@@ -450,7 +425,7 @@ header .menu-item .sub-menu .menu-item {
     font-size: 1rem !important;
     width: fit-content !important;
     text-align: start !important;
-    transition: all 0.3s ease !important;
+    transition: all 0.5s ease !important;
     color: black;
 }
 
@@ -460,7 +435,7 @@ header .menu-item .sub-menu .menu-item {
     box-sizing: border-box !important;
     padding-right: 0rem !important;
     font-size: 0.75rem !important;
-    transition: all 0.3s ease !important;
+    transition: all 0.5s ease !important;
     width: fit-content !important;
     text-align: start !important;
     color: black;
@@ -482,7 +457,7 @@ header .menu-item .sub-menu .menu-item {
     height: 100% !important;
     top: 0 !important;
     right: 0 !important;
-    transition: all 0.3s ease !important;
+    transition: all 0.5s ease !important;
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
@@ -495,7 +470,7 @@ header .menu-item .sub-menu .menu-item {
     transform: translateX(-100%) !important;
     opacity: 0 !important;
     border: 0 !important;
-    transition: all 0.3s ease !important;
+    transition: all 0.5s ease !important;
 }
 
 .mega_menu_cat_btn:hover {
@@ -504,7 +479,7 @@ header .menu-item .sub-menu .menu-item {
 
 .mega_menu_cat_btn:hover h2,
 .mega_menu_cat_btn:hover p {
-    color: #2B6AD1;
+    color: var(--color-text-hover);
 }
 
 .mega_menu_cat_btn:hover .chevron_right {
@@ -518,7 +493,7 @@ header .menu-item .sub-menu .menu-item {
 
 .mega_menu_cat_btn.active h2,
 .mega_menu_cat_btn.active p {
-    color: #2B6AD1;
+    color: var(--color-text-hover);
 }
 
 .mega_menu_cat_btn button:hover .chevron_right {
@@ -562,7 +537,7 @@ header .menu-item .sub-menu .menu-item {
     height: max-content !important;
     opacity: 1 !important;
     pointer-events: auto !important;
-    transition: all 0.3s ease !important;
+    transition: all 0.5s ease !important;
 }
 
 
@@ -580,7 +555,7 @@ header .menu-item .sub-menu .menu-item {
     gap: 0.5rem;
     justify-content: center;
     align-items: start;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
     color: black;
     text-decoration: none;
 }
@@ -603,7 +578,7 @@ header .menu-item .sub-menu .menu-item {
     justify-content: center;
     align-items: center;
     opacity: 1;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
 }
 
 .mega_menu_item .imgbox_hover {
@@ -616,7 +591,7 @@ header .menu-item .sub-menu .menu-item {
     justify-content: center;
     align-items: center;
     opacity: 0;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
 }
 
 .mega_menu_item:hover .imgbox {
@@ -661,7 +636,7 @@ header .menu-item .sub-menu .menu-item {
     align-items: center;
     text-decoration: none;
     color: black;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
 }
 
 .foot_menu_row a img {
@@ -673,12 +648,12 @@ header .menu-item .sub-menu .menu-item {
 .foot_menu_row a .hover {
     opacity: 0;
     right: 1rem;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
 
 }
 
 .foot_menu_row a:hover {
-    color: #2B6AD1
+    color: var(--color-text-hover)
 }
 
 .foot_menu_row a:hover .hover {

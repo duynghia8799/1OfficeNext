@@ -1,23 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi-VN">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <?php wp_head() ?>
+    <meta charset="<?php bloginfo('charset'); ?>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="zalo-platform-site-verification" content="JO-IEQkaG2LhjEauiA1_B6wLgZY2vtvXCJK" />
+    <meta content="<?php is_front_page() ? bloginfo('name') : wp_title(''); ?>" name="description" />
+    <title><?= is_front_page() ? bloginfo('name') : wp_title(''); ?></title>
+    <link rel="shortcut icon" href="<?= home_url(); ?>/favicon.ico" type="image/x-icon" />
+    <?php
+    wp_head();
+    get_template_part('template-parts/header/insert', 'thirtypart');
+    ?>
 </head>
 
-<body>
+<body <?= body_class(); ?>>
     <header>
         <div class="container">
             <div class="row">
-                <div class="col-xl-2">
-                    <div class="start">
-                        <img class="" src=<?= get_template_directory_uri() . "/assets/images/Logo1office.svg" ?> alt="">
-                    </div>
+                <div class="col-lg-2 d-flex align-items-center">
+                    <a href="<?= home_url(); ?> ?>" class="logo">
+                        <img class="skip-lazy" width="102" height="35" src=<?= get_template_directory_uri() . "/assets/images/Logo1office.svg" ?> alt="">
+                    </a>
                 </div>
-                <div class="col-xl-8">
+                <div class="col-xl-8 d-flex">
                     <?php
                     wp_nav_menu(array(
                         'theme_location' => 'navbar_desktop',
@@ -27,9 +34,8 @@
                     ));
                     ?>
                 </div>
-                <div class="col-xl-2 d-flex justify-content-end">
-                    <div class="end">
-
+                <div class="col-xl-2 align-items-center d-flex justify-content-end">
+                    <div class="group-action">
                         <button class="search_btn">
                             <img src=<?= get_template_directory_uri() . "/assets/images/LogoSearch.svg" ?> alt="">
                         </button>
@@ -66,22 +72,5 @@
                 </div>
             </div>
         </div>
-
-        <!-- đang làm regester-->
-        <div class="register_backdrop" style="opacity: 0; pointer-events:none ;">
-            <div class="register_window">
-                <button class="register_close">
-                    <img src="<?= get_template_directory_uri(); ?>/assets/images/Close_btn.svg" alt="">
-                </button>
-                <h1>ĐĂNG KÝ NHẬN TƯ VẤN 1OFFICE</h1>
-                <p>Trải nghiệm để khám phá những tính năng tuyệt vời 1Office mang lại.
-                    Phần mềm phù hợp sử dụng cho doanh nghiệp trên 10 nhân sự</p>
-                <form class="register_form" action="">
-                    <input class="field full" type="text" placeholder="">
-                </form>
-            </div>
-        </div>
-        <!-- đang làm regester-->
-
-        <?php get_template_part('template_parts/header/header_mega_menu') ?>
+        <?php get_template_part('template-parts/header/header_mega_menu') ?>
     </header>
