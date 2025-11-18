@@ -62,15 +62,128 @@ footer .footer_content .field_row .field_name {
     width: 20%;
 }
 
+footer .menu_footer,
+footer .menu_footer .foot_menu,
+footer .menu_footer .foot_menu .menu-item,
+footer .menu_footer .foot_menu .menu-item .sub-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+}
+
+footer a {
+    color: #0D1229;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer .menu_footer .foot_menu {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4.5rem;
+}
+
+footer .menu_footer .foot_menu .menu-item {
+    width: 15rem;
+}
+
+footer .menu_footer .foot_menu .menu-item {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+}
+
+footer .menu_footer .foot_menu .menu-item a {
+    font-size: 1rem;
+    font-weight: 600;
+    pointer-events: none;
+}
+
+footer .menu_footer .foot_menu .menu-item .sub-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+}
+
+footer .menu_footer .foot_menu .menu-item .sub-menu a {
+    color: #676D78;
+    font-size: 0.825rem;
+    font-weight: 400;
+    pointer-events: auto;
+}
+
+footer .line {
+    border: #D9D9D9 1px solid;
+    width: 100%;
+    height: 0px;
+    margin: 2.75rem 0;
+}
+
+footer .media_link_container {
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+footer .media_link {
+    min-width: 1.5rem;
+    height: 1.5rem;
+    width: auto;
+}
 
 
+footer .foot_menu_2 {
+    height: 3rem;
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .foot_menu_2 .menu-item a {
+    font-size: calc(13rem/16);
+    color: #676D78;
+    font-size: 0.825rem;
+    padding: 0 0.7rem 0.2rem;
+    display: inline-block;
+    border-right: 1px solid #D1D1D1;
 
 
+}
 
+footer .foot_menu_2 .menu-item:last-child a {
+    border-right: 0;
+}
 
+footer .quality_container {
+    height: 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
+footer .quality_container img {
+    height: 85%;
+    width: auto;
+}
 
+footer .apps_store {
 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    margin: 2rem 0 0 0;
+    gap: 0.5rem;
+}
 
 footer .Copyright {
     background-color: #0D1229;
