@@ -28,8 +28,6 @@ add_action('wp_enqueue_scripts', function () {
         'template_uri' => get_template_directory_uri(),
     );
     wp_localize_script('theme-menu-open', 'openmenu_Config', $openmenu_data);
-
-    wp_enqueue_script('add-Chervon-menu', get_template_directory_uri() . '/js/addChervon.js', array(), '1.0', true);
 });
 
 require_once get_template_directory() . '/template_parts/header/sub_menu_description.php';

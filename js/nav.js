@@ -15,10 +15,12 @@
         const $allBoxes = $('.mega_menu, .menu-item-has-children ul , .search_box, .language_box');
         $('.nav-menu a').each(function () {
             $(this).click(function (event) {
-                event.preventDefault()
+
                 if ($(this).parent().hasClass('tinhnang')) {
+                    event.preventDefault()
                     $targetBox = $('.mega_menu')
                 } else if ($(this).parent().hasClass('menu-item-has-children')) {
+                    event.preventDefault()
                     console.log('other click')
                     $targetBox = $(this).siblings('ul');
                 } else {
