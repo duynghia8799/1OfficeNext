@@ -1,7 +1,7 @@
 (function ($) {
     $(document).ready(function () {
         function mega_menu_action($targetBox) {
-            if ($targetBox.hasClass('mega_menu') && $targetBox.hasClass('open')) {
+            if ($targetBox.hasClass('mega_menu') && $targetBox.hasClass('active')) {
                 $('.mega_menu_cat button.nav-link:first').addClass('active')
                 $('.mega_menu_cat button.nav-link:first').parent().addClass('active')
                 $('.mega_menu_content .tab-content .container_items:first ').addClass('active')
@@ -26,8 +26,8 @@
                 } else {
                     return
                 }
-                $targetBox.toggleClass('open');
-                $allBoxes.not($targetBox).removeClass('open');
+                $targetBox.toggleClass('active');
+                $allBoxes.not($targetBox).removeClass('active');
                 mega_menu_action($targetBox)
             })
         })
@@ -49,12 +49,20 @@
             } else {
                 return;
             }
-            $targetBox.toggleClass('open');
-            $allBoxes.not($targetBox).removeClass('open');
+            $targetBox.toggleClass('active');
+            $allBoxes.not($targetBox).removeClass('active');
             mega_menu_action($targetBox)
-
-            //tắt mega menu
         });
+
+        $('.chatbot_btn').click(function () {
+            $('.chatbot_content').toggleClass('active')
+            $('.chatbot_btn').toggleClass('active')
+            $('.chatbot_content h2, .chatbot_content .slogan, .chatbot_options, .logo_1office_chatbot').toggleClass('active')
+            $('.chatbot_chatbox').removeClass('active')
+        })
+        $('.chatbot_options_chat').click(function () {
+            $('.chatbot_chatbox').toggleClass('active')
+        })
 
     });
 })(jQuery);
