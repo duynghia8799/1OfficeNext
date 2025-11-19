@@ -1,6 +1,6 @@
 <footer>
     <div class="container footer_content">
-        <div class="row">
+        <div class="row top_content">
             <div class="col-xl-4">
                 <div class="left">
                     <h1>CÔNG TY CỔ PHẦN 1OFFICE</h1>
