@@ -50,7 +50,6 @@
             $targetBox.toggleClass('active');
             $allBoxes.not($targetBox).removeClass('active');
             mega_menu_action($targetBox)
-
             //tắt mega menu
         });
 
