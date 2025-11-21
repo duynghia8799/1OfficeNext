@@ -1,4 +1,5 @@
 <?php
+$name = 'hesinhthai';
 $tabs = [
     [
         'title' => 'Nhân sự',
@@ -28,22 +29,35 @@ $tabs = [
         'title' => 'Ký số',
         'icon' => '',
     ],
-]
+];
 ?>
 
 <div class="animation_tabs">
-    <div class="card" style="width:100px"></div>
-    <div class="items_container">
+    <div class="card"></div>
+    <div class="items_container nav nav-tabs">
         <?php
         if (!empty($tabs)) {
             foreach ($tabs as $index => $tab) {
                 if ($tab['icon'] != '') {
-                    echo ' <button style="gap:1rem" class="item data-imdex={<?= $index ?>}">';
+                    echo ' <button id="' . $name . '_tab_' . $index . '" class="item"
+                    data-bs-toggle="tab" data-bs-target="' . $name . '_panel_' . $index . '" panels-container="' . $name . '"
+                    > <img src"' . $tab['icon'] . '" alt="icon">' . $tab['title'] . '</button> ';
                 } else {
-                    echo ' <button class="item data-imdex={<?= $index ?>}">';
+                    echo ' <button id="' . $name . '_tab_' . $index . '" class="item"
+                    data-bs-toggle="tab" data-bs-target="' . $name . '_panel_' . $index . '" panels-container="' . $name . '"
+                    >' . $tab['title'] . '</button> ';
                 }
-                echo '<img src"' . $tab['icon'] . '">' . $tab['title'] . '</button>';
             }
         } ?>
     </div>
+</div>
+<div class="<?= $name . " " ?>panels_container tab-content">
+    <?php
+    if (!empty($tabs)) {
+        foreach ($tabs as $index => $tab) {
+            echo '<div id="' . $name . '_panel_' . $index . '" class="tab-pane fade" > 
+            <h1>Panel:' . $index . '</h1> </div> ';
+        }
+    }
+    ?>
 </div>
