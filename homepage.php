@@ -6,7 +6,7 @@
  */
 
 get_header();
-?>
-<div style="width: 100%;height: 100vh; background-color:gray"></div>
-<?php
+
+get_template_part('template_parts/tabs/animation_tab');
+
 get_footer();
