@@ -1,5 +1,5 @@
 .animation_tabs {
-    height: 4rem;
+    height: fit-content;
     padding: 10px;
     width: fit-content;
     position: relative;
@@ -24,7 +24,7 @@
 }
 
 .animation_tabs .items_container {
-    height: 2.75rem;
+    height: fit-content;
     width: fit-content;
     display: flex;
     background-color: transparent;
@@ -70,4 +70,104 @@
 .panels_container.tab-content .tab-pane.active {
     opacity: 1;
     pointer-events: auto;
+}
+
+
+
+//tangtoc
+.tangtoc_container {
+    background-color: #F6F5F6;
+}
+
+.tangtoc_row {
+    justify-content: center;
+
+}
+
+.tangtoc_row h1 {
+    width: 54.25rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 3.75rem;
+    text-align: center;
+    margin: 4rem 0 3rem 0;
+}
+
+.tangtoc.animation_tabs {
+    background-color: transparent;
+    width: fit-content;
+    padding: 0;
+    border-bottom: 1px solid #D1D1D1;
+    border-radius: 0;
+}
+
+.tangtoc.animation_tabs .item {
+    height: 2.625rem;
+    align-items: start;
+    color: #676D78;
+}
+
+.tangtoc.animation_tabs .card {
+    height: 3px;
+    background-color: black;
+    bottom: -2px;
+}
+
+.tangtoc.tab-content {
+    width: 100%;
+    //height: fit-content;
+    height: 33rem;
+    background-color: transparent;
+    margin-bottom: 4rem;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.tangtoc.tab-content .tab-pane {
+    width: 100%;
+    //height: fit-content;
+    height: 100%;
+    background-color: transparent;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    bottom: 0;
+    transform: translateY(100%);
+    transition: all 0.8s ease;
+}
+
+.tangtoc.tab-content .tab-pane.up {
+    transform: translateY(0);
+
+}
+
+.tangtoc.tab-content .tab-pane .demo_img {
+    width: 100%;
+    height: auto;
+}
+
+.tangtoc.tab-content .tab-pane .content {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tangtoc.tab-content .tab-pane .content h2 {
+    width: 85%;
+    font-size: 1.75rem;
+    line-height: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.tangtoc.tab-content .tab-pane .content ul {
+    list-style: none;
+    padding-left: 0;
+
+}
+
+.tangtoc.tab-content .tab-pane .content li {
+    margin-bottom: 1rem;
 }
