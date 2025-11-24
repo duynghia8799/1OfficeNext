@@ -15,10 +15,12 @@
         const $allBoxes = $('.mega_menu, .menu-item-has-children ul , .search_box, .language_box');
         $('.nav-menu a').each(function () {
             $(this).click(function (event) {
-                event.preventDefault()
+
                 if ($(this).parent().hasClass('tinhnang')) {
+                    event.preventDefault()
                     $targetBox = $('.mega_menu')
                 } else if ($(this).parent().hasClass('menu-item-has-children')) {
+                    event.preventDefault()
                     console.log('other click')
                     $targetBox = $(this).siblings('ul');
                 } else {
@@ -50,8 +52,17 @@
             $targetBox.toggleClass('active');
             $allBoxes.not($targetBox).removeClass('active');
             mega_menu_action($targetBox)
-            //tắt mega menu
         });
+
+        $('.chatbot_btn').click(function () {
+            $('.chatbot_content').toggleClass('active')
+            $('.chatbot_btn').toggleClass('active')
+            $('.chatbot_content h2, .chatbot_content .slogan, .chatbot_options, .logo_1office_chatbot').toggleClass('active')
+            $('.chatbot_chatbox').removeClass('active')
+        })
+        $('.chatbot_options_chat').click(function () {
+            $('.chatbot_chatbox').toggleClass('active')
+        })
 
     });
 })(jQuery);

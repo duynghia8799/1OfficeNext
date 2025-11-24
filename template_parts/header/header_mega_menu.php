@@ -14,7 +14,7 @@
                                 <button class='nav-link' id="work_tab" data-bs-toggle="tab" data-bs-target="#work_panel"
                                     role="tab">
                                     <img class="chevron_right "
-                                        src="<?= get_template_directory_uri() ?> '/assets/images/Chevron_blue_right.svg'"
+                                        src="<?= get_template_directory_uri() ?>/assets/images/Chevron_blue_right.svg"
                                         alt="icon">
                                 </button>
                             </div>
@@ -26,7 +26,7 @@
                                 <button class='nav-link' id="hrm_tab" data-bs-toggle="tab" data-bs-target="#hrm_panel"
                                     role="tab">
                                     <img class="chevron_right "
-                                        src="<?= get_template_directory_uri() ?> '/assets/images/Chevron_blue_right.svg'"
+                                        src="<?= get_template_directory_uri() ?>/assets/images/Chevron_blue_right.svg"
                                         alt="icon">
                                 </button>
                             </div>
@@ -38,7 +38,7 @@
                                 <button class='nav-link' id="crm_tab" data-bs-toggle="tab" data-bs-target="#crm_panel"
                                     role="tab">
                                     <img class="chevron_right "
-                                        src="<?= get_template_directory_uri() ?> '/assets/images/Chevron_blue_right.svg'"
+                                        src="<?= get_template_directory_uri() ?>/assets/images/Chevron_blue_right.svg"
                                         alt="icon">
                                 </button>
                             </div>
@@ -50,7 +50,7 @@
                                 </a>
                                 <button>
                                     <img class="chevron_right "
-                                        src="<?= get_template_directory_uri() ?> '/assets/images/Chevron_blue_right.svg'"
+                                        src="<?= get_template_directory_uri() ?>/assets/images/Chevron_blue_right.svg"
                                         alt="icon">
                                 </button>
                             </div>
@@ -66,11 +66,11 @@
                             aria-labelledby="work_tab">
                             <a href="#" class="mega_menu_item">
                                 <div class="imgbox">
-                                    <img src="<?= get_template_directory_uri() . '/assets/images/headermenu/duan.svg' ?>"
+                                    <img src="<?= get_template_directory_uri() ?>/assets/images/headermenu/duan.svg"
                                         alt="icon">
                                 </div>
                                 <div class="imgbox_hover">
-                                    <img src="<?= get_template_directory_uri() . '/assets/images/headermenu/duan_hover.svg' ?>"
+                                    <img src="<?= get_template_directory_uri() ?>/assets/images/headermenu/duan_hover.svg"
                                         alt="icon">
                                 </div>
                                 <h2>Dự án</h2>
@@ -79,11 +79,11 @@
 
                             <a href="#" class="mega_menu_item">
                                 <div class="imgbox">
-                                    <img src="<?= get_template_directory_uri() . '/assets/images/headermenu/congviec.svg' ?>"
+                                    <img src="<?= get_template_directory_uri() ?>/assets/images/headermenu/congviec.svg"
                                         alt="icon">
                                 </div>
                                 <div class="imgbox_hover">
-                                    <img src="<?= get_template_directory_uri() . '/assets/images/headermenu/congviec_hover.svg' ?>"
+                                    <img src="<?= get_template_directory_uri() ?>/assets/images/headermenu/congviec_hover.svg"
                                         alt="icon">
                                 </div>
                                 <h2>Công việc</h2>
@@ -92,11 +92,11 @@
 
                             <a href="#" class="mega_menu_item">
                                 <div class="imgbox">
-                                    <img src="<?= get_template_directory_uri() . '/assets/images/headermenu/quytrinh.svg' ?>"
+                                    <img src="<?= get_template_directory_uri() ?>/assets/images/headermenu/quytrinh.svg"
                                         alt="icon">
                                 </div>
                                 <div class="imgbox_hover">
-                                    <img src="<?= get_template_directory_uri() . '/assets/images/headermenu/quytrinh_hover.svg' ?>"
+                                    <img src="<?= get_template_directory_uri() ?>/assets/images/headermenu/quytrinh_hover.svg"
                                         alt="icon">
                                 </div>
                                 <h2>Quy trình</h2>
@@ -105,11 +105,11 @@
 
                             <a href="#" class="mega_menu_item">
                                 <div class="imgbox">
-                                    <img src="<?= get_template_directory_uri() . '/assets/images/headermenu/vanban.svg' ?>"
+                                    <img src="<?= get_template_directory_uri() ?>/assets/images/headermenu/vanban.svg"
                                         alt="icon">
                                 </div>
                                 <div class="imgbox_hover">
-                                    <img src="<?= get_template_directory_uri() . '/assets/images/headermenu/vanban_hover.svg' ?>"
+                                    <img src="<?= get_template_directory_uri() ?>/assets/images/headermenu/vanban_hover.svg"
                                         alt="icon">
                                 </div>
                                 <h2>Văn bản</h2>
@@ -118,11 +118,11 @@
 
                             <a href="#" class="mega_menu_item">
                                 <div class="imgbox">
-                                    <img src="<?= get_template_directory_uri() . '/assets/images/headermenu/tailieu.svg' ?>"
+                                    <img src="<?= get_template_directory_uri() ?>/assets/images/headermenu/tailieu.svg"
                                         alt="icon">
                                 </div>
                                 <div class="imgbox_hover">
-                                    <img src="<?= get_template_directory_uri() . '/assets/images/headermenu/tailieu_hover.svg' ?>"
+                                    <img src="<?= get_template_directory_uri() ?>/assets/images/headermenu/tailieu_hover.svg"
                                         alt="icon">
                                 </div>
                                 <h2>Tài liệu</h2>
@@ -131,11 +131,11 @@
 
                             <a href="#" class="mega_menu_item">
                                 <div class="imgbox">
-                                    <img src="<?= get_template_directory_uri() . '/assets/images/headermenu/lichbieu.svg' ?>"
+                                    <img src="<?= get_template_directory_uri() ?>/assets/images/headermenu/lichbieu.svg"
                                         alt="icon">
                                 </div>
                                 <div class="imgbox_hover">
-                                    <img src="<?= get_template_directory_uri() . '/assets/images/headermenu/lichbieu_hover.svg' ?>"
+                                    <img src="<?= get_template_directory_uri() ?>/assets/images/headermenu/lichbieu_hover.svg"
                                         alt="icon">
                                 </div>
                                 <h2>Lịch biểu</h2>
@@ -144,11 +144,11 @@
 
                             <a href="#" class="mega_menu_item">
                                 <div class="imgbox">
-                                    <img src="<?= get_template_directory_uri() . '/assets/images/headermenu/taisan.svg' ?>"
+                                    <img src="<?= get_template_directory_uri() ?>/assets/images/headermenu/taisan.svg"
                                         alt="icon">
                                 </div>
                                 <div class="imgbox_hover">
-                                    <img src="<?= get_template_directory_uri() . '/assets/images/headermenu/taisan_hover.svg' ?>"
+                                    <img src="<?= get_template_directory_uri() ?>/assets/images/headermenu/taisan_hover.svg"
                                         alt="icon">
                                 </div>
                                 <h2>Tài sản</h2>
@@ -157,11 +157,11 @@
 
                             <a href="#" class="mega_menu_item">
                                 <div class="imgbox">
-                                    <img src="<?= get_template_directory_uri() . '/assets/images/headermenu/mangnoibo.svg' ?>"
+                                    <img src="<?= get_template_directory_uri() ?>/assets/images/headermenu/mangnoibo.svg"
                                         alt="icon">
                                 </div>
                                 <div class="imgbox_hover">
-                                    <img src="<?= get_template_directory_uri() . '/assets/images/headermenu/mangnoibo_hover.svg' ?>"
+                                    <img src="<?= get_template_directory_uri() ?>/assets/images/headermenu/mangnoibo_hover.svg"
                                         alt="icon">
                                 </div>
                                 <h2>Mạng nội bộ</h2>
@@ -194,11 +194,11 @@
                             aria-labelledby="hrm_tab">
                             <a href="#" class="mega_menu_item">
                                 <div class="imgbox">
-                                    <img src="<?= get_template_directory_uri() . '/assets/images/headermenu/tuyendung.svg' ?>"
+                                    <img src="<?= get_template_directory_uri() ?>/assets/images/headermenu/tuyendung.svg"
                                         alt="icon">
                                 </div>
                                 <div class="imgbox_hover">
-                                    <img src="<?= get_template_directory_uri() . '/assets/images/headermenu/tuyendung_hover.svg' ?>"
+                                    <img src="<?= get_template_directory_uri() ?>/assets/images/headermenu/tuyendung_hover.svg"
                                         alt="icon">
                                 </div>
                                 <h2>Tuyển dụng</h2>
@@ -207,11 +207,11 @@
 
                             <a href="#" class="mega_menu_item">
                                 <div class="imgbox">
-                                    <img src="<?= get_template_directory_uri() . '/assets/images/headermenu/nhansu.svg' ?>"
+                                    <img src="<?= get_template_directory_uri() ?>/assets/images/headermenu/nhansu.svg"
                                         alt="icon">
                                 </div>
                                 <div class="imgbox_hover">
-                                    <img src="<?= get_template_directory_uri() . '/assets/images/headermenu/nhansu_hover.svg' ?>"
+                                    <img src="<?= get_template_directory_uri() ?>/assets/images/headermenu/nhansu_hover.svg"
                                         alt="icon">
                                 </div>
                                 <h2>Nhân sự</h2>
@@ -220,11 +220,11 @@
 
                             <a href="#" class="mega_menu_item">
                                 <div class="imgbox">
-                                    <img src="<?= get_template_directory_uri() . '/assets/images/headermenu/chamcong.svg' ?>"
+                                    <img src="<?= get_template_directory_uri() ?>/assets/images/headermenu/chamcong.svg"
                                         alt="icon">
                                 </div>
                                 <div class="imgbox_hover">
-                                    <img src="<?= get_template_directory_uri() . '/assets/images/headermenu/chamcong_hover.svg' ?>"
+                                    <img src="<?= get_template_directory_uri() ?>/assets/images/headermenu/chamcong_hover.svg"
                                         alt="icon">
                                 </div>
                                 <h2>Chấm công</h2>
@@ -232,11 +232,11 @@
                             </a>
                             <a href="#" class="mega_menu_item">
                                 <div class="imgbox">
-                                    <img src="<?= get_template_directory_uri() . '/assets/images/headermenu/tienluong.svg' ?>"
+                                    <img src="<?= get_template_directory_uri() ?>/assets/images/headermenu/tienluong.svg"
                                         alt="icon">
                                 </div>
                                 <div class="imgbox_hover">
-                                    <img src="<?= get_template_directory_uri() . '/assets/images/headermenu/tienluong_hover.svg' ?>"
+                                    <img src="<?= get_template_directory_uri() ?>/assets/images/headermenu/tienluong_hover.svg"
                                         alt="icon">
                                 </div>
                                 <h2>Tiền lương</h2>
@@ -244,11 +244,11 @@
                             </a>
                             <a href="#" class="mega_menu_item">
                                 <div class="imgbox">
-                                    <img src="<?= get_template_directory_uri() . '/assets/images/headermenu/danhgia.svg' ?>"
+                                    <img src="<?= get_template_directory_uri() ?>/assets/images/headermenu/danhgia.svg"
                                         alt="icon">
                                 </div>
                                 <div class="imgbox_hover">
-                                    <img src="<?= get_template_directory_uri() . '/assets/images/headermenu/danhgia_hover.svg' ?>"
+                                    <img src="<?= get_template_directory_uri() ?>/assets/images/headermenu/danhgia_hover.svg"
                                         alt="icon">
                                 </div>
                                 <h2>Đánh giá</h2>
@@ -256,11 +256,11 @@
                             </a>
                             <a href="#" class="mega_menu_item">
                                 <div class="imgbox">
-                                    <img src="<?= get_template_directory_uri() . '/assets/images/headermenu/quanlykpi.svg' ?>"
+                                    <img src="<?= get_template_directory_uri() ?>/assets/images/headermenu/quanlykpi.svg"
                                         alt="icon">
                                 </div>
                                 <div class="imgbox_hover">
-                                    <img src="<?= get_template_directory_uri() . '/assets/images/headermenu/quanlykpi_hover.svg' ?>"
+                                    <img src="<?= get_template_directory_uri() ?>/assets/images/headermenu/quanlykpi_hover.svg"
                                         alt="icon">
                                 </div>
                                 <h2>Quản lý KPI</h2>
@@ -268,11 +268,11 @@
                             </a>
                             <a href="#" class="mega_menu_item">
                                 <div class="imgbox">
-                                    <img src="<?= get_template_directory_uri() . '/assets/images/headermenu/quantriokr.svg' ?>"
+                                    <img src="<?= get_template_directory_uri() ?>/assets/images/headermenu/quantriokr.svg"
                                         alt="icon">
                                 </div>
                                 <div class="imgbox_hover">
-                                    <img src="<?= get_template_directory_uri() . '/assets/images/headermenu/quantriokr_hover.svg' ?>"
+                                    <img src="<?= get_template_directory_uri() ?>/assets/images/headermenu/quantriokr_hover.svg"
                                         alt="icon">
                                 </div>
                                 <h2>Quản trị OKR</h2>
@@ -280,11 +280,11 @@
                             </a>
                             <a href="#" class="mega_menu_item">
                                 <div class="imgbox">
-                                    <img src="<?= get_template_directory_uri() . '/assets/images/headermenu/daotao.svg' ?>"
+                                    <img src="<?= get_template_directory_uri() ?>/assets/images/headermenu/daotao.svg"
                                         alt="icon">
                                 </div>
                                 <div class="imgbox_hover">
-                                    <img src="<?= get_template_directory_uri() . '/assets/images/headermenu/daotao_hover.svg' ?>"
+                                    <img src="<?= get_template_directory_uri() ?>/assets/images/headermenu/daotao_hover.svg"
                                         alt="icon">
                                 </div>
                                 <h2>Đào tạo</h2>
@@ -292,11 +292,11 @@
                             </a>
                             <a href="#" class="mega_menu_item">
                                 <div class="imgbox">
-                                    <img src="<?= get_template_directory_uri() . '/assets/images/headermenu/dontu.svg' ?>"
+                                    <img src="<?= get_template_directory_uri() ?>/assets/images/headermenu/dontu.svg"
                                         alt="icon">
                                 </div>
                                 <div class="imgbox_hover">
-                                    <img src="<?= get_template_directory_uri() . '/assets/images/headermenu/dontu_hover.svg' ?>"
+                                    <img src="<?= get_template_directory_uri() ?>/assets/images/headermenu/dontu_hover.svg"
                                         alt="icon">
                                 </div>
                                 <h2>Đơn từ</h2>
@@ -304,11 +304,11 @@
                             </a>
                             <a href="#" class="mega_menu_item">
                                 <div class="imgbox">
-                                    <img src="<?= get_template_directory_uri() . '/assets/images/headermenu/baohiem.svg' ?>"
+                                    <img src="<?= get_template_directory_uri() ?>/assets/images/headermenu/baohiem.svg"
                                         alt="icon">
                                 </div>
                                 <div class="imgbox_hover">
-                                    <img src="<?= get_template_directory_uri() . '/assets/images/headermenu/baohiem_hover.svg' ?>"
+                                    <img src="<?= get_template_directory_uri() ?>/assets/images/headermenu/baohiem_hover.svg"
                                         alt="icon">
                                 </div>
                                 <h2>Bảo hiểm</h2>
@@ -340,11 +340,11 @@
                             aria-labelledby="crm_tab">
                             <a href="#" class="mega_menu_item">
                                 <div class="imgbox">
-                                    <img src="<?= get_template_directory_uri() . '/assets/images/headermenu/taichinh.svg' ?>"
+                                    <img src="<?= get_template_directory_uri() ?>/assets/images/headermenu/taichinh.svg"
                                         alt="icon">
                                 </div>
                                 <div class="imgbox_hover">
-                                    <img src="<?= get_template_directory_uri() . '/assets/images/headermenu/taichinh_hover.svg' ?>"
+                                    <img src="<?= get_template_directory_uri() ?>/assets/images/headermenu/taichinh_hover.svg"
                                         alt="icon">
                                 </div>
                                 <h2>Tài chính</h2>
@@ -352,11 +352,11 @@
                             </a>
                             <a href="#" class="mega_menu_item">
                                 <div class="imgbox">
-                                    <img src="<?= get_template_directory_uri() . '/assets/images/headermenu/marketing.svg' ?>"
+                                    <img src="<?= get_template_directory_uri() ?>/assets/images/headermenu/marketing.svg"
                                         alt="icon">
                                 </div>
                                 <div class="imgbox_hover">
-                                    <img src="<?= get_template_directory_uri() . '/assets/images/headermenu/marketing_hover.svg' ?>"
+                                    <img src="<?= get_template_directory_uri() ?>/assets/images/headermenu/marketing_hover.svg"
                                         alt="icon">
                                 </div>
                                 <h2>Marketing</h2>
@@ -364,11 +364,11 @@
                             </a>
                             <a href="#" class="mega_menu_item">
                                 <div class="imgbox">
-                                    <img src="<?= get_template_directory_uri() . '/assets/images/headermenu/banhang.svg' ?>"
+                                    <img src="<?= get_template_directory_uri() ?>/assets/images/headermenu/banhang.svg"
                                         alt="icon">
                                 </div>
                                 <div class="imgbox_hover">
-                                    <img src="<?= get_template_directory_uri() . '/assets/images/headermenu/banhang_hover.svg' ?>"
+                                    <img src="<?= get_template_directory_uri() ?>/assets/images/headermenu/banhang_hover.svg"
                                         alt="icon">
                                 </div>
                                 <h2>Bán hàng</h2>
@@ -376,11 +376,11 @@
                             </a>
                             <a href="#" class="mega_menu_item">
                                 <div class="imgbox">
-                                    <img src="<?= get_template_directory_uri() . '/assets/images/headermenu/khachhang.svg' ?>"
+                                    <img src="<?= get_template_directory_uri() ?>/assets/images/headermenu/khachhang.svg"
                                         alt="icon">
                                 </div>
                                 <div class="imgbox_hover">
-                                    <img src="<?= get_template_directory_uri() . '/assets/images/headermenu/khachhang_hover.svg' ?>"
+                                    <img src="<?= get_template_directory_uri() ?>/assets/images/headermenu/khachhang_hover.svg"
                                         alt="icon">
                                 </div>
 
@@ -389,11 +389,11 @@
                             </a>
                             <a href="#" class="mega_menu_item">
                                 <div class="imgbox">
-                                    <img src="<?= get_template_directory_uri() . '/assets/images/headermenu/khohang.svg' ?>"
+                                    <img src="<?= get_template_directory_uri() ?>/assets/images/headermenu/khohang.svg"
                                         alt="icon">
                                 </div>
                                 <div class="imgbox_hover">
-                                    <img src="<?= get_template_directory_uri() . '/assets/images/headermenu/khohang_hover.svg' ?>"
+                                    <img src="<?= get_template_directory_uri() ?>/assets/images/headermenu/khohang_hover.svg"
                                         alt="icon">
                                 </div>
                                 <h2>Kho hàng</h2>
@@ -401,11 +401,11 @@
                             </a>
                             <a href="#" class="mega_menu_item">
                                 <div class="imgbox">
-                                    <img src="<?= get_template_directory_uri() . '/assets/images/headermenu/muahang.svg' ?>"
+                                    <img src="<?= get_template_directory_uri() ?>/assets/images/headermenu/muahang.svg"
                                         alt="icon">
                                 </div>
                                 <div class="imgbox_hover">
-                                    <img src="<?= get_template_directory_uri() . '/assets/images/headermenu/muahang_hover.svg' ?>"
+                                    <img src="<?= get_template_directory_uri() ?>/assets/images/headermenu/muahang_hover.svg"
                                         alt="icon">
                                 </div>
                                 <h2>Mua hàng</h2>
@@ -413,11 +413,11 @@
                             </a>
                             <a href="#" class="mega_menu_item">
                                 <div class="imgbox">
-                                    <img src="<?= get_template_directory_uri() . '/assets/images/headermenu/khuyenmai.svg' ?>"
+                                    <img src="<?= get_template_directory_uri() ?>/assets/images/headermenu/khuyenmai.svg"
                                         alt="icon">
                                 </div>
                                 <div class="imgbox_hover">
-                                    <img src="<?= get_template_directory_uri() . '/assets/images/headermenu/khuyenmai_hover.svg' ?>"
+                                    <img src="<?= get_template_directory_uri() ?>/assets/images/headermenu/khuyenmai_hover.svg"
                                         alt="icon">
                                 </div>
                                 <h2>Khuyến mãi</h2>

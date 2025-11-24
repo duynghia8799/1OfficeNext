@@ -10,7 +10,7 @@
 
 <body>
     <header>
-        <div class="container">
+        <div class="container header_container">
             <div class="row">
                 <div class="col-xl-2">
                     <div class="start">
@@ -67,6 +67,11 @@
             </div>
         </div>
 
+        <!--- chat bot -->
+
+
+
+
         <!-- đang làm regester-->
         <div class="register_backdrop" style="opacity: 0; pointer-events:none ;">
             <div class="register_window">
@@ -87,3 +92,52 @@
 
         <?php get_template_part('template_parts/header/header_mega_menu') ?>
     </header>
+
+
+
+    <div class="chatbot_container">
+        <div class="chatbot_content">
+            <img class="logo_1office_chatbot"
+                src="<?= get_template_directory_uri() ?>/assets/images/Logo1office_white.svg" alt="">
+            <h2>1Office</h2>
+            <p class="slogan">Trợ lý 1AI sẵn sàng hỗ trợ bạn!</p>
+            <div class="chatbot_options">
+                <button class="chatbot_options_chat">
+                    <img src="<?= get_template_directory_uri() ?>/assets/images/chatbot_option_chat.svg" alt="">
+                    <div>
+                        <h3>Chat</h3>
+                        <p>Tư vấn tự động với Trợ lý AI</p>
+                    </div>
+                    <img class="chevron" src="<?= get_template_directory_uri() ?>/assets/images/Chevron_right.svg"
+                        alt="">
+                </button>
+                <button>
+                    <img src="<?= get_template_directory_uri() ?>/assets/images/chatbot_option_call.svg" alt="">
+                    <div>
+                        <h3>Hotline 083 483 8888</h3>
+                        <p>Tư vấn trực tiếp qua điện thoại</p>
+                    </div>
+                    <img class="chevron" src="<?= get_template_directory_uri() ?>/assets/images/Chevron_right.svg"
+                        alt="">
+
+                </button>
+                <button>
+                    <img src="<?= get_template_directory_uri() ?>/assets/images/chatbot_option_zalo.svg" alt="">
+                    <div>
+                        <h3>Zalo</h3>
+                        <p>Kết nối và trao đổi qua Zalo</p>
+                    </div>
+                    <img class="chevron" src="<?= get_template_directory_uri() ?>/assets/images/Chevron_right.svg"
+                        alt="">
+
+                </button>
+            </div>
+        </div>
+        <button class="chatbot_btn">
+            <img class="open" src="<?= get_template_directory_uri() ?>/assets/images/chatbot_btn.svg" alt="">
+            <img class="close" src="<?= get_template_directory_uri() ?>/assets/images/chatbot_btn_close.svg" alt="">
+        </button>
+        <!--demo-->
+        <img class="chatbot_chatbox" src="<?= get_template_directory_uri() ?>/assets/images/demo/chatbot_chatbox.svg"
+            alt="">
+    </div>
