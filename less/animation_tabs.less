@@ -74,8 +74,9 @@
 
 
 
+
 //tangtoc
-.tangtoc_container {
+.tangtoc_section {
     background-color: #F6F5F6;
 }
 
@@ -85,11 +86,7 @@
 }
 
 .tangtoc_row h1 {
-    width: 54.25rem;
-    font-size: 2.5rem;
-    font-weight: 600;
-    line-height: 3.75rem;
-    text-align: center;
+    width: 60rem;
     margin: 4rem 0 3rem 0;
 }
 
@@ -139,7 +136,6 @@
 
 .tangtoc.tab-content .tab-pane.up {
     transform: translateY(0);
-
 }
 
 .tangtoc.tab-content .tab-pane .demo_img {
@@ -170,4 +166,144 @@
 
 .tangtoc.tab-content .tab-pane .content li {
     margin-bottom: 1rem;
+}
+
+//tichhop
+.tichhop_section {
+    background-color: white;
+    width: 100%;
+}
+
+.tichhop_row {
+    justify-content: center;
+}
+
+.tichhop_row h1 {
+    width: 60rem;
+    margin: 4rem 0 3rem 0;
+}
+
+.tichhop.animation_tabs {
+    width: fit-content;
+    margin-bottom: 2rem;
+}
+
+.tichhop.animation_tabs .card {
+    background-color: #292D32;
+    border-radius: 0.5rem;
+    height: 3.375rem;
+}
+
+.tichhop.animation_tabs .items_container {
+    gap: 0.5rem;
+}
+
+.tichhop.animation_tabs .item {
+    height: 3.375rem;
+    border: 1px solid #E3E6E7;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.tichhop.animation_tabs .item.active {
+    border: 0;
+    color: white;
+}
+
+.tichhop.tab-content {
+    width: 100%;
+    height: auto;
+    max-height: 45.85rem;
+    overflow: hidden;
+    margin-bottom: 4rem;
+}
+
+.tichhop.tab-content .tab-pane {
+    width: 100%;
+    height: 0;
+    position: relative;
+    padding: 0;
+    opacity: 1;
+    margin-bottom: 0;
+    transition: all 0.3s ease;
+}
+
+.tichhop.tab-content .tab-pane.active {
+    height: 32.75rem;
+    margin-bottom: 1rem;
+    opacity: 1;
+
+}
+
+.tichhop.tab-content .tab-pane .background {
+    width: 100%;
+    height: 100%;
+    padding: 0rem;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+.tichhop.tab-content .tab-pane .background.purple {
+    background-color: #F6F3FF;
+}
+
+.tichhop.tab-content .tab-pane .background.green {
+    background-color: #EDFBF4;
+}
+
+.tichhop.tab-content .tab-pane .background.yellow {
+    background-color: #FFF8EB;
+}
+
+.tichhop.tab-content .tab-pane .background.blue {
+    background-color: #EFF5FF;
+}
+
+.tichhop.tab-content .tab-pane .background.red {
+    background-color: #FEEEEE;
+}
+
+.tichhop.tab-content .tab-pane .content {
+    width: 45%;
+}
+
+.tichhop.tab-content .tab-pane .demo_image {
+    width: 55%;
+    height: auto;
+}
+
+.tichhop.tab-content .tab-pane .content {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 2rem;
+}
+
+.tichhop.tab-content .tab-pane .content h2 {
+    width: 100%;
+    font-size: 1.75rem;
+    line-height: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.tichhop.tab-content .tab-pane .content ul {
+    list-style: none;
+    padding-left: 0;
+
+}
+
+.tichhop.tab-content .tab-pane .content li {
+    width: 95%;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: start;
+    gap: 0.5rem;
+}
+
+.tichhop.tab-content .tab-pane .content li p {
+    text-align: justify;
 }

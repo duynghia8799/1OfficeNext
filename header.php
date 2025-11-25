@@ -14,7 +14,9 @@
             <div class="row">
                 <div class="col-xl-2">
                     <div class="start">
-                        <img class="" src=<?= get_template_directory_uri() . "/assets/images/Logo1office.svg" ?> alt="">
+                        <a href="/1OfficeNext">
+                            <img src=<?= get_template_directory_uri() . "/assets/images/Logo1office.svg" ?> alt="">
+                        </a>
                     </div>
                 </div>
                 <div class="col-xl-8">

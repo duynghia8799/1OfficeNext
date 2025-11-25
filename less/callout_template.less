@@ -1,0 +1,60 @@
+//dk_chat_ai
+.dk_chat_ai {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    gap: 1rem;
+}
+
+.dk_chat_ai button {
+    background-color: white;
+    height: 2.75rem;
+    width: auto;
+    padding: 0 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    position: relative;
+}
+
+.dk_chat_ai button.orange {
+    background-color: #F0500A !important;
+}
+
+.dk_chat_ai button div {
+    background-color: #F0500A;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.dk_chat_ai button.orange div {
+    background-color: #C54208
+}
+
+.dk_chat_ai button:hover div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dk_chat_ai button p {
+    position: relative;
+    color: black !important;
+    margin: 0;
+    height: fit-content;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.dk_chat_ai button.orange p {
+    color: white !important;
+}
+
+.dk_chat_ai button:hover p {
+    color: white !important;
+}

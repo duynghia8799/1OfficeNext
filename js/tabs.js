@@ -52,5 +52,27 @@
                 }
             }
         })
+
+        //animation up tichhop
+        $('.tichhop.tab-content .tab-pane').addClass('active')
+        var tichhop_panel = $('.tichhop.tab-content').find('.tab-pane')
+
+        $('.tichhop.animation_tabs .item').on('click', function () {
+            var $currentPanel = $("#" + $(this).attr('data-bs-target'))
+            console.log('check')
+            console.log($currentPanel)
+            let check = false
+            for (let $item of tichhop_panel) {
+                if ($($item).is($currentPanel)) {
+                    check = true
+                }
+                if (!check) {
+                    $($item).removeClass('active')
+                } else {
+                    $($item).addClass('active')
+                }
+            }
+        })
+
     })
 })(jQuery);
