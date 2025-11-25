@@ -20,11 +20,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-2 d-flex align-items-center">
-                    <a href="<?= home_url(); ?> ?>" class="logo">
+                    <a href="<?= home_url(); ?>" class="logo">
                         <img class="skip-lazy" width="102" height="35" src=<?= get_template_directory_uri() . "/assets/images/Logo1office.svg" ?> alt="">
                     </a>
                 </div>
-                <div class="col-xl-8 d-flex">
+                <div class="col-xl-7 d-flex">
                     <?php
                     wp_nav_menu(array(
                         'theme_location' => 'navbar_desktop',
@@ -34,43 +34,31 @@
                     ));
                     ?>
                 </div>
-                <div class="col-xl-2 align-items-center d-flex justify-content-end">
+                <div class="col-xl-3 align-items-center d-flex justify-content-end">
                     <div class="group-action">
-                        <button class="search_btn">
-                            <img src=<?= get_template_directory_uri() . "/assets/images/LogoSearch.svg" ?> alt="">
-                        </button>
-                        <div class="search_box">
-                            <button class="search_box_btn">
-                                <img src=<?= get_template_directory_uri() . "/assets/images/LogoSearch.svg" ?> alt="">
-                            </button>
-                            <input class="search_box_input" type="text" placeholder="Nhập">
-                        </div>
-
-                        <button class="language_btn">
+                        <span class="search_btn">
+                            <img src=<?= get_template_directory_uri() . "/assets/images/LogoSearch.svg" ?> alt="Icon">
+                            <?= get_search_form(); ?>
+                        </span>
+                        <span class="language_btn">
                             <img class src=<?= get_template_directory_uri() . "/assets/images/LogoLanguage.svg" ?>
                                 alt="icon">
-                            <p>VIE</p>
-                        </button>
-                        <div class="language_box">
-                            <button class="Vietnam">
-                                <img src="<?= get_template_directory_uri() ?>/assets/images/flags/Vietnam.svg"
-                                    alt="icon">
-                                <p>Tiếng Việt</p>
-                                <img class="checked"
-                                    src="<?= get_template_directory_uri() ?>/assets/images/Vchecked.svg" alt="icon">
-                            </button>
-                            <button class="USA">
-                                <img src="<?= get_template_directory_uri() ?>/assets/images/flags/USA.svg" alt="icon">
-                                <p>English</p>
-                                <img class="checked"
-                                    src="<?= get_template_directory_uri() ?>/assets/images/Vchecked.svg" alt="icon">
-                            </button>
-                        </div>
-
-                        <button class="register_btn">Đăng Ký</button>
+                            <span class="language">VIE</span>
+                            <div class="language_box">
+                                <span class="item active">
+                                    <img src="<?= get_template_directory_uri() ?>/assets/images/flags/Vietnam.svg" alt="icon">
+                                    <span class="label">Tiếng Việt</span>
+                                </span>
+                                <span class="item">
+                                    <img src="<?= get_template_directory_uri() ?>/assets/images/flags/USA.svg" alt="icon">
+                                    <span class="label">English</span>
+                                </span>
+                            </div>
+                        </span>
+                        <span class="register_btn">Đăng Ký</span>
                     </div>
                 </div>
             </div>
         </div>
-        <?php get_template_part('template-parts/header/header_mega_menu') ?>
+        <?php get_template_part('template-parts/header/mega-menu') ?>
     </header>

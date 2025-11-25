@@ -72,7 +72,9 @@ add_action('wp_enqueue_scripts', function () {
 
 add_filter('walker_nav_menu_start_el', function ($itemOutput, $item, $depth, $args) {
     if (!empty($item->description)) {
-        $itemOutput .= '<span class="item-description">' . esc_html($item->description) . '</span>';
+        $descItem = '<span class="item-description">' . esc_html($item->description) . '</span>';
+        $titleItem = '<span class="item-title">' . esc_html($item->title) . '</span>';
+        $itemOutput = '<a href="' . esc_url($item->url) . '" class="item-sub-menu">' . $titleItem . $descItem . '</a>';
     }
     return $itemOutput;
 }, 10, 4);
