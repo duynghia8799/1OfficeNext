@@ -17,8 +17,6 @@ if ($svg_hero === false) {
 }
 ?>
 
-<div style="height: 200px; width:100%; background-color:grey;"></div>
-
 <section class="AI-agents-hero">
     <div class="container">
         <div class="row">

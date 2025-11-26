@@ -19,7 +19,7 @@ return [
                         <li><img src="' . get_template_directory_uri() . '/assets/images/icons/ai_agents_li_icon.svg" alt="icon">Liên tục bổ sung và cập nhật nguồn tri thức</li>
                     </ul>
                 </div>
-                <img class="demo_img" style="width:60%" src="' .  get_template_directory_uri() . '/assets/images/demo/ai_agents_tangtoc_1.svg" alt="demo">
+                <img class="demo-img" style="width:60%" src="' .  get_template_directory_uri() . '/assets/images/demo/ai_agents_tangtoc_1.svg" alt="demo">
                 ',
             ],
             [
@@ -36,7 +36,7 @@ return [
                         <li><img src="' . get_template_directory_uri() . '/assets/images/icons/ai_agents_li_icon.svg" alt="icon">Highlight các ý chính, phân tích hiệu quả buổi họp</li>
                     </ul>
                 </div>
-                <img class="demo_img" style="width:60%" src="' .  get_template_directory_uri() . '/assets/images/demo/ai_agents_tangtoc_2.svg" alt="demo">
+                <img class="demo-img" style="width:60%" src="' .  get_template_directory_uri() . '/assets/images/demo/ai_agents_tangtoc_2.svg" alt="demo">
                 ',
             ],
             [
@@ -53,7 +53,7 @@ return [
                         <li><img src="' . get_template_directory_uri() . '/assets/images/icons/ai_agents_li_icon.svg" alt="icon">Liên tục học nguồn tri thức mới của doanh nghiệp</li>
                     </ul>
                 </div>
-                <img class="demo_img" style="width:60%" src="' .  get_template_directory_uri() . '/assets/images/demo/ai_agents_tangtoc_3.svg" alt="demo">
+                <img class="demo-img" style="width:60%" src="' .  get_template_directory_uri() . '/assets/images/demo/ai_agents_tangtoc_3.svg" alt="demo">
                 ',
             ],
             [
@@ -70,7 +70,7 @@ return [
                         <li><img src="' . get_template_directory_uri() . '/assets/images/icons/ai_agents_li_icon.svg" alt="icon">Đề xuất, gợi ý các hành động then chốt tiếp theo</li>
                     </ul>
                 </div>
-                <img class="demo_img" style="width:60%" src="' .  get_template_directory_uri() . '/assets/images/demo/ai_agents_tangtoc_4.svg" alt="demo">
+                <img class="demo-img" style="width:60%" src="' .  get_template_directory_uri() . '/assets/images/demo/ai_agents_tangtoc_4.svg" alt="demo">
                 ',
             ],
         ]
