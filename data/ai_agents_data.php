@@ -85,7 +85,7 @@ return [
                 '
                     <div class="background purple">
                         <div class="content">
-                            <h2>Tuyển dụng thông minh: đọc CV, lọc <span class="br_line"> ứng viên, gửi email, hẹn phỏng
+                            <h2>Tuyển dụng thông minh: đọc CV, lọc <span class="br-line"> ứng viên, gửi email, hẹn phỏng
                                     vấn</span></h2>
                             <ul>
                                 <li><img src="' . get_template_directory_uri() . '/assets/images/icons/ai_agents_li_icon_purple.svg"
@@ -119,7 +119,7 @@ return [
                 '
                     <div class="background green">
                         <div class="content">
-                            <h2>Tự động cấu hình bảng lương và <span class="br_line">phân tích chuyên sâu về tiền
+                            <h2>Tự động cấu hình bảng lương và <span class="br-line">phân tích chuyên sâu về tiền
                                     lương</span></h2>
                             <ul>
                                 <li><img src="' . get_template_directory_uri() . '/assets/images/icons/ai_agents_li_icon_green.svg"
@@ -153,7 +153,7 @@ return [
                 '
                     <div class="background yellow">
                         <div class="content">
-                            <h2>Tự động cấu hình, phân tích và <span class="br_line">đề xuất cải tiến tối ưu quy
+                            <h2>Tự động cấu hình, phân tích và <span class="br-line">đề xuất cải tiến tối ưu quy
                                     trình</span> </h2>
                             <ul>
                                 <li><img src="' . get_template_directory_uri() . '/assets/images/icons/ai_agents_li_icon_yellow.svg"
@@ -187,7 +187,7 @@ return [
                 '
                     <div class="background blue">
                         <div class="content">
-                            <h2>Hỗ trợ xây dựng và phân tích <span class="br_line">mẫu đánh giá KPI tự động</span> </h2>
+                            <h2>Hỗ trợ xây dựng và phân tích <span class="br-line">mẫu đánh giá KPI tự động</span> </h2>
                             <ul>
                                 <li><img src="' . get_template_directory_uri() . '/assets/images/icons/ai_agents_li_icon_blue.svg"
                                         alt="icon">
@@ -217,7 +217,7 @@ return [
                 '
                     <div class="background red">
                         <div class="content">
-                            <h2>Tự động soạn thảo bảng công, <span class="br_line">công thức chấm công</span> </h2>
+                            <h2>Tự động soạn thảo bảng công, <span class="br-line">công thức chấm công</span> </h2>
                             <ul>
                                 <li><img src="' . get_template_directory_uri() . '/assets/images/icons/ai_agents_li_icon.svg"
                                         alt="icon">

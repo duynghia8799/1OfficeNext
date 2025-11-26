@@ -4,9 +4,9 @@ $name = $args['name'];
 $tabs = $args['tabs'];
 ?>
 
-<div class="<?= $name . " " ?>animation_tabs">
+<div class="<?= $name . " " ?>animation-tabs">
     <div class="card"></div>
-    <div class="items_container nav nav-tabs">
+    <div class="items-container nav nav-tabs">
         <?php
         if (!empty($tabs)) {
             foreach ($tabs as $index => $tab) {
@@ -23,7 +23,7 @@ $tabs = $args['tabs'];
         } ?>
     </div>
 </div>
-<div class="<?= $name . " " ?>panels_container tab-content">
+<div class="<?= $name . " " ?>panels-container tab-content">
     <?php
     if (!empty($tabs)) {
         foreach ($tabs as $index => $tab) {

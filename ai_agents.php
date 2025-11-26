@@ -19,19 +19,19 @@ if ($svg_hero === false) {
 
 <div style="height: 200px; width:100%; background-color:grey;"></div>
 
-<section class="AI_agents_hero">
+<section class="AI-agents-hero">
     <div class="container">
         <div class="row">
             <div class="content">
-                <h1 class="title_section"><span class="br_line title_bold">AI Agents</span>
-                    <span class="br_line">Giải phóng nguồn lực</span>
+                <h1 class="title-section"><span class="br-line title-bold">AI Agents</span>
+                    <span class="br-line">Giải phóng nguồn lực</span>
                     Tăng cường hiệu suất vận hành
                 </h1>'
                 <p>Làm việc thông minh hơn với trợ lý AI dành cho doanh nghiệp của bạn.
                     Đơn giản hoá mọi tác vụ từ truy xuất, phân tích dữ liệu đến ra quyết định</p>
-                <?= get_template_part('template_parts/callout_parts/dk_chat_ai', 'template') ?>
+                <?= get_template_part('template_parts/callout_parts/dk-chat-ai', 'template') ?>
             </div>
-            <div class="img_container">
+            <div class="img-container">
                 <?php echo $svg_hero ?>
             </div>
 
@@ -39,20 +39,20 @@ if ($svg_hero === false) {
     </div>
 </section>
 
-<section class="tangtoc_section">
+<section class="tangtoc-section">
     <div class="container">
-        <div class="row tangtoc_row">
-            <h1 class="title_section">Ra quyết định nhanh hơn, chính xác hơn, <span class="br_line">tăng tốc độ xử lý và
+        <div class="row tangtoc-row">
+            <h1 class="title-section">Ra quyết định nhanh hơn, chính xác hơn, <span class="br-line">tăng tốc độ xử lý và
                     tối ưu hiệu quả công việc</span></h1>
             <?php get_template_part('template_parts/tabs/animation_tab', 'template', $tab1); ?>
         </div>
     </div>
 </section>
 
-<section class="tichhop_section">
+<section class="tichhop-section">
     <div class="container">
-        <div class="row tichhop_row">
-            <h1 class="title_section">Tích hợp AI vào quy trình làm việc. Giảm tải <span class="br_line">tác vụ lặp và
+        <div class="row tichhop-row">
+            <h1 class="title-section">Tích hợp AI vào quy trình làm việc. Giảm tải <span class="br-line">tác vụ lặp và
                     kiểm soát toàn diện hiệu quả đầu ra</span></h1>
             <?php get_template_part('template_parts/tabs/animation_tab', 'template', $tab2) ?>
 

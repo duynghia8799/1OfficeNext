@@ -1,4 +1,4 @@
-<div class="dk_chat_ai">
+<div class="dk-chat-ai">
     <button class="orange">
         <div></div>
         <p>Đăng Ký Ngay</p>
