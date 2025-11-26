@@ -32,3 +32,6 @@ add_action('wp_enqueue_scripts', function () {
 });
 
 require_once get_template_directory() . '/template_parts/header/sub_menu_description.php';
+
+// Hide WordPress Admin Bar
+add_filter('show_admin_bar', '__return_false');

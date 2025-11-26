@@ -8,11 +8,19 @@ header {
     background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(8px);
     top: 0;
-    transform: translateY(50%);
     position: fixed;
     z-index: 5;
 }
 
+body.admin-bar header {
+    top: 32px;
+}
+
+@media screen and (max-width: 782px) {
+    body.admin-bar header {
+        top: 46px;
+    }
+}
 
 header .start {
     display: flex;

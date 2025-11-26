@@ -1,58 +1,104 @@
-.AI-agents-hero {
+.ai-agents-hero {
     background-color: #0D1229;
     width: 100%;
     height: 41.25rem;
+
+    .container {
+        height: 100%;
+
+        .row {
+            height: 100%;
+        }
+    }
+
+    .content {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h1 {
+            color: white;
+        }
+
+        .title-section,
+        span {
+            text-align: start;
+        }
+
+        .title-bold {
+            font-weight: 700;
+        }
+
+        p {
+            color: white;
+            font-size: 1.125rem;
+            max-width: 580px;
+        }
+    }
+
+    .img-container {
+        width: 50%;
+        height: auto;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: auto;
+            height: auto;
+            position: absolute;
+            top: 0;
+        }
+    }
 }
 
-.AI-agents-hero .container {
-    height: 100%;
+
+
+
+@keyframes zoomInOut {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
-.AI-agents-hero .container .row {
-    height: 100%;
+.ai-bg-pattern {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: zoomInOut 3s ease-in-out infinite;
 }
 
-.AI-agents-hero .content {
-    width: 50%;
+.ai-center-glow {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: zoomInOut 3s ease-in-out infinite;
 }
 
-.AI-agents-hero .content h1 {
-    color: white;
+@keyframes rotate90 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(20deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
 }
 
-.AI-agents-hero .img-container {
-    width: 50%;
-    height: auto;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.AI-agents-hero .img-container img {
-    width: auto;
-    height: auto;
-    position: absolute;
-    top: 0;
-}
-
-.AI-agents-hero .content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.AI-agents-hero .content .title-section,
-.AI-agents-hero .content span {
-    text-align: start;
-}
-
-.AI-agents-hero .content .title-bold {
-    font-weight: 700;
-}
-
-.AI-agents-hero .content p {
-    color: white;
-    font-size: 1.125rem;
-    max-width: 580px;
+.ai-lighting-effects {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: rotate90 3s ease-in-out infinite;
 }

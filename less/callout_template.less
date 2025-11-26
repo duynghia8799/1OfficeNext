@@ -6,7 +6,7 @@
     gap: 1rem;
 }
 
-.dk-chat-ai button {
+.btn-hover-bg-LTR {
     background-color: white;
     height: 2.75rem;
     width: auto;
@@ -14,47 +14,47 @@
     font-size: 1rem;
     font-weight: 700;
     position: relative;
+
+    div {
+        background-color: #F0500A;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        transition: all 0.3s ease;
+        z-index: 1;
+    }
+
+    p {
+        position: relative;
+        color: black !important;
+        margin: 0;
+        height: fit-content;
+        z-index: 2;
+        transition: all 0.3s ease;
+    }
+
+    &:hover div {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &:hover p {
+        color: white !important;
+    }
 }
 
-.dk-chat-ai button.orange {
+.btn-hover-bg-LTR.orange {
     background-color: #F0500A !important;
-}
 
-.dk-chat-ai button div {
-    background-color: #F0500A;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    transition: all 0.3s ease;
-    z-index: 1;
-}
+    div {
+        background-color: #C54208 !important;
+    }
 
-.dk-chat-ai button.orange div {
-    background-color: #C54208
-}
-
-.dk-chat-ai button:hover div {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.dk-chat-ai button p {
-    position: relative;
-    color: black !important;
-    margin: 0;
-    height: fit-content;
-    z-index: 2;
-    transition: all 0.3s ease;
-}
-
-.dk-chat-ai button.orange p {
-    color: white !important;
-}
-
-.dk-chat-ai button:hover p {
-    color: white !important;
+    p {
+        color: white !important;
+    }
 }
