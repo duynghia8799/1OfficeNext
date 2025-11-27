@@ -1,10 +1,10 @@
 <div class="dk-chat-ai">
     <button class="btn-hover-bg-LTR orange">
+        <p>ĐĂNG KÝ NGAY</p>
         <div></div>
-        <p>Đăng Ký Ngay</p>
     </button>
     <button class="btn-hover-bg-LTR">
+        <p>CHAT VỚI 1AI</p>
         <div></div>
-        <p>Chat với 1Ai</p>
     </button>
 </div>

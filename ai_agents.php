@@ -28,7 +28,7 @@ if ($svg_hesinhthai === false) {
                 <h1 class="title-section"><span class="br-line title-bold">AI Agents</span>
                     <span class="br-line">Giải phóng nguồn lực</span>
                     Tăng cường hiệu suất vận hành
-                </h1>'
+                </h1>
                 <p>Làm việc thông minh hơn với trợ lý AI dành cho doanh nghiệp của bạn.
                     Đơn giản hoá mọi tác vụ từ truy xuất, phân tích dữ liệu đến ra quyết định</p>
                 <?php get_template_part('template_parts/callout_parts/dk_chat_ai', 'template'); ?>

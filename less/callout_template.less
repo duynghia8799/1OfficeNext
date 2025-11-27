@@ -36,9 +36,9 @@
     height: 2.75rem;
     width: auto;
     padding: 0 1rem;
-    font-size: 1rem;
-    font-weight: 700;
     position: relative;
+    display: flex;
+    justify-content: center;
 
     div {
         background-color: #F0500A;
@@ -53,11 +53,17 @@
 
     p {
         position: relative;
+        width: auto;
+        height: 100%;
+        font-size: 1rem !important;
+        font-weight: 600;
         color: black !important;
         margin: 0;
-        height: fit-content;
         z-index: 2;
         transition: all 0.3s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     &:hover div {

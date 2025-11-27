@@ -19,6 +19,8 @@
 
         h1 {
             color: white;
+            margin: 0;
+            margin-bottom: 2rem;
         }
 
         .title-section,
@@ -31,9 +33,11 @@
         }
 
         p {
+            margin: 0;
             color: white;
             font-size: 1.125rem;
             max-width: 580px;
+            margin-bottom: 3rem;
         }
     }
 
@@ -113,6 +117,44 @@
     .ai-agents-hesinhthai-svg {
         position: absolute;
         bottom: 0;
+        z-index: 1;
+
+        .item {
+            position: relative;
+            cursor: pointer;
+
+            &::after {
+                width: 100%;
+                content: attr(data-content);
+                color: black;
+                font-size: 1rem;
+                text-align: center;
+                white-space: nowrap;
+                opacity: 0;
+                pointer-events: none;
+                transition: opacity 0.2s ease;
+                z-index: 10;
+                position: absolute;
+                top: 0;
+            }
+
+            &.down::after {
+                top: 100%;
+                transform: translateY(-100%);
+            }
+
+            &.right::after {
+                top: 50%;
+                text-align: start;
+                padding: 45%;
+                transform: translateY(-50%);
+            }
+
+
+            &:hover::after {
+                opacity: 1;
+            }
+        }
     }
 
     .sub-title-section {
@@ -141,13 +183,14 @@
     z-index: 1;
 
     .ai-agents-chuyendoi-bg {
-        width: 118%;
-        height: auto;
+        width: 110%;
+        height: 100%;
         position: absolute;
-        bottom: -25%;
+        bottom: 0;
         left: 0;
         z-index: 1;
         transform: translateX(-9%);
+        object-fit: cover;
     }
 
     @media screen and (max-width: 1499px) {
@@ -205,6 +248,7 @@
                 img {
                     width: 110px;
                     height: 110px;
+
                 }
             }
         }
@@ -285,12 +329,14 @@
     flex-direction: column;
     justify-content: center;
 
+
     .ai-agents-buttoc-bg {
-        width: auto;
+        width: 100%;
         height: 100%;
         position: absolute;
         right: 0;
         z-index: 1;
+        object-fit: cover;
     }
 
     .content {
