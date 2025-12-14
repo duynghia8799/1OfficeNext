@@ -5,8 +5,8 @@
  * Template Post Type: page 
  */
 get_header();
-$data_file_path = get_stylesheet_directory() . '/data/ai_agents_data.php';
-$page_data = file_exists($data_file_path) ? require $data_file_path : [];
+$data_tabs_file_path = get_stylesheet_directory() . '/data/ai_agents_tabs_data.php';
+$page_data = file_exists($data_tabs_file_path) ? require $data_tabs_file_path : [];
 
 $tab1 = isset($page_data['tang_toc_data']) ? $page_data['tang_toc_data'] : [];
 $tab2 = isset($page_data['tich_hop_data']) ? $page_data['tich_hop_data'] : [];
@@ -53,21 +53,24 @@ if ($svg_hesinhthai === false) {
 
 <section class="ai-agents-tangtoc">
     <div class="container">
-        <div class="row tangtoc-row">
-            <h1 class="title-section">Ra quyết định nhanh hơn, chính xác hơn, <span class="br-line">tăng tốc độ xử lý và
+        <div class="row">
+            <div class="col tangtoc-col">
+                <h1 class="title-section">Ra quyết định nhanh hơn, chính xác hơn, <span class="br-line">tăng tốc độ xử lý và
                     tối ưu hiệu quả công việc</span></h1>
-            <?php get_template_part('template_parts/tabs/animation_tab', 'template', $tab1); ?>
+                <?php get_template_part('template_parts/tabs/animation_tab', 'template', $tab1); ?>
+            </div>
         </div>
     </div>
 </section>
 
 <section class="ai-agents-tichhop">
     <div class="container">
-        <div class="row tichhop-row">
-            <h1 class="title-section">Tích hợp AI vào quy trình làm việc. Giảm tải <span class="br-line">tác vụ lặp và
-                    kiểm soát toàn diện hiệu quả đầu ra</span></h1>
-            <?php get_template_part('template_parts/tabs/animation_tab', 'template', $tab2) ?>
-
+        <div class="row">
+            <div class="col tichhop-col">
+                <h1 class="title-section">Tích hợp AI vào quy trình làm việc. Giảm tải <span class="br-line">tác vụ lặp và
+                        kiểm soát toàn diện hiệu quả đầu ra</span></h1>
+                <?php get_template_part('template_parts/tabs/animation_tab', 'template', $tab2) ?>
+            </div>
         </div>
     </div>
 </section>
@@ -77,7 +80,8 @@ if ($svg_hesinhthai === false) {
     <div class="container">
         <div class="row">
             <h1 class="title-section">Chuyển đổi cách doanh nghiệp vận hành
-                <span class="br-line">bằng bộ công cụ AI mạnh mẽ</span></h1>
+                <span class="br-line">bằng bộ công cụ AI mạnh mẽ</span>
+            </h1>
             <div class="content">
                 <div class="item">
                     <img src="<?= get_template_directory_uri() . '/assets/images/icons/ai_agents_chuyendoi_item1.svg' ?>" alt="">
@@ -89,13 +93,13 @@ if ($svg_hesinhthai === false) {
                     <h2>Phối hợp đồng bộ</h2>
                     <p>Các AI Agents được tích hợp chung trên một nền tảng, phối hợp thực hiện các nhiệm vụ phức tạp một cách đồng bộ</p>
                 </div>
-            
+
                 <div class="item">
                     <img src="<?= get_template_directory_uri() . '/assets/images/icons/ai_agents_chuyendoi_item3.svg' ?>" alt="">
                     <h2>Hiểu ngữ cảnh sâu</h2>
                     <p>Hiểu ngữ cảnh doanh nghiệp sâu nhờ khả năng tự động truy xuất và phân tích dữ liệu thông minh</p>
                 </div>
-            
+
                 <div class="item">
                     <img src="<?= get_template_directory_uri() . '/assets/images/icons/ai_agents_chuyendoi_item4.svg' ?>" alt="">
                     <h2>Tự động hoá</h2>
@@ -114,9 +118,9 @@ if ($svg_hesinhthai === false) {
                     <p>Tuyệt đối bảo mật dữ liệu cá nhân và doanh nghiệp nhờ tích hợp sâu với quyền người dùng trên hệ thống</p>
                 </div>
             </div>
-            
-                
-            
+
+
+
         </div>
     </div>
 </section>
@@ -135,7 +139,7 @@ if ($svg_hesinhthai === false) {
                 <div class="item">
                     <h1>24<span>h</span></h1>
                     <h2>Tiết kiệm hàng tuần</h2>
-                    <p>Với sự kết hợp của AI và No-code, 1Office giúp người dùng tiết kiệm thời gian bằng việc tự động hoá công việc và giảm tải các tác vụ lặp lại</p>                
+                    <p>Với sự kết hợp của AI và No-code, 1Office giúp người dùng tiết kiệm thời gian bằng việc tự động hoá công việc và giảm tải các tác vụ lặp lại</p>
                 </div>
                 <div class="line"></div>
                 <div class="item">
@@ -145,7 +149,7 @@ if ($svg_hesinhthai === false) {
                 </div>
             </div>
         </div>
-    </div>  
+    </div>
 </section>
 <section class="ai-agents-buttoc">
     <img class="ai-agents-buttoc-bg" src="<?= get_template_directory_uri() . '/assets/images/ai_agents_buttoc_bg.svg' ?>" alt="">
@@ -157,7 +161,7 @@ if ($svg_hesinhthai === false) {
                 <?php get_template_part('template_parts/callout_parts/dk_chat_ai', 'template') ?>
             </div>
         </div>
-    </div>  
+    </div>
 </section>
 
 

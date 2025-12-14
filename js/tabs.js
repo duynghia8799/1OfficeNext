@@ -35,23 +35,30 @@
         })
         //
 
-        //animation up tangtoc
-        var $firstItem_tangtoc = $('.tangtoc.animation-tabs .items-container .item').first();
-        $("#" + $($firstItem_tangtoc).attr('data-bs-target')).addClass('up')
+        //animation up slide 
+        function initUpSlideAnimation(selector) {
+            var $container = $(selector + '.animation-tabs');
+            if ($container.length === 0) return;
 
-        var tangtoc_panel = $('.tangtoc.tab-content').find('.tab-pane')
-        $('.tangtoc.animation-tabs .item').on('click', function () {
-            $("." + $(this).attr('panels-container') + ".panels-container .tab-pane").removeClass('up')
-            var $currentPanel = $("#" + $(this).attr('data-bs-target'))
-            console.log($currentPanel)
-            for (let $item of tangtoc_panel) {
-                $($item).addClass('up')
-                if ($($item).is($currentPanel)) {
-                    $($item).addClass('up')
-                    return
+            var $firstItem = $container.find('.items-container .item').first();
+            $("#" + $($firstItem).attr('data-bs-target')).addClass('up');
+
+            var $panels = $(selector + '.tab-content').find('.tab-pane');
+            $container.find('.item').on('click', function () {
+                $("." + $(this).attr('panels-container') + ".panels-container .tab-pane").removeClass('up');
+                var $currentPanel = $("#" + $(this).attr('data-bs-target'));
+                for (let $item of $panels) {
+                    $($item).addClass('up');
+                    if ($($item).is($currentPanel)) {
+                        $($item).addClass('up');
+                        return;
+                    }
                 }
-            }
-        })
+            });
+        }
+        initUpSlideAnimation('.tangtoc');
+        initUpSlideAnimation('.dieuphoi');
+
 
         //animation up tichhop
         $('.tichhop.tab-content .tab-pane').addClass('active')
@@ -73,6 +80,32 @@
                 }
             }
         })
+
+
+        // Auto-switch dieuphoi
+        var $dieuphoiTabs = $('.dieuphoi.animation-tabs');
+        if ($dieuphoiTabs.length) {
+            var dieuphoiInterval;
+            var startDieuphoiAutoSwitch = function() {
+                clearInterval(dieuphoiInterval);
+                dieuphoiInterval = setInterval(function() {
+                    var $active = $dieuphoiTabs.find('.items-container .item.active');
+                    if (!$active.length) {
+                        $active = $dieuphoiTabs.find('.items-container .item').first();
+                    }
+                    var $next = $active.next('.item');
+                    if ($next.length === 0) {
+                        $next = $dieuphoiTabs.find('.items-container .item').first();
+                    }
+                    $next.trigger('click');
+                }, 6000);
+            };
+
+            startDieuphoiAutoSwitch();
+            $dieuphoiTabs.find('.items-container .item').on('click', function() {
+                startDieuphoiAutoSwitch();
+            });
+        }
 
     })
 })(jQuery);
