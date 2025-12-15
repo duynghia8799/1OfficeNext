@@ -7,20 +7,11 @@ header {
     align-items: center;
     background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(8px);
-    top: 0;
     position: fixed;
-    z-index: 5;
+    top: 0;
+    transform: translateY(50%);
 }
 
-body.admin-bar header {
-    top: 32px;
-}
-
-@media screen and (max-width: 782px) {
-    body.admin-bar header {
-        top: 46px;
-    }
-}
 
 header .start {
     display: flex;
@@ -73,8 +64,6 @@ header .end .search_box {
     opacity: 0;
     pointer-events: none;
     transition: all 0.3s ease;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
-
 }
 
 header .end .search_box.active {
@@ -128,8 +117,6 @@ header .end .language_box {
     opacity: 0;
     pointer-events: none;
     transition: all 0.3s ease;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
-
 }
 
 header .end .language_box.active {
@@ -317,7 +304,7 @@ header .menu-item-has-children ul {
     border-radius: 0.25rem;
     background-color: #ffffff;
     top: 100%;
-    z-index: 6;
+    z-index: 3;
     box-sizing: border-box;
     width: calc(286rem/16);
     height: max-content;
@@ -326,8 +313,6 @@ header .menu-item-has-children ul {
     opacity: 0;
     pointer-events: none;
     transition: all 0.3s ease;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
-
 }
 
 header .menu-item-has-children ul.active {
@@ -398,8 +383,6 @@ header .menu-item .sub-menu .menu-item {
     opacity: 0;
     pointer-events: none;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 8px -1px rgba(0, 0, 0, 0.3);
-
 }
 
 .mega_menu.active {
@@ -719,7 +702,6 @@ header .menu-item .sub-menu .menu-item {
     flex-direction: column;
     align-items: end;
     gap: 1rem;
-    z-index: 5;
 }
 
 .chatbot_container .chatbot_btn {

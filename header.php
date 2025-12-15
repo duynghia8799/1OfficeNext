@@ -14,9 +14,7 @@
             <div class="row">
                 <div class="col-xl-2">
                     <div class="start">
-                        <a href="/1OfficeNext">
-                            <img src=<?= get_template_directory_uri() . "/assets/images/Logo1office.svg" ?> alt="">
-                        </a>
+                        <img class="" src=<?= get_template_directory_uri() . "/assets/images/Logo1office.svg" ?> alt="">
                     </div>
                 </div>
                 <div class="col-xl-8">
@@ -89,8 +87,6 @@
             </div>
         </div>
         <!-- đang làm regester-->
-
-
 
         <?php get_template_part('template_parts/header/header_mega_menu') ?>
     </header>
