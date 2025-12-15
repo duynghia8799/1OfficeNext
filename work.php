@@ -12,7 +12,23 @@ $tab1 = isset($page_data['dieu_phoi_data']) ? $page_data['dieu_phoi_data'] : [];
 
 ?>
 
-<div class="void-box" style="background-color: #666666; width: 100%; height: 100vh;"></div>
+<section class="work-hero">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1 class="title-section">Giải pháp quản lý dự án và công việc</h1>
+                <div class="line2">
+                    <h1 class="title-section">thông minh giúp&nbsp;</h1>
+                    <h1 class="title-section scroll">
+                        <span>nâng cao hiệu xuất</span>
+                        <span>đội nhóm linh hoạt</span>
+                        <span>thúc đẩy công tác</span>
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <section class="work-dieuphoi">
     <div class="container">

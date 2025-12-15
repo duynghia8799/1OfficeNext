@@ -1,4 +1,33 @@
+.work-hero {
+    padding: 4.25rem 0;
+    background-image: linear-gradient(120deg, #DEF5E5 0%, #FFFFFF 40%, #FFE8D9 100%);
 
+    .title-section {
+        margin-bottom: 0rem;
+
+
+        
+    }
+    .line2{
+        height: 3rem;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .title-section.scroll{
+            display: flex;
+            flex-direction: column;
+            gap: 0rem;
+            transform: translateY(33%);
+            transition: all 0.5s ease-in-out;
+
+            &.top{transform: translateY(33%);}
+            &.center{transform: translateY(0%);}
+            &.bottom{transform: translateY(-33%);}
+        }
+    }
+}
 
 
 .work-tudonghoa {
@@ -87,8 +116,4 @@
             pointer-events: all;
         }
     }
-
-
-
-
 }
