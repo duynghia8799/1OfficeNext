@@ -1,0 +1,418 @@
+//default
+.animation-tabs {
+    height: fit-content;
+    padding: 10px;
+    width: fit-content;
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 0.25rem;
+    .card {
+        height: 2.75rem;
+        width: auto;
+        border-radius: 0.25rem;
+        position: absolute;
+        border: 0;
+        padding: 0;
+        margin: 0;
+        background-color: #FFD732;
+        z-index: 1;
+        transition: all 0.3s ease;
+    }
+
+        .items-container {
+            height: fit-content;
+            width: fit-content;
+            display: flex;
+            background-color: transparent;
+            z-index: 2;
+            border-bottom: none;
+
+            .item {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 0.5rem;
+                height: 2.75rem;
+                width: max-content;
+                padding: 0 1rem;
+                background-color: transparent;
+            }
+        }
+
+}
+// bọc trong class riêng đi
+// .tab-content {
+//     margin-top: 1rem;
+//     height: 200px;
+//     width: 800px;
+//     position: relative;
+//     .tab-pane {
+//         height: 100%;
+//         width: 100%;
+//         box-sizing: border-box;
+//         padding: 1rem;
+//         opacity: 0;
+//         pointer-events: none;
+//         display: flex;
+//         justify-content: start;
+//         align-items: start;
+//         background-color: white;
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+
+//         &.active {
+//             opacity: 1;
+//             pointer-events: auto;
+//         }
+//     }
+// }
+
+
+
+
+//tangtoc
+.ai-agents-tangtoc {
+    padding: 4.25rem 0;
+    background-color: #F6F5F6;
+    height: fit-content;
+
+    
+    .tangtoc-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: fit-content;
+
+        .title-section {
+            width: 60rem;
+        }
+        
+        .animation-tabs {
+            background-color: transparent;
+            width: fit-content;
+            height: fit-content;
+            padding: 0;
+            border-bottom: 1px solid #D1D1D1;
+            border-radius: 0;
+
+            .item {
+                height: 2.625rem;
+                align-items: start;
+                color: #676D78;
+            }
+
+            .card {
+                height: 3px;
+                background-color: black;
+                bottom: -2px;
+            }
+        }
+
+        .tab-content {
+            width: 100%;
+            height: 34.25rem !important;
+            padding: 2.25rem 0;
+            overflow: hidden;
+
+            .tab-pane {
+                width: 100%;
+                height: 100%;
+                background-color: transparent;
+                padding: 2.25rem 2rem 2.25rem 0;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                bottom: 0;
+                transform: translateY(100%);
+                transition: all 0.8s ease;
+
+                &.up {
+                    transform: translateY(0);
+                }
+
+                .demo-img {
+                    background-color: transparent;
+                    width: auto;
+                    height: auto;
+                    border-radius: 0.5rem;
+                    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
+                    margin-left: 2rem;
+                }
+
+                .content {
+                    height: fit-content;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    h2 {
+                        width: 85%;
+                        font-size: 1.75rem;
+                        line-height: 2.5rem;
+                        font-weight: 600;
+                        margin-bottom: 2rem;
+                    }
+
+                    ul {
+                        list-style: none;
+                        padding-left: 0;
+
+                        li {
+                            margin-bottom: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//tichhop
+.ai-agents-tichhop {
+    background-color: white;
+    width: 100%;
+}
+
+.tichhop-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+
+    .title-section {
+        width: 60rem;
+        margin: 5rem 0 3rem 0;
+    }
+
+    .animation-tabs {
+        width: fit-content;
+        margin-bottom: 2rem;
+
+        .card {
+            background-image: linear-gradient(to top, #292D32 0%, #412066 100%);
+            border-radius: 0.5rem;
+            height: 3.375rem;
+        }
+
+        .items-container {
+            gap: 0.5rem;
+
+            .item {
+                height: 3.375rem;
+                border: 1px solid #E3E6E7;
+                border-radius: 0.75rem;
+                box-sizing: border-box;
+                transition: all 0.5s ease;
+                gap: 0.5rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0 1.25rem;
+
+
+                &.active {
+                    border: 0;
+                    color: white;
+                    img {
+                        filter: brightness(0) invert(1);
+                        transition: all 0.5s ease;
+                    }
+                }
+            }
+        }
+    }
+        .tab-content {
+            width: 100%;
+            height: auto;
+            max-height: 45.85rem;
+            overflow: hidden;
+            margin-bottom: 5rem;
+
+            .tab-pane {
+                width: 100%;
+                height: 0;
+                opacity: 0;
+                position: relative;
+                padding: 0;
+                margin-bottom: 0;
+                overflow: hidden;
+                display: flex; /* Restore flex layout */
+                align-items: center;
+
+                transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out, margin-bottom 0.5s ease-in-out;
+                will-change: height, opacity, margin-bottom;
+
+                &.active {
+                    height: 32.75rem; /* Exact height transition */
+                    margin-bottom: 1rem;
+                    opacity: 1;
+                }
+
+                .background {
+                    width: 100%;
+                    height: 100%;
+                    padding: 0rem;
+                    box-sizing: border-box;
+                    display: flex;
+                    align-items: center;
+
+                    &.purple { background-color: #F6F3FF; }
+                    &.green { background-color: #EDFBF4; }
+                    &.yellow { background-color: #FFF8EB; }
+                    &.blue { background-color: #EFF5FF; }
+                    &.red { background-color: #FEEEEE; }
+                }
+
+                .content {
+                    width: 45%;
+                    height: fit-content;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    padding-left: 2rem;
+                    
+                    h2 {
+                        width: 100%;
+                        font-size: 1.75rem;
+                        line-height: 2.5rem;
+                        font-weight: 600;
+                        margin-bottom: 2rem;
+                    }
+
+                    ul {
+                        list-style: none;
+                        padding-left: 0;
+                        li {
+                            width: 95%;
+                            margin-bottom: 0.5rem;
+                            display: flex;
+                            align-items: start;
+                            gap: 0.5rem;
+                            p { text-align: justify; }
+                        }
+                    }
+                }
+
+                .demo_image {
+                    width: 55%;
+                    height: auto;
+                }
+            }
+        }
+}
+
+//work-dieuphoi
+
+.work-dieuphoi {
+    padding: 4.25rem 0;
+    background-color: #ffffff;
+    background-image: radial-gradient(circle at 50% 0%, #E8F0FF 0%, #ffffff 60%);
+
+    .col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .animation-tabs{
+        background-color: transparent;
+        .card {
+            background-color: transparent;
+        }
+
+        .items-container {
+            background-color: transparent;
+            gap: 0.75rem;
+
+            .item {
+                background-color: #ffffff;
+                border-radius:  100rem ;
+                height: 2.75rem;
+                padding: 0 1.5rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #000000;
+                transition: background-color 0.5s ease, color 0.5s ease;
+                box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+
+                
+                @keyframes fillbackground {
+                    0% { background-size: 0% 100%; }
+                    100% { background-size: 100% 100%; }
+                }
+                
+                background-image: linear-gradient(to right, #11426d, #385b7a);
+                background-repeat: no-repeat;
+                background-position: left center;
+                background-size: 0% 100%;
+
+                &.active {
+                    background-color: #003563;
+                    color: #ffffff;
+                    animation: fillbackground 6s linear forwards; 
+                }
+                
+            }
+        }
+    }
+    .tab-content{
+        width: 100%;
+        height: 28rem;
+        overflow: hidden;
+
+        .tab-pane{
+            background-color: transparent;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transform: translateY(100%);
+            transition: all 0.5s ease;
+            opacity: 0;
+
+            &.up {
+                transform: translateY(0);
+            }
+
+            &.active {
+                opacity: 1;
+            }
+            ul{
+                display: flex;
+                flex-direction: column;
+                gap: 1.75rem;
+                li{             
+                    display: flex;
+                    justify-content: start;
+                    align-items: start;
+                    gap: 0.75rem;
+                    i{
+                        
+                        font-size: 1rem;
+                        display: flex;
+                        align-items: center;
+                    }
+                    p{
+                        color: #676D78;
+                        margin: 0;
+                        font-size: 1rem;
+                        line-height: 1.5rem;
+                        margin: -0.25rem 0 -0.25rem 0 ; 
+                    }
+                }
+            }
+        }   
+    }
+}
+ 
+
+

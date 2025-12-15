@@ -42,8 +42,8 @@ add_action('wp_default_scripts', function ($scripts) {
 add_action('after_setup_theme', function () {
     register_nav_menus(array(
         'navbar_desktop' => esc_html__('Menu Header'),
-        'footer_desktop'  => esc_html__('Menu Footer'),
-        'footer_desktop_2'  => esc_html__('Menu Footer 2'),
+        'footer_desktop' => esc_html__('Menu Footer'),
+        'footer_desktop_2' => esc_html__('Menu Footer 2'),
     ));
 
     add_theme_support('html5', array(
@@ -53,22 +53,20 @@ add_action('after_setup_theme', function () {
     ));
 });
 
-
 add_action('wp_enqueue_scripts', function () {
-    $ver = '1.0';
+    $ver = '1.1';
     wp_enqueue_style('theme-main-style', get_stylesheet_uri(), array(), $ver);
     wp_enqueue_style('bootstrap-css', get_template_directory_uri() . '/assets/libs/bootstrap/css/bootstrap.min.css', array(), '5.3.8');
     wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/assets/libs/bootstrap/js/bootstrap.bundle.min.js', array('jquery'), '5.3.8', true);
     wp_enqueue_script('nav-js', get_stylesheet_directory_uri() . '/js/nav.js', array('jquery'), '1.0.0', true);
+    wp_enqueue_script('tabs-animation', get_stylesheet_directory_uri() . '/js/tabs.js', array('jquery'), '1.0.0', true);
+    wp_enqueue_script('scroll-checking', get_stylesheet_directory_uri() . '/js/scroll_checking.js', array('jquery'), '1.0.0', true);
 
     wp_dequeue_style('wp-block-library');
     wp_dequeue_style('wp-block-library-theme');
     wp_dequeue_style('global-styles');
     wp_dequeue_style('classic-theme-styles');
 });
-
-// require_once get_template_directory() . '/template-parts/header/sub_menu_description.php';
-
 
 add_filter('walker_nav_menu_start_el', function ($itemOutput, $item, $depth, $args) {
     if (!empty($item->description)) {

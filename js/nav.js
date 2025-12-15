@@ -56,6 +56,16 @@
                 $navActions.removeClass('active');
             }
         });
+
+        $('.chatbot_btn').click(function () {
+            $('.chatbot_content').toggleClass('active')
+            $('.chatbot_btn').toggleClass('active')
+            $('.chatbot_content h2, .chatbot_content .slogan, .chatbot_options, .logo_1office_chatbot').toggleClass('active')
+            $('.chatbot_chatbox').removeClass('active')
+        })
+        $('.chatbot_options_chat').click(function () {
+            $('.chatbot_chatbox').toggleClass('active')
+        })
     });
 })(jQuery);
 

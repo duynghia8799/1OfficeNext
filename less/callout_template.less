@@ -1,0 +1,92 @@
+//title section h1 forn sub title section p forn
+
+.title-section {
+    text-align: center;
+    padding: 0;
+    font-size: 2.25rem;
+    line-height: 3rem;
+    font-weight: 600;
+    margin: -0.375rem 0 3.375rem 0;
+}
+
+.sub-title-section {
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.875rem;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    color: #676D78;
+}
+
+//xuống dòng = span
+.br-line {
+    display: block;
+}
+
+//dk-chat-ai
+.dk-chat-ai {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-hover-bg-LTR {
+    background-color: white;
+    height: 2.75rem;
+    width: auto;
+    padding: 0 1rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    div {
+        background-color: #F0500A;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        transition: all 0.3s ease;
+        z-index: 1;
+    }
+
+    p {
+        position: relative;
+        width: auto;
+        height: 100%;
+        font-size: 1rem !important;
+        font-weight: 600;
+        color: black !important;
+        margin: 0;
+        z-index: 2;
+        transition: all 0.3s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &:hover div {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &:hover p {
+        color: white !important;
+    }
+
+    &.orange {
+        background-color: #F0500A !important;
+
+        div {
+            background-color: #C54208 !important;
+        }
+
+        p {
+            color: white !important;
+        }
+    }
+}

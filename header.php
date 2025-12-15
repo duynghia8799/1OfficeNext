@@ -17,7 +17,7 @@
 
 <body <?= body_class(); ?>>
     <header>
-        <div class="container">
+        <div class="container header_container">
             <div class="row">
                 <div class="col-lg-2 d-flex align-items-center">
                     <a href="<?= home_url(); ?>" class="logo">
@@ -28,9 +28,9 @@
                     <?php
                     wp_nav_menu(array(
                         'theme_location' => 'navbar_desktop',
-                        'container'      => 'nav',
+                        'container' => 'nav',
                         'container_class' => 'main-nav',
-                        'menu_class'     => 'nav-menu',
+                        'menu_class' => 'nav-menu',
                     ));
                     ?>
                 </div>
@@ -46,11 +46,13 @@
                             <span class="language">VIE</span>
                             <div class="language_box">
                                 <span class="item active">
-                                    <img src="<?= get_template_directory_uri() ?>/assets/images/flags/Vietnam.svg" alt="icon">
+                                    <img src="<?= get_template_directory_uri() ?>/assets/images/flags/Vietnam.svg"
+                                        alt="icon">
                                     <span class="label">Tiếng Việt</span>
                                 </span>
                                 <span class="item">
-                                    <img src="<?= get_template_directory_uri() ?>/assets/images/flags/USA.svg" alt="icon">
+                                    <img src="<?= get_template_directory_uri() ?>/assets/images/flags/USA.svg"
+                                        alt="icon">
                                     <span class="label">English</span>
                                 </span>
                             </div>
