@@ -41,25 +41,21 @@
                 return false;
             }
 
-                $navActions.not(this).removeClass('active');
+            $navActions.not(this).removeClass('active');
             $navMenus.removeClass('active');
             $megaMenu.removeClass('active');
             $(this).toggleClass('active');
         });
 
-        // $(this).click(function (e) {
-        //     const $target = $(e.target);
-        //     if (
-        //         $target.closest('nav').length === 0 &&
-        //         $target.closest('.mega_menu').length === 0 &&
-        //         $target.closest('header .search_btn').length === 0 &&
-        //         $target.closest('header .language_btn').length === 0
-        //     ) {
-        //         $navMenus.removeClass('active');
-        //         $megaMenu.removeClass('active');
-        //         $navActions.removeClass('active');
-        //     }
-        // });
+        $(this).click(function (e) {
+            const $target = $(e.target);
+
+            if ($target.closest('header').length === 0) {
+                $navMenus.removeClass('active');
+                $megaMenu.removeClass('active');
+                $navActions.removeClass('active');
+            }
+        });
     });
 })(jQuery);
 
