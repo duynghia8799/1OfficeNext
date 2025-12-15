@@ -1,0 +1,7 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="400" height="300" fill="#F0F9FF"/>
+<circle cx="200" cy="150" r="50" fill="#BAE6FD"/>
+<path d="M180 140H190M210 140H220" stroke="#0369A1" stroke-width="4" stroke-linecap="round"/>
+<path d="M180 170Q200 190 220 170" stroke="#0369A1" stroke-width="4" stroke-linecap="round"/>
+<text x="50%" y="90%" dominant-baseline="middle" text-anchor="middle" fill="#0369A1" font-family="sans-serif" font-size="20">Happy Worker</text>
+</svg>

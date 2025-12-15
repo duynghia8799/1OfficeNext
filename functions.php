@@ -30,6 +30,7 @@ add_action('wp_enqueue_scripts', function () {
 
     wp_enqueue_script('tabs-animation', get_stylesheet_directory_uri() . '/js/tabs.js', array('jquery'), '1.0.0', true);
     wp_enqueue_script('scroll-checking', get_stylesheet_directory_uri() . '/js/scroll_checking.js', array('jquery'), '1.0.0', true);
+    wp_enqueue_script('timer-animations', get_stylesheet_directory_uri() . '/js/timer_animations.js', array('jquery'), '1.0.0', true);
 });
 
 require_once get_template_directory() . '/template_parts/header/sub_menu_description.php';

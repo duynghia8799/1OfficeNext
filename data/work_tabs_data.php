@@ -5,8 +5,8 @@ return [
         'name' => 'dieuphoi',
         'tabs' => [
             [
-                'title' => '1AI Meeting',
-                'icon' => '/assets/images/icons/ai_meeting_icon.svg',
+                'title' => 'Quản lý đa chiều',
+                'icon' => '',
                 'content_panel' =>
                 '
                 <div class="content" style="width:26rem">                        
@@ -21,8 +21,8 @@ return [
                 ',
             ],
             [
-                'title' => '1AI Monitor',
-                'icon' => '/assets/images/icons/ai_monitor_icon.svg',
+                'title' => 'Quản lý Workload',
+                'icon' => '',
                 'content_panel' =>
                 '
                 <div class="content" style="width:26rem">                        
@@ -36,8 +36,8 @@ return [
                 ',
             ],
             [
-                'title' => '1AI Dashboard',
-                'icon' => '/assets/images/icons/ai_dashboard_icon.svg',
+                'title' => 'Quản lý vật tư',
+                'icon' => '',
                 'content_panel' =>
                 '
                 <div class="content" style="width:26rem">                        
@@ -52,8 +52,8 @@ return [
                 ',
             ],
             [
-                'title'         => '1AI Assistant',
-                'icon'          => '/assets/images/icons/ai_assistant_icon.svg',
+                'title'         => 'Quản lý tài chính',
+                'icon'          => '',
                 'content_panel' =>
                 '
                 <div class="content" style="width:26rem">                        
@@ -67,6 +67,42 @@ return [
                 ',
             ],
         ]
-
     ],
+    'lien_ket_data' => [
+        'name' => 'lienket',
+        'tabs' => [
+            [
+                'title' => 'Đo lường hiệu suất KPI',
+                'icon' => '',
+                'content_panel' =>
+                '
+                <img class="demo-img" src="' .  get_template_directory_uri() . '/assets/images/demo/work_lienket1.svg" alt="demo">`
+                <div class="content">
+                    <h2>Tự động lấy dữ liệu để đánh giá KPI</h2>                  
+                    <ul>
+                        <li><img src="' . get_template_directory_uri() . '/assets/images/Vchecked.svg" alt="icon"><p>Mỗi nhiệm vụ, dự án đều có thể liên kết với KPI cá nhân & phòng ban</p></li>
+                        <li><img src="' . get_template_directory_uri() . '/assets/images/Vchecked.svg" alt="icon"><p>Hệ thống tự động cập nhật vào KPI nhân viên mà không cần nhập tay</p></li>
+                        <li><img src="' . get_template_directory_uri() . '/assets/images/Vchecked.svg" alt="icon"><p>Đánh giá chính xác hiệu suất làm việc dựa trên dữ liệu thực tế</p></li>
+                    </ul>
+                </div>
+                ',
+            ],
+            [
+                'title' => 'Quản trị mục tiêu OKR',
+                'icon' => '',
+                'content_panel' =>
+                '
+                <img class="demo-img" src="' .  get_template_directory_uri() . '/assets/images/demo/work_lienket2.svg" alt="demo">
+                <div class="content">                        
+                    <h2>Hỗ trợ tracking OKR tự động</h2>
+                    <ul>
+                        <li><img src="' . get_template_directory_uri() . '/assets/images/Vchecked.svg" alt="icon"><p>Tự động cập nhật tiến độ OKR nhân viên khi công việc hoàn thành</p></li>
+                        <li><img src="' . get_template_directory_uri() . '/assets/images/Vchecked.svg" alt="icon"><p>Giúp theo dõi mức độ hoàn thành mục tiêu một cách minh bạch</p></li>
+                        <li><img src="' . get_template_directory_uri() . '/assets/images/Vchecked.svg" alt="icon"><p>Đảm bảo dữ liệu OKR cá nhân, phòng ban, công ty luôn đồng bộ</p></li>
+                    </ul>
+                </div>
+                ',
+            ],
+        ]
+    ]
 ];

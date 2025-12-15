@@ -30,63 +30,63 @@
     height: fit-content;
     display: flex;
     gap: 1rem;
-}
-
-.btn-hover-bg-LTR {
-    background-color: white;
-    height: 2.75rem;
-    width: auto;
-    padding: 0 1rem;
-    position: relative;
-    display: flex;
-    justify-content: center;
-
-    div {
-        background-color: #F0500A;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 0;
-        height: 100%;
-        transition: all 0.3s ease;
-        z-index: 1;
-    }
-
-    p {
-        position: relative;
+    .btn-hover-bg-LTR {
+        background-color: white;
+        height: 2.75rem;
         width: auto;
-        height: 100%;
-        font-size: 1rem !important;
-        font-weight: 600;
-        color: black !important;
-        margin: 0;
-        z-index: 2;
-        transition: all 0.3s ease;
+        padding: 0 1rem;
+        position: relative;
         display: flex;
         justify-content: center;
-        align-items: center;
-    }
-
-    &:hover div {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    &:hover p {
-        color: white !important;
-    }
-
-    &.orange {
-        background-color: #F0500A !important;
 
         div {
-            background-color: #C54208 !important;
+            background-color: #F0500A;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            transition: all 0.3s ease;
+            z-index: 1;
         }
 
         p {
-            color: white !important;
+            position: relative;
+            width: auto;
+            height: 100%;
+            font-size: 1rem ;
+            font-weight: 600;
+            color: black ;
+            margin: 0;
+            z-index: 2;
+            transition: all 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &:hover div {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &:hover p {
+            color: white ;
+        }
+
+        &.orange {
+            background-color: #F0500A ;
+
+            div {
+                background-color: #C54208 ;
+            }
+
+            p {
+                color: white ;
+            }
         }
     }
 }
+
