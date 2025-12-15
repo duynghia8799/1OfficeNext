@@ -78,7 +78,7 @@ return [
         'tabs' => [
             [
                 'title' => '1AI Talent',
-                'icon' => '',
+                'icon' => '/assets/images/icons/ai_agents_tichhop_tab1.svg',
                 'content_panel' =>
                 '
                     <div class="background purple">
@@ -112,7 +112,7 @@ return [
             ],
             [
                 'title' => '1AI Salary',
-                'icon' => '',
+                'icon' => '/assets/images/icons/ai_agents_tichhop_tab2.svg',
                 'content_panel' =>
                 '
                     <div class="background green">
@@ -146,7 +146,7 @@ return [
             ],
             [
                 'title' => '1AI Process',
-                'icon' => '',
+                'icon' => '/assets/images/icons/ai_agents_tichhop_tab3.svg',
                 'content_panel' =>
                 '
                     <div class="background yellow">
@@ -180,7 +180,7 @@ return [
             ],
             [
                 'title' => '1AI KPI',
-                'icon' => '',
+                'icon' => '/assets/images/icons/ai_agents_tichhop_tab4.svg',
                 'content_panel' =>
                 '
                     <div class="background blue">
@@ -210,7 +210,7 @@ return [
             ],
             [
                 'title' => '1AI Timekeeper',
-                'icon' => '',
+                'icon' => '/assets/images/icons/ai_agents_tichhop_tab5.svg',
                 'content_panel' =>
                 '
                     <div class="background red">
