@@ -1,57 +1,60 @@
 (function ($) {
     $(document).ready(function () {
-        function mega_menu_action($targetBox) {
-            if ($targetBox.hasClass('mega_menu') && $targetBox.hasClass('active')) {
-                $('.mega_menu_cat button.nav-link:first').addClass('active')
-                $('.mega_menu_cat button.nav-link:first').parent().addClass('active')
-                $('.mega_menu_content .tab-content .container_items:first ').addClass('active')
-            } else {
-                $('.mega_menu_cat button.nav-link').removeClass('active')
-                $('.mega_menu_cat .mega_menu_cat_btn').removeClass('active')
-                $('.mega_menu_content .tab-content .container_items ').removeClass('active')
+        const $navMenus = $('nav .nav-menu > li.menu-item');
+        const $megaMenu = $('.mega-menu');
+        const $navActions = $('header .search_btn, header .language_btn');
+
+        $navMenus.each(function (index) {
+            const item = this;
+            if (index === 0) {
+                $(this).addClass('menu-item-has-children') // Để hiện arrow down như những item có submenu khác
             }
-        }
 
-        const $allBoxes = $('.mega_menu, .menu-item-has-children ul , .search_box, .language_box');
-        $('.nav-menu a').each(function () {
-            $(this).click(function (event) {
+            $(item).click(function (e) {
+                const $target = $(e.target);
 
-                if ($(this).parent().hasClass('tinhnang')) {
-                    event.preventDefault()
-                    $targetBox = $('.mega_menu')
-                } else if ($(this).parent().hasClass('menu-item-has-children')) {
-                    event.preventDefault()
-                    console.log('other click')
-                    $targetBox = $(this).siblings('ul');
+                if ($target.closest('.sub-menu').length > 0) {
+                    return true;
                 } else {
-                    return
+                    if (index === 0) {
+                        $megaMenu.toggleClass('active');
+                        $navActions.removeClass('active');
+                    } else {
+                        if ($(this).hasClass('menu-item-has-children')) {
+                            $megaMenu.removeClass('active');
+                            $navActions.removeClass('active');
+                        }
+                    }
+
+                    $navMenus.not(this).removeClass('active');
+                    $(this).toggleClass('active');
+
+                    e.preventDefault();
+                    e.stopPropagation();
                 }
-                $targetBox.toggleClass('active');
-                $allBoxes.not($targetBox).removeClass('active');
-                mega_menu_action($targetBox)
-            })
-        })
+            });
+        });
 
-        $('.mega_menu_cat_btn button.nav-link').click(function () {
-            $('.mega_menu_cat_btn').removeClass('active')
-            if ($(this).hasClass('active')) {
-                $(this).parent().addClass('active')
+        $navActions.click(function (e) {
+            const $target = $(e.target);
+            if ($target.closest('.form-search').length > 0) {
+                return false;
             }
-        })
 
+            $navActions.not(this).removeClass('active');
+            $navMenus.removeClass('active');
+            $megaMenu.removeClass('active');
+            $(this).toggleClass('active');
+        });
 
-        $('.search_btn, .language_btn').click(function (event) {
-            event.preventDefault()
-            if ($(this).hasClass('search_btn')) {
-                $targetBox = $('.search_box');
-            } else if ($(this).hasClass('language_btn')) {
-                $targetBox = $('.language_box');
-            } else {
-                return;
+        $(this).click(function (e) {
+            const $target = $(e.target);
+
+            if ($target.closest('header').length === 0) {
+                $navMenus.removeClass('active');
+                $megaMenu.removeClass('active');
+                $navActions.removeClass('active');
             }
-            $targetBox.toggleClass('active');
-            $allBoxes.not($targetBox).removeClass('active');
-            mega_menu_action($targetBox)
         });
 
         $('.chatbot_btn').click(function () {
@@ -63,7 +66,6 @@
         $('.chatbot_options_chat').click(function () {
             $('.chatbot_chatbox').toggleClass('active')
         })
-
     });
 })(jQuery);
 

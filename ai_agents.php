@@ -31,7 +31,7 @@ if ($svg_hesinhthai === false) {
                 </h1>
                 <p>Làm việc thông minh hơn với trợ lý AI dành cho doanh nghiệp của bạn.
                     Đơn giản hoá mọi tác vụ từ truy xuất, phân tích dữ liệu đến ra quyết định</p>
-                <?php get_template_part('template_parts/callout_parts/dk_chat_ai', 'template'); ?>
+                <?php get_template_part('template-parts/callout_parts/dk_chat_ai', 'template'); ?>
             </div>
             <div class="img-container">
                 <?= $svg_hero ?>
@@ -57,7 +57,7 @@ if ($svg_hesinhthai === false) {
             <div class="col tangtoc-col">
                 <h1 class="title-section">Ra quyết định nhanh hơn, chính xác hơn, <span class="br-line">tăng tốc độ xử lý và
                     tối ưu hiệu quả công việc</span></h1>
-                <?php get_template_part('template_parts/tabs/animation_tab', 'template', $tab1); ?>
+                <?php get_template_part('template-parts/tabs/animation_tab', 'template', $tab1); ?>
             </div>
         </div>
     </div>
@@ -69,7 +69,7 @@ if ($svg_hesinhthai === false) {
             <div class="col tichhop-col">
                 <h1 class="title-section">Tích hợp AI vào quy trình làm việc. Giảm tải <span class="br-line">tác vụ lặp và
                         kiểm soát toàn diện hiệu quả đầu ra</span></h1>
-                <?php get_template_part('template_parts/tabs/animation_tab', 'template', $tab2) ?>
+                <?php get_template_part('template-parts/tabs/animation_tab', 'template', $tab2) ?>
             </div>
         </div>
     </div>
@@ -158,7 +158,7 @@ if ($svg_hesinhthai === false) {
             <div class="content">
                 <img class="ai-light-bg" src="<?= get_template_directory_uri() . '/assets/images/ai_light_bg.svg' ?>" alt="">
                 <h1 class="title-section">Bứt tốc trong kỷ nguyên AI. Khai thác tối đa <span class="br-line">sức mạnh của tự động hoá</span></h1>
-                <?php get_template_part('template_parts/callout_parts/dk_chat_ai', 'template') ?>
+                <?php get_template_part('template-parts/callout_parts/dk_chat_ai', 'template') ?>
             </div>
         </div>
     </div>

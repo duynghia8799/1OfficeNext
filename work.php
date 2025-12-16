@@ -32,7 +32,7 @@ $tab2 = isset($page_data['lien_ket_data']) ? $page_data['lien_ket_data'] : [];
                     <span><img src="<?= get_template_directory_uri() . '/assets/images/icons/ai_agents_li_icon.svg' ?>" alt="">Cộng tác nhóm</span>
                     <span><img src="<?= get_template_directory_uri() . '/assets/images/icons/ai_agents_li_icon.svg' ?>" alt="">Giao việc hiệu quả</span>
                 </p>
-                <?php get_template_part('template_parts/callout_parts/dk_chat_ai') ?>
+                <?php get_template_part('template-parts/callout_parts/dk_chat_ai') ?>
                 <img class="img-fluid" src="<?= get_template_directory_uri() . '/assets/images/demo/work_hero.svg' ?>" alt="">
             </div>
         </div>
@@ -112,7 +112,7 @@ $tab2 = isset($page_data['lien_ket_data']) ? $page_data['lien_ket_data'] : [];
         <div class="row">
             <div class="col">
                 <h1 class="title-section">Liên kết với KPI và OKR giúp đo lường hiệu suất tự động</h1>
-                <?php get_template_part('template_parts/tabs/animation_tab', 'template', $tab2); ?>
+                <?php get_template_part('template-parts/tabs/animation_tab', 'template', $tab2); ?>
             </div>
         </div>
     </div>
@@ -123,7 +123,7 @@ $tab2 = isset($page_data['lien_ket_data']) ? $page_data['lien_ket_data'] : [];
         <div class="row">
             <div class="col">
                 <h1 class="title-section">Điều phối dự án và kiểm soát công việc hiệu quả</h1>
-                <?php get_template_part('template_parts/tabs/animation_tab', 'template', $tab1); ?>
+                <?php get_template_part('template-parts/tabs/animation_tab', 'template', $tab1); ?>
             </div>
         </div>
     </div>
