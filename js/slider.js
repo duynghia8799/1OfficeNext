@@ -51,6 +51,5 @@ jQuery(document).ready(function ($) {
             $container.hover(stopAutoSlide, startAutoSlide);
         });
     }
-
     initCustomSlider();
 });
