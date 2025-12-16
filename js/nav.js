@@ -23,14 +23,14 @@
                         if ($(this).hasClass('menu-item-has-children')) {
                             $megaMenu.removeClass('active');
                             $navActions.removeClass('active');
+
+                            e.preventDefault();
+                            e.stopPropagation();
                         }
                     }
 
                     $navMenus.not(this).removeClass('active');
                     $(this).toggleClass('active');
-
-                    e.preventDefault();
-                    e.stopPropagation();
                 }
             });
         });
