@@ -43,33 +43,36 @@
         }
 
 }
-// bọc trong class riêng đi
-// .tab-content {
-//     margin-top: 1rem;
-//     height: 200px;
-//     width: 800px;
-//     position: relative;
-//     .tab-pane {
-//         height: 100%;
-//         width: 100%;
-//         box-sizing: border-box;
-//         padding: 1rem;
-//         opacity: 0;
-//         pointer-events: none;
-//         display: flex;
-//         justify-content: start;
-//         align-items: start;
-//         background-color: white;
-//         position: absolute;
-//         top: 0;
-//         left: 0;
+.animation-tabs-content {
+    width: fit-content;
+    height: fit-content;
+    .tab-content {
+        margin-top: 1rem;
+        height: 200px;
+        width: 800px;
+        position: relative;
+        .tab-pane {
+            height: 100%;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 1rem;
+            opacity: 0;
+            pointer-events: none;
+            display: flex;
+            justify-content: start;
+            align-items: start;
+            background-color: white;
+            position: absolute;
+            top: 0;
+            left: 0;
 
-//         &.active {
-//             opacity: 1;
-//             pointer-events: auto;
-//         }
-//     }
-// }
+            &.active {
+                opacity: 1;
+                pointer-events: auto;
+            }
+        }
+    }
+}
 
 
 
@@ -111,12 +114,17 @@
                 bottom: -2px;
             }
         }
-
-        .tab-content {
+        .animation-tabs-content {
+            height: 34.25rem;
             width: 100%;
-            height: 34.25rem !important;
+        }
+        .tab-content {
+            width: 100% ;
+            height: 34.25rem ;
             padding: 2.25rem 0;
             overflow: hidden;
+            background-color: transparent;
+
 
             .tab-pane {
                 width: 100%;
@@ -132,6 +140,7 @@
 
                 &.up {
                     transform: translateY(0);
+                    background-color: transparent;
                 }
 
                 .demo-img {
@@ -362,9 +371,13 @@
             }
         }
     }
-    .tab-content{
+    .animation-tabs-content{
         width: 100%;
         height: 28rem;
+    }
+    .tab-content{
+        width: 100%;
+        height: 100%;
         overflow: hidden;
 
         .tab-pane{
@@ -413,6 +426,138 @@
         }   
     }
 }
- 
+
+.work-lienket{
+    padding: 4.25rem 0;
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    background-image: url('assets/images/work_dashboard_bg.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    .col{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .title-section {
+            margin-bottom: 3.75rem;
+            text-align: center;
+            color: #ffffff;
+        }
+        .animation-tabs {
+            border-radius: 999rem;
+            padding: 0.25rem;
+            background-color: rgba(255, 255, 255, 10%);
+            border: 1px solid rgba(255, 255, 255, 16%);
+            margin-bottom: 3.75rem;
+
+            .card{
+                border-radius: 999rem;
+            }
+            .items-container{
+                .item{
+                    color: #ffffff;
+                    
+                    &.active{
+                        color: #000000;
+                    }
+                }
+            }
+        }
+        .animation-tabs-content{
+            width: 100%;
+            height: 25.75rem;
+
+            .tab-content{
+                width: 100%;
+                height: 100%;
+                
+                .tab-pane{
+                    background-color: transparent;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap:3.25rem;
+                    transition: all 0.5s ease;
+                    
+                    .demo-container{
+                        width: 55.5%;
+                        height: 100%;
+                        max-width: 55.55%;
+                        max-height: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        img{
+                            width: 0;
+                            height: 0;
+                            transition: all 0.5s ease;                   
+                        }
+                    }
+
+                    .content{
+                        flex-grow: 1;
+                        height: auto;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: start;
+                        gap: 1rem;
+                        opacity: 0;
+                        transition: all 0.5s ease;
+                        h2{
+                            font-size: 1.75rem;
+                            line-height: 1.75rem;
+                            font-weight: 600;
+                            margin-bottom: 2rem;
+                            color: #fff;
+                        }
+                        ul{
+                            margin: 0;
+                            font-size: 1rem;
+                            line-height: 1.5rem;
+                            padding: 0;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 2rem;
+
+                            li{
+                                display: flex;
+                                align-items: start;
+                                gap: 0.5rem;
+                                p{
+                                    font-size: 1rem;
+                                    line-height: 1rem;
+                                    margin: 0;
+                                    color: #fff;
+                                }
+                                img{
+                                    width: 1rem;
+                                    height: 1rem;
+                                }
+                            }
+                        }
+                    }
+
+                    &.active{                        
+                        img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                        .content{
+                            opacity: 1;
+                            pointer-events: auto;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
 
 

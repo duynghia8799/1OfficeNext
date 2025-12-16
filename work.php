@@ -27,10 +27,10 @@ $tab2 = isset($page_data['lien_ket_data']) ? $page_data['lien_ket_data'] : [];
                     </h1>
                 </div>
                 <p class="sub-title-section">
-                    <span><img src="<?= get_template_directory_uri() . '/assets/images/icons/ai_agents_li_icon.svg' ?>" alt="">Lập kế hoạch dự án</span>
-                    <span><img src="<?= get_template_directory_uri() . '/assets/images/icons/ai_agents_li_icon.svg' ?>" alt="">Theo dõi công việc</span>
-                    <span><img src="<?= get_template_directory_uri() . '/assets/images/icons/ai_agents_li_icon.svg' ?>" alt="">Cộng tác nhóm</span>
-                    <span><img src="<?= get_template_directory_uri() . '/assets/images/icons/ai_agents_li_icon.svg' ?>" alt="">Giao việc hiệu quả</span>
+                    <span><img src="<?= get_template_directory_uri() . '/assets/images/icons/V_circle_original.svg' ?>" alt="">Lập kế hoạch dự án</span>
+                    <span><img src="<?= get_template_directory_uri() . '/assets/images/icons/V_circle_original.svg' ?>" alt="">Theo dõi công việc</span>
+                    <span><img src="<?= get_template_directory_uri() . '/assets/images/icons/V_circle_original.svg' ?>" alt="">Cộng tác nhóm</span>
+                    <span><img src="<?= get_template_directory_uri() . '/assets/images/icons/V_circle_original.svg' ?>" alt="">Giao việc hiệu quả</span>
                 </p>
                 <?php get_template_part('template-parts/callout_parts/dk_chat_ai') ?>
                 <img class="img-fluid" src="<?= get_template_directory_uri() . '/assets/images/demo/work_hero.svg' ?>" alt="">
@@ -107,23 +107,23 @@ $tab2 = isset($page_data['lien_ket_data']) ? $page_data['lien_ket_data'] : [];
     </div>
 </section>
 
-<section class="work-lienket">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h1 class="title-section">Liên kết với KPI và OKR giúp đo lường hiệu suất tự động</h1>
-                <?php get_template_part('template-parts/tabs/animation_tab', 'template', $tab2); ?>
-            </div>
-        </div>
-    </div>
-</section>
-
 <section class="work-dieuphoi">
     <div class="container">
         <div class="row">
             <div class="col">
                 <h1 class="title-section">Điều phối dự án và kiểm soát công việc hiệu quả</h1>
                 <?php get_template_part('template-parts/tabs/animation_tab', 'template', $tab1); ?>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="work-lienket">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1 class="title-section">Liên kết với KPI và OKR giúp đo lường hiệu suất tự động</h1>
+                <?php get_template_part('template-parts/tabs/animation_tab', 'template', $tab2); ?>
             </div>
         </div>
     </div>
@@ -228,8 +228,6 @@ $tab2 = isset($page_data['lien_ket_data']) ? $page_data['lien_ket_data'] : [];
                         </p>
                     </div>
                 </div>
-
-                
             </div>
         </div>
     </div>
@@ -258,16 +256,19 @@ $tab2 = isset($page_data['lien_ket_data']) ? $page_data['lien_ket_data'] : [];
     </div>
 </section>
 
-<section class="work-tintuong">
+<?php get_template_part('template-parts/callout_parts/tintuong_slider'); ?>
+
+<section class="top-footer">
+    <img class="top-footer-bg" src="<?= get_template_directory_uri() . '/assets/images/ai_light_bg_blue.svg' ?>" alt="">
     <div class="container">
         <div class="row">
-            <div class="col">
-                <h1 class="title-section">Được tin tưởng và đánh giá cao bởi các<span class="br-line">doanh nghiệp hàng đầu</h1>
+            <div class="content">
+                <h1 class="title-section">Bứt tốc trong kỷ nguyên AI. Khai thác tối đa <span class="br-line">sức mạnh của tự động hoá</span></h1>
+                <?php get_template_part('template-parts/callout_parts/dk_chat_ai', 'template') ?>
             </div>
         </div>
     </div>
 </section>
 
-<div class="void-box" style="background-color: #666666; width: 100%; height: 100vh;"></div>
 
 <?php get_footer();

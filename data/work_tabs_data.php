@@ -76,7 +76,9 @@ return [
                 'icon' => '',
                 'content_panel' =>
                 '
-                <img class="demo-img" src="' .  get_template_directory_uri() . '/assets/images/demo/work_lienket1.svg" alt="demo">`
+                <div class="demo-container">
+                    <img class="demo-img" src="' .  get_template_directory_uri() . '/assets/images/demo/work_lienket1.svg" alt="demo">
+                </div>
                 <div class="content">
                     <h2>Tự động lấy dữ liệu để đánh giá KPI</h2>                  
                     <ul>
@@ -92,7 +94,9 @@ return [
                 'icon' => '',
                 'content_panel' =>
                 '
-                <img class="demo-img" src="' .  get_template_directory_uri() . '/assets/images/demo/work_lienket2.svg" alt="demo">
+                <div class="demo-container">
+                    <img class="demo-img" src="' .  get_template_directory_uri() . '/assets/images/demo/work_lienket2.svg" alt="demo">
+                </div>
                 <div class="content">                        
                     <h2>Hỗ trợ tracking OKR tự động</h2>
                     <ul>
