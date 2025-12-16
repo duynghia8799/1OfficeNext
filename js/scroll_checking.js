@@ -32,10 +32,14 @@
                 });
             }, observerOptions);
 
-            observerTitle.observe($('.work-tudonghoa .title-section')[0]);
-            $('.work-tudonghoa .content-container').each(function () {
-                observerContent.observe(this);
-            });
+            if ($('.work-tudonghoa .title-section').length) {
+                observerTitle.observe($('.work-tudonghoa .title-section')[0]);
+            }
+            if ($('.work-tudonghoa .content-container').length) { // Optional: Check for container existence too
+                $('.work-tudonghoa .content-container').each(function () {
+                    observerContent.observe(this);
+                });
+            }
         }
         scrollCheckingTudonghoa();
     });

@@ -82,30 +82,7 @@
         })
 
 
-        // Auto-switch dieuphoi
-        var $dieuphoiTabs = $('.dieuphoi.animation-tabs');
-        if ($dieuphoiTabs.length) {
-            var dieuphoiInterval;
-            var startDieuphoiAutoSwitch = function() {
-                clearInterval(dieuphoiInterval);
-                dieuphoiInterval = setInterval(function() {
-                    var $active = $dieuphoiTabs.find('.items-container .item.active');
-                    if (!$active.length) {
-                        $active = $dieuphoiTabs.find('.items-container .item').first();
-                    }
-                    var $next = $active.next('.item');
-                    if ($next.length === 0) {
-                        $next = $dieuphoiTabs.find('.items-container .item').first();
-                    }
-                    $next.trigger('click');
-                }, 6000);
-            };
 
-            startDieuphoiAutoSwitch();
-            $dieuphoiTabs.find('.items-container .item').on('click', function() {
-                startDieuphoiAutoSwitch();
-            });
-        }
 
     })
 })(jQuery);

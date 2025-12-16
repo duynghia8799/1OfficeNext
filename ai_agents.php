@@ -11,11 +11,11 @@ $page_data = file_exists($data_tabs_file_path) ? require $data_tabs_file_path : 
 $tab1 = isset($page_data['tang_toc_data']) ? $page_data['tang_toc_data'] : [];
 $tab2 = isset($page_data['tich_hop_data']) ? $page_data['tich_hop_data'] : [];
 
-$svg_hero = file_get_contents(get_template_directory_uri() . '/assets/images/ai_agents_hero.svg');
+$svg_hero = file_get_contents(get_template_directory() . '/assets/images/ai_agents_hero.svg');
 if ($svg_hero === false) {
     $svg_hero = "<p style='color: red;'>Lỗi: Không tìm thấy file SVG.</p>";
 }
-$svg_hesinhthai = file_get_contents(get_template_directory_uri() . '/assets/images/ai_agents_hesinhthai.svg');
+$svg_hesinhthai = file_get_contents(get_template_directory() . '/assets/images/ai_agents_hesinhthai.svg');
 if ($svg_hesinhthai === false) {
     $svg_hesinhthai = "<p style='color: red;'>Lỗi: Không tìm thấy file SVG.</p>";
 }
@@ -31,7 +31,7 @@ if ($svg_hesinhthai === false) {
                 </h1>
                 <p>Làm việc thông minh hơn với trợ lý AI dành cho doanh nghiệp của bạn.
                     Đơn giản hoá mọi tác vụ từ truy xuất, phân tích dữ liệu đến ra quyết định</p>
-                <?php get_template_part('template_parts/callout_parts/dk_chat_ai', 'template'); ?>
+                <?php get_template_part('template-parts/callout_parts/dk_chat_ai', 'template'); ?>
             </div>
             <div class="img-container">
                 <?= $svg_hero ?>
@@ -57,7 +57,7 @@ if ($svg_hesinhthai === false) {
             <div class="col tangtoc-col">
                 <h1 class="title-section">Ra quyết định nhanh hơn, chính xác hơn, <span class="br-line">tăng tốc độ xử lý và
                     tối ưu hiệu quả công việc</span></h1>
-                <?php get_template_part('template_parts/tabs/animation_tab', 'template', $tab1); ?>
+                <?php get_template_part('template-parts/tabs/animation_tab', 'template', $tab1); ?>
             </div>
         </div>
     </div>
@@ -69,7 +69,7 @@ if ($svg_hesinhthai === false) {
             <div class="col tichhop-col">
                 <h1 class="title-section">Tích hợp AI vào quy trình làm việc. Giảm tải <span class="br-line">tác vụ lặp và
                         kiểm soát toàn diện hiệu quả đầu ra</span></h1>
-                <?php get_template_part('template_parts/tabs/animation_tab', 'template', $tab2) ?>
+                <?php get_template_part('template-parts/tabs/animation_tab', 'template', $tab2) ?>
             </div>
         </div>
     </div>
@@ -151,14 +151,14 @@ if ($svg_hesinhthai === false) {
         </div>
     </div>
 </section>
-<section class="ai-agents-buttoc">
-    <img class="ai-agents-buttoc-bg" src="<?= get_template_directory_uri() . '/assets/images/ai_agents_buttoc_bg.svg' ?>" alt="">
+
+<section class="top-footer">
+    <img class="top-footer-bg" src="<?= get_template_directory_uri() . '/assets/images/ai_light_bg.svg' ?>" alt="">
     <div class="container">
         <div class="row">
             <div class="content">
-                <img class="ai-light-bg" src="<?= get_template_directory_uri() . '/assets/images/ai_light_bg.svg' ?>" alt="">
                 <h1 class="title-section">Bứt tốc trong kỷ nguyên AI. Khai thác tối đa <span class="br-line">sức mạnh của tự động hoá</span></h1>
-                <?php get_template_part('template_parts/callout_parts/dk_chat_ai', 'template') ?>
+                <?php get_template_part('template-parts/callout_parts/dk_chat_ai', 'template') ?>
             </div>
         </div>
     </div>

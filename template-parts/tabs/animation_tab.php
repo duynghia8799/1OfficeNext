@@ -23,7 +23,8 @@ $tabs = $args['tabs'];
         } ?>
     </div>
 </div>
-<div class="<?= $name . " " ?>panels-container tab-content">
+<div class="animation-tabs-content">
+    <div class="<?= $name . " " ?>panels-container tab-content">
     <?php
     if (!empty($tabs)) {
         foreach ($tabs as $index => $tab) {
@@ -33,4 +34,5 @@ $tabs = $args['tabs'];
         }
     }
     ?>
+    </div>
 </div>

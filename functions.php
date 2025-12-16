@@ -61,6 +61,8 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_script('nav-js', get_stylesheet_directory_uri() . '/js/nav.js', array('jquery'), '1.0.0', true);
     wp_enqueue_script('tabs-animation', get_stylesheet_directory_uri() . '/js/tabs.js', array('jquery'), '1.0.0', true);
     wp_enqueue_script('scroll-checking', get_stylesheet_directory_uri() . '/js/scroll_checking.js', array('jquery'), '1.0.0', true);
+    wp_enqueue_script('timer-animations', get_stylesheet_directory_uri() . '/js/timer_animations.js', array('jquery'), '1.0.0', true);
+    wp_enqueue_script('slider-js', get_stylesheet_directory_uri() . '/js/slider.js', array('jquery'), '1.0.0', true);
 
     wp_dequeue_style('wp-block-library');
     wp_dequeue_style('wp-block-library-theme');
@@ -75,4 +77,4 @@ add_filter('walker_nav_menu_start_el', function ($itemOutput, $item, $depth, $ar
         $itemOutput = '<a href="' . esc_url($item->url) . '" class="item-sub-menu">' . $titleItem . $descItem . '</a>';
     }
     return $itemOutput;
-}, 10, 4);
+}, 10, 4);  
