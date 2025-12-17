@@ -60,30 +60,6 @@
                                 </a>
                                 <a class="module-item">
                                     <img class="icon"
-                                        src="<?= get_template_directory_uri(); ?>/assets/images/headermenu/vanban.svg"
-                                        alt="">
-                                    <img class="hover"
-                                        src="<?= get_template_directory_uri(); ?>/assets/images/headermenu/vanban_hover.svg"
-                                        alt="">
-                                    <div class="info">
-                                        <span class="title">Văn bản</span>
-                                        <span class="desc">Quản lý công văn đi, đến nội bộ</span>
-                                    </div>
-                                </a>
-                                <a class="module-item">
-                                    <img class="icon"
-                                        src="<?= get_template_directory_uri(); ?>/assets/images/headermenu/taisan.svg"
-                                        alt="">
-                                    <img class="hover"
-                                        src="<?= get_template_directory_uri(); ?>/assets/images/headermenu/taisan_hover.svg"
-                                        alt="">
-                                    <div class="info">
-                                        <span class="title">Tài sản</span>
-                                        <span class="desc">Thông tin, quá trình sử dụng tài sản</span>
-                                    </div>
-                                </a>
-                                <a class="module-item">
-                                    <img class="icon"
                                         src="<?= get_template_directory_uri(); ?>/assets/images/headermenu/congviec.svg"
                                         alt="">
                                     <img class="hover"
@@ -92,18 +68,6 @@
                                     <div class="info">
                                         <span class="title">Công việc</span>
                                         <span class="desc">Giao việc, giám sát và đánh giá kết quả</span>
-                                    </div>
-                                </a>
-                                <a class="module-item">
-                                    <img class="icon"
-                                        src="<?= get_template_directory_uri(); ?>/assets/images/headermenu/tailieu.svg"
-                                        alt="">
-                                    <img class="hover"
-                                        src="<?= get_template_directory_uri(); ?>/assets/images/headermenu/tailieu_hover.svg"
-                                        alt="">
-                                    <div class="info">
-                                        <span class="title">Tài liệu</span>
-                                        <span class="desc">Lưu trữ, chia sẻ và quản lý tài liệu</span>
                                     </div>
                                 </a>
                                 <a class="module-item">
@@ -120,14 +84,50 @@
                                 </a>
                                 <a class="module-item">
                                     <img class="icon"
-                                        src="<?= get_template_directory_uri(); ?>/assets/images/headermenu/quytrinh.svg"
+                                        src="<?= get_template_directory_uri(); ?>/assets/images/headermenu/vanban.svg"
                                         alt="">
                                     <img class="hover"
-                                        src="<?= get_template_directory_uri(); ?>/assets/images/headermenu/quytrinh_hover.svg"
+                                        src="<?= get_template_directory_uri(); ?>/assets/images/headermenu/vanban_hover.svg"
+                                        alt="">
+                                    <div class="info">
+                                        <span class="title">Văn bản</span>
+                                        <span class="desc">Quản lý công văn đi, đến nội bộ</span>
+                                    </div>
+                                </a>
+                                <a class="module-item">
+                                    <img class="icon"
+                                        src="<?= get_template_directory_uri(); ?>/assets/images/headermenu/tailieu.svg"
+                                        alt="">
+                                    <img class="hover"
+                                        src="<?= get_template_directory_uri(); ?>/assets/images/headermenu/tailieu_hover.svg"
+                                        alt="">
+                                    <div class="info">
+                                        <span class="title">Tài liệu</span>
+                                        <span class="desc">Lưu trữ, chia sẻ và quản lý tài liệu</span>
+                                    </div>
+                                </a>
+                                <a class="module-item">
+                                    <img class="icon"
+                                        src="<?= get_template_directory_uri(); ?>/assets/images/headermenu/lichbieu.svg"
+                                        alt="">
+                                    <img class="hover"
+                                        src="<?= get_template_directory_uri(); ?>/assets/images/headermenu/lichbieu_hover.svg"
                                         alt="">
                                     <div class="info">
                                         <span class="title">Lịch biểu</span>
                                         <span class="desc">Lịch làm việc công ty, phòng ban</span>
+                                    </div>
+                                </a>
+                                <a class="module-item">
+                                    <img class="icon"
+                                        src="<?= get_template_directory_uri(); ?>/assets/images/headermenu/taisan.svg"
+                                        alt="">
+                                    <img class="hover"
+                                        src="<?= get_template_directory_uri(); ?>/assets/images/headermenu/taisan_hover.svg"
+                                        alt="">
+                                    <div class="info">
+                                        <span class="title">Tài sản</span>
+                                        <span class="desc">Thông tin, quá trình sử dụng tài sản</span>
                                     </div>
                                 </a>
                             </div>
@@ -148,62 +148,14 @@
                                 </a>
                                 <a class="module-item">
                                     <img class="icon"
-                                        src="<?= get_template_directory_uri(); ?>/assets/images/headermenu/tienluong.svg"
+                                        src="<?= get_template_directory_uri(); ?>/assets/images/headermenu/nhansu.svg"
                                         alt="">
                                     <img class="hover"
-                                        src="<?= get_template_directory_uri(); ?>/assets/images/headermenu/tienluong_hover.svg"
-                                        alt="">
-                                    <div class="info">
-                                        <span class="title">Quản lý tiền lương</span>
-                                        <span class="desc">Tính lương và trả lương qua phần mềm</span>
-                                    </div>
-                                </a>
-                                <a class="module-item">
-                                    <img class="icon"
-                                        src="<?= get_template_directory_uri(); ?>/assets/images/headermenu/okr.svg"
-                                        alt="">
-                                    <img class="hover"
-                                        src="<?= get_template_directory_uri(); ?>/assets/images/headermenu/okr_hover.svg"
-                                        alt="">
-                                    <div class="info">
-                                        <span class="title">Quản trị mục tiêu OKR</span>
-                                        <span class="desc">Thiết lập và quản trị mục tiêu OKR</span>
-                                    </div>
-                                </a>
-                                <a class="module-item">
-                                    <img class="icon"
-                                        src="<?= get_template_directory_uri(); ?>/assets/images/headermenu/tuyendung.svg"
-                                        alt="">
-                                    <img class="hover"
-                                        src="<?= get_template_directory_uri(); ?>/assets/images/headermenu/tuyendung_hover.svg"
+                                        src="<?= get_template_directory_uri(); ?>/assets/images/headermenu/nhansu_hover.svg"
                                         alt="">
                                     <div class="info">
                                         <span class="title">Thông tin nhân sự</span>
                                         <span class="desc">Hồ sơ, hợp đồng, bảo hiểm nhân sự</span>
-                                    </div>
-                                </a>
-                                <a class="module-item">
-                                    <img class="icon"
-                                        src="<?= get_template_directory_uri(); ?>/assets/images/headermenu/danhgia.svg"
-                                        alt="">
-                                    <img class="hover"
-                                        src="<?= get_template_directory_uri(); ?>/assets/images/headermenu/danhgia_hover.svg"
-                                        alt="">
-                                    <div class="info">
-                                        <span class="title">Đánh giá nhân sự</span>
-                                        <span class="desc">Quản lý đánh giá nhân sự định kỳ</span>
-                                    </div>
-                                </a>
-                                <a class="module-item">
-                                    <img class="icon"
-                                        src="<?= get_template_directory_uri(); ?>/assets/images/headermenu/tuyendung.svg"
-                                        alt="">
-                                    <img class="hover"
-                                        src="<?= get_template_directory_uri(); ?>/assets/images/headermenu/tuyendung_hover.svg"
-                                        alt="">
-                                    <div class="info">
-                                        <span class="title">Kê khai bảo hiểm IVAN</span>
-                                        <span class="desc">Kê khai và quản lý BHXH điện tử</span>
                                     </div>
                                 </a>
                                 <a class="module-item">
@@ -220,14 +172,62 @@
                                 </a>
                                 <a class="module-item">
                                     <img class="icon"
-                                        src="<?= get_template_directory_uri(); ?>/assets/images/headermenu/quanlykpi.svg"
+                                        src="<?= get_template_directory_uri(); ?>/assets/images/headermenu/tienluong.svg"
                                         alt="">
                                     <img class="hover"
-                                        src="<?= get_template_directory_uri(); ?>/assets/images/headermenu/quanlykpi_hover.svg"
+                                        src="<?= get_template_directory_uri(); ?>/assets/images/headermenu/tienluong_hover.svg"
+                                        alt="">
+                                    <div class="info">
+                                        <span class="title">Quản lý tiền lương</span>
+                                        <span class="desc">Tính lương và trả lương qua phần mềm</span>
+                                    </div>
+                                </a>
+                                <a class="module-item">
+                                    <img class="icon"
+                                        src="<?= get_template_directory_uri(); ?>/assets/images/headermenu/danhgia.svg"
+                                        alt="">
+                                    <img class="hover"
+                                        src="<?= get_template_directory_uri(); ?>/assets/images/headermenu/danhgia_hover.svg"
+                                        alt="">
+                                    <div class="info">
+                                        <span class="title">Đánh giá nhân sự</span>
+                                        <span class="desc">Quản lý đánh giá nhân sự định kỳ</span>
+                                    </div>
+                                </a>
+                                <a class="module-item">
+                                    <img class="icon"
+                                        src="<?= get_template_directory_uri(); ?>/assets/images/headermenu/kpi.svg"
+                                        alt="">
+                                    <img class="hover"
+                                        src="<?= get_template_directory_uri(); ?>/assets/images/headermenu/kpi_hover.svg"
                                         alt="">
                                     <div class="info">
                                         <span class="title">Hiệu suất làm việc KPI</span>
                                         <span class="desc">Xây dựng và quản lý chỉ tiêu đánh giá KPI</span>
+                                    </div>
+                                </a>
+                                <a class="module-item">
+                                    <img class="icon"
+                                        src="<?= get_template_directory_uri(); ?>/assets/images/headermenu/quantriokr.svg"
+                                        alt="">
+                                    <img class="hover"
+                                        src="<?= get_template_directory_uri(); ?>/assets/images/headermenu/quantriokr_hover.svg"
+                                        alt="">
+                                    <div class="info">
+                                        <span class="title">Quản trị mục tiêu OKR</span>
+                                        <span class="desc">Thiết lập và quản trị mục tiêu OKR</span>
+                                    </div>
+                                </a>
+                                <a class="module-item">
+                                    <img class="icon"
+                                        src="<?= get_template_directory_uri(); ?>/assets/images/headermenu/tuyendung.svg"
+                                        alt="">
+                                    <img class="hover"
+                                        src="<?= get_template_directory_uri(); ?>/assets/images/headermenu/tuyendung_hover.svg"
+                                        alt="">
+                                    <div class="info">
+                                        <span class="title">Kê khai bảo hiểm IVAN</span>
+                                        <span class="desc">Kê khai và quản lý BHXH điện tử</span>
                                     </div>
                                 </a>
                                 <a class="module-item">
@@ -260,30 +260,6 @@
                                 </a>
                                 <a class="module-item">
                                     <img class="icon"
-                                        src="<?= get_template_directory_uri(); ?>/assets/images/headermenu/muahang.svg"
-                                        alt="">
-                                    <img class="hover"
-                                        src="<?= get_template_directory_uri(); ?>/assets/images/headermenu/muahang_hover.svg"
-                                        alt="">
-                                    <div class="info">
-                                        <span class="title">Mua hàng</span>
-                                        <span class="desc">Quản lý, giám sát quá trình mua hàng</span>
-                                    </div>
-                                </a>
-                                <a class="module-item">
-                                    <img class="icon"
-                                        src="<?= get_template_directory_uri(); ?>/assets/images/headermenu/tai_chinh.svg"
-                                        alt="">
-                                    <img class="hover"
-                                        src="<?= get_template_directory_uri(); ?>/assets/images/headermenu/tai_chinh_hover.svg"
-                                        alt="">
-                                    <div class="info">
-                                        <span class="title">Tài chính</span>
-                                        <span class="desc">Quản lý và quy trình duyệt thu chi</span>
-                                    </div>
-                                </a>
-                                <a class="module-item">
-                                    <img class="icon"
                                         src="<?= get_template_directory_uri(); ?>/assets/images/headermenu/khachhang.svg"
                                         alt="">
                                     <img class="hover"
@@ -292,18 +268,6 @@
                                     <div class="info">
                                         <span class="title">Khách hàng</span>
                                         <span class="desc">Lưu trữ, chăm sóc, cơ hội khách hàng</span>
-                                    </div>
-                                </a>
-                                <a class="module-item">
-                                    <img class="icon"
-                                        src="<?= get_template_directory_uri(); ?>/assets/images/headermenu/khachhang.svg"
-                                        alt="">
-                                    <img class="hover"
-                                        src="<?= get_template_directory_uri(); ?>/assets/images/headermenu/khachhang_hover.svg"
-                                        alt="">
-                                    <div class="info">
-                                        <span class="title">Kho hàng</span>
-                                        <span class="desc">Quản lý xuất, nhập, và tồn kho</span>
                                     </div>
                                 </a>
                                 <a class="module-item">
@@ -320,6 +284,30 @@
                                 </a>
                                 <a class="module-item">
                                     <img class="icon"
+                                        src="<?= get_template_directory_uri(); ?>/assets/images/headermenu/muahang.svg"
+                                        alt="">
+                                    <img class="hover"
+                                        src="<?= get_template_directory_uri(); ?>/assets/images/headermenu/muahang_hover.svg"
+                                        alt="">
+                                    <div class="info">
+                                        <span class="title">Mua hàng</span>
+                                        <span class="desc">Quản lý, giám sát quá trình mua hàng</span>
+                                    </div>
+                                </a>
+                                <a class="module-item">
+                                    <img class="icon"
+                                        src="<?= get_template_directory_uri(); ?>/assets/images/headermenu/khohang.svg"
+                                        alt="">
+                                    <img class="hover"
+                                        src="<?= get_template_directory_uri(); ?>/assets/images/headermenu/khohang_hover.svg"
+                                        alt="">
+                                    <div class="info">
+                                        <span class="title">Kho hàng</span>
+                                        <span class="desc">Quản lý xuất, nhập, và tồn kho</span>
+                                    </div>
+                                </a>
+                                <a class="module-item">
+                                    <img class="icon"
                                         src="<?= get_template_directory_uri(); ?>/assets/images/headermenu/khuyenmai.svg"
                                         alt="">
                                     <img class="hover"
@@ -328,6 +316,18 @@
                                     <div class="info">
                                         <span class="title">Khuyến mại</span>
                                         <span class="desc">Quản lý các tiện ích và chương trình KM</span>
+                                    </div>
+                                </a>
+                                <a class="module-item">
+                                    <img class="icon"
+                                        src="<?= get_template_directory_uri(); ?>/assets/images/headermenu/taichinh.svg"
+                                        alt="">
+                                    <img class="hover"
+                                        src="<?= get_template_directory_uri(); ?>/assets/images/headermenu/taichinh_hover.svg"
+                                        alt="">
+                                    <div class="info">
+                                        <span class="title">Tài chính</span>
+                                        <span class="desc">Quản lý và quy trình duyệt thu chi</span>
                                     </div>
                                 </a>
                             </div>

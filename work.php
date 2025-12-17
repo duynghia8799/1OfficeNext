@@ -12,7 +12,7 @@ $tab1 = isset($page_data['dieu_phoi_data']) ? $page_data['dieu_phoi_data'] : [];
 $tab2 = isset($page_data['lien_ket_data']) ? $page_data['lien_ket_data'] : [];
 
 ?>
-
+<div class="work-page">
 <section class="work-hero">
     <div class="container">
         <div class="row">
@@ -269,6 +269,7 @@ $tab2 = isset($page_data['lien_ket_data']) ? $page_data['lien_ket_data'] : [];
         </div>
     </div>
 </section>
+</div>
 
 
 <?php get_footer();
