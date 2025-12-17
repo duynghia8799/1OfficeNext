@@ -20,7 +20,7 @@ if ($svg_hesinhthai === false) {
     $svg_hesinhthai = "<p style='color: red;'>Lỗi: Không tìm thấy file SVG.</p>";
 }
 ?>
-
+<div class="ai-agents-page">
 <section class="ai-agents-hero">
     <div class="container">
         <div class="row">
@@ -163,6 +163,6 @@ if ($svg_hesinhthai === false) {
         </div>
     </div>
 </section>
-
+</div>
 
 <?php get_footer();

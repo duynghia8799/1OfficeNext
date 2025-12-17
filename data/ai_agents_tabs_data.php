@@ -8,67 +8,65 @@ return [
                 'icon'          => '/assets/images/icons/ai_assistant_icon.svg',
                 'content_panel' =>
                 '
-                <div class="content" style="width:40%">                        
-                    <h2>Trợ lý ảo 24/7 giúp bạn làm việc thông minh hơn, hiệu quả hơn</h2>
+                <div class="content" style="width:45%">                        
+                    <h2>Trợ lý ảo 24/7 giúp bạn làm việc<br/>thông minh hơn, hiệu quả hơn</h2>
                     <ul>
-                        <li><img src="' . get_template_directory_uri() . '/assets/images/icons/V_circle_original.svg" alt="icon"> Hỏi đáp tức thì, chính xác bằng cả chat và giọng nói</li>
-                        <li><img src="' . get_template_directory_uri() . '/assets/images/icons/V_circle_original.svg" alt="icon">Cá nhân hóa phản hồi theo vai trò, tính cách và cảm xúc</li>
-                        <li><img src="' . get_template_directory_uri() . '/assets/images/icons/V_circle_original.svg" alt="icon">Gợi ý thông minh và tự động thực hiện hành động</li>
-                        <li><img src="' . get_template_directory_uri() . '/assets/images/icons/V_circle_original.svg" alt="icon">Liên tục bổ sung và cập nhật nguồn tri thức</li>
+                        <li><img src="' . get_template_directory_uri() . '/assets/images/icons/V_circle_original.svg" alt="icon"><span>Hỏi đáp tức thì, chính xác bằng cả chat và giọng nói</span></li>
+                        <li><img src="' . get_template_directory_uri() . '/assets/images/icons/V_circle_original.svg" alt="icon"><span>Cá nhân hóa phản hồi theo vai trò, tính cách và cảm xúc</span></li>
+                        <li><img src="' . get_template_directory_uri() . '/assets/images/icons/V_circle_original.svg" alt="icon"><span>Gợi ý thông minh và tự động thực hiện hành động</span></li>
+                        <li><img src="' . get_template_directory_uri() . '/assets/images/icons/V_circle_original.svg" alt="icon"><span>Liên tục bổ sung và cập nhật nguồn tri thức</span></li>
                     </ul>
                 </div>
-                <img class="demo-img" style="width:60%" src="' .  get_template_directory_uri() . '/assets/images/demo/ai_agents_tangtoc_1.svg" alt="demo">
+                <img class="demo-img" style="width:55%" src="' .  get_template_directory_uri() . '/assets/images/demo/ai_agents_tangtoc_1.svg" alt="demo">
                 ',
             ],
             [
                 'title' => '1AI Meeting',
                 'icon' => '/assets/images/icons/ai_meeting_icon.svg',
-                'content_panel' =>
+                'content_panel' =>  
                 '
-                <div class="content" style="width:40%">                        
-                    <h2>Ghi nhớ, tóm tắt, tổng hợp biên bản và giao việc sau cuộc họp</h2>
+                <div class="content" style="width:45%">                        
+                    <h2>Ghi nhớ, tóm tắt, tổng hợp biên bản<br/>và giao việc sau cuộc họp</h2>
                     <ul>
-                        <li><img src="' . get_template_directory_uri() . '/assets/images/icons/V_circle_original.svg" alt="icon">Tự động tổng hợp cuộc họp từ file word, audio</li>
-                        <li><img src="' . get_template_directory_uri() . '/assets/images/icons/V_circle_original.svg" alt="icon">Nhận diện và gán các công việc cho người thực hiện</li>
-                        <li><img src="' . get_template_directory_uri() . '/assets/images/icons/V_circle_original.svg" alt="icon">Tự động tạo công việc, lịch biểu, biên bản dựa trên tổng hợp</li>
-                        <li><img src="' . get_template_directory_uri() . '/assets/images/icons/V_circle_original.svg" alt="icon">Highlight các ý chính, phân tích hiệu quả buổi họp</li>
+                        <li><img src="' . get_template_directory_uri() . '/assets/images/icons/V_circle_original.svg" alt="icon"><span>Tự động tổng hợp cuộc họp từ file word, audio</span></li>
+                        <li><img src="' . get_template_directory_uri() . '/assets/images/icons/V_circle_original.svg" alt="icon"><span>Nhận diện và gán các công việc cho người thực hiện</span></li>
+                        <li><img src="' . get_template_directory_uri() . '/assets/images/icons/V_circle_original.svg" alt="icon"><span>Tự động tạo công việc, lịch biểu, biên bản dựa trên tổng hợp</span></li>
+                        <li><img src="' . get_template_directory_uri() . '/assets/images/icons/V_circle_original.svg" alt="icon"><span>Highlight các ý chính, phân tích hiệu quả buổi họp</span></li>
                     </ul>
                 </div>
-                <img class="demo-img" style="width:60%" src="' .  get_template_directory_uri() . '/assets/images/demo/ai_agents_tangtoc_2.svg" alt="demo">
+                <img class="demo-img" style="width:55%" src="' .  get_template_directory_uri() . '/assets/images/demo/ai_agents_tangtoc_2.svg" alt="demo">
                 ',
             ],
             [
                 'title' => '1AI Monitor',
                 'icon' => '/assets/images/icons/ai_monitor_icon.svg',
-                'content_panel' =>
-                '
-                <div class="content" style="width:40%">                        
-                    <h2>Giám sát dữ liệu và chính sách, đảm bảo vận hành minh bạch</h2>
+                'content_panel' =>  '
+                <div class="content" style="width:45%">                        
+                    <h2>Giám sát dữ liệu và chính sách,<br/>đảm bảo vận hành minh bạch</h2>
                     <ul>
-                        <li><img src="' . get_template_directory_uri() . '/assets/images/icons/V_circle_original.svg" alt="icon">Giám sát toàn bộ vận hành dựa trên quy định, chính sách</li>
-                        <li><img src="' . get_template_directory_uri() . '/assets/images/icons/V_circle_original.svg" alt="icon">Phát hiện, phân tích nguyên nhân và cảnh báo bất thường</li>
-                        <li><img src="' . get_template_directory_uri() . '/assets/images/icons/V_circle_original.svg" alt="icon">Đề xuất hành động thay thế, khắc phục tối ưu</li>
-                        <li><img src="' . get_template_directory_uri() . '/assets/images/icons/V_circle_original.svg" alt="icon">Liên tục học nguồn tri thức mới của doanh nghiệp</li>
+                        <li><img src="' . get_template_directory_uri() . '/assets/images/icons/V_circle_original.svg" alt="icon"><span>Giám sát toàn bộ vận hành dựa trên quy định, chính sách</span></li>
+                        <li><img src="' . get_template_directory_uri() . '/assets/images/icons/V_circle_original.svg" alt="icon"><span>Phát hiện, phân tích nguyên nhân và cảnh báo bất thường</span></li>
+                        <li><img src="' . get_template_directory_uri() . '/assets/images/icons/V_circle_original.svg" alt="icon"><span>Đề xuất hành động thay thế, khắc phục tối ưu</span></li>
+                        <li><img src="' . get_template_directory_uri() . '/assets/images/icons/V_circle_original.svg" alt="icon"><span>Liên tục học nguồn tri thức mới của doanh nghiệp</span></li>
                     </ul>
                 </div>
-                <img class="demo-img" style="width:60%" src="' .  get_template_directory_uri() . '/assets/images/demo/ai_agents_tangtoc_3.svg" alt="demo">
+                <img class="demo-img" style="width:55%" src="' .  get_template_directory_uri() . '/assets/images/demo/ai_agents_tangtoc_3.svg" alt="demo">
                 ',
             ],
             [
                 'title' => '1AI Dashboard',
                 'icon' => '/assets/images/icons/ai_dashboard_icon.svg',
-                'content_panel' =>
-                '
-                <div class="content" style="width:40%">                        
-                    <h2>Trợ lý báo cáo thông minh, nhanh hơn và chính xác hơn</h2>
+                'content_panel' =>  '
+                <div class="content" style="width:45%">                        
+                    <h2>Trợ lý báo cáo thông minh,<br/>nhanh hơn và chính xác hơn</h2>
                     <ul>
-                        <li><img src="' . get_template_directory_uri() . '/assets/images/icons/V_circle_original.svg" alt="icon">Tự động tổng hợp dữ liệu và xây dựng các báo cáo</li>
-                        <li><img src="' . get_template_directory_uri() . '/assets/images/icons/V_circle_original.svg" alt="icon">Đọc, phân tích tóm tắt các các báo cáo cho người dùng</li>
-                        <li><img src="' . get_template_directory_uri() . '/assets/images/icons/V_circle_original.svg" alt="icon">Chỉ ra các điểm quan trọng, cũng như bất thường</li>
-                        <li><img src="' . get_template_directory_uri() . '/assets/images/icons/V_circle_original.svg" alt="icon">Đề xuất, gợi ý các hành động then chốt tiếp theo</li>
+                        <li><img src="' . get_template_directory_uri() . '/assets/images/icons/V_circle_original.svg" alt="icon"><span>Tự động tổng hợp dữ liệu và xây dựng các báo cáo</span></li>
+                        <li><img src="' . get_template_directory_uri() . '/assets/images/icons/V_circle_original.svg" alt="icon"><span>Đọc, phân tích tóm tắt các các báo cáo cho người dùng</span></li>
+                        <li><img src="' . get_template_directory_uri() . '/assets/images/icons/V_circle_original.svg" alt="icon"><span>Chỉ ra các điểm quan trọng, cũng như bất thường</span></li>
+                        <li><img src="' . get_template_directory_uri() . '/assets/images/icons/V_circle_original.svg" alt="icon"><span>Đề xuất, gợi ý các hành động then chốt tiếp theo</span></li>
                     </ul>
                 </div>
-                <img class="demo-img" style="width:60%" src="' .  get_template_directory_uri() . '/assets/images/demo/ai_agents_tangtoc_4.svg" alt="demo">
+                <img class="demo-img" style="width:55%" src="' .  get_template_directory_uri() . '/assets/images/demo/ai_agents_tangtoc_4.svg" alt="demo">
                 ',
             ],
         ]

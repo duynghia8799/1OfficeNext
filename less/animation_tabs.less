@@ -95,6 +95,7 @@
         }
         
         .animation-tabs {
+            margin-top: 3.75rem;
             background-color: transparent;
             width: fit-content;
             height: fit-content;
@@ -103,9 +104,16 @@
             border-radius: 0;
 
             .item {
-                height: 2.625rem;
-                align-items: start;
+                box-sizing: border-box;
+                height: 1.375rem;
+                margin-bottom: 1.25rem;
+                align-items: center;
                 color: #676D78;
+
+                &.active {
+                    color: #000000;
+                    font-weight: 500;
+                }
             }
 
             .card {
@@ -119,7 +127,7 @@
             width: 100%;
         }
         .tab-content {
-            width: 100% ;
+            width: 110% ;
             height: 34.25rem ;
             padding: 2.25rem 0;
             overflow: hidden;
@@ -127,16 +135,17 @@
 
 
             .tab-pane {
-                width: 100%;
+                width: 91%;
                 height: 100%;
                 background-color: transparent;
-                padding: 2.25rem 2rem 2.25rem 0;
+                padding: 2.25rem 0rem 2.25rem 0;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
                 bottom: 0;
                 transform: translateY(100%);
                 transition: all 0.8s ease;
+                
 
                 &.up {
                     transform: translateY(0);
@@ -150,6 +159,7 @@
                     border-radius: 0.5rem;
                     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
                     margin-left: 2rem;
+                    transform: translateX(0rem);
                 }
 
                 .content {
@@ -159,7 +169,7 @@
                     justify-content: center;
 
                     h2 {
-                        width: 85%;
+                        width: 100%;
                         font-size: 1.75rem;
                         line-height: 2.5rem;
                         font-weight: 600;
@@ -171,7 +181,9 @@
                         padding-left: 0;
 
                         li {
+                            display: flex;
                             margin-bottom: 1rem;
+                            gap: 0.75rem;
                         }
                     }
                 }
@@ -183,6 +195,7 @@
 
 //tichhop
 .ai-agents-tichhop {
+    padding-top: 4.25rem;
     background-color: white;
     width: 100%;
 }
@@ -196,10 +209,11 @@
 
     .title-section {
         width: 60rem;
-        margin: 5rem 0 3rem 0;
+        margin: 5rem 0 0 0;
     }
 
     .animation-tabs {
+        margin-top: 3rem;
         width: fit-content;
         margin-bottom: 2rem;
 
@@ -330,6 +344,7 @@
     }
 
     .animation-tabs{
+        margin-top: 3.75rem;
         background-color: transparent;
         .card {
             background-color: transparent;
@@ -443,11 +458,11 @@
         align-items: center;
 
         .title-section {
-            margin-bottom: 3.75rem;
             text-align: center;
             color: #ffffff;
         }
         .animation-tabs {
+            margin-top: 3.75rem;
             border-radius: 999rem;
             padding: 0.25rem;
             background-color: rgba(255, 255, 255, 10%);
