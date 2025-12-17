@@ -7,7 +7,7 @@
                         <li class="nav-item">
                             <a class="info-item">
                                 <span class="title">1WORK</span>
-                                <span class="desc">Quản lý công việc, dự án và quy trình DN</span>
+                                <span class="desc">Quản lý công việc, quy trình & thúc đẩy cộng tác</span>
                             </a>
                             <a class="nav-link active" data-bs-toggle="pill" data-bs-target="#tab-1work">
                                 <img src="<?= get_template_directory_uri(); ?>/assets/images/Chevron_blue_right.svg"
@@ -27,7 +27,7 @@
                         <li class="nav-item">
                             <a class="info-item">
                                 <span class="title">1CRM</span>
-                                <span class="desc">Quản lý khách hàng và hoạt động KD</span>
+                                <span class="desc">Quản lý khách hàng và hoạt động kinh doanh</span>
                             </a>
                             <a class="nav-link" data-bs-toggle="pill" data-bs-target="#tab-1crm">
                                 <img src="<?= get_template_directory_uri(); ?>/assets/images/Chevron_blue_right.svg"
