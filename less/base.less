@@ -4,6 +4,7 @@ html {
     --color-main: #F0500A;
     --color-main-outline: fade(#f15822, 50%);
     --color-text: #3A3D42;
+    --color-text-main: #2B2D33;
     --color-text-primary: #1D232E;
     --color-text-hover: #2B6AD1;
     --color-text-post: #394B51;
@@ -98,4 +99,32 @@ p {
             height: 100%;
         }
     }
+}
+
+.section-numbers {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .item {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+
+        .number {
+            font-size: 48px;
+            font-weight: var(--font-weight-bold);
+            color: #004C38;
+            line-height: 35px;
+        }
+
+        .title {
+            font-weight: var(--font-weight-medium);
+            color: var(--color-text-secondary);
+            font-size: 14px;
+        }
+    }
+
+
 }
