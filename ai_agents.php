@@ -52,7 +52,7 @@ if ($svg_hesinhthai === false) {
 </section>
 
 <section class="ai-agents-tangtoc">
-    <div class="container">
+    <div class="container ">
         <div class="row">
             <div class="col tangtoc-col">
                 <h1 class="title-section">Ra quyết định nhanh hơn, chính xác hơn, <span class="br-line">tăng tốc độ xử lý và
