@@ -7,7 +7,7 @@
 get_header();
 ?>
 <div class="home-page">
-    <div class="hero-banner">
+    <div class="section-banner">
         <div class="container">
             <span class="section-title">
                 1Office Next <span>với sự kết hợp</span> AI và No-code <br />
@@ -96,8 +96,9 @@ get_header();
         <div class="container">
             <div class="section-title">
                 <span class="title">Giải pháp quản trị toàn diện, đáng tin cậy</span>
-                <p class="desc">Kiến tạo hệ thống vận hành tự động, nơi doanh nghiệp làm chủ quy trình, dữ liệu và toàn
-                    bộ hoạt động - hướng đến môi trường làm việc thông minh, linh hoạt</p>
+                <span class="desc">Kiến tạo hệ thống vận hành tự động, nơi doanh nghiệp làm chủ quy trình, dữ liệu và
+                    toàn
+                    bộ hoạt động - hướng đến môi trường làm việc thông minh, linh hoạt</span>
             </div>
             <div class="list-solution">
                 <div class="item">
@@ -152,10 +153,77 @@ get_header();
         <div class="container">
             <div class="section-title">
                 <span class="title">1AI Agents</span>
-                <p class="desc">Giúp ra quyết định nhanh chóng, chính xác</p>
+                <span class="desc">Giúp ra quyết định nhanh chóng, chính xác</span>
             </div>
             <div class="list-agents">
                 <?= file_get_contents(get_template_directory() . '/assets/images/home/ai-agents.svg'); ?>
+            </div>
+            <a class="btn-action">
+                <span>Tìm hiểu thêm</span>
+            </a>
+        </div>
+    </div>
+    <div class="section-nocode">
+        <div class="container">
+            <div class="section-title">
+                <span class="title">No-code Platform</span>
+                <span class="desc">Xây dựng và tùy chỉnh ứng dụng của riêng bạn</span>
+            </div>
+            <div class="nocode-tab">
+                <div class="nocode-nav nav">
+                    <button class="active nav-link" data-bs-toggle="pill" data-bs-target="#nocode-1">
+                        <img class="icon" src="<?= get_template_directory_uri(); ?>/assets/images/home/icon-nc-1.svg" alt="">
+                        <div class="content">
+                            <span class="title">Kho ứng dụng mẫu phong phú</span>
+                            <span class="desc">Cài đặt tức thì từ thư viện, dễ dàng chỉnh sửa và tùy biến theo thực tế vận hành của doanh nghiệp</span>
+                        </div>
+                    </button>
+                    <button class="nav-link" data-bs-toggle="pill" data-bs-target="#nocode-2">
+                        <img class="icon" src="<?= get_template_directory_uri(); ?>/assets/images/home/icon-nc-2.svg" alt="">
+                        <div class="content">
+                            <span class="title">Xây mọi thứ bằng thao tác trực quan</span>
+                            <span class="desc">Dễ dàng tạo và tùy chỉnh đối tượng, trường dữ liệu, tác vụ, báo cáo, dashboard,...</span>
+                        </div>
+                    </button>
+                    <button class="nav-link" data-bs-toggle="pill" data-bs-target="#nocode-3">
+                        <img class="icon" src="<?= get_template_directory_uri(); ?>/assets/images/home/icon-nc-3.svg" alt="">
+                        <div class="content">
+                            <span class="title">Thiết kế Form và quy trình</span>
+                            <span class="desc">Studio và Formula hỗ trợ tạo workflow, form phê duyệt và biểu mẫu dễ dàng, không phụ thuộc vào IT</span>
+                        </div>
+                    </button>
+                    <button class="nav-link" data-bs-toggle="pill" data-bs-target="#nocode-4">
+                        <img class="icon" src="<?= get_template_directory_uri(); ?>/assets/images/home/icon-nc-4.svg" alt="">
+                        <div class="content">
+                            <span class="title">Xuất bản ứng dụng nhanh</span>
+                            <span class="desc">Tự động sinh hướng dẫn, hỗ trợ triển khai đa vùng, đa chi nhánh kèm tài liệu và đa ngôn ngữ</span>
+                        </div>
+                    </button>
+                    <button class="nav-link" data-bs-toggle="pill" data-bs-target="#nocode-5">
+                        <img class="icon" src="<?= get_template_directory_uri(); ?>/assets/images/home/icon-nc-5.svg" alt="">
+                        <div class="content">
+                            <span class="title">Phân quyền và bảo mật đa tầng</span>
+                            <span class="desc">Kiểm soát quyền truy cập chi tiết đến từng trường dữ liệu, tác vụ, báo cáo,...</span>
+                        </div>
+                    </button>
+                </div>
+                <div class="nocode-content tab-content">
+                    <div class="tab-pane show active" id="nocode-1">
+                            <img src="<?= get_template_directory_uri(); ?>/assets/images/home/nc-img-1.svg" alt="">
+                    </div>
+                    <div class="tab-pane" id="nocode-2">
+                            <img src="<?= get_template_directory_uri(); ?>/assets/images/home/nc-img-2.svg" alt="">
+                    </div>
+                    <div class="tab-pane" id="nocode-3">
+                            <img src="<?= get_template_directory_uri(); ?>/assets/images/home/nc-img-3.svg" alt="">
+                    </div>
+                    <div class="tab-pane" id="nocode-4">
+                            <img src="<?= get_template_directory_uri(); ?>/assets/images/home/nc-img-4.svg" alt="">
+                    </div>
+                    <div class="tab-pane" id="nocode-5">
+                            <img src="<?= get_template_directory_uri(); ?>/assets/images/home/nc-img-5.svg" alt="">
+                    </div>
+                </div>
             </div>
         </div>
     </div>

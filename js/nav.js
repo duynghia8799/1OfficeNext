@@ -12,6 +12,7 @@
 
             $(item).click(function (e) {
                 const $target = $(e.target);
+                let isRedirect = false;
 
                 if ($target.closest('.sub-menu').length > 0) {
                     return true;
@@ -19,14 +20,18 @@
                     if (index === 0) {
                         $megaMenu.toggleClass('active');
                         $navActions.removeClass('active');
+                        isRedirect = true;
                     } else {
                         if ($(this).hasClass('menu-item-has-children')) {
                             $megaMenu.removeClass('active');
                             $navActions.removeClass('active');
-
-                            e.preventDefault();
-                            e.stopPropagation();
+                            isRedirect = true;
                         }
+                    }
+
+                    if (isRedirect) {
+                        e.preventDefault();
+                        e.stopPropagation();
                     }
 
                     $navMenus.not(this).removeClass('active');

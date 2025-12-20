@@ -1,5 +1,5 @@
 .home-page {
-    .hero-banner {
+    .section-banner {
         padding: 80px 0;
         background: linear-gradient(180deg, #FFFFFF 29.81%, #FFD730 100%);
 
@@ -11,6 +11,10 @@
             display: block;
             width: 100%;
             line-height: normal;
+
+            span {
+                color: var(--color-text-secondary);
+            }
         }
 
         .tour-guide {
@@ -25,8 +29,6 @@
             }
         }
     }
-
-
 
     .section-together {
         padding: 72px 0;
@@ -73,8 +75,11 @@
             border-radius: 12px;
             overflow: hidden;
             border: 4px solid #004C38;
-            background: #004C38;
             padding: 40px 0;
+            background: url('../1OfficeNext/assets/images/home/bgr-together.svg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
 
             .title-list-number {
                 font-size: 26px;
@@ -109,6 +114,7 @@
                     .title {
                         color: #fff;
                         font-size: 14px;
+                        line-height: 10px;
                     }
                 }
             }
@@ -126,7 +132,7 @@
             margin: auto;
             display: flex;
             flex-direction: column;
-            gap: 32px;
+            gap: 23px;
 
             .title {
                 font-size: 40px;
@@ -136,7 +142,6 @@
             .desc {
                 font-size: 18px;
                 font-weight: var(--font-weight-medium);
-                margin: 0;
             }
         }
 
@@ -239,7 +244,7 @@
             text-align: center;
             display: flex;
             flex-direction: column;
-            gap: 32px;
+            gap: 23px;
 
             .title {
                 font-size: 40px;
@@ -249,48 +254,150 @@
 
             .desc {
                 font-size: 26px;
-                margin: 0;
                 color: var(--color-text-secondary);
             }
+        }
+
+        .btn-action {
+            margin: 43px auto 0;
         }
 
         .list-agents {
             margin-top: 70px;
             position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
             .center-point {
                 fill: #2F6FFF;
                 animation: pulse 1.2s infinite ease-in-out;
             }
+        }
+    }
 
-            @keyframes pulse {
-                0% {
-                    transform: rotate(0) scale(1) skew(1deg)
+    .section-nocode {
+        background: #F2F0E9;
+        padding: 72px 0;
+
+        .section-title {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 23px;
+
+            .title {
+                font-size: 40px;
+                font-weight: var(--font-weight-semibold);
+                color: var(--color-text-main);
+            }
+
+            .desc {
+                font-size: 26px;
+                color: var(--color-text-secondary);
+            }
+        }
+
+        .nocode-tab {
+            margin: 72px 0;
+            display: flex;
+            gap: 63px;
+
+            .nocode-nav {
+                display: flex;
+                flex-direction: column;
+                flex-basis: 463px;
+                flex-shrink: 0;
+                justify-content: space-between;
+                gap: 8px;
+
+                .nav-link {
+                    display: flex;
+                    padding: 24px 20px;
+                    cursor: pointer;
+                    transition: all .5s;
+                    border-left: 4px solid;
+                    border-color: transparent;
+                    gap: 10px;
+
+                    .icon {
+                        width: 24px;
+                        height: 24px;
+                    }
+
+                    &.active {
+                        .content {
+                            .desc {
+                                height: 50px;
+                                margin-top: 26px;
+                            }
+                        }
+
+                        box-shadow: 0px 0px 40px 0px rgba(255, 215, 48, 0.12);
+                        background: #fff;
+                        border-radius: 0 16px 16px 0;
+                        border-color: rgba(10, 75, 49, 1);
+                    }
+
+                    .content {
+                        display: flex;
+                        flex-direction: column;
+
+                        .title {
+                            font-size: 24px;
+                            font-weight: var(--font-weight-semibold);
+                            color: var(--color-text-main);
+                            text-align: left;
+                        }
+
+                        .desc {
+                            color: var(--color-text-secondary);
+                            font-weight: var(--font-weight-medium);
+                            transition: all .5s;
+                            height: 0;
+                            text-align: left;
+                            margin-top: 0;
+                            overflow: hidden;
+                        }
+                    }
+                }
+            }
+
+            .nocode-content {
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .tab-pane {
+                    height: 100%;
+
+                    img {
+                        width: auto;
+                        height: 100%;
+                        object-fit: cover;
+
+                    }
+
+                    .thumb {
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        overflow: hidden;
+                        opacity: 0;
+                        transition: all 5s;
+                        visibility: hidden;
+
+                        img {
+                            width: auto;
+                            height: 100%;
+                            object-fit: cover;
+
+                        }
+                    }
                 }
 
-                10% {
-                    transform: rotate(-25deg) scale(1) skew(1deg)
-                }
-
-                20% {
-                    transform: rotate(25deg) scale(1) skew(1deg)
-                }
-
-                30% {
-                    transform: rotate(-25deg) scale(1) skew(1deg)
-                }
-
-                40% {
-                    transform: rotate(25deg) scale(1) skew(1deg)
-                }
-
-                50% {
-                    transform: rotate(0) scale(1) skew(1deg)
-                }
-
-                100% {
-                    transform: rotate(0) scale(1) skew(1deg)
-                }
             }
         }
     }
