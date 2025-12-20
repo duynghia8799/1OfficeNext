@@ -269,7 +269,7 @@ get_template_part('template-parts/callout_parts/tintuong_slider', null, $slider_
                             <div class="content">
                                 <p>Chi phí của Chữ ký số 1CA của 1Office phụ thuộc vào nhu cầu sử dụng của khách hàng. Các gói dịch vụ chính sẽ có mức phí khác nhau theo năm hoặc lượt ký.</p>
                                 <p>Xem chi tiết <a href="#">bảng giá chữ ký số 1SIGN</a></p>
-                                <p>Để nhận báo giá tốt nhất, doanh nghiệp liên hệ trực tiếp tới tư vấn viên: <strong>0834 838 888</strong></p>
+                                <p>Để nhận báo giá tốt nhất, doanh nghiệp liên hệ trực tiếp tới tư vấn viên: 0834 838 888</p>
                             </div>
                         </div>
                     </div>
