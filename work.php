@@ -12,7 +12,7 @@ $tab1 = isset($page_data['dieu_phoi_data']) ? $page_data['dieu_phoi_data'] : [];
 $tab2 = isset($page_data['lien_ket_data']) ? $page_data['lien_ket_data'] : [];
 
 ?>
-
+<div class="work-page">
 <section class="work-hero">
     <div class="container">
         <div class="row">
@@ -256,7 +256,10 @@ $tab2 = isset($page_data['lien_ket_data']) ? $page_data['lien_ket_data'] : [];
     </div>
 </section>
 
-<?php get_template_part('template-parts/callout_parts/tintuong_slider'); ?>
+<?php 
+$slider_data_source = require get_template_directory() . '/data/slider_data.php';
+get_template_part('template-parts/callout_parts/tintuong_slider', null, $slider_data_source['data1']); 
+?>
 
 <section class="top-footer">
     <img class="top-footer-bg" src="<?= get_template_directory_uri() . '/assets/images/ai_light_bg_blue.svg' ?>" alt="">
@@ -269,6 +272,7 @@ $tab2 = isset($page_data['lien_ket_data']) ? $page_data['lien_ket_data'] : [];
         </div>
     </div>
 </section>
+</div>
 
 
 <?php get_footer();

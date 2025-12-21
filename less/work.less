@@ -1,3 +1,5 @@
+.work-page{
+
 .work-hero {
     padding: 4.25rem 0 2rem;
     background-image: linear-gradient(140deg, #D9F4EC 0%, #FFEDE0 60%, #DBF3FF 100%);
@@ -7,9 +9,7 @@
         flex-direction: column;
         align-items: center;
     }
-    .title-section {
-        margin-bottom: 0rem;
-    }
+    
     .line2{
         height: 3rem;
         overflow: hidden;
@@ -84,12 +84,12 @@
         align-items: center;
     }
     .title-section {
-        margin-bottom: 3.75rem;
         text-align: center;
     }
     .benefits-grid {
+        margin-top: 3.75rem;
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: ~"repeat(4, 1fr)";
         gap: 1.5rem;
         width: 100%;
 
@@ -138,11 +138,9 @@
         flex-direction: column;
         align-items: center;
     }
-    .title-section {
-        margin-bottom: 3.75rem;
-        text-align: center;
-    }
+
     .comparison-container {
+        margin-top: 3.75rem;
         display: flex;
         gap: 2rem;
         width: 100%;
@@ -216,6 +214,7 @@
 
     .col {
         display: flex;
+        margin-top: 3.75rem;
     }
 
     .left {
@@ -351,6 +350,7 @@
                 color: #fff;
             }
             .sub-title-section {
+                margin-top: 3.75rem;
                 margin-bottom: 3.75rem;
                 color: #fff;
             }
@@ -368,4 +368,6 @@
             }
         }
     }
+}
+    
 }

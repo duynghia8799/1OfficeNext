@@ -8,6 +8,7 @@
     align-items: center;
 
     .slider-wrapper {
+        margin-top: 3.75rem;
         width: 100%;
         height: 26.5rem;
         display: flex; 
@@ -23,24 +24,60 @@
             justify-content: space-between;
 
             .video-container{
-                width: 49%;
-                height: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                img{
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                }
-            }
-            .content {
-                width: 46%;
+                width: 48%;
                 height: 100%;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
+                position: relative;
 
+                .button-container{
+                    width: 90px;
+                    height: 160px;
+                    display: flex;
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    transform: translate(30px, -50%);
+                    background-color: transparent;
+                    .content-button{
+                        width: 100%;
+                        height: 100%;
+                        position: relative;
+                        .mini-box{
+                            width: 30px;
+                            height: 30px;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            background-color: #F0500A;
+                        }
+                        button{
+                            width: 60px;
+                            height: 130px;
+                            position: absolute;
+                            bottom: 0;
+                            right: 0;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            background-color: #F0500A;
+                            cursor: pointer;
+                            img{
+                                width:25px;
+                                height:auto;
+                                object-fit: cover;
+                            }
+                        }
+                    }
+                }
+            }
+            .content{
+                width: 48%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
                 .head{
                     display: flex;
                     justify-content: space-between;
@@ -75,10 +112,15 @@
                 .feedback{
                     display: flex;
                     align-items: center;
-                    height: 4rem;
+                    height: auto;
+                    text-align: justify;
                     font-size: 1rem;
                     line-height: 1.625rem;
                     margin: -0.312rem 0 1.438rem 0;
+                    padding-left: 0.75rem;
+                    box-sizing: border-box;
+                    font-style: italic;
+                    
                 }
                 .user{
                     display: flex;

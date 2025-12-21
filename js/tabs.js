@@ -87,7 +87,16 @@
         })
 
 
-
+        $(window).on('load', function () {
+            $('.animation-tabs').each(function () {
+                var $currentTabGroup = $(this);
+                var $activeItem = $currentTabGroup.find('.items-container .item.active');
+                if ($activeItem.length) {
+                    changePosisionCard($activeItem);
+                }
+            });
+        });
 
     })
+
 })(jQuery);

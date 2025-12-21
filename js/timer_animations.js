@@ -30,28 +30,40 @@
             }, 5000);
         }
 
-        // --- Part 2: Dieuphoi Tabs Auto-switch ---
-        var $dieuphoiTabs = $('.dieuphoi.animation-tabs');
-        if ($dieuphoiTabs.length) {
-            var dieuphoiInterval;
-            var startDieuphoiAutoSwitch = function() {
-                if (dieuphoiInterval) clearInterval(dieuphoiInterval);
-                dieuphoiInterval = setInterval(function() {
-                    var $active = $dieuphoiTabs.find('.items-container .item.active');
-                    if (!$active.length) {
-                        $active = $dieuphoiTabs.find('.items-container .item').first();
+        // --- Part 2: Generic Tabs Auto-switch ---
+        function initAutoTabs(uniqueClass, duration) {
+            var $tabsContainer = $('.' + uniqueClass + '.animation-tabs');
+            if ($tabsContainer.length === 0) return;
+            var interval;
+            
+            function startInterval() {
+                if (interval) clearInterval(interval);
+                interval = setInterval(function() {
+                    // Re-query the active item from the DOM to get the current state
+                    var $active = $tabsContainer.find('.items-container .item.active');
+                    if ($active.length === 0) {
+                         $active = $tabsContainer.find('.items-container .item').first();
                     }
                     var $next = $active.next('.item');
                     if ($next.length === 0) {
-                        $next = $dieuphoiTabs.find('.items-container .item').first();
+                        $next = $tabsContainer.find('.items-container .item').first();
                     }
                     $next.trigger('click');
-                }, 6000); 
-            };
-            startDieuphoiAutoSwitch();
-            $dieuphoiTabs.find('.items-container .item').on('click', function(e) {
-                 startDieuphoiAutoSwitch();
+                }, duration);
+            }
+
+            // Start the auto-switch
+            startInterval();
+
+            // Reset timer on user interaction
+            $tabsContainer.find('.items-container .item').on('click', function() {
+                startInterval();
             });
         }
+
+        // Apply to specific tabs
+        initAutoTabs('dieuphoi', 6000);
+        initAutoTabs('kyket', 5000);
+
     });
 })(jQuery);
