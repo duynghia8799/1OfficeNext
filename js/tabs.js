@@ -22,14 +22,19 @@
             var $firstItem = $currentTabGroup.find('.items-container .item').first();
             $firstItem.addClass('active')
             changePosisionCard($firstItem)
-            $("#" + $($firstItem).attr('data-bs-target')).addClass('active')
+            // Lỗi 2 lần ##
+            let textTarget = $($firstItem).attr('data-bs-target');
+            textTarget = textTarget.replace('#', '');
+            $("#" + textTarget).addClass('active')
 
             $currentTabGroup.find('.items-container .item').on('click', function () {
                 $currentTabGroup.find('.items-container .item').removeClass('active');
                 $(this).addClass('active');
-
+                // Lỗi 2 lần ##
                 $("." + $(this).attr('panels-container') + ".panels-container .tab-pane").removeClass('active')
-                $("#" + $(this).attr('data-bs-target')).addClass('active')
+                let currentTarget = $(this).attr('data-bs-target');
+                currentTarget = currentTarget.replace('#', '');
+                $("#" + currentTarget).addClass('active')
                 changePosisionCard($(this))
             });
         })
