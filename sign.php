@@ -17,9 +17,8 @@ $tab1 = isset($page_data['ky_ket_data']) ? $page_data['ky_ket_data'] : [];
             <div class="col">
                 <div class="content-container">
                     <h1 class="title-section">
-                        1Sign<br/>
-                        Ký số không chạm,<br/>
-                        vận hành không giấy
+                        1Sign 
+                        <span class="br-line">Ký số không chạm, <br/>vận hành không giấy</span>
                     </h1>
                     <p class="sub-title-section">Giải pháp ký số nhanh chóng, an toàn, lưu trữ<br/>và quản lý tài liệu tập trung</p>
                     <?php get_template_part('template-parts/callout_parts/dk_chat_ai', 'template'); ?>
