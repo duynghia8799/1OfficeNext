@@ -74,6 +74,7 @@
         }
         initUpSlideAnimation('.tangtoc');
         initUpSlideAnimation('.dieuphoi');
+        initUpSlideAnimation('.kyket');
 
         //animation up tichhop
         $('.tichhop.tab-content .tab-pane').addClass('active')

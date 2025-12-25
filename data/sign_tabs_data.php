@@ -10,7 +10,7 @@ return [
                 'content_panel' =>
                 '
                 <div class="content">
-                    <h2>Thiết lập mẫu chữ ký riêng cho người dùng</h2>
+                    <h2>Thiết lập mẫu chữ ký riêng cho <br/>người dùng</h2>
                     <ul>
                         <li><img src="' . get_template_directory_uri() . '/assets/images/icons/V.svg" alt="icon"><p>Tạo mẫu chữ ký riêng nhanh chóng và tiện lợi</p></li>
                         <li><img src="' . get_template_directory_uri() . '/assets/images/icons/V.svg" alt="icon"><p>Thiết kế riêng mẫu chữ ký chính và chữ ký nháy</p></li>
