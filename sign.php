@@ -17,9 +17,8 @@ $tab1 = isset($page_data['ky_ket_data']) ? $page_data['ky_ket_data'] : [];
             <div class="col">
                 <div class="content-container">
                     <h1 class="title-section">
-                        1Sign<br/>
-                        Ký số không chạm,<br/>
-                        vận hành không giấy
+                        1Sign 
+                        <span class="br-line">Ký số không chạm, <br/>vận hành không giấy</span>
                     </h1>
                     <p class="sub-title-section">Giải pháp ký số nhanh chóng, an toàn, lưu trữ<br/>và quản lý tài liệu tập trung</p>
                     <?php get_template_part('template-parts/callout_parts/dk_chat_ai', 'template'); ?>
@@ -58,7 +57,7 @@ $tab1 = isset($page_data['ky_ket_data']) ? $page_data['ky_ket_data'] : [];
         </div>
     </div>
 </section>
-<section class="work-quytrinh">
+<section class="sign-quytrinh">
     <div class="container">
         <div class="row">
             <div class="col">
@@ -66,31 +65,37 @@ $tab1 = isset($page_data['ky_ket_data']) ? $page_data['ky_ket_data'] : [];
                 <div class="process-steps">
                     <div class="step-item">
                         <img src="<?= get_template_directory_uri(); ?>/assets/images/icons/sign_process_icon1.svg" alt="icon">
+                        <img class="icon-light" src="<?= get_template_directory_uri(); ?>/assets/images/icons/sign_process_icon1_active.svg" alt="icon">
                         <div class="dot"></div>
                         <p>Kết nối<br>chứng thư số</p>
                     </div>
                     <div class="step-item">
                         <img src="<?= get_template_directory_uri(); ?>/assets/images/icons/sign_process_icon2.svg" alt="icon">
+                        <img class="icon-light" src="<?= get_template_directory_uri(); ?>/assets/images/icons/sign_process_icon2_active.svg" alt="icon">
                         <div class="dot"></div>
                         <p>Tạo mẫu<br>chữ ký</p>
                     </div>
                     <div class="step-item">
                         <img src="<?= get_template_directory_uri(); ?>/assets/images/icons/sign_process_icon3.svg" alt="icon">
+                        <img class="icon-light" src="<?= get_template_directory_uri(); ?>/assets/images/icons/sign_process_icon3_active.svg" alt="icon">
                         <div class="dot"></div>
                         <p>Chọn hoặc tạo<br>tài liệu cần ký</p>
                     </div>
                     <div class="step-item">
                         <img src="<?= get_template_directory_uri(); ?>/assets/images/icons/sign_process_icon4.svg" alt="icon">
+                        <img class="icon-light" src="<?= get_template_directory_uri(); ?>/assets/images/icons/sign_process_icon4_active.svg" alt="icon">
                         <div class="dot"></div>
                         <p>Gán<br>người ký</p>
                     </div>
                     <div class="step-item">
                         <img src="<?= get_template_directory_uri(); ?>/assets/images/icons/sign_process_icon5.svg" alt="icon">
+                        <img class="icon-light" src="<?= get_template_directory_uri(); ?>/assets/images/icons/sign_process_icon5_active.svg" alt="icon">
                         <div class="dot"></div>
                         <p>Thực hiện<br>ký số</p>
                     </div>
                     <div class="step-item last">
                         <img src="<?= get_template_directory_uri(); ?>/assets/images/icons/sign_process_icon6.svg" alt="icon">
+                        <img class="icon-light" src="<?= get_template_directory_uri(); ?>/assets/images/icons/sign_process_icon6_active.svg" alt="icon">
                         <div class="dot"></div>
                         <p>Lưu trữ và<br>quản lý tài liệu</p>
                     </div>
@@ -102,7 +107,7 @@ $tab1 = isset($page_data['ky_ket_data']) ? $page_data['ky_ket_data'] : [];
         </div>
     </div>
 </section>
-<section class="work-quytrinh-bottom">
+<section class="sign-quytrinh-bottom">
     <div class="container">
         <div class="row">
             <div class="col">
@@ -110,12 +115,12 @@ $tab1 = isset($page_data['ky_ket_data']) ? $page_data['ky_ket_data'] : [];
                     <div class="comp-card before">
                         <h3>Trước đây</h3>
                         <ul>
-                            <li><span class="icon dash"></span><p>Mất thời gian in ấn - ký tay - scan gửi lại</p></li>
-                            <li><span class="icon dash"></span><p>Khó kiểm soát văn bản đã ký và chưa ký</p></li>
-                            <li><span class="icon dash"></span><p>Không thể ký duyệt mọi lúc, mọi nơi</p></li>
-                            <li><span class="icon dash"></span><p>Thiếu minh bạch, truy vết trong quy trình phê duyệt</p></li>
-                            <li><span class="icon dash"></span><p>Giao nhận văn bản giấy giữa các phòng ban rêu</p></li>
-                            <li><span class="icon dash"></span><p>Thiếu đồng bộ với các hệ thống văn bản, hợp đồng</p></li>
+                            <li><img src="<?= get_template_directory_uri(); ?>/assets/images/icons/X_circle_red.svg" alt="img"><p>Mất thời gian in ấn - ký tay - scan gửi lại</p></li>
+                            <li><img src="<?= get_template_directory_uri(); ?>/assets/images/icons/X_circle_red.svg" alt="img"><p>Khó kiểm soát văn bản đã ký và chưa ký</p></li>
+                            <li><img src="<?= get_template_directory_uri(); ?>/assets/images/icons/X_circle_red.svg" alt="img"><p>Không thể ký duyệt mọi lúc, mọi nơi</p></li>
+                            <li><img src="<?= get_template_directory_uri(); ?>/assets/images/icons/X_circle_red.svg" alt="img"><p>Thiếu minh bạch, truy vết trong quy trình phê duyệt</p></li>
+                            <li><img src="<?= get_template_directory_uri(); ?>/assets/images/icons/X_circle_red.svg" alt="img"><p>Giao nhận văn bản giấy giữa các phòng ban rêu</p></li>
+                            <li><img src="<?= get_template_directory_uri(); ?>/assets/images/icons/X_circle_red.svg" alt="img"><p>Thiếu đồng bộ với các hệ thống văn bản, hợp đồng</p></li>
                         </ul>
                         <div class="img-container">
                             <img src="<?= get_template_directory_uri(); ?>/assets/images/sign_bottom_quytrinh1.svg" alt="img">
@@ -124,12 +129,12 @@ $tab1 = isset($page_data['ky_ket_data']) ? $page_data['ky_ket_data'] : [];
                     <div class="comp-card after">
                         <h3>Ký với 1SIGN</h3>
                         <ul>
-                            <li><span class="icon check"></span><p>Ký kết từ xa, mọi lúc mọi nơi, mọi nền tảng</p></li>
-                            <li><span class="icon check"></span><p>Lưu trữ, bảo mật và tra cứu tài liệu sau ký</p></li>
-                            <li><span class="icon check"></span><p>Hỗ trợ ký số mọi loại hợp đồng, chứng từ</p></li>
-                            <li><span class="icon check"></span><p>Soạn thảo, thảo luận và ký ngay trên hệ thống</p></li>
-                            <li><span class="icon check"></span><p>Đảm bảo tính pháp lý điện tử theo quy định</p></li>
-                            <li><span class="icon check"></span><p>Triển khai nhanh, chỉ trong 15 phút</p></li>
+                            <li><img src="<?= get_template_directory_uri(); ?>/assets/images/icons/V_circle_bg_yellow.svg" alt="img"><p>Ký kết từ xa, mọi lúc mọi nơi, mọi nền tảng</p></li>
+                            <li><img src="<?= get_template_directory_uri(); ?>/assets/images/icons/V_circle_bg_yellow.svg" alt="img"><p>Lưu trữ, bảo mật và tra cứu tài liệu sau ký</p></li>
+                            <li><img src="<?= get_template_directory_uri(); ?>/assets/images/icons/V_circle_bg_yellow.svg" alt="img"><p>Hỗ trợ ký số mọi loại hợp đồng, chứng từ</p></li>
+                            <li><img src="<?= get_template_directory_uri(); ?>/assets/images/icons/V_circle_bg_yellow.svg" alt="img"><p>Soạn thảo, thảo luận và ký ngay trên hệ thống</p></li>
+                            <li><img src="<?= get_template_directory_uri(); ?>/assets/images/icons/V_circle_bg_yellow.svg" alt="img"><p>Đảm bảo tính pháp lý điện tử theo quy định</p></li>
+                            <li><img src="<?= get_template_directory_uri(); ?>/assets/images/icons/V_circle_bg_yellow.svg" alt="img"><p>Triển khai nhanh, chỉ trong 15 phút</p></li>
                         </ul>
                         <div class="img-container">
                             <img src="<?= get_template_directory_uri(); ?>/assets/images/sign_bottom_quytrinh2.svg" alt="img">
@@ -140,7 +145,7 @@ $tab1 = isset($page_data['ky_ket_data']) ? $page_data['ky_ket_data'] : [];
         </div>
     </div>
 </section>
-<section class="work-kyket">
+<section class="sign-kyket">
     <div class="container">
         <div class="row">
             <div class="col">

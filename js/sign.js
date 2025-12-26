@@ -10,11 +10,11 @@ jQuery(document).ready(function($) {
     });
 
     function initTimeline() {
-        var $processSteps = $('.work-quytrinh .process-steps');
-        var $line = $('.work-quytrinh .line');
-        var $lineActive = $('.work-quytrinh .line-active');
-        var $dots = $('.work-quytrinh .step-item .dot');
-        var $items = $('.work-quytrinh .step-item');
+        var $processSteps = $('.sign-quytrinh .process-steps');
+        var $line = $('.sign-quytrinh .line');
+        var $lineActive = $('.sign-quytrinh .line-active');
+        var $dots = $('.sign-quytrinh .step-item .dot');
+        var $items = $('.sign-quytrinh .step-item');
 
         if (!$processSteps.length || !$line.length || !$dots.length) return;
 
@@ -97,7 +97,6 @@ jQuery(document).ready(function($) {
            dotCenters = setInitialPositions();
         });
     }
-
 
     // FAQ Toggle
     $('.sign-faq .faq-item .header').on('click', function() {

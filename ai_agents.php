@@ -29,8 +29,7 @@ if ($svg_hesinhthai === false) {
                     <span class="br-line">Giải phóng nguồn lực</span>
                     Tăng cường hiệu suất vận hành
                 </h1>
-                <p>Làm việc thông minh hơn với trợ lý AI dành cho doanh nghiệp của bạn.
-                    Đơn giản hoá mọi tác vụ từ truy xuất, phân tích dữ liệu đến ra quyết định</p>
+                <p class="sub-title-section">Làm việc thông minh hơn với trợ lý AI dành cho doanh nghiệp của bạn.<br/>Đơn giản hoá mọi tác vụ từ truy xuất, phân tích dữ liệu đến ra quyết định</p>
                 <?php get_template_part('template-parts/callout_parts/dk_chat_ai', 'template'); ?>
             </div>
             <div class="img-container">
@@ -46,7 +45,7 @@ if ($svg_hesinhthai === false) {
         <div class="row">
             <h1 class="title-section">Hệ sinh thái 1AI Agents</h1>
             <p class="sub-title-section">Kết nối dữ liệu, dự đoán xu hướng và đề xuất hành động tối ưu</p>
-            <p class="content">Vận hành doanh nghiệp <span class="br-line">thông minh với AI Agents</span></p>
+            <p class="content">Vận hành doanh nghiệp<br/>thông minh với AI Agents</p>
         </div>
     </div>
 </section>
@@ -76,7 +75,6 @@ if ($svg_hesinhthai === false) {
 </section>
 
 <section class="ai-agents-chuyendoi">
-    <img class="ai-agents-chuyendoi-bg" src="<?= get_template_directory_uri() . '/assets/images/ai_agents_chuyendoi_bg.svg' ?>" alt="">
     <div class="container">
         <div class="row">
             <h1 class="title-section">Chuyển đổi cách doanh nghiệp vận hành
@@ -86,36 +84,36 @@ if ($svg_hesinhthai === false) {
                 <div class="item">
                     <img src="<?= get_template_directory_uri() . '/assets/images/icons/ai_agents_chuyendoi_item1.svg' ?>" alt="">
                     <h2>Khả năng tích hợp</h2>
-                    <p>Tích hợp với toàn bộ quy trình vận hành <span class="br-line">của doanh nghiệp thông qua nền tảng <span class="br-line">All-in-one</span></span></p>
+                    <p>Tích hợp với toàn bộ quy trình vận hành<br/>của doanh nghiệp thông qua nền tảng<br/>All-in-one</p>
                 </div>
                 <div class="item">
                     <img src="<?= get_template_directory_uri() . '/assets/images/icons/ai_agents_chuyendoi_item2.svg' ?>" alt="">
                     <h2>Phối hợp đồng bộ</h2>
-                    <p>Các AI Agents được tích hợp chung trên một nền tảng, phối hợp thực hiện các nhiệm vụ phức tạp một cách đồng bộ</p>
+                    <p>Các AI Agents được tích hợp chung trên một<br/>nền tảng, phối hợp thực hiện các nhiệm vụ<br/>phức tạp một cách đồng bộ</p>
                 </div>
 
                 <div class="item">
                     <img src="<?= get_template_directory_uri() . '/assets/images/icons/ai_agents_chuyendoi_item3.svg' ?>" alt="">
                     <h2>Hiểu ngữ cảnh sâu</h2>
-                    <p>Hiểu ngữ cảnh doanh nghiệp sâu nhờ khả năng tự động truy xuất và phân tích dữ liệu thông minh</p>
+                    <p>Hiểu ngữ cảnh doanh nghiệp sâu nhờ khả<br/>năng tự động truy xuất và phân tích dữ liệu<br/>thông minh</p>
                 </div>
 
                 <div class="item">
                     <img src="<?= get_template_directory_uri() . '/assets/images/icons/ai_agents_chuyendoi_item4.svg' ?>" alt="">
                     <h2>Tự động hoá</h2>
-                    <p>Không chỉ đưa ra gợi ý, 1AI Agents còn được giao quyền thay người dùng tự động xử lý tác vụ và quy trình</p>
+                    <p>Không chỉ đưa ra gợi ý, 1AI Agents còn được<br/>giao quyền thay người dùng tự động xử lý tác<br/>vụ và quy trình</p>
                 </div>
 
                 <div class="item">
                     <img src="<?= get_template_directory_uri() . '/assets/images/icons/ai_agents_chuyendoi_item5.svg' ?>" alt="">
                     <h2>Bản địa hóa</h2>
-                    <p>AI Agents 1Office được huấn luyện từ dữ liệu hàng ngàn doanh nghiệp Việt, nên thấu hiểu đặc thù quản trị và hành vi người dùng nội địa</p>
+                    <p>AI Agents 1Office được huấn luyện từ dữ liệu<br/>hàng ngàn doanh nghiệp Việt, nên thấu hiểu<br/>đặc thù quản trị và hành vi người dùng nội địa</p>
                 </div>
 
                 <div class="item">
                     <img src="<?= get_template_directory_uri() . '/assets/images/icons/ai_agents_chuyendoi_item6.svg' ?>" alt="">
                     <h2>Bảo mật</h2>
-                    <p>Tuyệt đối bảo mật dữ liệu cá nhân và doanh nghiệp nhờ tích hợp sâu với quyền người dùng trên hệ thống</p>
+                    <p>Tuyệt đối bảo mật dữ liệu cá nhân và doanh<br/>nghiệp nhờ tích hợp sâu với quyền người dùng<br/>trên hệ thống</p>
                 </div>
             </div>
 

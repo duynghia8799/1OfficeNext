@@ -193,7 +193,6 @@ $tab2 = isset($page_data['lien_ket_data']) ? $page_data['lien_ket_data'] : [];
                     <img class="img-3" src="<?= get_template_directory_uri() . '/assets/images/demo/work_tudonghoa_3.svg' ?>" alt="demo">
                 </div>
             </div>
-
         </div>
     </div>
 </section>
@@ -260,6 +259,42 @@ $tab2 = isset($page_data['lien_ket_data']) ? $page_data['lien_ket_data'] : [];
 $slider_data_source = require get_template_directory() . '/data/slider_data.php';
 get_template_part('template-parts/callout_parts/tintuong_slider', null, $slider_data_source['data1']); 
 ?>
+
+<section class="work-stats">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2 class="title-section">Năng suất cao hơn với ít công cụ hơn</h2>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="number">145K+</div>
+                        <div class="desc">Tổng số Dự án</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="number">20.7M+</div>
+                        <div class="desc">Tổng số Công việc</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="number">22.6M+</div>
+                        <div class="desc">Tổng số Tệp đính kèm</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="number">15.6M+</div>
+                        <div class="desc">Tổng số Quy trình</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="number">5.1M+</div>
+                        <div class="desc">Số Công việc thường</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="number">35.7K+</div>
+                        <div class="desc">Số Quy trình mẫu</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <section class="top-footer">
     <img class="top-footer-bg" src="<?= get_template_directory_uri() . '/assets/images/ai_light_bg_blue.svg' ?>" alt="">

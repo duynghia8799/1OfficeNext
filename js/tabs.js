@@ -19,7 +19,13 @@
 
         $('.animation-tabs').each(function () {
             var $currentTabGroup = $(this);
-            var $firstItem = $currentTabGroup.find('.items-container .item').first();
+            var $firstItem;
+            if ($currentTabGroup.hasClass('tangtoc')) {
+                $firstItem = $currentTabGroup.find('.items-container .item').last();
+            } else {
+                $firstItem = $currentTabGroup.find('.items-container .item').first();
+            }
+
             $firstItem.addClass('active')
             changePosisionCard($firstItem)
             // Lỗi 2 lần ##
@@ -45,10 +51,15 @@
             var $container = $(selector + '.animation-tabs');
             if ($container.length === 0) return;
 
-            var $firstItem = $container.find('.items-container .item').first();
-            $("#" + $($firstItem).attr('data-bs-target')).addClass('up');
-
             var $panels = $(selector + '.tab-content').find('.tab-pane');
+
+            if ($container.hasClass('tangtoc')) {
+                $panels.addClass('up');
+            } else {
+                var $firstItem = $container.find('.items-container .item').first();
+                $("#" + $($firstItem).attr('data-bs-target')).addClass('up');
+            }
+
             $container.find('.item').on('click', function () {
                 $("." + $(this).attr('panels-container') + ".panels-container .tab-pane").removeClass('up');
                 var $currentPanel = $("#" + $(this).attr('data-bs-target'));
@@ -63,7 +74,7 @@
         }
         initUpSlideAnimation('.tangtoc');
         initUpSlideAnimation('.dieuphoi');
-
+        initUpSlideAnimation('.kyket');
 
         //animation up tichhop
         $('.tichhop.tab-content .tab-pane').addClass('active')
@@ -71,8 +82,6 @@
 
         $('.tichhop.animation-tabs .item').on('click', function () {
             var $currentPanel = $("#" + $(this).attr('data-bs-target'))
-            console.log('check')
-            console.log($currentPanel)
             let check = false
             for (let $item of tichhop_panel) {
                 if ($($item).is($currentPanel)) {

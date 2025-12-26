@@ -34,6 +34,7 @@
         function initAutoTabs(uniqueClass, duration) {
             var $tabsContainer = $('.' + uniqueClass + '.animation-tabs');
             if ($tabsContainer.length === 0) return;
+
             var interval;
             
             function startInterval() {
