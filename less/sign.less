@@ -433,13 +433,14 @@
         }
         .animation-tabs-content{
             width: 100%;
-            height: 34.375rem;
+            height: auto;
             margin-top: 1.5rem;
             .tab-content{
-                width: 100%;
-                height: 100%;
-                display: flex;
+                // Inherit layout/grid from .animation-tabs-content in animation_tabs.less
+                // Removed redundant display: grid/flex and dimensions
+                
                 .tab-pane{
+                    // Inherit grid-area from global
                     padding:0;
                     background-color: transparent;
                     transform: translateY(100%);
@@ -791,3 +792,105 @@
     }
     
 }
+
+
+
+
+
+
+
+
+// Sample Complex Stack Animation Styles
+.sign-sample-complex {
+    .animation-tabs {
+        justify-content: center;
+        margin-bottom: 2rem;
+        background: transparent;
+        padding: 0;
+
+        .card { opacity: 0; } // Hide the default moving card if we don't want to animate it, or keep it. Let's keep it but it needs JS to work.
+
+        .items-container {
+            border-bottom: 1px solid #ddd;
+            gap: 20px;
+            
+            .item {
+                font-size: 1.25rem;
+                padding: 10px 20px;
+                background: transparent;
+                border: none;
+                border-bottom: 3px solid transparent;
+                transition: all 0.3s;
+                opacity: 0.6;
+
+                &.active {
+                    opacity: 1;
+                    border-bottom-color: #2B6AD1;
+                    color: #2B6AD1;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    .animation-tabs-content {
+        width: 100%; // Override fit-content
+        margin: 0 auto;
+        max-width: 1000px;
+        height: 500px; // Fixed height is important for absolute positioning stability
+        position: relative;
+        overflow: hidden; // Clip the sliding tabs
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+
+        .tab-content {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .tab-pane {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 40px;
+            background: #fff;
+            display: flex !important; // Override bootstrap 'none'
+            opacity: 1; // Default visible for logic
+            transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.6s ease;
+            
+            // Logic States (Will be controlled by JS Classes usually, but we set defaults)
+            // By default, assume they are 'waiting' below if they are not active? 
+            // actually JS will initialize positions.
+            
+            // Initial State in CSS: All 'active' in BS5 are display:block, others none.
+            // We need to override this: All must be block/flex.
+            
+            transform: translateY(100%); // Default position: Waiting below
+            
+            &.active-view {
+                transform: translateY(0%);
+            }
+            
+            &.behind-view {
+                transform: translateY(0%); // Sitting behind
+                z-index: -1; // Specific fix ensuring it does not block clicks if top layer has transparent parts (though data shows full Cards)
+            }
+            
+            // Content styling
+            .content {
+                width: 50%;
+                h2 { margin-bottom: 20px; font-size: 24px; color: #333; }
+                ul { 
+                    list-style: none; padding: 0; 
+                    li { margin-bottom: 15px; display: flex; gap: 10px; color: #666; }
+                }
+            }
+            .demo { width: 50%; object-fit: contain; }
+        }
+    }
+}
+
