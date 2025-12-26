@@ -97,15 +97,18 @@ jQuery(document).ready(function($) {
            dotCenters = setInitialPositions();
         });
     }
+    initTimeline();
 
     // FAQ Toggle
     $('.sign-faq .faq-item .header').on('click', function() {
         var $item = $(this).closest('.faq-item');
+        
         var $body = $item.find('.body');
         
         $item.toggleClass('active');
         $body.slideToggle(300);
     });
-
-    initTimeline();
+    var $firstItem = $('.sign-faq .faq-item').first();
+    $firstItem.addClass('active');
+    $firstItem.find('.body').slideDown(0);
 });
