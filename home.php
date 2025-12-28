@@ -38,6 +38,22 @@ get_header();
                             <?= file_get_contents(get_template_directory() . '/assets/images/home/banner/menu-aiagent.svg'); ?>
                         </div>
                     </div>
+
+                    <div class="banner-overlay popup-ai-agent" data-banner="aiagent-chat">
+                        <div class="overlay-content">
+                            <div class="chatbox-wrapper">
+                                <div class="chatbox-bg">
+                                    <?= file_get_contents(get_template_directory() . '/assets/images/home/banner/pop-chatbox.svg'); ?>
+                                </div>
+                                <div class="chatbox-content-scroll">
+                                    <div class="chatbox-content-img">
+                                        <img src="<?= get_template_directory_uri() ?>/assets/images/home/banner/chatbox-content.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="chatbox-close-hitbox"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <script>
@@ -49,7 +65,7 @@ get_header();
                         function switchLayer(targetName) {
                             if (!targetName) return;
 
-                            if (targetName === 'phanhe' || targetName === 'aiagent') {
+                            if (targetName === 'phanhe' || targetName === 'aiagent' || targetName === 'aiagent-chat') {
                                 overlays.forEach(o => {
                                     if (o.dataset.banner === targetName) {
                                         o.classList.add('active');
@@ -90,6 +106,25 @@ get_header();
                             const closeBtn = e.target.closest('.btn-close-overlay');
                             if (closeBtn) {
                                 overlays.forEach(o => o.classList.remove('active'));
+                                e.stopPropagation();
+                            }
+
+                            // Handle AI Assistant Click (Item 1 in menu-aiagent.svg)
+                            // We target the group or rect based on SVG structure
+                            const aiAgentMenu = e.target.closest('[data-banner="aiagent"]');
+                            if (aiAgentMenu) {
+                                // Simple detection for now based on click location or element ID if available
+                                // item 1ai assistant is roughly the first rect after the filter
+                                // rect at x=30, y=24
+                                if (e.target.closest('rect[y="24"]') || e.target.closest('path[d*="74.3613 38.8145"]')) {
+                                    switchLayer('aiagent-chat');
+                                    e.stopPropagation();
+                                }
+                            }
+
+                            // Handle Chatbox Close
+                            if (e.target.closest('.chatbox-close-hitbox')) {
+                                document.querySelector('.popup-ai-agent[data-banner="aiagent-chat"]').classList.remove('active');
                                 e.stopPropagation();
                             }
                         });
