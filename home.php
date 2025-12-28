@@ -14,9 +14,98 @@ get_header();
                 <span>giúp doanh nghiệp vận hành</span> ”như bạn tưởng tượng”
             </span>
             <div class="tour-guide">
-                <?php // include 'banner-root.svg' ?>
-                <img src="<?= esc_url(get_template_directory_uri() . '/banner-root.svg'); ?>" alt="">
+                <div class="banner-wrapper">
+                    <div class="banner-layer active" data-banner="root">
+                        <?= file_get_contents(get_template_directory() . '/assets/images/home/banner/banner-root.svg'); ?>
+                    </div>
+                    <div class="banner-layer" data-banner="quytrinh">
+                        <?= file_get_contents(get_template_directory() . '/assets/images/home/banner/banner-quytrinh.svg'); ?>
+                    </div>
+                    <div class="banner-layer" data-banner="congviec">
+                        <?= file_get_contents(get_template_directory() . '/assets/images/home/banner/banner-congviec.svg'); ?>
+                    </div>
+                    <div class="banner-layer" data-banner="dashboard">
+                        <?= file_get_contents(get_template_directory() . '/assets/images/home/banner/banner-dashboard.svg'); ?>
+                    </div>
+
+                    <div class="banner-overlay" data-banner="phanhe">
+                        <div class="overlay-content">
+                            <?= file_get_contents(get_template_directory() . '/assets/images/home/banner/menu-phanhe.svg'); ?>
+                        </div>
+                    </div>
+                    <div class="banner-overlay" data-banner="aiagent">
+                        <div class="overlay-content">
+                            <?= file_get_contents(get_template_directory() . '/assets/images/home/banner/menu-aiagent.svg'); ?>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        const layers = document.querySelectorAll('.banner-layer');
+                        const overlays = document.querySelectorAll('.banner-overlay');
+                        const wrapper = document.querySelector('.banner-wrapper');
+
+                        function switchLayer(targetName) {
+                            if (!targetName) return;
+
+                            if (targetName === 'phanhe' || targetName === 'aiagent') {
+                                overlays.forEach(o => {
+                                    if (o.dataset.banner === targetName) {
+                                        o.classList.add('active');
+                                    } else {
+                                        o.classList.remove('active');
+                                    }
+                                });
+                                return;
+                            }
+
+                            layers.forEach(layer => {
+                                if (layer.dataset.banner === targetName) {
+                                    layer.classList.add('active');
+                                } else {
+                                    layer.classList.remove('active');
+                                }
+                            });
+
+                            // Handle active class for dots
+                            document.querySelectorAll('.interactive-dot').forEach(dot => {
+                                if (dot.dataset.target === targetName) {
+                                    dot.classList.add('active');
+                                } else {
+                                    dot.classList.remove('active');
+                                }
+                            });
+
+                            overlays.forEach(o => o.classList.remove('active'));
+                        }
+
+                        wrapper.addEventListener('click', function(e) {
+                            const dot = e.target.closest('.interactive-dot');
+                            if (dot) {
+                                switchLayer(dot.dataset.target);
+                                e.stopPropagation();
+                            }
+
+                            const closeBtn = e.target.closest('.btn-close-overlay');
+                            if (closeBtn) {
+                                overlays.forEach(o => o.classList.remove('active'));
+                                e.stopPropagation();
+                            }
+                        });
+
+                        document.addEventListener('click', function(e) {
+                            if (!e.target.closest('.overlay-content') && !e.target.closest('.interactive-dot')) {
+                                overlays.forEach(o => o.classList.remove('active'));
+                            }
+                        });
+
+                        // Set default active state
+                        switchLayer('root');
+                    });
+                </script>
             </div>
+
         </div>
 
     </div>

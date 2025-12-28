@@ -18,15 +18,120 @@
         }
 
         .tour-guide {
-            display: flex;
-            justify-content: center;
-            align-items: center;
             margin-top: 72px;
+            width: 100%;
+            max-width: 1304px;
+            margin-left: auto;
+            margin-right: auto;
 
-            img {
+            .banner-wrapper {
+                position: relative;
                 width: 100%;
-                object-fit: contain;
+                // Aspect ratio for SVG viewBox 1304 724
+                padding-top: 55.52%;
+                overflow: visible;
+
+                .banner-layer {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0;
+                    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+                    pointer-events: none;
+                    z-index: 1;
+
+                    &.active {
+                        opacity: 1;
+                        pointer-events: auto;
+                        z-index: 2;
+                    }
+
+                    svg {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                .banner-overlay {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: all 0.4s ease;
+                    z-index: 10;
+                    pointer-events: none;
+
+                    &.active {
+                        opacity: 1;
+                        visibility: visible;
+                        pointer-events: auto;
+                    }
+
+                    .overlay-content {
+                        position: absolute;
+                        width: 40%; // Adjust based on SVG size
+
+                        svg {
+                            width: 100%;
+                            height: auto;
+                            filter: drop-shadow(0px 24px 48px rgba(0, 0, 0, 0.16));
+                        }
+                    }
+
+                    &[data-banner="phanhe"] .overlay-content {
+                        top: 1.38%;
+                        left: 0.92%;
+                        width: 35.28%;
+                    }
+
+                    &[data-banner="aiagent"] .overlay-content {
+                        top: 6%;
+                        width: 22%;
+                        right: 2%;
+                    }
+                }
             }
+
+            .interactive-dot {
+                cursor: pointer;
+                pointer-events: auto;
+
+                .dot-point {
+                    width: 10px;
+                    height: 10px;
+                    transition: all 0.3s ease;
+                }
+
+                .dot-ring {
+                    width: 10px;
+                    height: 10px;
+                    transform-origin: center;
+                    transform-box: fill-box;
+                    animation: ring-pulse 2s infinite ease-out;
+                    pointer-events: none;
+                    opacity: 0;
+
+                    &:nth-child(2) {
+                        animation-delay: 1.5s;
+                    }
+                }
+
+                &:hover,
+                &.active {
+                    .dot-point {
+                        fill: #ff2a2a;
+                        filter: brightness(1.2);
+                        transform-origin: center;
+                        transform-box: fill-box;
+                    }
+                }
+            }
+
         }
     }
 
@@ -265,8 +370,37 @@
 
             .center-point {
                 fill: #2F6FFF;
-                animation: pulse 1.2s infinite ease-in-out;
+                position: relative;
             }
+
+            .center-point-ring {
+                fill: #2F6FFF;
+                transform-origin: center;
+                transform-box: fill-box;
+                animation: ring-pulse 3s infinite ease-out;
+                pointer-events: none;
+
+                &.center-point-ring-1 {
+                    animation-delay: 0s;
+                }
+
+                &.center-point-ring-2 {
+                    animation-delay: 1.5s;
+                }
+            }
+
+            @keyframes ring-pulse {
+                0% {
+                    transform: scale(1);
+                    opacity: 0.5;
+                }
+
+                100% {
+                    transform: scale(2.5);
+                    opacity: 0;
+                }
+            }
+
         }
     }
 
@@ -391,11 +525,15 @@
 
                         @keyframes fadeIn {
                             from {
-                                opacity: 0.5;
+                                pointer-events: none;
+                                z-index: 1;
+                                opacity: .6;
                             }
 
                             to {
                                 opacity: 1;
+                                pointer-events: auto;
+                                z-index: 2;
                             }
                         }
                     }
@@ -646,9 +784,7 @@
                     background: transparent;
                     z-index: 1;
 
-                    &.active {
-                        // background: #FFD730;
-                    }
+
 
                     .icon {
                         width: 18px;
