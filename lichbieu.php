@@ -47,7 +47,7 @@ get_header();
             <div class="col-12">
                 <h1 class="title-section">Quản lý toàn bộ lịch làm việc tại một nơi duy nhất</h1>
                 <div class="lichbieu-tabs-wrapper">
-                    <?php get_template_part('template-parts/tabs/animation_tab2', null, array('name' => 'lichbieu-quanly', 'tabs' => array(
+                    <?php get_template_part('template-parts/tabs/animation_tab2', null, array('name' => 'quanly', 'tabs' => array(
                         [
                             'content_tab' => '
                             <div class="header-item">
@@ -116,7 +116,7 @@ get_header();
         <div class="row">
             <div class="col-12">
                 <h1 class="title-section">Làm chủ lịch trình với tính năng đồng bộ và tích hợp mạnh mẽ</h1>
-                <?php get_template_part('template-parts/tabs/animation_tab', null, array('name' => 'lichbieu-lamchu', 'tabs' => array(
+                <?php get_template_part('template-parts/tabs/animation_tab', null, array('name' => 'lamchu', 'tabs' => array(
                     [
                         'title'         => 'Đồng bộ linh hoạt',
                         'icon'          => '/assets/images/icons/lichbieu_lamchu_icon1.svg',

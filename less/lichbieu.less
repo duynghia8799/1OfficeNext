@@ -82,6 +82,7 @@
 .lichbieu-quanly{
     .col-12{
         margin-top: 4.25rem;
+        overflow: hidden;
     }
     .lichbieu-tabs-wrapper{
         margin-top: 3.75rem;
@@ -113,6 +114,30 @@
                     align-items: start;
                     border-bottom: 1px dashed #D1D1D1;
                     transition: all 0.5s ease;
+                    position: relative; 
+
+                    // Thanh progress bar ảo
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: -1px;
+                        left: 0;
+                        height: 3px;
+                        background-color: #14629A;
+                        width: 0%;
+                        z-index: 5;
+                    }
+
+                    // Class kích hoạt animation
+                    &.active.counting::after {
+                         animation: items_loader linear forwards;
+                         animation-duration: inherit; // Fix: Inherit duration set by JS on parent
+                    }
+                    
+                    @keyframes items_loader {
+                        from { width: 0%; }
+                        to { width: 100%; }
+                    }
 
 
                     &.active{
@@ -221,9 +246,12 @@
             margin-top: 3.25rem;
             padding: 0;
             border-bottom: 1px solid rgba(255, 255, 255, 0.20);
+            background-color: transparent;
+
             .items-container{
                 height: 3rem;
                 gap: 3.25rem;
+                background-color: transparent;
                 align-items: start;
                 .item{
                     height: 1.75rem;

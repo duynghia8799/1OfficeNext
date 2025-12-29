@@ -106,8 +106,8 @@
         initTabs('.tangtoc',  { startIndex: -1 }); // Mặc định tab cuối
         initTabs('.tichhop',  { startIndex: 0 });
         initTabs('.lienket',  { startIndex: 0 });
-        initTabs('.animation-tabs2',  { startIndex: 0 });
-        initTabs('.lichbieu-lamchu',  { startIndex: 0 });
+        initTabs('.quanly',  { startIndex: 0 });
+        initTabs('.lamchu',  { startIndex: 0 });
         initTabs('.complex_stack', { startIndex: 0 });
         // Global Load Handler (Safety)
         $(window).on('load', function () {

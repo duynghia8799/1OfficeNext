@@ -32,7 +32,7 @@
 
         // --- Part 2: Generic Tabs Auto-switch ---
         function initAutoTabs(uniqueClass, duration) {
-            var $tabsContainer = $('.' + uniqueClass + '.animation-tabs');
+            var $tabsContainer = $('.' + uniqueClass).filter('.animation-tabs, .animation-tabs2');
             if ($tabsContainer.length === 0) return;
 
             var interval;
@@ -65,6 +65,7 @@
         // Apply to specific tabs
         initAutoTabs('dieuphoi', 6000);
         initAutoTabs('kyket', 5000);
+        initAutoTabs('quanly', 5000);
 
     });
 })(jQuery);
