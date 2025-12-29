@@ -181,7 +181,7 @@ get_header();
         <div class="row">
             <div class="col-12">
                 <div class="left">
-                    <h1 class="title-section">Công cụ hỗ trợ điều phối, sắp xếp lịch làm việc</h1>
+                    <h1 class="title-section">Công cụ hỗ trợ điều phối, <br/>sắp xếp lịch làm việc</h1>
                     <div class="item">
                         <img src=" <?php echo get_template_directory_uri(); ?>/assets/images/icons/lichbieu_linhhoat_icon1.svg" alt="">
                         <div class="content-item">
@@ -212,7 +212,12 @@ get_header();
                     </div>
                 </div>
                 <div class="right">
-
+                    <h1 class="title-section">Sử dụng linh hoạt, hiệu quả, mọi lúc mọi nơi</h1>
+                    <img class="phone" src=" <?php echo get_template_directory_uri(); ?>/assets/images/lichbieu_linhhoat.svg" alt="">
+                    <div class="app-container">
+                        <img src=" <?php echo get_template_directory_uri(); ?>/assets/images/app_btn_google.svg" alt="">
+                        <img src=" <?php echo get_template_directory_uri(); ?>/assets/images/app_btn_apple.svg" alt="">
+                    </div>
                 </div>
             </div>
         </div>
@@ -224,12 +229,12 @@ $slider_data_source = require get_template_directory() . '/data/slider_data.php'
 get_template_part('template-parts/callout_parts/tintuong_slider', null, $slider_data_source['data1']); 
 ?>
 
-<section class="top-footer">
-    <img class="top-footer-bg" src="<?= get_template_directory_uri() . '/assets/images/ai_light_bg_blue.svg' ?>" alt="">
+<section class="top-footer lichbieu">
+    <img class="top-footer-bg" src="<?= get_template_directory_uri() . '/assets/images/ai_light_bg_bluesky.svg' ?>" alt="">
     <div class="container">
         <div class="row">
             <div class="content">
-                <h1 class="title-section">Bứt tốc trong kỷ nguyên AI. Khai thác tối đa <span class="br-line">sức mạnh của tự động hoá</span></h1>
+                <h1 class="title-section">Bắt đầu sắp xếp lại lịch làm việc của bạn <br/>theo cách khoa học và hiệu quả hơn</h1>
                 <?php get_template_part('template-parts/callout_parts/dk_chat_ai', 'template') ?>
             </div>
         </div>
