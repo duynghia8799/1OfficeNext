@@ -38,10 +38,12 @@
                 // Fallback tìm kiếm container nếu cấu trúc HTML rời rạc
                 if ($panelContainer.length === 0) {
                     $panelContainer = $container.siblings(selector + '.tab-content');
-                    if ($panelContainer.length === 0) $panelContainer = $container.siblings('.animation-tabs-content').find('.tab-content');
+                    if ($panelContainer.length === 0) $panelContainer = $container.siblings('.animation-tabs-content, .animation-tabs-content2').find('.tab-content');
                     if ($panelContainer.length === 0 && $container.hasClass('tichhop')) $panelContainer = $('.tichhop.tab-content');
                 }
                 var $panels = $panelContainer.find('.tab-pane');
+
+                
                 if ($tabs.length === 0 || $panels.length === 0) return;
                 // Xử lý Start Index
                 var currentIndex = settings.startIndex;
@@ -104,6 +106,8 @@
         initTabs('.tangtoc',  { startIndex: -1 }); // Mặc định tab cuối
         initTabs('.tichhop',  { startIndex: 0 });
         initTabs('.lienket',  { startIndex: 0 });
+        initTabs('.animation-tabs2',  { startIndex: 0 });
+        initTabs('.lichbieu-lamchu',  { startIndex: 0 });
         initTabs('.complex_stack', { startIndex: 0 });
         // Global Load Handler (Safety)
         $(window).on('load', function () {
