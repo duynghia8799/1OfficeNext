@@ -101,6 +101,7 @@
             });
         }
         // ==========================================
+        initTabs('.module-tab', { startIndex: 0 });
         initTabs('.dieuphoi', { startIndex: 0 });
         initTabs('.kyket',    { startIndex: 0 });
         initTabs('.tangtoc',  { startIndex: -1 }); // Mặc định tab cuối
@@ -110,11 +111,7 @@
         initTabs('.lamchu',  { startIndex: 0 });
         initTabs('.complex_stack', { startIndex: 0 });
         // Global Load Handler (Safety)
-        $(window).on('load', function () {
-            $('.animation-tabs .items-container .item.active').each(function () {
-                changePosisionCard($(this));
-            });
-        });
+        
 
     });
 })(jQuery);
