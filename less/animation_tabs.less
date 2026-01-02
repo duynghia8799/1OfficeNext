@@ -48,11 +48,13 @@
     height: fit-content;
     .tab-content {
         margin-top: 1rem;
-        height: 200px;
-        width: 800px;
         position: relative;
+        display: grid;
+        grid-template-columns: 100%;
+
         .tab-pane {
-            height: 100%;
+            grid-column: 1;
+            grid-row: 1;
             width: 100%;
             box-sizing: border-box;
             padding: 1rem;
@@ -62,10 +64,64 @@
             justify-content: start;
             align-items: start;
             background-color: white;
-            position: absolute;
-            top: 0;
-            left: 0;
+            &.active {
+                opacity: 1;
+                pointer-events: auto;
+            }
+        }
+    }
+}
 
+
+.animation-tabs2 {
+    height: fit-content;
+    width: fit-content;
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 0.25rem;
+
+        .items-container {
+            height: fit-content;
+            width: fit-content;
+            display: flex;
+            background-color: transparent;
+            z-index: 2;
+            border-bottom: none;
+
+            .item {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 0.5rem;
+                height: 2.75rem;
+                width: max-content;
+                background-color: transparent;
+            }
+        }
+
+}
+.animation-tabs-content2 {
+    width: fit-content;
+    height: fit-content;
+    .tab-content {
+        position: relative;
+        display: grid;
+        grid-template-columns: 100%;
+
+        .tab-pane {
+            grid-column: 1;
+            grid-row: 1;
+            width: 100%;
+            box-sizing: border-box;
+            opacity: 0;
+            pointer-events: none;
+            display: flex;
+            justify-content: start;
+            align-items: start;
+            background-color: white;
             &.active {
                 opacity: 1;
                 pointer-events: auto;

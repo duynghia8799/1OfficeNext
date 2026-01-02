@@ -1,8 +1,10 @@
 jQuery(document).ready(function($) {
     function playAnimation() {
-        $('.sign-hero').removeClass('start-anim');
-        void $('.sign-hero')[0].offsetWidth;
-        $('.sign-hero').addClass('start-anim');
+        var $hero = $('.sign-hero');
+        if ($hero.length === 0) return;
+        $hero.removeClass('start-anim');
+        void $hero[0].offsetWidth;
+        $hero.addClass('start-anim');
     }
     setTimeout(playAnimation, 100);
     $('.sign-hero').on('click', function() {

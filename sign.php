@@ -215,6 +215,7 @@ $tab1 = isset($page_data['ky_ket_data']) ? $page_data['ky_ket_data'] : [];
 $slider_data_source = require get_template_directory() . '/data/slider_data.php';
 get_template_part('template-parts/callout_parts/tintuong_slider', null, $slider_data_source['data2']); 
 ?>
+
 <section class="sign-stats">
     <div class="container">
         <div class="row">
