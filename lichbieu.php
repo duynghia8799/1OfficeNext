@@ -68,7 +68,7 @@ get_header();
                                 <img src="' . get_template_directory_uri() . '/assets/images/icons/lichbieu_quanly_icon2.svg" alt="icon">
                                 <h2>Tạo và chỉnh sửa linh hoạt</h2>
                             </div>
-                            <div class="content-item">
+                            <div class="content-item line-4">
                                 <p>Tạo lịch bằng thao tác click hoặc kéo-thả. Hỗ trợ đầy đủ các loại lịch: họp, công tác, phỏng vấn, gặp khách hàng, lịch nghỉ… kèm mô tả, tệp đính kèm và người tham gia</p>
                             </div>
                             ',

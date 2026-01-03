@@ -40,6 +40,17 @@
             function startInterval() {
                 if (interval) clearInterval(interval);
                 interval = setInterval(function() {
+                    // Check if any ancestor tab-pane is not active (hidden)
+                    var $parents = $tabsContainer.parents('.tab-pane');
+                    var isHidden = false;
+                    $parents.each(function() {
+                        if (!$(this).hasClass('active')) {
+                            isHidden = true;
+                            return false; // break
+                        }
+                    });
+                    if (isHidden) return;
+
                     // Re-query the active item from the DOM to get the current state
                     var $active = $tabsContainer.find('.items-container .item.active');
                     if ($active.length === 0) {
@@ -66,6 +77,9 @@
         initAutoTabs('dieuphoi', 6000);
         initAutoTabs('kyket', 5000);
         initAutoTabs('quanly', 5000);
+        initAutoTabs('duytri1', 6000);
+        initAutoTabs('duytri2', 6000);
+        initAutoTabs('duytri3', 6000);
 
     });
 })(jQuery);

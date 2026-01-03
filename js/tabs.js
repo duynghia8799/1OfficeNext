@@ -1,6 +1,9 @@
 (function ($) {
     $(document).ready(function () {
         function changePosisionCard($targetItem) {
+            // FIX: Ngăn tab con (animation-tabs2) ảnh hưởng đến card của tab cha (animation-tabs)
+            if ($targetItem.closest('.animation-tabs2').length > 0) return;
+
             var $wrapper = $targetItem.closest('.animation-tabs');
             var $card = $wrapper.find('.card');
             
@@ -30,18 +33,30 @@
 
             $wrappers.each(function () {
                 var $container = $(this);
+                // Ngăn chặn init trên chính container nội dung nếu nó dùng chung class định danh (vd: .duytri)
+                // Điều này tránh việc tab cha nhận nhầm các item của tab con nằm sâu bên trong content
+                if ($container.hasClass('tab-content') || $container.hasClass('panels-container')) return;
+
                 // Tìm Tabs
-                var $tabs = $container.find('.items-container .item');
+                var $tabs = $container.children('.items-container').find('.item');
+                if ($tabs.length === 0) $tabs = $container.find('.items-container .item');
                 if ($tabs.length === 0) $tabs = $container.find('.item');
                 // Tìm Panel Container
                 var $panelContainer = $container.find('.tab-content');
                 // Fallback tìm kiếm container nếu cấu trúc HTML rời rạc
                 if ($panelContainer.length === 0) {
                     $panelContainer = $container.siblings(selector + '.tab-content');
-                    if ($panelContainer.length === 0) $panelContainer = $container.siblings('.animation-tabs-content, .animation-tabs-content2').find('.tab-content');
+                    // Ưu tiên tìm content có mác class cụ thể bên trong wrapper
+                    if ($panelContainer.length === 0) {
+                         $panelContainer = $container.siblings('.animation-tabs-content, .animation-tabs-content2').find(selector + '.tab-content');
+                    }
+                    // Fallback chung (có thể gây lỗi nếu có nhiều sibling, nhưng giữ để tương thích ngược)
+                    if ($panelContainer.length === 0) {
+                        $panelContainer = $container.siblings('.animation-tabs-content, .animation-tabs-content2').find('.tab-content');
+                    }
                     if ($panelContainer.length === 0 && $container.hasClass('tichhop')) $panelContainer = $('.tichhop.tab-content');
                 }
-                var $panels = $panelContainer.find('.tab-pane');
+                var $panels = $panelContainer.children('.tab-pane');
 
                 
                 if ($tabs.length === 0 || $panels.length === 0) return;
@@ -92,7 +107,24 @@
                 $tabs.off('click').on('click', function (e) {
                     e.preventDefault();
                     var userIndex = $tabs.index(this);
-                    if (userIndex !== -1) updateState(userIndex);
+                    if (userIndex !== -1) {
+                        updateState(userIndex);
+                        
+                        // --- LOGIC RESET CÁC TAB ẨN (ANH EM) & TAB HIỆN TẠI ---
+                        // Reset tất cả các tab con về trạng thái ban đầu (Tab 1)
+                        // Việc này giúp:
+                        // 1. Tab ẩn được reset để lần sau quay lại nó "mới".
+                        // 2. Tab hiện tại (vừa bấm) được reset timer (do trigger 'click') để tránh bị nhảy tham số thời gian.
+                        $panels.each(function(i) {
+                              var $childTabsWrappers = $(this).find('.animation-tabs2');
+                              $childTabsWrappers.each(function() {
+                                  var $firstTabItem = $(this).find('.items-container .item').first();
+                                  if ($firstTabItem.length > 0) {
+                                      $firstTabItem.trigger('click');
+                                  }
+                              });
+                        });
+                    } 
                 });
                 // --- INITIALIZE ---
                 requestAnimationFrame(function () {
@@ -110,6 +142,10 @@
         initTabs('.quanly',  { startIndex: 0 });
         initTabs('.lamchu',  { startIndex: 0 });
         initTabs('.complex_stack', { startIndex: 0 });
+        initTabs('.duytri', { startIndex: 0 });
+        initTabs('.duytri1', { startIndex: 0 });
+        initTabs('.duytri2', { startIndex: 0 });
+        initTabs('.duytri3', { startIndex: 0 });
         // Global Load Handler (Safety)
         
 
