@@ -27,7 +27,6 @@
         function initTabs(selector, options) {
             var settings = $.extend({
                 startIndex: 0,
-                zIndexStart: 1
             }, options);
 
             var $wrappers = $(selector);
