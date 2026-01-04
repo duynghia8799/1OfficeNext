@@ -87,7 +87,7 @@
     .lichbieu-tabs-wrapper{
         margin-top: 3.75rem;
         width: 100%;
-        height: auto;
+        height: 32.75rem;
         display: flex;
         gap:1.5rem;
         align-items: center;
@@ -113,7 +113,7 @@
                     flex-direction: column;
                     align-items: start;
                     border-bottom: 1px dashed #D1D1D1;
-                    transition: all 0.5s ease;
+                    transition: all 0.6s ease;
                     position: relative; 
 
                     // Thanh progress bar ảo
@@ -125,13 +125,15 @@
                         height: 3px;
                         background-color: #14629A;
                         width: 0%;
-                        z-index: 5;
+                        z-index: 10;
+                        opacity: 0;
                     }
 
                     // Class kích hoạt animation
-                    &.active.counting::after {
+                    &.active::after {
                          animation: items_loader linear forwards;
-                         animation-duration: inherit; // Fix: Inherit duration set by JS on parent
+                         animation-duration: 5s; 
+                         opacity: 1;
                     }
                     
                     @keyframes items_loader {
@@ -143,9 +145,15 @@
                     &.active{
                         .content-item{
                             opacity: 1;
-                            max-height: 10rem; /* Đủ lớn để chứa nội dung */
-                            transition: all 1s ease;
-
+                            max-height: 6rem;
+                             /* Giảm max-height sát với nội dung hơn để giảm trễ */
+                            transition: all 0.6s ease-in-out;
+                            &.line-4{
+                                max-height: 7.75rem;
+                            }
+                            @media (max-width: 1399px) {
+                                max-height: 7.75rem;
+                            }
                         }
                     }
                     
@@ -170,8 +178,9 @@
                     .content-item{
                         opacity: 0;
                         max-height: 0;
+                        
                         overflow: hidden; 
-                        transition: all 0.5s ease-in-out; 
+                        transition: all 0.6s ease-in-out; 
                         p{
                             font-size: 1rem;
                             line-height: 1.75rem;

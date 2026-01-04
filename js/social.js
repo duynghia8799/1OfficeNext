@@ -10,5 +10,33 @@
                 $(this).addClass('active');
             }
         });
+
+        // Animation cho Social Hero
+        function initSocialHeroAnimation() {
+            const $parts = [
+                $('.img-part-1'),
+                $('.img-part-2'),
+                $('.img-part-3')
+            ];
+            
+            let step = 0; // 0: none, 1: part1, 2: part2, 3: part3
+
+            setInterval(function() {
+                step++;
+                if (step > 3) step = 0;
+
+                // Reset all
+                $parts.forEach(function($el) {
+                    $el.removeClass('active');
+                });
+
+                // Set active
+                if (step > 0) {
+                    $parts[step - 1].addClass('active');
+                }
+            }, 5000);
+        }
+
+        initSocialHeroAnimation();
     });
 })(jQuery);

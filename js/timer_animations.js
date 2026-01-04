@@ -40,6 +40,17 @@
             function startInterval() {
                 if (interval) clearInterval(interval);
                 interval = setInterval(function() {
+                    // Check if any ancestor tab-pane is not active (hidden)
+                    var $parents = $tabsContainer.parents('.tab-pane');
+                    var isHidden = false;
+                    $parents.each(function() {
+                        if (!$(this).hasClass('active')) {
+                            isHidden = true;
+                            return false; // break
+                        }
+                    });
+                    if (isHidden) return;
+
                     // Re-query the active item from the DOM to get the current state
                     var $active = $tabsContainer.find('.items-container .item.active');
                     if ($active.length === 0) {
@@ -66,6 +77,29 @@
         initAutoTabs('dieuphoi', 6000);
         initAutoTabs('kyket', 5000);
         initAutoTabs('quanly', 5000);
+        initAutoTabs('duytri1', 6000);
+        initAutoTabs('duytri2', 6000);
+        initAutoTabs('duytri3', 6000);
+
+        // Hàm riêng để reset animation cho phần Duy trì khi chuyển tab cha
+        function initDuyTriReset() {
+            $('.duytri.animation-tabs .items-container .item').on('shown.bs.tab', function (e) {
+                var targetId = $(e.target).attr('data-bs-target');
+                var $panel = $(targetId);
+                
+                // Tìm item con đang active trong đúng các khối duytri1, duytri2, duytri3 tương ứng
+                var $activeChild = $panel.find('.duytri1 .item.active, .duytri2 .item.active, .duytri3 .item.active');
+                
+                if ($activeChild.length) {
+                    // Reset animation bằng cách gỡ class active -> reflow -> thêm lại active
+                    // Cách này mạnh hơn việc chỉ reset property animation, đảm bảo mọi trạng thái vẽ lại từ đầu
+                    $activeChild.removeClass('active');
+                    void $activeChild[0].offsetHeight; // Trigger reflow
+                    $activeChild.addClass('active');
+                }
+            });
+        }
+        initDuyTriReset();
 
     });
 })(jQuery);
