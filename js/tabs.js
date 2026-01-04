@@ -26,7 +26,8 @@
          */
         function initTabs(selector, options) {
             var settings = $.extend({
-                startIndex: 0
+                startIndex: 0,
+                zIndexStart: 1
             }, options);
 
             var $wrappers = $(selector);
@@ -75,7 +76,7 @@
                     // --- CASE ĐẶC BIỆT: TICH HOP ---
                     if ($container.hasClass('tichhop')) {
                         $panels.each(function (i) {
-                            $(this).css('z-index', 10 + i); 
+                            $(this).css('z-index', 0 + i); 
                             if (i < targetIndex) {
                                 $(this).removeClass('active');
                             } else {
@@ -88,7 +89,7 @@
                     // --- CASE CHUNG (STANDARD + STACK UP) ---
                     else {
                         $panels.each(function(i) {
-                            $(this).css('z-index', 10 + i);
+                            $(this).css('z-index', 0 + i);
                             if (i === targetIndex) {
                                 $(this).addClass('active');
                             } else {
