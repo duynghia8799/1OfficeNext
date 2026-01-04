@@ -220,10 +220,10 @@
                                 </a>
                                 <a class="module-item">
                                     <img class="icon"
-                                        src="<?= get_template_directory_uri(); ?>/assets/images/headermenu/tuyendung.svg"
+                                        src="<?= get_template_directory_uri(); ?>/assets/images/headermenu/baohiem.svg"
                                         alt="">
                                     <img class="hover"
-                                        src="<?= get_template_directory_uri(); ?>/assets/images/headermenu/tuyendung_hover.svg"
+                                        src="<?= get_template_directory_uri(); ?>/assets/images/headermenu/baohiem_hover.svg"
                                         alt="">
                                     <div class="info">
                                         <span class="title">Kê khai bảo hiểm IVAN</span>
