@@ -13,7 +13,7 @@ get_header();
             <div class="row">
                 <div class="col-12">
                     <h1 class="title-section">Tự động hoá toàn diện quy trình nghiệp vụ</h1>
-                    <p class="sub-title-section">Xây dựng luồng xử lý linh hoạt, tăng tốc phê duyệt, minh bạch trách nhiệm và đảm bảo <br />mọi quy trình được thực thi liền mạch</p>
+                    <p class="sub-title-section">Xây dựng luồng xử lý linh hoạt, tăng tốc phê duyệt, minh bạch trách nhiệm và đảm bảo <br/>mọi quy trình được thực thi liền mạch</p>
                     <?php get_template_part('template-parts/callout_parts/dk_chat_ai', 'button'); ?>
                     <img src="<?= get_template_directory_uri() ?>/assets/images/demo/process_hero.svg" alt="">
                 </div>
@@ -21,33 +21,37 @@ get_header();
         </div>
     </section>
 
-    <section class="diemnghen">
+    <section class="process-diemnghen">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h1 class="title-section">Khi những điểm nghẽn trong quy trình đang âm thầm kéo lùi hiệu suất vận hành</h1>
+                    <h1 class="title-section">Khi những điểm nghẽn trong quy trình đang âm thầm <br/>kéo lùi hiệu suất vận hành</h1>
                     <div class="content-container">
                         <div class="content-item">
-                            <h2>Trước đây</h2>
-                            <div class="content">
-                                <p><img src="<?= get_template_directory_uri() ?>/assets/images/icons/X_icon_red.svg" alt="">Công việc rời rạc, không có quy trình chuẩn</p>
-                                <p><img src="<?= get_template_directory_uri() ?>/assets/images/icons/X_icon_red.svg" alt="">Các phòng ban thiếu kết nối, trách nhiệm mơ hồ</p>
-                                <p><img src="<?= get_template_directory_uri() ?>/assets/images/icons/X_icon_red.svg" alt="">Thiếu hệ thống quản lý, công việc dễ quên sót</p>
-                                <p><img src="<?= get_template_directory_uri() ?>/assets/images/icons/X_icon_red.svg" alt="">Không biết công việc đang ở đâu, do ai xử lý</p>
-                                <p><img src="<?= get_template_directory_uri() ?>/assets/images/icons/X_icon_red.svg" alt="">Lãng phí tài nguyên, hiệu quả làm việc thấp</p>
-                            </div>
-                            <img src="<?= get_template_directory_uri() ?>/assets/images/process_diemnghen_img1.svg" alt="">
+                            <div class="flex-center">
+                                <h2>Trước đây</h2>
+                                <div class="content">
+                                    <p><img src="<?= get_template_directory_uri() ?>/assets/images/icons/X_icon_red.svg" alt="">Công việc rời rạc, không có quy trình chuẩn</p>
+                                    <p><img src="<?= get_template_directory_uri() ?>/assets/images/icons/X_icon_red.svg" alt="">Các phòng ban thiếu kết nối, trách nhiệm mơ hồ</p>
+                                    <p><img src="<?= get_template_directory_uri() ?>/assets/images/icons/X_icon_red.svg" alt="">Thiếu hệ thống quản lý, công việc dễ quên sót</p>
+                                    <p><img src="<?= get_template_directory_uri() ?>/assets/images/icons/X_icon_red.svg" alt="">Không biết công việc đang ở đâu, do ai xử lý</p>
+                                    <p><img src="<?= get_template_directory_uri() ?>/assets/images/icons/X_icon_red.svg" alt="">Lãng phí tài nguyên, hiệu quả làm việc thấp</p>
+                                </div>
+                                <img class="img-content" src="<?= get_template_directory_uri() ?>/assets/images/process_diemnghen_img1.svg" alt="">
+                            </div>  
                         </div>
                         <div class="content-item">
-                            <h2>Thay đổi với 1Process</h2>
-                            <div class="content">
-                                <p><img src="<?= get_template_directory_uri() ?>/assets/images/icons/V_icon_green.svg" alt="">Chuẩn hoá quy trình, phòng ban phối hợp nhịp nhàng</p>
-                                <p><img src="<?= get_template_directory_uri() ?>/assets/images/icons/V_icon_green.svg" alt="">Dữ liệu tập trung, kiểm soát trách nhiệm chặt chẽ</p>
-                                <p><img src="<?= get_template_directory_uri() ?>/assets/images/icons/V_icon_green.svg" alt="">Theo dõi tiến trình realtime, phát hiện điểm nghẽn kịp thời</p>
-                                <p><img src="<?= get_template_directory_uri() ?>/assets/images/icons/V_icon_green.svg" alt="">Tự động hoá tác vụ thủ công, tăng tốc độ xử lý công việc</p>
-                                <p><img src="<?= get_template_directory_uri() ?>/assets/images/icons/V_icon_green.svg" alt="">Phân tích và tối ưu quy trình giúp cải thiện hiệu suất</p>
+                            <div class="flex-center">
+                                <h2 class="right">Thay đổi với 1Process</h2>
+                                <div class="content">
+                                    <p><img src="<?= get_template_directory_uri() ?>/assets/images/icons/V_icon_green.svg" alt="">Chuẩn hoá quy trình, phòng ban phối hợp nhịp nhàng</p>
+                                    <p><img src="<?= get_template_directory_uri() ?>/assets/images/icons/V_icon_green.svg" alt="">Dữ liệu tập trung, kiểm soát trách nhiệm chặt chẽ</p>
+                                    <p><img src="<?= get_template_directory_uri() ?>/assets/images/icons/V_icon_green.svg" alt="">Theo dõi tiến trình realtime, phát hiện điểm nghẽn kịp thời</p>
+                                    <p><img src="<?= get_template_directory_uri() ?>/assets/images/icons/V_icon_green.svg" alt="">Tự động hoá tác vụ thủ công, tăng tốc độ xử lý công việc</p>
+                                    <p><img src="<?= get_template_directory_uri() ?>/assets/images/icons/V_icon_green.svg" alt="">Phân tích và tối ưu quy trình giúp cải thiện hiệu suất</p>
+                                </div>
+                                <img class="img-content" src="<?= get_template_directory_uri() ?>/assets/images/process_diemnghen_img2.svg" alt="">
                             </div>
-                            <img src="<?= get_template_directory_uri() ?>/assets/images/process_diemnghen_img2.svg" alt="">
                         </div>
                     </div>
                     <div class="content-bottom">
@@ -83,71 +87,73 @@ get_header();
             <div class="row">
                 <div class="col-12">
                     <h1 class="title-section">Số hoá và tự động hoá các quy trình phức tạp một cách dễ dàng</h1>
+                    <div class="tabs-panel">
                     <?php get_template_part('template-parts/tabs/animation_tab2', null, array('name' => 'sohoa', 'tabs' => array(
                         [
                             'content_tab' =>'
                                 <div class="tab-item">
                                     <h2>Thiết lập quy trình trực quan, kéo thả dễ dàng</h2>
-                                    <div class="content">
-                                        <div><img src="<?= get_template_directory_uri() ?>/assets/images/icons/V_icon_green.svg" alt=""><p>Dễ dàng xây dựng luồng công việc với giao diện kéo-thả</p></div>
-                                        <div><img src="<?= get_template_directory_uri() ?>/assets/images/icons/V_icon_green.svg" alt=""><p>AI phân tích dữ liệu và tự động xây dựng quy trình thông minh</p></div>
-                                        <div><img src="<?= get_template_directory_uri() ?>/assets/images/icons/V_icon_green.svg" alt=""><p>Thiết lập quy trình động, gồm nhiều bước, điều kiện, rẽ nhánh,...</p></div>
-                                        <div><img src="<?= get_template_directory_uri() ?>/assets/images/icons/V_icon_green.svg" alt=""><p>Kiểm soát quyền truy cập, gán bộ phận và cá nhân cụ thể</p></div>
+                                    <div class="content c1">
+                                        <div><img src="' . get_template_directory_uri() . '/assets/images/icons/V_icon_green.svg" alt=""><p>Dễ dàng xây dựng luồng công việc với giao diện kéo-thả</p></div>
+                                        <div><img src="' . get_template_directory_uri() . '/assets/images/icons/V_icon_green.svg" alt=""><p>AI phân tích dữ liệu và tự động xây dựng quy trình thông minh</p></div>
+                                        <div><img src="' . get_template_directory_uri() . '/assets/images/icons/V_icon_green.svg" alt=""><p>Thiết lập quy trình động, gồm nhiều bước, điều kiện, rẽ nhánh,...</p></div>
+                                        <div><img src="' . get_template_directory_uri() . '/assets/images/icons/V_icon_green.svg" alt=""><p>Kiểm soát quyền truy cập, gán bộ phận và cá nhân cụ thể</p></div>
                                     </div>
                                 </div>
                             ',
                             'content_panel' => '
-                                <img src="<?= get_template_directory_uri() ?>/assets/images/demo/process_sohoa_1.svg" alt="">
+                                <img src="' . get_template_directory_uri() . '/assets/images/demo/process_sohoa_1.svg" alt="">
                             ',
                         ],
                         [
                             'content_tab' =>'
                                 <div class="tab-item">
                                     <h2>Quản lý & giám sát theo thời gian thực</h2>
-                                    <div class="content">
-                                        <div><img src="<?= get_template_directory_uri() ?>/assets/images/icons/V_icon_green.svg" alt=""><p>Hiển thị trạng thái của từng bước trong quy trình, ai xử lý, mất bao lâu</p></div>
-                                        <div><img src="<?= get_template_directory_uri() ?>/assets/images/icons/V_icon_green.svg" alt=""><p>Tích hợp AI giúp giám sát, cảnh báo và tư vấn tối ưu các quy trình</p></div>
-                                        <div><img src="<?= get_template_directory_uri() ?>/assets/images/icons/V_icon_green.svg" alt=""><p>Báo cáo thời gian hoàn thành, tích hợp KPI & OKR đánh giá hiệu suất</p></div>
+                                    <div class="content c2">
+                                        <div><img src="' . get_template_directory_uri() . '/assets/images/icons/V_icon_green.svg" alt=""><p>Hiển thị trạng thái của từng bước trong quy trình, ai xử lý, mất bao lâu</p></div>
+                                        <div><img src="' . get_template_directory_uri() . '/assets/images/icons/V_icon_green.svg" alt=""><p>Tích hợp AI giúp giám sát, cảnh báo và tư vấn tối ưu các quy trình</p></div>
+                                        <div><img src="' . get_template_directory_uri() . '/assets/images/icons/V_icon_green.svg" alt=""><p>Báo cáo thời gian hoàn thành, tích hợp KPI & OKR đánh giá hiệu suất</p></div>
                                     </div>
                                 </div>
                             ',
                             'content_panel' => '
-                                <img src="<?= get_template_directory_uri() ?>/assets/images/demo/process_sohoa_2.svg" alt="">
+                                <img src="' . get_template_directory_uri() . '/assets/images/demo/process_sohoa_2.svg" alt="">
                             ',
                         ],
                         [
                             'content_tab' =>'
                                 <div class="tab-item">
                                     <h2>Tự động hoá với các Node mạnh mẽ</h2>
-                                    <div class="content">
-                                        <div><img src="<?= get_template_directory_uri() ?>/assets/images/icons/V_icon_green.svg" alt=""><p>Node Điều kiện: Thiết lập điều kiện rẽ nhánh từ giá trị đầu vào</p></div>
-                                        <div><img src="<?= get_template_directory_uri() ?>/assets/images/icons/V_icon_green.svg" alt=""><p>Node Tích hợp: Kết nối với hệ thống ngoài như CRM, ERP, HRM,...</p></div>
-                                        <div><img src="<?= get_template_directory_uri() ?>/assets/images/icons/V_icon_green.svg" alt=""><p>Node Var: Tạo biến động để sử dụng trong quy trình</p></div>
-                                        <div><img src="<?= get_template_directory_uri() ?>/assets/images/icons/V_icon_green.svg" alt=""><p>Node Form Design: Thiết lập các biểu mẫu điện tử</p></div>
-                                        <div><img src="<?= get_template_directory_uri() ?>/assets/images/icons/V_icon_green.svg" alt=""><p>Node Nhắc nhở & Cảnh báo: Cảnh báo khi quy trình bị chậm trễ</p></div>
+                                    <div class="content c3">
+                                        <div><img src="' . get_template_directory_uri() . '/assets/images/icons/V_icon_green.svg" alt=""><p>Node Điều kiện: Thiết lập điều kiện rẽ nhánh từ giá trị đầu vào</p></div>
+                                        <div><img src="' . get_template_directory_uri() . '/assets/images/icons/V_icon_green.svg" alt=""><p>Node Tích hợp: Kết nối với hệ thống ngoài như CRM, ERP, HRM,...</p></div>
+                                        <div><img src="' . get_template_directory_uri() . '/assets/images/icons/V_icon_green.svg" alt=""><p>Node Var: Tạo biến động để sử dụng trong quy trình</p></div>
+                                        <div><img src="' . get_template_directory_uri() . '/assets/images/icons/V_icon_green.svg" alt=""><p>Node Form Design: Thiết lập các biểu mẫu điện tử</p></div>
+                                        <div><img src="' . get_template_directory_uri() . '/assets/images/icons/V_icon_green.svg" alt=""><p>Node Nhắc nhở & Cảnh báo: Cảnh báo khi quy trình bị chậm trễ</p></div>
                                     </div>
                                 </div>
                             ',
                             'content_panel' => '
-                                <img src="<?= get_template_directory_uri() ?>/assets/images/demo/process_sohoa_3.svg" alt="">
+                                <img src="' . get_template_directory_uri() . '/assets/images/demo/process_sohoa_3.svg" alt="">
                             ',
                         ],
                         [
                             'content_tab' =>'
                                 <div class="tab-item">
                                     <h2>Tích hợp ký số ngay trên quy trình</h2>
-                                    <div class="content">
-                                        <div><img src="<?= get_template_directory_uri() ?>/assets/images/icons/V_icon_green.svg" alt=""><p>Tích hợp với mọi loại chữ ký số và tất cả nhà cung cấp</p></div>
-                                        <div><img src="<?= get_template_directory_uri() ?>/assets/images/icons/V_icon_green.svg" alt=""><p>Cài đặt điều kiện ký linh hoạt, thao tác ký đơn giản trên quy trình</p></div>
-                                        <div><img src="<?= get_template_directory_uri() ?>/assets/images/icons/V_icon_green.svg" alt=""><p>Trình và Ký một lúc nhiều file, đính kèm file vào quy trình/ đối tượng</p></div>
+                                    <div class="content c4">
+                                        <div><img src="' . get_template_directory_uri() . '/assets/images/icons/V_icon_green.svg" alt=""><p>Tích hợp với mọi loại chữ ký số và tất cả nhà cung cấp</p></div>
+                                        <div><img src="' . get_template_directory_uri() . '/assets/images/icons/V_icon_green.svg" alt=""><p>Cài đặt điều kiện ký linh hoạt, thao tác ký đơn giản trên quy trình</p></div>
+                                        <div><img src="' . get_template_directory_uri() . '/assets/images/icons/V_icon_green.svg" alt=""><p>Trình và Ký một lúc nhiều file, đính kèm file vào quy trình/ đối tượng</p></div>
                                     </div>
                                 </div>
                             ',
                             'content_panel' => '
-                                <img src="<?= get_template_directory_uri() ?>/assets/images/demo/process_sohoa_4.svg" alt="">
+                                <img src="' . get_template_directory_uri() . '/assets/images/demo/process_sohoa_4.svg" alt="">
                             ',
                         ],
                     ))); ?>
+                    </div>
                 </div>
             </div>
         </div>
@@ -157,6 +163,7 @@ get_header();
             <div class="row">
                 <div class="col-12">
                     <h1 class="title-section">Thiết kế mọi mẫu form với Form design</h1>
+                    <div class="tabs-panel">
                     <?php get_template_part('template-parts/tabs/animation_tab2', null, array('name' => 'thietke', 'tabs' => array(
                         [
                             'content_tab' =>'
@@ -166,7 +173,7 @@ get_header();
                                 </div>
                             ',
                             'content_panel' => '
-                                <img src="<?= get_template_directory_uri() ?>/assets/images/demo/process_thietke_1.svg" alt="">
+                                <img src="' . get_template_directory_uri() . '/assets/images/demo/process_thietke_1.svg" alt="">
                             ',
                         ],
                         [
@@ -177,7 +184,7 @@ get_header();
                                 </div>
                             ',
                             'content_panel' => '
-                                <img src="<?= get_template_directory_uri() ?>/assets/images/demo/process_thietke_2.svg" alt="">
+                                <img src="' . get_template_directory_uri() . '/assets/images/demo/process_thietke_2.svg" alt="">
                             ',
                         ],
                         [
@@ -188,7 +195,7 @@ get_header();
                                 </div>
                             ',
                             'content_panel' => '
-                                <img src="<?= get_template_directory_uri() ?>/assets/images/demo/process_thietke_3.svg" alt="">
+                                <img src="' . get_template_directory_uri() . '/assets/images/demo/process_thietke_3.svg" alt="">
                             ',
                         ],
                         [
@@ -199,10 +206,11 @@ get_header();
                                 </div>
                             ',
                             'content_panel' => '
-                                <img src="<?= get_template_directory_uri() ?>/assets/images/demo/process_thietke_4.svg" alt="">
+                                <img src="' . get_template_directory_uri() . '/assets/images/demo/process_thietke_4.svg" alt="">
                             ',
                         ],
                     )))?>
+                    </div>
             </div>
         </div>
     </section>
@@ -297,6 +305,22 @@ get_header();
         </div>
     </section>
 
+    <?php 
+    $slider_data_source = require get_template_directory() . '/data/slider_data.php';
+    get_template_part('template-parts/callout_parts/tintuong_slider', null, $slider_data_source['data1']); 
+    ?>
+
+    <section class="top-footer center">
+        <img class="top-footer-bg" src="<?= get_template_directory_uri() . '/assets/images/ai_light_bg_tear.svg' ?>" alt="">
+        <div class="container">
+            <div class="row">
+                <div class="content">
+                    <h1 class="title-section">Vận hành liền mạch, tự động hoá hàng trăm <br/>quy trình với một nền tảng</h1>
+                    <?php get_template_part('template-parts/callout_parts/dk_chat_ai', 'template') ?>
+                </div>
+            </div>
+        </div>
+    </section>    
 
 
 </div>
