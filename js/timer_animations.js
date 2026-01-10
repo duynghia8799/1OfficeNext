@@ -80,6 +80,8 @@
         initAutoTabs('duytri1', 6000);
         initAutoTabs('duytri2', 6000);
         initAutoTabs('duytri3', 6000);
+        initAutoTabs('sohoa', 6000);
+        initAutoTabs('thietke', 6000);
 
         // Hàm riêng để reset animation cho phần Duy trì khi chuyển tab cha
         function initDuyTriReset() {

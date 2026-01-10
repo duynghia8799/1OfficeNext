@@ -146,6 +146,8 @@
         initTabs('.duytri1', { startIndex: 0 });
         initTabs('.duytri2', { startIndex: 0 });
         initTabs('.duytri3', { startIndex: 0 });
+        initTabs('.sohoa', { startIndex: 0 });
+        initTabs('.thietke', { startIndex: 0 });
         // Global Load Handler (Safety)
         
 
