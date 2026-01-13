@@ -66,6 +66,7 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_script('sign-js', get_stylesheet_directory_uri() . '/js/sign.js', array('jquery'), '1.0.0', true);
     wp_enqueue_script('social-js', get_stylesheet_directory_uri() . '/js/social.js', array('jquery'), '1.0.0', true);
     wp_enqueue_script('svg-js', get_stylesheet_directory_uri() . '/assets/js/svg.js', array('jquery'), '1.0.0', true);
+    wp_enqueue_script('vanban-js', get_stylesheet_directory_uri() . '/js/vanban.js', array('jquery'), '1.0.0', true);
 
     wp_dequeue_style('wp-block-library');
     wp_dequeue_style('wp-block-library-theme');
