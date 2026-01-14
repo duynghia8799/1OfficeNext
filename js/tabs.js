@@ -148,6 +148,10 @@
         initTabs('.duytri3', { startIndex: 0 });
         initTabs('.sohoa', { startIndex: 0 });
         initTabs('.thietke', { startIndex: 0 });
+        initTabs('.luutru', { startIndex: 0 });
+        initTabs('.tudonghoa', { startIndex: 0 });
+        initTabs('.giaoviec', { startIndex: 0 });
+
         // Global Load Handler (Safety)
         
 
