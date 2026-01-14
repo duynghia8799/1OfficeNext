@@ -191,8 +191,8 @@
                             bottom: 0;
                             background: rgba(255, 255, 255, 0.06);
                             width: 0%;
-                            opacity: 1;
-                            transition: none;
+                            opacity: 0;
+                            transition: width 0s ease 0.5s, opacity 0.5s ease;
                         }
 
                         &.active{
@@ -202,8 +202,8 @@
 
                             &::before {
                                 width: 100%;
-                                opacity: 0;
-                                transition: width 6s ease-out, opacity 0.5s linear 7s;
+                                opacity: 1;
+                                transition: width 6.5s ease, opacity 0.5s ease;
                             }
 
                             div{
@@ -476,14 +476,14 @@
                             height: 0;
                             background-color: #FDB441;
                             opacity: 0;
-                            transition: height 7s linear, opacity 0.5s ease;
+                            transition: opacity 0.5s ease, height 0s ease 0.5s;
                         }
 
                         &.active{
                             &::before{
                                 height: 100%;
                                 opacity: 1;
-                                
+                                transition: height 7s ease, opacity 0.5s;
                             }
                         }
                         
