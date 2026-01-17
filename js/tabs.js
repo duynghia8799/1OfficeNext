@@ -151,6 +151,7 @@
         initTabs('.luutru', { startIndex: 0 });
         initTabs('.tudonghoa', { startIndex: 0 });
         initTabs('.giaoviec', { startIndex: 0 });
+        initTabs('.tailieu-quanly', { startIndex: 0 });
 
         // Global Load Handler (Safety)
         

@@ -84,6 +84,7 @@
         initAutoTabs('thietke', 6000);
         initAutoTabs('luutru', 7000);
         initAutoTabs('giaoviec', 7000);
+        initAutoTabs('tailieu-quanly', 7000);
 
         // Hàm riêng để reset animation cho phần Duy trì khi chuyển tab cha
         function initDuyTriReset() {
