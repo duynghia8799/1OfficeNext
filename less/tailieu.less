@@ -4,23 +4,27 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        .col-12{
+
+        .col-12 {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: start;
             padding-top: 4.25rem;
         }
+
         .title-section {
             font-size: 2.5rem;
             font-weight: 600;
             height: 3.5rem;
             margin: -0.5rem 0;
             margin-bottom: 2rem;
+
             span {
                 color: #008C43;
             }
         }
+
         .sub-title-section {
             font-size: 1.125rem;
             font-weight: 500;
@@ -30,31 +34,42 @@
             padding: -0.375rem 0;
             color: #676D78;
         }
+
         .dk-chat-ai {
             padding: 3.25rem 0 3.75rem;
-            .btn-hover-bg-LTR{
+
+            .btn-hover-bg-LTR {
                 background-color: #2B2D33 !important;
-                p{
+
+                p {
                     color: #FFFFFF !important;
                 }
-                div{background-color: #1a1a1a !important;}
 
-                &.orange{
+                div {
+                    background-color: #1a1a1a !important;
+                }
+
+                &.orange {
                     background-color: #F0500A !important;
-                    p{
+
+                    p {
                         color: #FFFFFF !important;
                     }
-                    div{background-color: #C54208 !important;}
+
+                    div {
+                        background-color: #C54208 !important;
+                    }
                 }
             }
         }
-        
+
     }
 
     .tailieu-hero-bottom {
-        .col-12{
+        .col-12 {
             padding-top: 4.25rem;
         }
+
         .content {
             display: flex;
             flex-direction: row;
@@ -65,6 +80,7 @@
                 display: flex;
                 flex-direction: column;
                 align-items: start;
+
                 img {
                     height: 3rem;
                     width: auto;
@@ -97,6 +113,7 @@
             justify-content: center;
             gap: 4.5rem;
             margin-top: 4.25rem;
+
             @media (max-width: 1399px) {
                 gap: 2rem;
             }
@@ -118,7 +135,7 @@
                 }
             }
 
-            & > p {
+            &>p {
                 font-size: 1rem;
                 margin: 0;
                 color: #2B2D33;
@@ -140,22 +157,29 @@
             width: 100%;
             display: flex;
             justify-content: center;
+
             .card {
                 display: none;
             }
+
             .nav-tabs {
                 display: flex;
                 justify-content: center;
                 border: 1px solid #EDEFEF;
 
-                .item  {
+                .item {
                     padding: 1rem 2rem 1.125rem;
                     transition: background-color 0.3s ease-in-out;
                     position: relative;
-                    
+
+                    img {
+                        width: 1.5rem;
+                        height: 1.5rem;
+                    }
+
                     &.active {
                         background-color: #FFF8EB;
-                        
+
                         &::after {
                             content: "";
                             position: absolute;
@@ -167,20 +191,27 @@
                         }
                     }
                 }
-                }
             }
-        
-            @keyframes progressTabs {
-                from { width: 0; }
-                to { width: 100%; }
+        }
+
+        @keyframes progressTabs {
+            from {
+                width: 0;
             }
+
+            to {
+                width: 100%;
+            }
+        }
 
         .animation-tabs-content {
             width: 100%;
+
             .tab-content {
                 width: 100%;
                 padding: 0;
                 margin: 0;
+
                 .tab-pane {
                     width: 100%;
                     padding: 0;
@@ -188,6 +219,7 @@
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
+                    transition: all 0.5s ease-in-out;
 
                     @media (max-width: 1399px) {
                         gap: 2rem;
@@ -205,33 +237,40 @@
                             margin-bottom: 3rem;
                             line-height: 1rem;
                         }
+
                         .item {
                             display: flex;
                             align-items: flex-start;
                             gap: 0.75rem;
                             margin-bottom: 3rem;
+
                             img {
                                 width: 1.125rem;
                                 height: 1.125rem;
                             }
+
                             p {
                                 margin: -0.375rem 0;
                                 font-size: 1rem;
                                 line-height: 1.625rem;
                                 color: #676D78;
                                 font-weight: 500;
+
                                 span {
                                     color: #2B2D33;
                                     font-weight: 600;
                                 }
+
                                 @media (max-width: 1399px) {
-                                    br{display: none;}
+                                    br {
+                                        display: none;
+                                    }
                                 }
                             }
                         }
                     }
 
-                    > img {
+                    >img {
                         width: 57.5%;
                         height: auto;
                     }
@@ -248,6 +287,7 @@
         background-position: center;
         background-repeat: no-repeat;
         padding-top: 4.25rem;
+
         .col-12 {
             display: flex;
             flex-direction: column;
@@ -268,6 +308,7 @@
             .item {
                 flex: 1;
                 max-width: 21.125rem;
+
                 h3 {
                     font-size: 1.25rem;
                     font-weight: 600;
@@ -285,10 +326,11 @@
                     color: rgba(255, 255, 255, 0.85);
                     margin: -0.375rem0;
                     font-weight: 400;
+                    br{display: none;}
                 }
             }
         }
-        
+
         img {
             max-width: 100%;
             height: auto;
@@ -296,7 +338,7 @@
     }
 
     .tailieu-kho {
-        background-color: #FDF9F2; 
+        background-color: #FDF9F2;
 
         .col {
             padding: 4.25rem 0;
@@ -338,18 +380,18 @@
                     margin-top: 2.75rem;
                     display: flex;
                     gap: 0.625rem;
-                    
+
                     button {
                         background: none;
                         border: none;
                         padding: 0;
                         cursor: pointer;
                         transition: transform 0.2s;
-                        
+
                         &:hover {
                             transform: translateY(-2px);
                         }
-                        
+
                         img {
                             height: 3.25rem;
                             width: auto;
