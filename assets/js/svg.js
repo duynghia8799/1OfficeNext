@@ -23,7 +23,8 @@ jQuery(document).ready(function ($) {
             return;
         }
 
-        var maxScroll = contentHeight - viewportHeight;
+        // Thêm +100 để đẩy nội dung lên cao hơn nữa, tránh bị che ở dưới đáy
+        var maxScroll = (contentHeight - viewportHeight) + 100;
         
         // Create a wrapper to move content
         var $wrapper = $(document.createElementNS("http://www.w3.org/2000/svg", "g"));
