@@ -170,9 +170,25 @@
                         background-color: #F6F6F6;     
                         color: #676D78;        
                         transition: all 0.5s ease;
+                        position: relative;
+                        overflow: hidden;
+                        z-index: 1;
+                        font-weight: 600;
+
                         &.active{
                             background-color: #FFE0A7;
                             color: #2B2D33;
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                bottom: 0;
+                                width: 0;
+                                background-color: #FFD588;
+                                z-index: -1;
+                                animation: progressTabs 7s ease-out forwards;
+                            }
                         }         
                     }
                 }
@@ -453,7 +469,23 @@ section.taisan-chuanhoa{
     .title-section{
         color: #2B2D33 !important;
     }
+    .dk-chat-ai{
+        .btn-hover-bg-LTR{
+            background-color: #2B2D33 !important;
+            p{
+                color: #FFFFFF !important;
+            }
+            div{background-color: #1a1a1a !important;}
 
+            &.orange{
+                background-color: #F0500A !important;
+                p{
+                    color: #FFFFFF !important;
+                }
+                div{background-color: #C54208 !important;}
+            }
+        }
+    }
 }
 
 
