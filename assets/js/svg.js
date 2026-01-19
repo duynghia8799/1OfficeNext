@@ -1,7 +1,6 @@
 jQuery(document).ready(function ($) {
   // SVG Animation handling
   console.log("SVG Animation script loaded.");
-
   var $phoneContent = $("#phone-scrolling-content");
   if ($phoneContent.length > 0) {
     console.log("Phone content found, initiating animation.");
@@ -23,7 +22,8 @@ jQuery(document).ready(function ($) {
             return;
         }
 
-        var maxScroll = contentHeight - viewportHeight;
+        // Thêm +100 để đẩy nội dung lên cao hơn nữa, tránh bị che ở dưới đáy
+        var maxScroll = (contentHeight - viewportHeight) + 50;
         
         // Create a wrapper to move content
         var $wrapper = $(document.createElementNS("http://www.w3.org/2000/svg", "g"));
