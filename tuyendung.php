@@ -21,27 +21,29 @@ get_header(); ?>
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <div class="content">
-                    <div class="item">
-                        <h1 class="title-section">60%</h1>
-                        <p class="sub-title-section">Rút ngắn thời gian tuyển dụng</p>
+                <div class="box-content">
+                    <div class="content">
+                        <div class="item">
+                            <h1 class="title-section">60%</h1>
+                            <p class="sub-title-section">Rút ngắn thời gian tuyển dụng</p>
+                        </div>
+                        <div class="item">
+                            <h1 class="title-section">08h</h1>
+                            <p class="sub-title-section">Giảm thời gian lọc CV mỗi tuần</p>
+                        </div>
+                        <div class="item">
+                            <h1 class="title-section">07h</h1>
+                            <p class="sub-title-section">Giảm thời gian báo cáo mỗi tuần</p>
+                        </div>
+                        <div class="item">
+                            <h1 class="title-section">32%</h1>
+                            <p class="sub-title-section">Giảm chi phí tuyển dụng tổng thể</p>
+                        </div>
                     </div>
-                    <div class="item">
-                        <h1 class="title-section">08h</h1>
-                        <p class="sub-title-section">Giảm thời gian lọc CV mỗi tuần</p>
+                    <div class="run-bar">
+                        <img class="demo-img" src="<?= get_template_directory_uri() . '/assets/images/social_hero_bar.svg'; ?>" alt="demo">                    
+                        <img class="demo-img" src="<?= get_template_directory_uri() . '/assets/images/social_hero_bar.svg'; ?>" alt="demo">
                     </div>
-                    <div class="item">
-                        <h1 class="title-section">07h</h1>
-                        <p class="sub-title-section">Giảm thời gian báo cáo mỗi tuần</p>
-                    </div>
-                    <div class="item">
-                        <h1 class="title-section">32%</h1>
-                        <p class="sub-title-section">Giảm chi phí tuyển dụng tổng thể</p>
-                    </div>
-                </div>
-                <div class="run-bar">
-                    <img class="demo-img" src="<?= get_template_directory_uri() . '/assets/images/social_hero_bar.svg'; ?>" alt="demo">                    
-                    <img class="demo-img" src="<?= get_template_directory_uri() . '/assets/images/social_hero_bar.svg'; ?>" alt="demo">
                 </div>
             </div>
         </div>
