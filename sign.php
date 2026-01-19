@@ -164,15 +164,15 @@ $tab1 = isset($page_data['ky_ket_data']) ? $page_data['ky_ket_data'] : [];
                 <h2 class="title-section">Hệ thống Dashboard và báo cáo thống kê trực quan</h2>
                 <div class="content-container">
                     <div class="item">
-                        <img src="<?= get_template_directory_uri(); ?>/assets/images/icons/V_white_bg_blue.svg" alt="">
+                        <img src="<?= get_template_directory_uri(); ?>/assets/images/icons/V_circle_white_bg_blue.svg" alt="">
                         <p>Ghi lại trạng thái, thời gian ký,<br/>người ký hỗ trợ truy vết, kiểm tra</p>
                     </div>
                     <div class="item">
-                        <img src="<?= get_template_directory_uri(); ?>/assets/images/icons/V_white_bg_blue.svg" alt="">
+                        <img src="<?= get_template_directory_uri(); ?>/assets/images/icons/V_circle_white_bg_blue.svg" alt="">
                         <p>Thống kê nhanh hiệu suất ký,<br/>giúp đánh giá và tối ưu quy trình</p>
                     </div>
                     <div class="item">
-                        <img src="<?= get_template_directory_uri(); ?>/assets/images/icons/V_white_bg_blue.svg" alt="">
+                        <img src="<?= get_template_directory_uri(); ?>/assets/images/icons/V_circle_white_bg_blue.svg" alt="">
                         <p>Hiển thị số lượng và trạng thái<br/>tài liệu giúp theo dõi tiến độ xử lý</p>
                     </div>
                 </div>

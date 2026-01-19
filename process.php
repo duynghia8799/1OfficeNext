@@ -16,6 +16,7 @@ get_header();
                     <p class="sub-title-section">Xây dựng luồng xử lý linh hoạt, tăng tốc phê duyệt, minh bạch trách nhiệm và đảm bảo <br/>mọi quy trình được thực thi liền mạch</p>
                     <?php get_template_part('template-parts/callout_parts/dk_chat_ai', 'button'); ?>
                     <div class="demo">
+                        <img src="<?= get_template_directory_uri() ?>/assets/images/for-animated/process_hero_demobg.svg" alt="">
                         <?php echo file_get_contents(get_stylesheet_directory() . '/assets/images/for-animated/process_hero.svg'); ?>
                     </div>
                 </div>
