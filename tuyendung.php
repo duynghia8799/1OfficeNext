@@ -10,13 +10,15 @@ get_header(); ?>
 <div class="tuyendung-page">
 
 <section class="tuyendung-hero">
-    <div class="container-custom">
-        <h1 class="title-section">Thu hút ứng viên chất lượng với giải pháp tự động hóa quy trình tuyển dụng</h1>
-        <p class="sub-title-section">Rút ngắn thời gian, nâng cao chất lượng tuyển dụng, chuẩn hóa quy trình xuyên suốt từ nộp <br/>hồ sơ cho đến onboard với hệ thống tuyển dụng chuyên nghiệp và tự động</p>
-        <?php get_template_part('template-parts/callout_parts/dk_chat_ai', 'button'); ?>
-        <img src="<?= get_template_directory_uri(); ?>/assets/images/demo/tuyendung_hero.svg" alt="">
+    <div class="container-custom top">
+        <div class="col">
+            <h1 class="title-section">Thu hút ứng viên chất lượng với giải pháp <br/>tự động hóa quy trình tuyển dụng</h1>
+            <p class="sub-title-section">Rút ngắn thời gian, nâng cao chất lượng tuyển dụng, chuẩn hóa quy trình xuyên suốt từ nộp <br/>hồ sơ cho đến onboard với hệ thống tuyển dụng chuyên nghiệp và tự động</p>
+            <?php get_template_part('template-parts/callout_parts/dk_chat_ai', 'button'); ?>
+            <img src="<?= get_template_directory_uri(); ?>/assets/images/demo/tuyendung_hero.svg" alt="">
+        </div>
     </div>
-    <div class="container-custom">
+    <div class="container">
         <div class="row">
             <div class="col-12">
                 <div class="content">
@@ -76,7 +78,7 @@ get_header(); ?>
                                 <p>Thiếu dữ liệu tổng quan để dự báo và hoạch định nhân sự</p>
                             </div>
                         </div>
-                        <img src="<?php echo get_template_directory_uri(); ?>" alt="">
+                        <img src="<?= get_template_directory_uri(); ?>/assets/images/tuyendung_tudonghoa_1.svg" alt="">
                     </div>
                     <div class="right">
                         <h2>Với 1HRM</h2>
@@ -102,6 +104,7 @@ get_header(); ?>
                                 <p>Dashboard & báo cáo trực quan, hỗ trợ ra quyết định chiến lược</p>
                             </div>
                         </div>
+                        <img src="<?= get_template_directory_uri(); ?>/assets/images/tuyendung_tudonghoa_2.svg" alt="">
                     </div>
                 </div>
             </div>
@@ -126,19 +129,19 @@ get_header(); ?>
                                     <div class="content">
                                         <div class="item">
                                             <img src="' . get_template_directory_uri() . '/assets/images/icons/V_yellow.svg" alt="icon">
-                                            <p>Thiết lập quy trình tuyển dụng linh hoạt theo từng vị trí, phòng ban</p>
+                                            <p>Thiết lập quy trình tuyển dụng linh hoạt theo từng vị <br/>trí, phòng ban</p>
                                         </div>
                                         <div class="item">
                                             <img src="' . get_template_directory_uri() . '/assets/images/icons/V_yellow.svg" alt="icon">
-                                            <p>Quản lý pipeline ứng viên theo giai đoạn từ ứng tuyển đến onboard</p>
+                                            <p>Quản lý pipeline ứng viên theo giai đoạn từ ứng tuyển <br/>đến onboard</p>
                                         </div>
                                         <div class="item">
                                             <img src="' . get_template_directory_uri() . '/assets/images/icons/V_yellow.svg" alt="icon">
-                                            <p>Tự động luân chuyển trạng thái, phân công người phụ trách</p>
+                                            <p>Tự động luân chuyển trạng thái, phân công người phụ <br/>trách</p>
                                         </div>
                                         <div class="item">
                                             <img src="' . get_template_directory_uri() . '/assets/images/icons/V_yellow.svg" alt="icon">
-                                            <p>Chuẩn hóa quy trình tuyển dụng, giảm sai sót và thao tác thủ công</p>
+                                            <p>Chuẩn hóa quy trình tuyển dụng, giảm sai sót và thao tác <br/>thủ công</p>
                                         </div>
                                     </div>
                                 </div>
@@ -155,19 +158,19 @@ get_header(); ?>
                                     <div class="content">
                                         <div class="item">
                                             <img src="' . get_template_directory_uri() . '/assets/images/icons/V_yellow.svg" alt="icon">
-                                            <p>Quản lý nhu cầu tuyển dụng theo kế hoạch nhân sự và định biên</p>
+                                            <p>Quản lý nhu cầu tuyển dụng theo kế hoạch nhân sự và <br/>định biên</p>
                                         </div>
                                         <div class="item">
                                             <img src="' . get_template_directory_uri() . '/assets/images/icons/V_yellow.svg" alt="icon">
-                                            <p>Theo dõi số lượng cần tuyển, đã tuyển và còn thiếu theo từng bộ phận</p>
+                                            <p>Theo dõi số lượng cần tuyển, đã tuyển và còn thiếu <br/>theo từng bộ phận</p>
                                         </div>
                                         <div class="item">
                                             <img src="' . get_template_directory_uri() . '/assets/images/icons/V_yellow.svg" alt="icon">
-                                            <p>Liên thông dữ liệu với kế hoạch nhân sự, hỗ trợ dự báo nguồn lực</p>
+                                            <p>Liên thông dữ liệu với kế hoạch nhân sự, hỗ trợ dự báo <br/>nguồn lực</p>
                                         </div>
                                         <div class="item">
                                             <img src="' . get_template_directory_uri() . '/assets/images/icons/V_yellow.svg" alt="icon">
-                                            <p>Giúp nhà quản lý kiểm soát tăng trưởng nhân sự một cách chủ động</p>
+                                            <p>Giúp nhà quản lý kiểm soát tăng trưởng nhân sự một <br/>cách chủ động</p>
                                         </div>
                                     </div>
                                 </div>
@@ -184,19 +187,19 @@ get_header(); ?>
                                     <div class="content">
                                         <div class="item">
                                             <img src="' . get_template_directory_uri() . '/assets/images/icons/V_yellow.svg" alt="icon">
-                                            <p>Tạo và quản lý các chiến dịch tuyển dụng theo vị trí, thời gian,...</p>
+                                            <p>Tạo và quản lý các chiến dịch tuyển dụng theo vị trí, <br/>thời gian,...</p>
                                         </div>
                                         <div class="item">
                                             <img src="' . get_template_directory_uri() . '/assets/images/icons/V_yellow.svg" alt="icon">
-                                            <p>Tích hợp với các nền tảng tuyển dụng: LinkedIn, TopCV,...</p>
+                                            <p>Tích hợp với các nền tảng tuyển dụng: LinkedIn, <br/>TopCV,...</p>
                                         </div>
                                         <div class="item">
                                             <img src="' . get_template_directory_uri() . '/assets/images/icons/V_yellow.svg" alt="icon">
-                                            <p>Quản lý ngân sách tuyển dụng theo từng vị trí, kênh tuyển dụng</p>
+                                            <p>Quản lý ngân sách tuyển dụng theo từng vị trí, kênh <br/>tuyển dụng</p>
                                         </div>
                                         <div class="item">
                                             <img src="' . get_template_directory_uri() . '/assets/images/icons/V_yellow.svg" alt="icon">
-                                            <p>Theo dõi hiệu suất tiểu dụng với dashboard, báo cáo chuyên sâu</p>
+                                            <p>Theo dõi hiệu suất tiểu dụng với dashboard, báo cáo <br/>chuyên sâu</p>
                                         </div>
                                     </div>
                                 </div>
@@ -213,15 +216,15 @@ get_header(); ?>
                                     <div class="content">
                                         <div class="item">
                                             <img src="' . get_template_directory_uri() . '/assets/images/icons/V_yellow.svg" alt="icon">
-                                            <p>Thiết lập tiêu chí đánh giá ứng viên theo từng vị trí tuyển dụng</p>
+                                            <p>Thiết lập tiêu chí đánh giá ứng viên theo từng vị trí <br/>tuyển dụng</p>
                                         </div>
                                         <div class="item">
                                             <img src="' . get_template_directory_uri() . '/assets/images/icons/V_yellow.svg" alt="icon">
-                                            <p>Thu thập và tổng hợp đánh giá, đề xuất ứng viên phù hợp</p>
+                                            <p>Thu thập và tổng hợp đánh giá, đề xuất ứng viên phù <br/>hợp</p>
                                         </div>
                                         <div class="item">
                                             <img src="' . get_template_directory_uri() . '/assets/images/icons/V_yellow.svg" alt="icon">
-                                            <p>So sánh mức độ phù hợp dựa trên dữ liệu và điểm số rõ ràng</p>
+                                            <p>So sánh mức độ phù hợp dựa trên dữ liệu và điểm số <br/>rõ ràng</p>
                                         </div>
                                         <div class="item">
                                             <img src="' . get_template_directory_uri() . '/assets/images/icons/V_yellow.svg" alt="icon">
@@ -246,15 +249,15 @@ get_header(); ?>
                                         </div>
                                         <div class="item">
                                             <img src="' . get_template_directory_uri() . '/assets/images/icons/V_yellow.svg" alt="icon">
-                                            <p>Tích hợp Google Calendar, Outlook để tự động sắp xếp và nhắc lịch</p>
+                                            <p>Tích hợp Google Calendar, Outlook để tự động sắp <br/>xếp và nhắc lịch</p>
                                         </div>
                                         <div class="item">
                                             <img src="' . get_template_directory_uri() . '/assets/images/icons/V_yellow.svg" alt="icon">
-                                            <p>Ghi nhận kết quả phỏng vấn, nhận xét và đề xuất ngay trên hệ thống</p>
+                                            <p>Ghi nhận kết quả phỏng vấn, nhận xét và đề xuất ngay <br/>trên hệ thống</p>
                                         </div>
                                         <div class="item">
                                             <img src="' . get_template_directory_uri() . '/assets/images/icons/V_yellow.svg" alt="icon">
-                                            <p>Tối ưu trải nghiệm và nâng cao tính chuyên nghiệp trong tuyển dụng</p>
+                                            <p>Tối ưu trải nghiệm và nâng cao tính chuyên nghiệp <br/>trong tuyển dụng</p>
                                         </div>
                                     </div>
                                 </div>
@@ -303,7 +306,7 @@ get_header(); ?>
     </div>
 </section>
 
-<section>
+<section class="tuyendung-hethong">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -320,12 +323,12 @@ $slider_data_source = require get_template_directory() . '/data/slider_data.php'
 get_template_part('template-parts/callout_parts/tintuong_slider', null, $slider_data_source['data3']); 
 ?>
 
-<section class="top-footer center">
-    <img class="top-footer-bg" src="<?= get_template_directory_uri() . '/assets/images/ai_light_bg_gray.svg' ?>" alt="">
+<section class="top-footer">
+    <img class="top-footer-bg" src="<?= get_template_directory_uri() . '/assets/images/ai_light_bg_purple.svg' ?>" alt="">
     <div class="container">
         <div class="row">
             <div class="content">
-                <h1 class="title-section">Xây dựng hệ thống quản lý và xử văn bản <br/>chuyên nghiệp, tối ưu cho doanh nghiệp</h1>
+                <h1 class="title-section">Giúp việc tìm kiếm và tuyển dụng nhân tài <br/>trở nên dễ dàng hơn</h1>
                 <?php get_template_part('template-parts/callout_parts/dk_chat_ai', 'template') ?>
             </div>
         </div>
