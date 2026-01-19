@@ -130,6 +130,9 @@
                     line-height: 2.5rem;
                     margin: -0.5rem 0;
                     margin-bottom: 1rem;
+                    @media (max-width: 87.4375rem) {
+                        br{display: none;}
+                    }
                 }
                 p{
                     font-size: 1rem;
@@ -138,6 +141,9 @@
                     color: #676D78;
                     margin: -0.3125rem 0;
                     text-align: center;
+                    @media (max-width: 87.4375rem) {
+                        br{display: none;}
+                    }
                 }
             }
         }
@@ -170,9 +176,25 @@
                         background-color: #F6F6F6;     
                         color: #676D78;        
                         transition: all 0.5s ease;
+                        position: relative;
+                        overflow: hidden;
+                        z-index: 1;
+                        font-weight: 600;
+
                         &.active{
                             background-color: #FFE0A7;
                             color: #2B2D33;
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                bottom: 0;
+                                width: 0;
+                                background-color: #FFD588;
+                                z-index: -1;
+                                animation: progressTabs 7s ease-out forwards;
+                            }
                         }         
                     }
                 }
@@ -197,11 +219,29 @@
                         margin: -0.3125rem 0;
                         color: #2B2D33;
                         text-align: center;
+                        transition: 0s ;
+                        opacity: 1;
+                        transition: all 0s ease-out;
+
                     }
                     img{
                         margin-top: 2.5rem;
                         width: 82.96875;
                         height: auto;
+                        transform: scale(0.6);
+                        transition: all 0.5s ease-out;
+                        opacity: 0;
+                        transform-origin: bottom;
+                    }
+                    &.up{
+                        img{
+                            transform: scale(1);
+                        }
+                    }
+                    &.active{
+                        img{
+                            opacity: 1;
+                        }
                     }
                 }
 
@@ -339,6 +379,12 @@ section.taisan-chuanhoa{
             display: flex;
             flex-direction: column;
             gap: 3.75rem;
+            .title-section{
+                text-align: start;
+                @media (max-width: 87.4375rem) {
+                    br{display: none;}
+                }
+            }
             .content{
                 display: flex;
                 flex-direction: column;
@@ -363,6 +409,9 @@ section.taisan-chuanhoa{
                             color: #2B2D33;
                             font-weight: 500;
                         }
+                        @media (max-width: 87.4375rem) {
+                            br{display: none;}
+                        }
                     }
                 }
             }
@@ -371,8 +420,6 @@ section.taisan-chuanhoa{
 }
 
 .taisan-theodoi {
-    
-
     .col-12 {
         margin: 4.25rem 0 0;
         display: flex;
@@ -453,7 +500,23 @@ section.taisan-chuanhoa{
     .title-section{
         color: #2B2D33 !important;
     }
+    .dk-chat-ai{
+        .btn-hover-bg-LTR{
+            background-color: #2B2D33 !important;
+            p{
+                color: #FFFFFF !important;
+            }
+            div{background-color: #1a1a1a !important;}
 
+            &.orange{
+                background-color: #F0500A !important;
+                p{
+                    color: #FFFFFF !important;
+                }
+                div{background-color: #C54208 !important;}
+            }
+        }
+    }
 }
 
 
