@@ -129,12 +129,12 @@ $tab1 = isset($page_data['ky_ket_data']) ? $page_data['ky_ket_data'] : [];
                     <div class="comp-card after">
                         <h3>Ký với 1SIGN</h3>
                         <ul>
-                            <li><img src="<?= get_template_directory_uri(); ?>/assets/images/icons/V_circle_bg_yellow.svg" alt="img"><p>Ký kết từ xa, mọi lúc mọi nơi, mọi nền tảng</p></li>
-                            <li><img src="<?= get_template_directory_uri(); ?>/assets/images/icons/V_circle_bg_yellow.svg" alt="img"><p>Lưu trữ, bảo mật và tra cứu tài liệu sau ký</p></li>
-                            <li><img src="<?= get_template_directory_uri(); ?>/assets/images/icons/V_circle_bg_yellow.svg" alt="img"><p>Hỗ trợ ký số mọi loại hợp đồng, chứng từ</p></li>
-                            <li><img src="<?= get_template_directory_uri(); ?>/assets/images/icons/V_circle_bg_yellow.svg" alt="img"><p>Soạn thảo, thảo luận và ký ngay trên hệ thống</p></li>
-                            <li><img src="<?= get_template_directory_uri(); ?>/assets/images/icons/V_circle_bg_yellow.svg" alt="img"><p>Đảm bảo tính pháp lý điện tử theo quy định</p></li>
-                            <li><img src="<?= get_template_directory_uri(); ?>/assets/images/icons/V_circle_bg_yellow.svg" alt="img"><p>Triển khai nhanh, chỉ trong 15 phút</p></li>
+                            <li><img src="<?= get_template_directory_uri(); ?>/assets/images/icons/V_circle_darkblue_bg_yellow.svg" alt="img"><p>Ký kết từ xa, mọi lúc mọi nơi, mọi nền tảng</p></li>
+                            <li><img src="<?= get_template_directory_uri(); ?>/assets/images/icons/V_circle_darkblue_bg_yellow.svg" alt="img"><p>Lưu trữ, bảo mật và tra cứu tài liệu sau ký</p></li>
+                            <li><img src="<?= get_template_directory_uri(); ?>/assets/images/icons/V_circle_darkblue_bg_yellow.svg" alt="img"><p>Hỗ trợ ký số mọi loại hợp đồng, chứng từ</p></li>
+                            <li><img src="<?= get_template_directory_uri(); ?>/assets/images/icons/V_circle_darkblue_bg_yellow.svg" alt="img"><p>Soạn thảo, thảo luận và ký ngay trên hệ thống</p></li>
+                            <li><img src="<?= get_template_directory_uri(); ?>/assets/images/icons/V_circle_darkblue_bg_yellow.svg" alt="img"><p>Đảm bảo tính pháp lý điện tử theo quy định</p></li>
+                            <li><img src="<?= get_template_directory_uri(); ?>/assets/images/icons/V_circle_darkblue_bg_yellow.svg" alt="img"><p>Triển khai nhanh, chỉ trong 15 phút</p></li>
                         </ul>
                         <div class="img-container">
                             <img src="<?= get_template_directory_uri(); ?>/assets/images/sign_bottom_quytrinh2.svg" alt="img">

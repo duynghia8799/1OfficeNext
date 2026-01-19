@@ -22,6 +22,7 @@ if (empty($slider_data)) return;
                             'yellow' => '#D9AB27',    
                             'original' => '#F37022',  
                             'green' => '#55BA63',
+                            'red' => '#EE2D25',
                         ];
                         
                         foreach ($slider_data['slides'] as $index => $slide) : 
@@ -70,7 +71,7 @@ if (empty($slider_data)) return;
                                         <p>Kết quả nổi bật</p>
                                         <ul>
                                             <?php foreach ($slide['ketqua'] as $ketqua) : ?>
-                                                <li><img src="<?= get_template_directory_uri() . '/assets/images/icons/V_circle_'. $slide['color'] . '.svg' ?>" alt=""><span><?= esc_html($ketqua) ?></span></li>
+                                                <li><img src="<?= get_template_directory_uri() . '/assets/images/icons/V_circle_'. $slide['color'] . '_bg_' . $slide['color'] . 'sky.svg' ?>" alt=""><span><?= esc_html($ketqua) ?></span></li>
                                             <?php endforeach; ?>
                                         </ul>
                                     </div>
