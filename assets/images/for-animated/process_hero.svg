@@ -14,7 +14,7 @@
       <!-- AREA TO INJECT CONTENT (White Square) -->
       <g id="screen-content-layer">
     <g transform="translate(12, 24)">
-        <g id="phone-scrolling-content">
+        <g id="phone-scrolling-content" class="js-svg-process-hero">
             <image 
                 width="352" 
                 height="1766" 
