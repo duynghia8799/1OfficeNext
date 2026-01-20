@@ -154,19 +154,19 @@ get_header();
                 <h1 class="title-section">Tóm tắt, tổng hợp và tạo biên bản họp nhanh chóng với AI</h1>
                 <div class="content-section">
                     <div class="item">
-                        <img src=" <?php echo get_template_directory_uri(); ?>/assets/images/icons/V_circle_bluesky.svg" alt="">
+                        <img src=" <?php echo get_template_directory_uri(); ?>/assets/images/icons/V_circle_blue_bg_bluesky.svg" alt="">
                         <p>Tự động tổng hợp nội dung họp</p>
                     </div>
                     <div class="item">
-                        <img src=" <?php echo get_template_directory_uri(); ?>/assets/images/icons/V_circle_bluesky.svg" alt="">
+                        <img src=" <?php echo get_template_directory_uri(); ?>/assets/images/icons/V_circle_blue_bg_bluesky.svg" alt="">
                         <p>Tạo việc, lịch biểu, biên bản tự động</p>
                     </div>
                     <div class="item">
-                        <img src=" <?php echo get_template_directory_uri(); ?>/assets/images/icons/V_circle_bluesky.svg" alt="">
+                        <img src=" <?php echo get_template_directory_uri(); ?>/assets/images/icons/V_circle_blue_bg_bluesky.svg" alt="">
                         <p>Nhận diện & phân công công việc</p>
                     </div>
                     <div class="item">
-                        <img src=" <?php echo get_template_directory_uri(); ?>/assets/images/icons/V_circle_bluesky.svg" alt="">
+                        <img src=" <?php echo get_template_directory_uri(); ?>/assets/images/icons/V_circle_blue_bg_bluesky.svg" alt="">
                         <p>Highlight ý chính & đánh giá hiệu quả họp</p>
                     </div>
                 </div>

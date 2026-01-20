@@ -138,4 +138,73 @@ return [
             ],
         ]
     ],
+
+    'data3'=> [
+        'section-title' => 'Được tin tưởng và đánh giá cao bởi các<br/>doanh nghiệp hàng đầu',
+        'slides'=>[
+            [
+                'color' => 'yellow',
+                'video-url' => get_template_directory_uri().'/assets/images/demo/slider_demo_data/item6_video.svg',
+                'logo-congty' => get_template_directory_uri().'/assets/images/demo/slider_demo_data/item6_logo.svg',
+                'linhvuc' => 'Thời trang',
+                'quymo' => '5K+ Users',
+                'giaiphap' => '1HRM - Quản lý nhân sự',
+                'feedback'=> 'Từ khi triển khai phần mềm này tới toàn bộ nhân viên trong công ty, nhân viên có thể làm việc tại bất cứ đâu, bất cứ lúc nào vẫn có thể truy cập để nhận phân công công việc và báo cáo công việc, chấm công tính lương. Còn với bản thân tôi cũng giảm tải được nhiều thao tác nghiệp vụ như quản lý hồ sơ nhân sự, quy trình...',
+                'user'=> [
+                    'avatar'=> get_template_directory_uri().'/assets/images/demo/slider_demo_data/item6_avatar.svg',
+                    'name'=> 'Đinh Trung Sơn',
+                    'danhxung'=> 'Anh',
+                    'position'=> 'Giám đốc nhân sự thời trang YODY',
+                ],
+                'ketqua'=> [
+                    "50+ quy trình nội bộ được số hoá",
+                    "Chuẩn hóa luồng phê duyệt từ cửa hàng đến trụ sở",
+                    "Tổng hợp bảng công, bảng lương nhanh chóng",
+                    "Giao - nhận - đo lường hiệu suất công việc ngay trên hệ thống",
+                ],
+            ],
+            [
+                'color' => 'original',
+                'video-url' => get_template_directory_uri().'/assets/images/demo/slider_demo_data/item7_video.svg',
+                'logo-congty' => get_template_directory_uri().'/assets/images/demo/slider_demo_data/item7_logo.svg',
+                'linhvuc' => 'Logistics - Kho vận',
+                'quymo' => '600+ Users',
+                'giaiphap' => '1HRM - Quản lý nhân sự',
+                'feedback'=> '“Nhờ áp dụng 1Office, các thông tin quản trị từ việc mua bán, xét duyệt hợp đồng, xét duyệt các kế hoạch cần nhiều cấp bậc xác nhận, các hoạt động thanh toán, ... đều được quản lý trên hệ thống. Hầu như tất cả mọi thông tin về nhân sự hay công việc đều có thể tra cứu được từ hệ thống quản trị”',
+                'user'=> [
+                    'avatar'=> get_template_directory_uri().'/assets/images/demo/slider_demo_data/item7_avatar.svg',
+                    'name'=> 'Nguyễn Kim Anh',
+                    'danhxung'=> 'Chị',
+                        'position'=> 'Trưởng phòng nhân sự Ahamove',
+                ],
+                'ketqua'=> [
+                    "Giảm thiểu hao phí thời gian nhân sự ",
+                    "Cắt giảm thủ tục hành chính, giấy tờ",
+                    "Dễ dàng tra cứu toàn bộ thông tin, dữ liệu",
+                    "Ra quyết định nhân sự nhanh chóng, chính xác",
+                ],
+            ],
+            [
+                'color'=> 'red',
+                'video-url' => get_template_directory_uri().'/assets/images/demo/slider_demo_data/item8_video.svg',
+                'logo-congty' => get_template_directory_uri().'/assets/images/demo/slider_demo_data/item8_logo.svg',
+                'linhvuc' => 'Công nghệ',
+                'quymo' => '500+ Users',
+                'giaiphap' => '1HRM - Quản lý nhân sự',
+                'feedback'=> 'Chúng tôi tìm thấy ở 1Office một giải pháp quản trị toàn diện, giúp chúng tôi tiết kiệm được chi phí về nhân công và thời gian, nhanh chóng nắm bắt được tình trạng nhân sự cũng như tình trạng của doanh nghiệp',
+                'user'=> [
+                    'avatar'=> get_template_directory_uri().'/assets/images/demo/slider_demo_data/item8_avatar.svg',
+                    'name'=> 'Vũ Anh Tú',
+                    'danhxung'=> 'Ông',
+                    'position'=> 'Giám đốc MOR Software',
+                ],
+                'ketqua'=> [
+                    "Quản lý nhân sự tập trung trên một nền tảng",
+                    "Chấm công, tổng hợp công nhanh chóng, dễ dàng",
+                    "Đơn từ tự tạo và duyệt tự động trên phần mềm",
+                    "Giảm thiểu sai sót và thời gian tính lương",
+                ],    
+            ],
+        ]
+    ],
 ];

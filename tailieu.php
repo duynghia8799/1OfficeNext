@@ -178,27 +178,27 @@ get_header(); ?>
                 <div class="content">
                     <h1 class="title-section">Kho tài liệu trực tuyến <br/>dành cho mọi phòng ban</h1>
                     <div class="item">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/V_circle_bg_orangeW.svg" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/V_circle_white_bg_orange.svg" alt="">
                         <p>Giao diện trực quan</p>
                     </div>
                     <div class="item">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/V_circle_bg_orangeW.svg" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/V_circle_white_bg_orange.svg" alt="">
                         <p>Sắp xếp và phân loại khoa học</p>
                     </div>
                     <div class="item">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/V_circle_bg_orangeW.svg" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/V_circle_white_bg_orange.svg" alt="">
                         <p>Truy xuất nhanh chóng</p>
                     </div>
                     <div class="item">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/V_circle_bg_orangeW.svg" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/V_circle_white_bg_orange.svg" alt="">
                         <p>Phân quyền chặt chẽ</p>
                     </div>
                     <div class="item">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/V_circle_bg_orangeW.svg" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/V_circle_white_bg_orange.svg" alt="">
                         <p>Theo dõi lịch sử thao tác</p>
                     </div>
                     <div class="item">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/V_circle_bg_orangeW.svg" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/V_circle_white_bg_orange.svg" alt="">
                         <p>Lưu trữ tài liệu đa nguồn</p>
                     </div>
                     <div class="buttons">

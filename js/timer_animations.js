@@ -87,6 +87,7 @@
         initAutoTabs('tailieu-quanly', 7000);
         initAutoTabs('taisan-quanly', 7000);
         initAutoTabs('taisan-chuanhoa', 8000);
+        initAutoTabs('tuyendung-quanly', 7000);
 
         // Hàm riêng để reset animation cho phần Duy trì khi chuyển tab cha
         function initDuyTriReset() {
