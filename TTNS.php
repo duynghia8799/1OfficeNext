@@ -48,24 +48,24 @@ get_header(); ?>
             <div class="col">
                 <div class="content">
                     <div class="item">
-                        <img src="<?= get_template_directory_uri(); ?>" alt="">
-                        <p></p>
+                        <img src="<?= get_template_directory_uri(); ?>/assets/images/icons/TTNS_hero_bottom_item1.svg" alt="">
+                        <p>Lưu trữ dữ liệu nhân sự tập trung, khoa học</p>
                     </div>
                     <div class="item">
-                        <img src="<?= get_template_directory_uri(); ?>" alt="">
-                        <p></p>
+                        <img src="<?= get_template_directory_uri(); ?>/assets/images/icons/TTNS_hero_bottom_item2.svg" alt="">
+                        <p>Quản lý chi tiết lịch sử và biến động nhân sự</p>
                     </div>
                     <div class="item">
-                        <img src="<?= get_template_directory_uri(); ?>" alt="">
-                        <p></p>
+                        <img src="<?= get_template_directory_uri(); ?>/assets/images/icons/TTNS_hero_bottom_item3.svg" alt="">
+                        <p>Giảm thiểu tình trạng thất lạc và sai lệch thông tin</p>
                     </div>
                     <div class="item">
-                        <img src="<?= get_template_directory_uri(); ?>" alt="">
-                        <p></p>
+                        <img src="<?= get_template_directory_uri(); ?>/assets/images/icons/TTNS_hero_bottom_item4.svg" alt="">
+                        <p>Chuẩn hoá quy trình phê duyệt và ký kết</p>
                     </div>
                     <div class="item">
-                        <img src="<?= get_template_directory_uri(); ?>" alt="">
-                        <p></p>
+                        <img src="<?= get_template_directory_uri(); ?>/assets/images/icons/TTNS_hero_bottom_item5.svg" alt="">
+                        <p>Truy cập và tra cứu thông tin nhanh chóng</p>
                     </div>
                 </div>
             </div>
@@ -78,6 +78,7 @@ get_header(); ?>
         <div class="row">
             <div class="col-12">
                 <h1 class="title-section">Xây dựng hệ thống dữ liệu nhân sự <br/>đồng bộ, minh bạch</h1>
+                <div class="tabs-wrapper">
                 <?php get_template_part('template-parts/tabs/animation_tab2', null, array('name' => 'TTNS-xaydung', 'tabs' => array(
                     [
                         'content_tab' => '
@@ -85,7 +86,7 @@ get_header(); ?>
                             <p>Số hoá toàn bộ hồ sơ nhân sự, bao gồm thông tin cá nhân, <br/>quá trình làm việc, hợp đồng, bảo hiểm và phúc lợi,...trên một <br/>hệ thống thống nhất</p>
                         ',
                         'content_panel' => '
-                            <img src="' . get_template_directory_uri() . '" alt="demo">
+                            <img src="' . get_template_directory_uri() . '/assets/images/demo/TTNS_xaydung_1.svg" alt="demo">
                         ',
                     ],
                     [
@@ -94,7 +95,7 @@ get_header(); ?>
                             <p>Sắp xếp, phân loại hồ sơ theo phòng ban, vị trí, trạng thái làm <br/>việc, hỗ trợ tra cứu nhanh và theo dõi thông tin nhân sự rõ <br/>ràng, nhất quán</p>
                         ',
                         'content_panel' => '
-                            <img src="' . get_template_directory_uri() . '" alt="demo">
+                            <img src="' . get_template_directory_uri() . '/assets/images/demo/TTNS_xaydung_2.svg" alt="demo">
                         ',
                     ],
                     [
@@ -103,7 +104,7 @@ get_header(); ?>
                             <p>Cho phép cập nhật thông tin nhân sự nhanh chóng, ghi nhận <br/>lịch sử thay đổi và đảm bảo dữ liệu luôn chính xác trong suốt <br/>vòng đời làm việc</p>
                         ',
                         'content_panel' => '
-                            <img src="' . get_template_directory_uri() . '" alt="demo">
+                            <img src="' . get_template_directory_uri() . '/assets/images/demo/TTNS_xaydung_3.svg" alt="demo">
                         ',
                     ],
                     [
@@ -112,10 +113,11 @@ get_header(); ?>
                             <p>Tìm kiếm và truy xuất hồ sơ nhân sự chỉ trong vài thao tác, <br/>hỗ trợ HR quản lý khoa học, truy xuất thông tin hiệu quả hơn <br/>mỗi ngày </p>
                         ',
                         'content_panel' => '
-                            <img src="' . get_template_directory_uri() . '" alt="demo">
+                            <img src="' . get_template_directory_uri() . '/assets/images/demo/TTNS_xaydung_4.svg" alt="demo">
                         ',
                     ],
                 ))); ?>
+                </div>
             </div>
         </div>
     </div>

@@ -155,6 +155,7 @@
         initTabs('.taisan-quanly', { startIndex: 1 });
         initTabs('.taisan-chuanhoa', { startIndex: 0 });
         initTabs('.tuyendung-quanly', { startIndex: 0 });
+        initTabs('.TTNS-xaydung', { startIndex: 0 });
 
         // Global Load Handler (Safety)
         
