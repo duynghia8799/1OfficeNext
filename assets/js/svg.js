@@ -36,7 +36,7 @@
         '.js-svg-TTNS-10': {
             keyframes: [
                 { x: 0, y: 0, rotate: 0, easing: 'easeInOut' },
-                { x: 0, y: 0.1, rotate: 8, pause: 1000, easing: 'easeInOut' },
+                { x: 0, y: 0.1, rotate: 8, pause: 700, easing: 'easeInOut' },
                 { x: 0, y: 0, rotate: 0 }
             ],
             scrollSpeed: 0.0003,
@@ -47,7 +47,7 @@
         '.js-svg-TTNS-9': {
             keyframes: [
                 { x: 0, y: 0, rotate: 0, easing: 'easeInOut' },
-                { x: 0, y: 0.1, rotate: 16, pause: 1000, easing: 'easeInOut' },
+                { x: 0, y: 0.1, rotate: 16, pause: 700, easing: 'easeInOut' },
                 { x: 0, y: 0, rotate: 0 }
             ],
             scrollSpeed: 0.0003,
@@ -58,7 +58,7 @@
         '.js-svg-TTNS-8': {
             keyframes: [
                 { x: 0, y: 0, rotate: 0, easing: 'easeInOut' },
-                { x: 0, y: 0.1, rotate: 24, pause: 1000, easing: 'easeInOut' },
+                { x: 0, y: 0.1, rotate: 24, pause: 700, easing: 'easeInOut' },
                 { x: 0, y: 0, rotate: 0 }
             ],
             scrollSpeed: 0.0003,
@@ -69,7 +69,7 @@
         '.js-svg-TTNS-7': {
             keyframes: [
                 { x: 0, y: 0, rotate: 0, easing: 'easeInOut' },
-                { x: 0, y: 0.1, rotate: 32, pause: 1000, easing: 'easeInOut' },
+                { x: 0, y: 0.1, rotate: 32, pause: 700, easing: 'easeInOut' },
                 { x: 0, y: 0, rotate: 0 }
             ],
             scrollSpeed: 0.0003,
@@ -80,7 +80,7 @@
         '.js-svg-TTNS-6': {
             keyframes: [
                 { x: 0, y: 0, rotate: 0, easing: 'easeInOut' },
-                { x: 0, y: 0.1, rotate: 40, pause: 1000, easing: 'easeInOut' },
+                { x: 0, y: 0.1, rotate: 40, pause: 700, easing: 'easeInOut' },
                 { x: 0, y: 0, rotate: 0 }
             ],
             scrollSpeed: 0.0003,
@@ -91,7 +91,7 @@
         '.js-svg-TTNS-5': {
             keyframes: [
                 { x: 0, y: 0, rotate: 0, easing: 'easeInOut' },
-                { x: 0, y: 0.1, rotate: 48, pause: 1000, easing: 'easeInOut' },
+                { x: 0, y: 0.1, rotate: 48, pause: 700, easing: 'easeInOut' },
                 { x: 0, y: 0, rotate: 0 }
             ],
             scrollSpeed: 0.0003,
@@ -102,7 +102,7 @@
         '.js-svg-TTNS-4': {
             keyframes: [
                 { x: 0, y: 0, rotate: 0, easing: 'easeInOut' },
-                { x: 0, y: 0.1, rotate: 56, pause: 1000, easing: 'easeInOut' },
+                { x: 0, y: 0.1, rotate: 56, pause: 700, easing: 'easeInOut' },
                 { x: 0, y: 0, rotate: 0 }
             ],
             scrollSpeed: 0.0003,
@@ -113,7 +113,7 @@
         '.js-svg-TTNS-3': {
             keyframes: [
                 { x: 0, y: 0, rotate: 0, easing: 'easeInOut' },
-                { x: 0, y: 0.1, rotate: 64, pause: 1000, easing: 'easeInOut' },
+                { x: 0, y: 0.1, rotate: 64, pause: 700, easing: 'easeInOut' },
                 { x: 0, y: 0, rotate: 0 }
             ],
             scrollSpeed: 0.0003,
@@ -124,7 +124,7 @@
         '.js-svg-TTNS-2': {
             keyframes: [
                 { x: 0, y: 0, rotate: 0, easing: 'easeInOut' },
-                { x: 0, y: 0.1, rotate: 72, pause: 1000, easing: 'easeInOut' },
+                { x: 0, y: 0.1, rotate: 72, pause: 700, easing: 'easeInOut' },
                 { x: 0, y: 0, rotate: 0 }
             ],
             scrollSpeed: 0.0003,
@@ -135,7 +135,7 @@
         '.js-svg-TTNS-1': {
             keyframes: [
                 { x: 0, y: 0, rotate: 0, easing: 'easeInOut' },
-                { x: 0, y: 0.1, rotate: 80, pause: 1000, easing: 'easeInOut' },
+                { x: 0, y: 0.1, rotate: 80, pause: 700, easing: 'easeInOut' },
                 { x: 0, y: 0, rotate: 0 }
             ],
             scrollSpeed: 0.0003,

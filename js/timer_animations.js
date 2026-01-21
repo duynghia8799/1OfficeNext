@@ -88,6 +88,8 @@
         initAutoTabs('taisan-quanly', 7000);
         initAutoTabs('taisan-chuanhoa', 8000);
         initAutoTabs('tuyendung-quanly', 7000);
+        initAutoTabs('TTNS-xaydung', 8000);
+        initAutoTabs('TTNS-chuanhoa', 8000);
 
         // Hàm riêng để reset animation cho phần Duy trì khi chuyển tab cha
         function initDuyTriReset() {
