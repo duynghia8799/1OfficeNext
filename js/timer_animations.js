@@ -30,29 +30,27 @@
             }, 5000);
         }
 
-        // --- Part 2: Generic Tabs Auto-switch ---
+        // --- Part 2: Generic Tabs Auto-switch (Refactored for Nested Tabs & Opacity Transition) ---
         function initAutoTabs(uniqueClass, duration) {
             var $tabsContainer = $('.' + uniqueClass).filter('.animation-tabs, .animation-tabs2');
             if ($tabsContainer.length === 0) return;
 
             var interval;
             
+            // Hàm khởi động lại vòng lặp
             function startInterval() {
                 if (interval) clearInterval(interval);
-                interval = setInterval(function() {
-                    // Check if any ancestor tab-pane is not active (hidden)
-                    var $parents = $tabsContainer.parents('.tab-pane');
-                    var isHidden = false;
-                    $parents.each(function() {
-                        if (!$(this).hasClass('active')) {
-                            isHidden = true;
-                            return false; // break
-                        }
-                    });
-                    if (isHidden) return;
 
-                    // Re-query the active item from the DOM to get the current state
-                    var $active = $tabsContainer.find('.items-container .item.active');
+                interval = setInterval(function() {
+                    // Logic Kiểm tra hiển thị MỚI (Dựa trên class active, vì dùng opacity):
+                    // Kiểm tra TẤT CẢ các cha là tab-pane. Nếu có cha nào KHÔNG active -> Dừng
+                    var $inactiveParents = $tabsContainer.parents('.tab-pane').not('.active');
+                    if ($inactiveParents.length > 0) {
+                        return; // Đang ẩn (cha không active) -> Bỏ qua vòng lặp này
+                    }
+
+                    // Nếu OK (tất cả cha đều active), thì chuyển tab con
+                    var $active = $tabsContainer.find('.items-container .item.active'); 
                     if ($active.length === 0) {
                          $active = $tabsContainer.find('.items-container .item').first();
                     }
@@ -60,17 +58,64 @@
                     if ($next.length === 0) {
                         $next = $tabsContainer.find('.items-container .item').first();
                     }
+                    
+                    // Trigger chuyển tab
                     $next.trigger('click');
+
                 }, duration);
             }
 
-            // Start the auto-switch
-            startInterval();
+            // Hàm resetCycle: Reset toàn bộ timer và animation CSS
+            function resetCycle() {
+                if (interval) clearInterval(interval);
+                
+                // Reset CSS Animation (Reflow)
+                var $active = $tabsContainer.find('.items-container .item.active');
+                if ($active.length) {
+                    $active.removeClass('active');
+                    void $active[0].offsetWidth; // Trigger reflow để replay CSS animation
+                    $active.addClass('active');
+                }
+                
+                // Reset Timer
+                startInterval();
+            }
 
-            // Reset timer on user interaction
-            $tabsContainer.find('.items-container .item').on('click', function() {
+            // --- Event Listeners ---
+
+            // 1. Khi user click tay vào item -> Reset timer
+            $tabsContainer.find('.items-container .item').on('click', function(e) {
+                if (interval) clearInterval(interval);
                 startInterval();
             });
+
+            // 2. Lắng nghe sự kiện chuyển tab của TAB CHA (Nested Tabs)
+            // Tìm tab-pane cha gần nhất
+            var $parentTabPane = $tabsContainer.closest('.tab-pane');
+            if ($parentTabPane.length > 0) {
+                var parentId = $parentTabPane.attr('id');
+                
+                // Lắng nghe sự kiện 'shown.bs.tab' trên các button điều khiển tab cha này
+                // Delegate sự kiện từ document để đảm bảo bắt được ngay cả khi button render sau (tuy nhiên document.ready đã chạy)
+                $(document).on('shown.bs.tab', 'button[data-bs-toggle="tab"][data-bs-target="#' + parentId + '"]', function(e) {
+                    // Khi tab cha hiện ra -> Reset toàn bộ chu trình tab con
+                    // Logic này fix lỗi bất đồng bộ giữa Animation CSS và Timer JS
+                    resetCycle();
+                });
+            }
+
+            // 3. Xử lý khi user rời tab browser rồi quay lại (Fix lỗi Browser Throttle Timer)
+            document.addEventListener("visibilitychange", function() {
+                if (document.visibilityState === 'visible') {
+                    // Chỉ reset nếu tab này đang visible trên màn hình
+                    if ($tabsContainer.is(':visible')) {
+                        resetCycle();
+                    }
+                }
+            });
+
+            // Start lần đầu
+            startInterval();
         }
 
         // Apply to specific tabs
@@ -91,25 +136,11 @@
         initAutoTabs('TTNS-xaydung', 8000);
         initAutoTabs('TTNS-chuanhoa', 8000);
 
-        // Hàm riêng để reset animation cho phần Duy trì khi chuyển tab cha
-        function initDuyTriReset() {
-            $('.duytri.animation-tabs .items-container .item').on('shown.bs.tab', function (e) {
-                var targetId = $(e.target).attr('data-bs-target');
-                var $panel = $(targetId);
-                
-                // Tìm item con đang active trong đúng các khối duytri1, duytri2, duytri3 tương ứng
-                var $activeChild = $panel.find('.duytri1 .item.active, .duytri2 .item.active, .duytri3 .item.active');
-                
-                if ($activeChild.length) {
-                    // Reset animation bằng cách gỡ class active -> reflow -> thêm lại active
-                    // Cách này mạnh hơn việc chỉ reset property animation, đảm bảo mọi trạng thái vẽ lại từ đầu
-                    $activeChild.removeClass('active');
-                    void $activeChild[0].offsetHeight; // Trigger reflow
-                    $activeChild.addClass('active');
-                }
-            });
-        }
-        initDuyTriReset();
+        // Cham Cong Tabs (New)
+        initAutoTabs('chamcong1', 6000);
+        initAutoTabs('chamcong2', 6000);
+        initAutoTabs('chamcong3', 6000);
+        initAutoTabs('chamcong-quanly-main', 6000);
 
     });
 })(jQuery);

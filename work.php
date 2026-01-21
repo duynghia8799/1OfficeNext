@@ -21,7 +21,7 @@ $tab2 = isset($page_data['lien_ket_data']) ? $page_data['lien_ket_data'] : [];
                 <div class="line2">
                     <h1 class="title-section">thông minh giúp&nbsp;</h1>
                     <h1 class="title-section scroll">
-                        <span>nâng cao hiệu xuất</span>
+                        <span>nâng cao hiệu suất</span>
                         <span>đội nhóm linh hoạt</span>
                         <span>thúc đẩy công tác</span>
                     </h1>
