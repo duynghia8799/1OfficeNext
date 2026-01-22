@@ -19,6 +19,25 @@
                 'width': width + 'px'
             });
         }
+        function changePosisionCard2($targetItem) {
+            // FIX: Ngăn tab con (animation-tabs2) ảnh hưởng đến card của tab cha (animation-tabs)
+            if ($targetItem.closest('.animation-tabs').length > 0) return;
+
+            var $wrapper = $targetItem.closest('.animation-tabs2');
+            var $card = $wrapper.find('.card');
+            
+            if ($card.length === 0 || $targetItem.length === 0) return;
+
+            var wrapperOffset = $wrapper.offset().top;
+            var itemOffset = $targetItem.offset().top;
+            var move = itemOffset - wrapperOffset;
+            var height = $targetItem.outerHeight();
+
+            $card.css({
+                'top': move + 'px',
+                'height': height + 'px'
+            });
+        }
         /**
          * Hàm khởi tạo Tabs thống nhất
          * @param {string} selector - Class của wrapper (vd: .tangtoc)
@@ -71,6 +90,7 @@
                     $tabs.removeClass('active');
                     $targetTab.addClass('active');
                     changePosisionCard($targetTab);
+                    changePosisionCard2($targetTab);
                     // 2. Cập nhật Panel UI
                     // --- CASE ĐẶC BIỆT: TICH HOP ---
                     if ($container.hasClass('tichhop')) {

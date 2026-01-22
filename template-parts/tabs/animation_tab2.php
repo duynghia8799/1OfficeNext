@@ -5,6 +5,7 @@ $tabs = $args['tabs'];
 ?>
 
 <div class="<?= $name . " " ?>animation-tabs2">
+    <div class="card"></div>
     <div class="items-container nav nav-tabs">
         <?php
         if (!empty($tabs)) {
