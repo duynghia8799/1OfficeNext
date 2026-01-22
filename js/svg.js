@@ -21,32 +21,28 @@
         //Social-Hatnhan
         '.hatnhan-anim-part': {
             keyframes: [
-                { x: 0, y: 0, easing:[0.1, 0, 0.1, 1]},
+                { x: 0, y: 0, easing:[0.4, 0, 0.1, 1]},
                 { x: -850, y: 0 },
             ],
             scrollSpeed: 1,
-            pauseDuration: 2000,
-            pauseOnHover: true,
-            fadeReset: true,
-            pauseOnHover: true,
+            pauseDuration: 1000,
+            pauseOnHover: false,
             fadeReset: true,
             interactive: false, // Disable drag/wheel during wait
             startDelay: 1000     // Delay before starting/restarting
         },
 
-        '.hatnhan-anim-part2':{
+        '.hatnhan-anim-part2': {
             keyframes: [
-                { x: 210, y: 60, easing:[0.1, 0, 0.4, 1]},
-                { x: -850, y: 60 },
-                { x: -850, y: -850 },
+                { x: 0, y: 0, easing:[0.4, 0, 0.1, 1]},
+                { x: -390, y: 0 , easing:[0.1, 0, 0.1, 1]},
+                { x: -390, y: -580 },
             ],
             scrollSpeed: 1,
-            pauseDuration: 2000,
-            pauseOnHover: true,
+            pauseDuration: 1000,
+            pauseOnHover: false,
             fadeReset: true,
-            pauseOnHover: true,
-            fadeReset: true,
-            interactive: false, // Disable drag/wheel during wait
+            interactive: false, 
             startDelay: 1000
         },
 
