@@ -28,7 +28,10 @@
             pauseDuration: 2000,
             pauseOnHover: true,
             fadeReset: true,
-            interactive: false // Disable drag/wheel during wait
+            pauseOnHover: true,
+            fadeReset: true,
+            interactive: false, // Disable drag/wheel during wait
+            startDelay: 1000     // Delay before starting/restarting
         },
 
 
@@ -163,7 +166,8 @@
                 fadeReset: false, // Option: Fade out/in on reset (Default is FALSE)
                 scrollAxis: 'y',  // Option: 'y', 'x', or 'both' for wheel interaction
                 transformOrigin: null, // New Option: "center center" or "Xpx Ypx"
-                interactive: true // Option: Allow user drag/wheel (Default is TRUE)
+                interactive: true, // Option: Allow user drag/wheel (Default is TRUE)
+                startDelay: 0      // Option: Delay before start (Default 0)
             };
 
             this.config = $.extend({}, defaults, config);
@@ -173,12 +177,16 @@
             this.maxScroll = 0;
             this.pathInterpolator = null;
 
-            this.interactTimer = null;
             this.dragState = {
                 isDragging: false,
                 lastX: 0,
                 lastY: 0
             };
+
+            this.isVisible = false; // Track viewport visibility
+
+            // Store instance for external control
+            this.$element.data('svgAutoScroll', this);
 
             this.init();
         }
@@ -191,9 +199,10 @@
                     this.createWrapper();
                     this.applyStaticStyles(); // New helper
                     this.bindEvents();
+                    this.setupObserver(); // Auto-pause logic
 
                     this.state = "AUTO_SCROLL";
-                    this.loop();
+                    // Loop execution is now controlled by observer
                 } catch (e) {
                     console.error("SVG Auto Scroll Init Error:", e);
                 }
@@ -243,6 +252,28 @@
             }
         }
 
+        setupObserver() {
+            if ('IntersectionObserver' in window) {
+                this.observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        this.isVisible = entry.isIntersecting;
+                        if (this.isVisible) {
+                            // Resume if we should be running
+                            if (this.state === "AUTO_SCROLL" || this.state === "WAITING") {
+                                this.loop();
+                            }
+                        }
+                    });
+                }, { threshold: 0 }); // Trigger as soon as 1px is visible
+                
+                this.observer.observe(this.$wrapper[0]);
+            } else {
+                // Fallback for ancient browsers: Always visible
+                this.isVisible = true;
+                this.loop();
+            }
+        }
+
         bindEvents() {
             this.$wrapper.on('wheel', (e) => this.handleWheel(e));
             this.$wrapper.on('mousedown touchstart', (e) => this.handleDragStart(e));
@@ -282,8 +313,9 @@
         }
 
         loop() {
+            if (!this.isVisible) return; // Optimization: Stop running when off-screen
             if (this.state === "PAUSED" || this.state === "WAITING") return; 
-
+            
             if (this.state === "AUTO_SCROLL") {
                 // Advance distance
                 const nextPos = this.currentPos + this.speed;
@@ -367,10 +399,40 @@
                     }
                 });
             } else {
-                // Instant Reset
-                this.setTransform(0);
-                this.state = "AUTO_SCROLL";
-                this.loop();
+            }
+        }
+
+        /**
+         * External API: Instantly reset to start without fading
+         */
+        instantReset() {
+            // Stop any pending timers/animations
+            if (this.interactTimer) clearTimeout(this.interactTimer);
+            this.state = "RESETTING"; // Briefly lock
+            
+            // Force reset
+            this.currentPos = 0;
+            this.setTransform(0);
+            
+            // Resume immediately or with delay
+            const _this = this;
+            const delay = this.config.startDelay || 0;
+
+            if (delay > 0) {
+                // Wait before starting loop
+                this.interactTimer = setTimeout(() => {
+                    requestAnimationFrame(() => {
+                        if (_this.state === "RESETTING") { // Ensure no other state change happened
+                            _this.state = "AUTO_SCROLL";
+                            _this.loop();
+                        }
+                    });
+                }, delay);
+            } else {
+                requestAnimationFrame(() => {
+                    _this.state = "AUTO_SCROLL";
+                    _this.loop();
+                });
             }
         }
 

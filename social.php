@@ -251,6 +251,9 @@ get_header(); ?>
         <div class="row">
             <div class="col-12">
                 <h1 class="title-section">Mỗi nhân sự đều là một “hạt nhân” quan trọng của tổ chức</h1>
+                <?php 
+                    $hatnhan_svg = get_template_directory() . '/assets/images/for-animated/social_hatnhan_1_frame.svg';
+                ?>
                 <div class="social-hatnhan-content">
                     <?php get_template_part('template-parts/tabs/animation_tab2', null, array('name' => 'duytri3', 'tabs' => array(
                     [
@@ -258,9 +261,7 @@ get_header(); ?>
                             <h2>Lộ trình thăng tiến</h2>
                             <p>Hiển thị rõ ràng các vị trí, năng lực & tiêu chí phát triển cho từng <br/>nhân sự. Giúp nhân viên định hình mục tiêu nghề nghiệp, đồng <br/>thời hỗ trợ doanh nghiệp xây dựng chiến lược kế thừa minh <br/>bạch và bền vững</p>
                         ',
-                        'content_panel' => '
-                            <img src="' . get_template_directory_uri() . '/assets/images/demo/social_hatnhan_1.svg" alt="demo">
-                        ',
+                        'content_panel' => file_exists($hatnhan_svg) ? file_get_contents($hatnhan_svg) : '',
                     ],
                     [
                         'content_tab' => '

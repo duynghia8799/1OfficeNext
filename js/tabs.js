@@ -102,6 +102,17 @@
                         });
                     }
                     currentIndex = targetIndex;
+
+                    // 3. Reset SVG Animations inside the new Active Panel
+                    var $activeActivePanel = $panels.eq(targetIndex);
+                    // Find elements that have the svgAutoScroll instance
+                    // Note: The structure is usually .svg-scroll-wrapper > svg (the original element)
+                    $activeActivePanel.find('.svg-scroll-wrapper').children().each(function() {
+                        var instance = $(this).data('svgAutoScroll');
+                        if (instance && typeof instance.instantReset === 'function') {
+                            instance.instantReset();
+                        }
+                    });
                 }
                 // --- BIND EVENT ---
                 $tabs.off('click').on('click', function (e) {
@@ -111,23 +122,34 @@
                         updateState(userIndex);
                         
                         // --- LOGIC RESET CÁC TAB ẨN (ANH EM) & TAB HIỆN TẠI ---
-                        // Reset tất cả các tab con về trạng thái ban đầu (Tab 1)
-                        // Việc này giúp:
-                        // 1. Tab ẩn được reset để lần sau quay lại nó "mới".
-                        // 2. Tab hiện tại (vừa bấm) được reset timer (do trigger 'click') để tránh bị nhảy tham số thời gian.
                         $panels.each(function(i) {
-                              var $childTabsWrappers = $(this).find('.animation-tabs2');
-                              $childTabsWrappers.each(function() {
-                                  var $firstTabItem = $(this).find('.items-container .item').first();
+                             var $childTabsWrappers = $(this).find('.animation-tabs2');
+                             var $childTabs = $childTabsWrappers.find('.items-container .item');
+
+                             // 1. Với Panel ĐANG ACTIVE (i === userIndex)
+                             // -> Trigger click vào tab đầu tiên để chạy lại từ đầu
+                             if (i === userIndex) {
+                                  var $firstTabItem = $childTabs.first();
                                   if ($firstTabItem.length > 0) {
                                       $firstTabItem.trigger('click');
                                   }
-                              });
+                             } 
+                             // 2. Với Panel ĐANG ẨN (i !== userIndex)
+                             // -> Xóa class active để reset CSS (width=0, opacity=0)
+                             else {
+                                  $childTabs.removeClass('active');
+                             }
                         });
                     } 
                 });
                 // --- INITIALIZE ---
                 requestAnimationFrame(function () {
+                    // FIX: Chỉ init state nếu wrapper không nằm trong một tab-pane đang ẩn
+                    // Điều này ngăn animation chạy ngầm khi tab cha chưa active
+                    var $parentPanel = $container.closest('.tab-pane');
+                    if ($parentPanel.length > 0 && !$parentPanel.hasClass('active')) {
+                        return; 
+                    }
                     updateState(currentIndex);
                 });
             });
@@ -157,6 +179,10 @@
         initTabs('.tuyendung-quanly', { startIndex: 0 });
         initTabs('.TTNS-xaydung', { startIndex: 0 });
         initTabs('.TTNS-chuanhoa', { startIndex: 0 });
+        initTabs('.chamcong-quanly-main', { startIndex: 0 });
+        initTabs('.chamcong-quanly1', { startIndex: 0 });
+        initTabs('.chamcong-quanly2', { startIndex: 0 });
+        initTabs('.chamcong-sohoa', { startIndex: 0 });
 
         // Global Load Handler (Safety)
         

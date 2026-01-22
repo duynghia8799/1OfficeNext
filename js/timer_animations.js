@@ -30,95 +30,136 @@
             }, 5000);
         }
 
-        // --- Part 2: Generic Tabs Auto-switch (Refactored for Nested Tabs & Opacity Transition) ---
+         /**
+         * [PART 2] HƯỚNG DẪN SỬ DỤNG: TỰ ĐỘNG CHUYỂN TAB (AUTO TABS)
+         * ------------------------------------------------------------------
+         * Hàm initAutoTabs giúp tạo hiệu ứng tự động chuyển đổi giữa các tab sau một khoảng thời gian.
+         * Hệ thống tích hợp sẵn cơ chế tối ưu hiệu năng:
+         * 1. Tự động tạm dừng khi cuộn khỏi màn hình (IntersectionObserver).
+         * 2. Tự động tạm dừng khi user ẩn tab trình duyệt (Visibility API).
+         * 3. Cơ chế Reset thông minh (đồng bộ với CSS animation) khi tab hiển thị lại.
+         * 
+         * HƯỚNG DẪN TÍCH HỢP CSS (QUAN TRỌNG):
+         * Để thanh progress chạy mượt và reset đúng, cần cấu hình CSS như sau:
+         * 
+         * 1. Cấu hình Transition (Chạy):
+         *    &.active {
+         *       &::after { 
+         *           width: 100%; 
+         *           transition: width 6s ease-out, opacity 0.3s ease; // 6s = tham số duration truyền vào hàm
+         *       }
+         *    }
+         * 
+         * 2. Cấu hình Reset Mượt (.resetting):
+         *    &.resetting {
+         *       &::after {
+         *           width: 0 !important;
+         *           transition: none !important;
+         *           opacity: 0 !important;
+         *       }
+         *    }
+         * 
+         * CÁCH DÙNG:
+         * Gọi hàm: initAutoTabs('tên-class-wrapper', thời_gian_ms);
+         * Ví dụ: initAutoTabs('chamcong-quanly1', 6000); // Tương ứng transition 6s trong CSS
+         */
+        
         function initAutoTabs(uniqueClass, duration) {
             var $tabsContainer = $('.' + uniqueClass).filter('.animation-tabs, .animation-tabs2');
             if ($tabsContainer.length === 0) return;
 
             var interval;
+            var isVisible = false;
             
-            // Hàm khởi động lại vòng lặp
             function startInterval() {
                 if (interval) clearInterval(interval);
+                if (!isVisible) return; 
 
                 interval = setInterval(function() {
-                    // Logic Kiểm tra hiển thị MỚI (Dựa trên class active, vì dùng opacity):
-                    // Kiểm tra TẤT CẢ các cha là tab-pane. Nếu có cha nào KHÔNG active -> Dừng
+                    // Stop if any parent tab-pane is hidden
                     var $inactiveParents = $tabsContainer.parents('.tab-pane').not('.active');
-                    if ($inactiveParents.length > 0) {
-                        return; // Đang ẩn (cha không active) -> Bỏ qua vòng lặp này
-                    }
+                    if ($inactiveParents.length > 0) return;
 
-                    // Nếu OK (tất cả cha đều active), thì chuyển tab con
                     var $active = $tabsContainer.find('.items-container .item.active'); 
-                    if ($active.length === 0) {
-                         $active = $tabsContainer.find('.items-container .item').first();
-                    }
-                    var $next = $active.next('.item');
-                    if ($next.length === 0) {
-                        $next = $tabsContainer.find('.items-container .item').first();
-                    }
+                    if ($active.length === 0) $active = $tabsContainer.find('.items-container .item').first();
                     
-                    // Trigger chuyển tab
+                    var $next = $active.next('.item');
+                    if ($next.length === 0) $next = $tabsContainer.find('.items-container .item').first();
+                    
                     $next.trigger('click');
-
                 }, duration);
             }
 
-            // Hàm resetCycle: Reset toàn bộ timer và animation CSS
+            // Sync Reset: CSS Animation + JS Timer
             function resetCycle() {
                 if (interval) clearInterval(interval);
                 
-                // Reset CSS Animation (Reflow)
                 var $active = $tabsContainer.find('.items-container .item.active');
                 if ($active.length) {
-                    $active.removeClass('active');
-                    void $active[0].offsetWidth; // Trigger reflow để replay CSS animation
-                    $active.addClass('active');
+                    // Force instant reset (bypass CSS transition)
+                    $active.addClass('resetting').removeClass('active');
+                    void $active[0].offsetWidth; 
+
+                    // Wait 50ms for repaint, then restart
+                    setTimeout(function() {
+                        $active.removeClass('resetting').addClass('active');
+                        startInterval();
+                    }, 50); 
+                } else {
+                    startInterval();
                 }
-                
-                // Reset Timer
-                startInterval();
             }
 
             // --- Event Listeners ---
 
-            // 1. Khi user click tay vào item -> Reset timer
+            // 1. Manual Click
             $tabsContainer.find('.items-container .item').on('click', function(e) {
-                if (interval) clearInterval(interval);
-                startInterval();
-            });
-
-            // 2. Lắng nghe sự kiện chuyển tab của TAB CHA (Nested Tabs)
-            // Tìm tab-pane cha gần nhất
-            var $parentTabPane = $tabsContainer.closest('.tab-pane');
-            if ($parentTabPane.length > 0) {
-                var parentId = $parentTabPane.attr('id');
-                
-                // Lắng nghe sự kiện 'shown.bs.tab' trên các button điều khiển tab cha này
-                // Delegate sự kiện từ document để đảm bảo bắt được ngay cả khi button render sau (tuy nhiên document.ready đã chạy)
-                $(document).on('shown.bs.tab', 'button[data-bs-toggle="tab"][data-bs-target="#' + parentId + '"]', function(e) {
-                    // Khi tab cha hiện ra -> Reset toàn bộ chu trình tab con
-                    // Logic này fix lỗi bất đồng bộ giữa Animation CSS và Timer JS
-                    resetCycle();
-                });
-            }
-
-            // 3. Xử lý khi user rời tab browser rồi quay lại (Fix lỗi Browser Throttle Timer)
-            document.addEventListener("visibilitychange", function() {
-                if (document.visibilityState === 'visible') {
-                    // Chỉ reset nếu tab này đang visible trên màn hình
-                    if ($tabsContainer.is(':visible')) {
-                        resetCycle();
-                    }
+                if (e.originalEvent) {
+                    if (interval) clearInterval(interval);
+                    startInterval();
                 }
             });
 
-            // Start lần đầu
-            startInterval();
+            // 2. Parent Tab Switch
+            var $parentTabPane = $tabsContainer.closest('.tab-pane');
+            if ($parentTabPane.length > 0) {
+                var parentId = $parentTabPane.attr('id');
+                $(document).on('shown.bs.tab', 'button[data-bs-toggle="tab"][data-bs-target="#' + parentId + '"]', function(e) {
+                     resetCycle();
+                });
+            }
+
+            // 3. Intersection Observer (Scroll Detect)
+            if ('IntersectionObserver' in window) {
+                var observer = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            isVisible = true;
+                            resetCycle();
+                        } else {
+                            isVisible = false;
+                            if (interval) clearInterval(interval);
+                        }
+                    });
+                }, { threshold: 0.1 });
+                
+                $tabsContainer.each(function() { observer.observe(this); });
+            } else {
+                isVisible = true; 
+                startInterval();
+            }
+
+            // 4. Visibility API (Tab Switch Detect)
+            document.addEventListener("visibilitychange", function() {
+                if (document.visibilityState === 'visible') {
+                    if (isVisible) resetCycle();
+                } else {
+                    if (interval) clearInterval(interval);
+                }
+            });
         }
 
-        // Apply to specific tabs
+        // --- Application ---
         initAutoTabs('dieuphoi', 6000);
         initAutoTabs('kyket', 5000);
         initAutoTabs('quanly', 5000);
@@ -135,12 +176,8 @@
         initAutoTabs('tuyendung-quanly', 7000);
         initAutoTabs('TTNS-xaydung', 8000);
         initAutoTabs('TTNS-chuanhoa', 8000);
-
-        // Cham Cong Tabs (New)
-        initAutoTabs('chamcong1', 6000);
-        initAutoTabs('chamcong2', 6000);
-        initAutoTabs('chamcong3', 6000);
-        initAutoTabs('chamcong-quanly-main', 6000);
+        initAutoTabs('chamcong-quanly1', 6000);
+        initAutoTabs('chamcong-quanly2', 6000); 
 
     });
 })(jQuery);
