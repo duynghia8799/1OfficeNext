@@ -34,6 +34,22 @@
             startDelay: 1000     // Delay before starting/restarting
         },
 
+        '.hatnhan-anim-part2':{
+            keyframes: [
+                { x: 210, y: 60, easing:[0.1, 0, 0.4, 1]},
+                { x: -850, y: 60 },
+                { x: -850, y: -850 },
+            ],
+            scrollSpeed: 1,
+            pauseDuration: 2000,
+            pauseOnHover: true,
+            fadeReset: true,
+            pauseOnHover: true,
+            fadeReset: true,
+            interactive: false, // Disable drag/wheel during wait
+            startDelay: 1000
+        },
+
 
         //TTNS BlueSky
         '.js-svg-TTNS-10': {

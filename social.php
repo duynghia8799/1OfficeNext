@@ -253,6 +253,7 @@ get_header(); ?>
                 <h1 class="title-section">Mỗi nhân sự đều là một “hạt nhân” quan trọng của tổ chức</h1>
                 <?php 
                     $hatnhan_svg = get_template_directory() . '/assets/images/for-animated/social_hatnhan_1_frame.svg';
+                    $hatnhan_svg2 = get_template_directory() . '/assets/images/for-animated/social_hatnhan_2_frame.svg';
                 ?>
                 <div class="social-hatnhan-content">
                     <?php get_template_part('template-parts/tabs/animation_tab2', null, array('name' => 'duytri3', 'tabs' => array(
@@ -277,9 +278,7 @@ get_header(); ?>
                             <h2>Sơ đồ tổ chức</h2>
                             <p>Trực quan hóa cấu trúc doanh nghiệp theo phòng ban, chức vụ <br/>giúp nhân viên hiểu rõ hơn về vai trò & trách nghiệm của mình <br/>trong tổ chức. BLĐ có cái nhìn tổng quan để quản lý nhân sự <br/>hiệu quả</p>
                         ',
-                        'content_panel' => '
-                            <img src="' . get_template_directory_uri() . '/assets/images/demo/social_hatnhan_3.svg" alt="demo">
-                        ',
+                        'content_panel' =>  file_exists($hatnhan_svg2) ? file_get_contents($hatnhan_svg2) : '',
                     ],
                     )))?>
                 </div>
