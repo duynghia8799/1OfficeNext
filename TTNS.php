@@ -293,11 +293,6 @@ get_header(); ?>
     </div>
 </section>
 
-<?php 
-$slider_data_source = require get_template_directory() . '/data/slider_data.php';
-get_template_part('template-parts/callout_parts/tintuong_slider', null, $slider_data_source['data3']); 
-?>
-
 <section class="top-footer">
     <img class="top-footer-bg" src="<?php echo get_template_directory_uri()?>/assets/images/ai_lights_lightblue.svg" alt="">
     <div class="container">

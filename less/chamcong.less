@@ -1,0 +1,581 @@
+.chamcong-page{
+
+
+    .chamcong-hero{
+        background-color:#BEFCF6;
+        box-shadow: inset 0 -1.5rem 3rem -0.5rem rgba(0, 0, 0, 0.08);
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: fit-content;
+            
+            .row{
+                width: 86.7%;
+                position: relative;
+                padding-bottom: 21.875rem;
+                > img{
+                    position: absolute;
+                    width: 100%;
+                    height: auto;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%) translateY(50%);
+                }
+            }
+        }
+
+        .col-12{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 4.25rem 1.125rem 5rem;
+            .title-section{
+                width: 25.25rem;  
+                font-size: 2.5rem;
+                line-height: 3.5rem;
+                margin: -0.5rem 0; 
+                text-align: start;
+            }
+            > div{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: start;
+                gap:2.5rem;
+                p{
+                    font-size: 1.125rem;
+                    line-height: 1.875rem;
+                    margin: -0.375rem 0;
+                    max-width: 32rem;
+                    text-align: start;
+                }
+                .dk-chat-ai{
+                    display: flex;
+                }
+            }
+        }
+    }
+
+    .chamcong-thaydoi{
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: fit-content;
+            .row{
+                padding-top: 21.875rem;
+                width: 86.7%;
+                .col{
+                    padding-top: 4.25rem;
+                    
+                    .content{
+                        margin-top: 3.75rem;
+                        padding-right: 4.15%;
+                        display: grid;
+                        grid-template-columns: repeat(3, 1fr);
+                        row-gap: 3rem;
+                        column-gap: 5.375rem;
+
+                        .item{
+                            max-width: 18.625rem;
+                            display: flex;
+                            gap:0.75rem;
+                            > img{
+                                width: 1.75rem;
+                                height: 1.625rem;
+                            }
+                            > p{
+                                font-size: 1rem;
+                                line-height: 1.75rem;
+                                margin:0 0 -0.375rem 0;
+                                font-weight: 500;
+                            }
+                        }
+                        
+                    }
+                    .bottom{
+                        padding: 1.5rem 15.15%;
+                        display: flex;
+                        align-items: center;
+                        background-color: #12393D;
+                        width: 100%;
+                        height: fit-content;
+                        border-radius: 0.25rem;
+                        gap: 0.75rem;
+                        margin-top: 3.75rem;
+                        
+                        > img{
+                            width: 3.5rem;
+                            height: auto;
+                        }
+                        > p{
+                            font-style: italic;
+                            font-size: 1rem;
+                            line-height: 1.75rem;
+                            margin:-0.3125rem 0;
+                            font-weight: 500;
+                            color: #fff;
+                            > span{
+                                font-weight: 700;
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+    .chamcong-quanly{
+        .col-12{
+            padding: 4.25rem 0;
+            height: fit-content;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            .tabs-wrapper{
+                margin-top: 3.25rem;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .chamcong-quanly-main.animation-tabs{
+                    width: fit-content;
+                    height: fit-content;
+                    justify-content: center;
+                    background-color: #E3E6E7;
+                    border-radius: 999rem;
+                    padding: 0.375rem;
+                    height: 4rem;
+                    
+                    .card{
+                        background-color: #12393D;
+                        transition: all 0.5s ease;
+                        border-radius: 999rem;
+                        height: 3.25rem;
+                        box-sizing: border-box;
+                        
+                    }
+                    .items-container{
+                        width: fit-content;
+                        height: 100%;
+                        display: flex;      
+                        .item{
+                            padding: 0.875rem 2.5rem;
+                            height: 100%;
+                            background-color: transparent;
+                            color: #2B2D33;
+                            transition: all 0.5s ease;
+                            font-size: 1rem;
+                            font-weight: 600;
+                            border-radius: 999rem;
+
+                            &.active{
+                                color: #fff;
+                            }
+                        }
+                        
+                    }
+                }
+                .animation-tabs-content{
+                    margin-top: 3.25rem;
+                    width: 100%;
+                    height: auto;
+                    
+                }
+                .chamcong-quanly-main.panels-container{
+                    width: 100%;
+                    height: auto;
+                    margin: 0;
+                    transition: all 0.5s ease;
+                    .tab-pane{
+                        padding: 0;
+                        height: 100%;
+
+                        &.active .animation-tabs2 .items-container button.active {
+                            animation: items_loader 6s linear forwards;
+                        }
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        transition: all 0.5s;
+                        gap: 2.5rem;
+                        
+                        &.active{
+                            transition: all 0.5s;
+                        }
+
+                        .animation-tabs2{
+                            width: 31.125rem;
+                            height: fit-content;
+                            transition: all 0.5s;
+                            
+                            .items-container{
+                                width: 100%;
+                                height: fit-content;
+                                gap: 2rem;
+
+                                button{
+                                    width: 100%;
+                                    height: fit-content;
+                                    padding: 0 0 2rem;
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: start;
+                                    transition: all 0.5s ease;
+                                    position: relative;
+                                    border-bottom: 1px dashed #D1D1D1;
+                                    
+                                    h2{
+                                        font-size: 1.25rem;
+                                        height: 1rem;
+                                        font-weight: 600;
+                                        color: #676D78;
+                                        margin: 0;
+                                        margin-bottom: 1.25rem;
+                                        transition: all 0.5s ease;
+                                    }
+                                    p{
+                                        font-size: 1rem;
+                                        line-height: 1.75rem;
+                                        color: #676D78;
+                                        text-align: start;
+                                        margin: -0.375rem 0;
+                                        @media (max-width: 87.4375rem) {
+                                            br{
+                                                display: none;
+                                            }
+                                        }
+                                    }
+
+                                    //progress bar
+                                    &::after{
+                                        content: '';
+                                        position: absolute;
+                                        bottom: -1px;
+                                        left: 0;
+                                        width: 0;
+                                        height: 3px;
+                                        background-color: #12393D;
+                                        opacity: 0;
+                                        transition: opacity 0.5s ease, width 0s linear 0.3s;
+                                    }
+
+                                    &.active {
+                                        h2{color:#2B2D33;}
+                                        &::after{
+                                            width: 100%;
+                                            opacity: 1;
+                                            transition: width 6s ease-out, opacity 0.3s ease;
+                                        }
+                                    }
+                                    &.resetting {
+                                        &::after {
+                                            width: 0 !important;
+                                            transition: none !important;
+                                            opacity: 0 !important;
+                                        }
+                                    }
+                                    /////////////////
+
+                                }
+                            }
+                        }
+                        .animation-tabs-content2{
+                            width: 57.5%;
+                            height: 100%;
+
+                            .panels-container{
+                                margin: 0 ;
+                                width: 100%;
+                                height: 100%;
+                                align-items: center;
+
+                                .tab-pane{
+                                    padding: 0 ;
+                                    width: 100%;
+                                    height: auto;
+                                    border-radius: 0.5rem;
+                                    border: 1px solid #DEDEDE;
+                                    overflow: hidden;
+                                    transition: all 0.8s ease;
+                                    transform:scale(0.7);
+                                    transform-origin: top;
+                                    img{
+                                        width: 100%;
+                                        height: auto;
+                                        object-fit: cover;
+                                    }
+
+                                    &.up{
+                                        transform:scale(1);
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+    > .chamcong-sohoa{
+        background-color: #12393D;
+        width: 100%;
+
+        .col-12{
+            padding: 4.25rem 0;
+            width: 100%;
+            .title-section{
+                color: #fff;
+            }
+            .tabs-wrapper{
+                display: flex;
+                align-items: center;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                margin-top: 3.25rem;
+                
+
+                .animation-tabs2{
+                    width: 30.625rem;
+                    height: fit-content;
+                    background-color: transparent;
+                    .items-container{
+                        width: 100%;
+                        height: fit-content;
+
+                        button{
+                            width: 100%;
+                            box-sizing: border-box;
+                            padding: 1.5rem 0 1.5rem 1.5rem;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: start;
+                            transition: all 0.5s ease;
+                            position: relative;
+                            border-radius: 0.5rem;
+                            border: 1px solid transparent;
+                            gap:0;
+
+                            &.active{
+                                border: 1px solid rgba(255, 255, 255, 0.363);
+                            }
+                            
+                            h2{
+                                font-size: 1.25rem;
+                                line-height: 1rem;
+                                font-weight: 600;
+                                color: #fff;
+                                margin: 0;
+                                margin-bottom: 1.5rem;
+                            }
+                            p{
+                                font-size: 1rem;
+                                line-height: 1.75rem;
+                                color: #fff;
+                                text-align: start;
+                                margin: -0.4rem 0;
+                                font-weight: 400;
+                                @media (max-width: 87.4375rem) {
+                                    font-size: 0.875rem;
+                                    line-height: 1.5rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .animation-tabs-content2{
+                width: auto;
+                height: 100%;
+                overflow: hidden;
+
+                .panels-container{
+                    margin: 0 ;
+                    width: auto;
+                    height: auto;
+                    align-items: center;
+
+                    .tab-pane{
+                        padding: 0 ;
+                        width: auto;
+                        height: 100%;
+                        border-radius: 0.5rem;
+                        border: 1px solid #DEDEDE;
+                        overflow: hidden;
+                        transition: all 0.8s ease;
+                        transform:scale(0.7);
+                        transform-origin: top;
+                        img{
+                            width: 100%;
+                            height: 34.5rem;
+                            object-fit: cover;
+                        }
+
+                        &.up{
+                            transform:scale(1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .chamcong-hethong{
+        border-bottom: 1px solid #E3E6E7;
+        .col-12{
+            padding: 4.25rem 0 0;
+
+            .content{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                margin-top: 3.25rem;
+                margin-bottom: 3.75rem;
+                padding: 0 3.90625%;
+                box-sizing: border-box;
+
+                .item{
+                    width: 15.625rem;
+                    height: fit-content;
+                    display: flex;
+                    gap: 0.75rem;
+
+                    img{
+                        width: 1.625rem;
+                        height: 1.625rem;
+                        object-fit: cover;
+                    }
+                    p{
+                        font-size: 1rem;
+                        line-height: 1.75rem;
+                        margin:0 0 -0.375rem 0;
+                        font-weight: 500;
+                    }
+
+                    
+                }
+            }
+            > img{
+                width: 86.71875%;
+                height: auto;
+                object-fit: cover;
+                margin-left: 13.28125%;
+            }
+
+        }
+        
+    }
+
+    .chamcong-antuong{
+        .row{
+            padding: 4.25rem 0 0;
+            height: fit-content;
+            .col-6.left{
+                height: fit-content;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 0;
+                padding-top: 4.25rem;
+                background-color: #12393D;
+                > .title-section{
+                   br{display: none;}
+                   color: #fff;
+                   @media (max-width: 87.4375rem) {
+                        br{display: block;}
+                    }
+                }
+                > img{
+                    margin-top: 3.75rem;
+                    height: 27.25rem;
+                    width: auto;
+                    object-fit: cover;
+                }
+            
+                > .btn-container{
+                    width: 100%;
+                    height: fit-content;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: rgba(0, 0, 0, 0.2);
+                    padding: 0.875rem 0;
+                    border-top: 1px solid rgba(255, 255, 255, 0.123);
+                    button{
+                        img{
+                            width: auto;
+                            height: 3.25rem;
+                        }
+                        
+                    }
+                }
+                
+            }
+            .col-6.right{
+                padding: 4.25rem 0 0;
+                background-color: #F6F6F6;
+                > .title-section{
+                   br{display: none;}
+                }
+                > .content{
+                    margin-top: 5.625rem;
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: auto;
+                    padding: 0 7.96875%;
+                    row-gap: 5.375rem;
+                    @media (max-width: 87.4375rem) {
+                        padding: 0 4%;
+                    }
+                    
+                    
+                    .item{
+                        display: flex;
+                        align-items: center;
+                        justify-content: start;
+                        gap: 1.25rem;
+                        img{
+                            width: 4.75rem;
+                            height: 4.75rem;
+                            object-fit: cover;
+                        }
+                        > div{
+                            height: 4.75rem;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: start;
+                            justify-content: space-between;
+                            
+                            > .title-section{
+                                text-align: start;
+                                display: flex;
+                                align-items: center;
+                            }
+                            p{
+                                font-size: 0.875rem;
+                                line-height: 1.875rem;
+                                margin: 0;
+                                font-weight: 500;
+                                color: #676D78;
+                            }
+                        }
+                        
+                    }
+                }
+                
+            }
+        }
+    }
+
+    
+
+
+}
