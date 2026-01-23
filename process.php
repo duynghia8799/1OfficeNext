@@ -314,7 +314,7 @@ get_header();
     ?>
 
     <section class="top-footer center">
-        <img class="top-footer-bg" src="<?= get_template_directory_uri() . '/assets/images/ai_light_bg_tear.svg' ?>" alt="">
+        <img class="top-footer-bg" src="<?= get_template_directory_uri() . '/assets/images/ai_light_bg_semidarktear.svg' ?>" alt="">
         <div class="container">
             <div class="row">
                 <div class="content">

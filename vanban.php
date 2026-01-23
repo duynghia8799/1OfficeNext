@@ -133,18 +133,10 @@ get_header(); ?>
                             ',
                         ],
                     ))); ?>
-                    <div class="tabs-navigation">
-                        <button class="prev-tab">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </button>
-                        <button class="next-tab">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </button>
-                    </div>
+                    <?php get_template_part('template-parts/tabs/tab_navigation', null, array('icons' => array(
+                        'prev' => '/assets/images/icons/chevron_gray_l.svg',
+                        'next' => '/assets/images/icons/chevron_gray_r.svg'
+                    ))); ?>
                 </div>
             </div>
         </div>
