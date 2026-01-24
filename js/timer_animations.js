@@ -43,10 +43,12 @@
          * Để thanh progress chạy mượt và reset đúng, cần cấu hình CSS như sau:
          * 
          * 1. Cấu hình Transition (Chạy):
+         *    opacity: 0;
          *    transition: opacity 0.3s ease, width 0s linear 0.3s;
          *    &.active {
          *       &::after { 
-         *           width: 100%; 
+         *           width: 100%;
+         *           opacity: 1;
          *           transition: width 6s ease-out, opacity 0.3s ease; // 6s = tham số duration truyền vào hàm
          *       }
          *    }
@@ -181,6 +183,8 @@
         initAutoTabs('chamcong-quanly2', 6000); 
         initAutoTabs('DGNS-thietlap-tabs', 8000);
         initAutoTabs('DGNS-hethong-tabs', 8000);
+        initAutoTabs('tinhluong-tudonghoa-tabs', 8000);
+        initAutoTabs('tinhluong-chitra-tabs', 8000);
 
     });
 })(jQuery);

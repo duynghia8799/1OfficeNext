@@ -1,0 +1,427 @@
+.tinhluong-page {
+
+    .tinhluong-hero {
+        background-image: url('assets/images/tinhluong_hero_bg.svg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        .col{
+            padding: 4.25rem 0 ;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .title-section{
+                font-size: 2.5rem;
+                line-height: 3.5rem;
+                margin: -0.5rem 0;
+                margin-bottom: 1.75rem;
+            }
+            .sub-title-section{
+                font-size: 1.125rem;
+                line-height: 1.875rem;
+                margin: -0.375rem 0;
+            }
+            .dk-chat-ai{
+                margin: 3rem 0 3.75rem;
+                .btn-hover-bg-LTR{
+                    background-color: #2B2D33 !important;
+                    p{
+                        color: #FFFFFF !important;
+                    }
+                    div{background-color: #1a1a1a !important;}
+
+                    &.orange{
+                        background-color: #F0500A !important;
+                        p{
+                            color: #FFFFFF !important;
+                        }
+                        div{background-color: #C54208 !important;}
+                    }
+                }
+            }
+            img{
+                width: 86.64%;
+            }
+        }
+    }
+
+    .tinhluong-loaibo{
+        background-color: #0E1E4D;
+        .col{
+            padding: 4.25rem 0;
+            .title-section{color: #fff; text-align: center;}
+            .content{
+                display: flex;
+                justify-content: space-between;
+                .item{
+                    width: 24rem;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    img{
+                        width: 3.5rem;
+                        height: 3.5rem;
+                        margin: 3.75rem 0 3rem;
+                    }
+                    h3{
+                        font-size: 1.5rem;
+                        line-height: 2.5rem;
+                        margin: -0.5rem 0;
+                        color: #fff;
+                        margin-bottom: 2.25rem;
+                        span{
+                            color: #FFCC00;
+                        }
+                    }
+                    p{
+                        font-size: 1rem;
+                        line-height: 1.75rem;
+                        margin: -0.375rem 0;
+                        text-align: justify;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+
+    .tinhluong-tudonghoa{
+        background-image: url('assets/images/tinhluong_tudonghoa_bg.svg');
+        background-size:100%;
+        background-position: center 80%;
+        background-repeat: no-repeat;
+        .col{
+            padding: 4.25rem 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .title-section{text-align: center;}
+            .tabs-wrapper{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .animation-tabs{
+                    padding: 0;
+                    margin: 3.75rem 0 0;
+                    .card{height: 0;}
+                    .items-container{
+                        padding: 0;
+                        margin: 0;
+                        gap: 2.25rem;
+                        @media (max-width: 87.4375rem) {
+                            gap: 1rem;
+                        }
+                        .item{
+                            padding: 0;
+                            margin: 0;
+                            height: auto;
+                            padding: 0 0 1.5rem;
+                            align-items: start;
+                            font-size: 1.25rem;
+                            line-height: 1.875rem;
+                            margin: -0.375rem 0;
+                            font-weight: 600;
+                            color: #676D78;
+                            border-bottom: 0.0625rem solid #E3E6E7;
+                            transition: color 0.5s ease;
+                            position: relative;
+                            &.active{
+                                color: #0E1E4D;
+                            }
+
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                width: 0; /* Bắt đầu bằng 0 */
+                                height: 2px;
+                                background-color: #FFCC00; /* Màu sắc đường gạch chân */
+                                transition: opacity 0.3s ease, width 0s linear 0.3s; 
+                                opacity: 0;
+
+                            }
+
+                            /* Cấu hình Transition (Chạy): */
+                            &.active {
+                                &::after { 
+                                    width: 100%; 
+                                    transition: width 8s ease-out, opacity 0.3s ease; // 6s = tham số duration truyền vào hàm
+                                    opacity: 1;
+                                }
+                            }
+         
+                            /* 2. Cấu hình Reset Mượt (.resetting): */
+                            &.resetting {
+                                &::after {
+                                    width: 0 !important;
+                                    transition: none !important;
+                                    opacity: 0 !important;
+                                }
+                            }
+
+                        }
+                    }
+                }
+                .animation-tabs-content{
+                    margin-top: 2.75rem;
+                    .tab-pane{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        .sub-title-section{
+                            line-height: 1.75rem;
+                        }
+                        img{
+                            width: 86.64%;
+                            margin-top: 3.25rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .tinhluong-chitra{
+        background-color: #F6F5EE;
+        .col{
+            padding: 4.25rem 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .title-section{text-align: center;}
+            .tabs-wrapper{
+                display: flex;
+                align-items: start;
+                justify-content: space-between;
+                width: 100%;
+                margin-top: 4.5rem;
+
+                .animation-tabs2{
+                    margin: 0 0 0 3.625rem;
+                    @media (max-width: 87.4375rem) {
+                        margin: 0;
+                    }
+                    max-width: 27.25rem;
+                    min-width: 27.25rem;
+                    background-color: transparent;
+                    .items-container{
+                        padding: 0;
+                        margin: 0;
+                        width: 100%;
+                        gap: 2.5rem;
+                        .item{
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            width: 100%;
+                            padding: 0 0 0 1.5rem;
+                            margin: 0;
+                            height: auto;
+                            align-items: start;
+                            border-left: 4px solid transparent;
+                            transition: border-left 0.5s ease;
+                            position: relative;
+                            gap: 0;
+                            &.active{
+                                h3{
+                                    color: #2B2D33;
+                                }
+                                border-left: 4px solid #E3E6E7;
+                            }
+
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                top: 0;
+                                left: -0.25rem;
+                                height: 0; /* Bắt đầu bằng 0 */
+                                width: 0.25rem;
+                                background-color: #FFCC00; /* Màu sắc đường gạch chân */
+                                transition: opacity 0.3s ease, height 0s linear 0.3s; 
+                                opacity: 0;
+
+                            }
+
+                            /* Cấu hình Transition (Chạy): */
+                            &.active {
+                                &::after { 
+                                    height: 100%; 
+                                    opacity: 1;
+                                    transition: height 8s ease-out, opacity 0.3s ease; // 6s = tham số duration truyền vào hàm
+                                }
+                            }
+         
+                            /* 2. Cấu hình Reset Mượt (.resetting): */
+                            &.resetting {
+                                &::after {
+                                    height: 0 !important;
+                                    transition: none !important;
+                                    opacity: 0 !important;
+                                }
+                            }
+                            
+                            h3{
+                                font-size: 1.25rem;
+                                line-height: 1.875rem;
+                                margin: -0.375rem 0;
+                                margin-bottom: 1.25rem;
+                                font-weight: 600;
+                                text-align: start;
+                                color: #676D78;
+                            }
+                            p{
+                                font-size: 1rem;
+                                line-height: 1.75rem;
+                                margin: -0.375rem 0;
+                                font-weight: 500;
+                                color: #676D78;
+                            }
+                        }
+                    }
+                }
+                .animation-tabs-content2{
+                    background-color: transparent;
+                    width: 51.9%;
+                    .tab-content{
+                        width: 100%;
+                        background-color: transparent;
+                    }
+                    .tab-pane{
+                        width: 100%;
+                        background-color: transparent;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        img{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .tinhluong-kiemsoat{
+        background-color: #0E1E4D;
+        .col{
+            padding: 4.25rem 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .title-section{
+                color: #fff;
+                text-align: center;
+            }
+            .content{
+                margin: 3.75rem 0;
+                width: 83%;
+                height: fit-content;
+                @media (max-width: 87.4375rem) {
+                    width: 100%;
+                }
+                display: flex;
+                justify-content: space-between;
+                .item{
+                    width: 12.5rem;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    gap: 1.125rem;
+                    img{
+                        width: 1.625rem;
+                        height: auto;
+                        object-fit: contain;
+                    }
+                    p{
+                        font-size: 1rem;
+                        line-height: 1.75rem;
+                        margin: -0.375rem 0;
+                        font-weight: 500;
+                        color: #fff;
+                    }
+                }
+            }
+            img{
+                width: 76.3%;
+                height: auto;
+            }
+        }
+    }
+
+    .tinhluong-phieuluong{
+        .col{
+            margin-top: 4.25rem;
+            background-color: #F6F5EE;
+            height: fit-content;
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+
+            .left{
+                height: 100%;
+                width: 27.5rem;
+                margin: 3.75rem 0 3.75rem 5rem;
+                .title-section{
+                    color: #2B2D33;
+                    text-align: start;
+                }
+                .content{
+                    margin: 2.5rem 0 3rem;
+                    width: 16.75rem;
+                    height: fit-content;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    gap: 2rem;
+                    .item{
+                        width: 100%;
+                        display: flex;
+                        align-items: start;
+                        gap: 0.75rem;
+                        img{
+                            width: 1.6875rem;
+                            height: auto;
+                            object-fit: contain;
+                        }
+                        p{
+                            font-size: 1rem;
+                            line-height: 1.75rem;
+                            margin: 0 0 -0.375rem 0;
+                            font-weight: 500;
+                            color: #2B2D33;
+                        }
+                    }
+                }
+                .btn-container{
+                    width: auto;
+                    height: fit-content;
+                    display: flex;
+                    gap: 0.75rem;
+                    button{
+                        height: 3.25rem;
+                        width: auto;
+                    }
+                }
+            }
+            .right{
+                margin-right: 5rem;
+                height: 100%;
+                width: 50.78125%;
+                display: flex;
+                align-items: end;
+                justify-content: center;
+                img{
+                    width: 100%;
+                }
+            }
+            @media (max-width: 87.4375rem) {
+                .left{margin: 3.75rem 0 3.75rem 2rem;}
+                .right{margin-right: 2rem;}
+            }
+        } 
+    }
+
+
+}
+    

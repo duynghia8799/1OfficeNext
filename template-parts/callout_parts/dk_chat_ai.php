@@ -8,3 +8,23 @@
         <div></div>
     </button>
 </div>
+<!-- /dk_chat_ai 
+black btn css:
+
+.btn-hover-bg-LTR{
+    background-color: #2B2D33 !important;
+    p{
+        color: #FFFFFF !important;
+    }
+    div{background-color: #1a1a1a !important;}
+
+    &.orange{
+        background-color: #F0500A !important;
+        p{
+            color: #FFFFFF !important;
+        }
+        div{background-color: #C54208 !important;}
+    }
+}
+    
+-->

@@ -206,6 +206,8 @@
         initTabs('.DGNS-hethong-tabs', { startIndex: 0 });
         initTabs('.DGNS-thietlap-tabs', { startIndex: 0 });
         initTabs('.DGNS-caithien-tabs', { startIndex: 0 });
+        initTabs('.tinhluong-tudonghoa-tabs', { startIndex: 0 });
+        initTabs('.tinhluong-chitra-tabs', { startIndex: 0 });
 
         
 
