@@ -176,6 +176,7 @@ get_header(); ?>
                 <?php get_template_part('template-parts/tabs/animation_tab', null, array('name' => 'DGNS-caithien-tabs', 'tabs' => array(
                     [
                         'title' => 'Tích hợp đánh giá với KPI & OKR',
+                        'icon' => '',
                         'content_panel' => '
                             <p>Kết nối kết quả đánh giá năng lực với KPI và OKR để phản ánh đầy đủ hiệu suất làm việc <br/>thực tế, không chỉ dựa trên kết quả đầu ra mà còn trên năng lực thực thi</p>
                             <button><p>TÌM HIỂU THÊM</p><div></div></button>
@@ -185,6 +186,7 @@ get_header(); ?>
                     ],
                     [
                         'title' => 'Lộ trình phát triển cá nhân (IDP)',
+                        'icon' => '',
                         'content_panel' => '
                             <p>Dựa trên kết quả đánh giá, hệ thống đề xuất lộ trình phát triển và đào tạo phù hợp cho <br/>từng nhân sự, gắn với mục tiêu công việc và định hướng phát triển dài hạn</p>
                             <button><p>TÌM HIỂU THÊM</p><div></div></button>
