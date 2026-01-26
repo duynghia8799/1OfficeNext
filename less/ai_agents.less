@@ -263,8 +263,8 @@
                 }
 
                 .demo-img {
+                    width:55%;
                     background-color: transparent;
-                    width: auto;
                     height: auto;
                     border-radius: 0.5rem;
                     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
@@ -273,6 +273,7 @@
                 }
 
                 .content {
+                    width:45%;
                     height: fit-content;
                     display: flex;
                     flex-direction: column;
@@ -595,6 +596,463 @@
             height: 100%;
             width: 1px;
             background-image: linear-gradient(to bottom, #ffffff 0%, #E3E3E3 50%, #ffffff 100%);
+        }
+    }
+}
+
+// ============================================
+// RESPONSIVE - AI Agents Page (< 1200px)
+// ============================================
+@media (max-width: 1199.98px) {
+    // --- AI AGENTS HERO ---
+    .ai-agents-hero {
+        height: 100vh;
+        min-height: 0rem;
+        padding: 0;
+        overflow: hidden;
+
+        .container {
+            height: 100%;
+        }
+
+        .container .row {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+        .content {
+            width: 100%;
+            min-width: unset;
+            align-items: center;
+            text-align: center;
+
+            .title-section {
+                text-align: center;
+                max-width: 30rem;
+
+                // Giữ "AI Agents" trên 1 dòng, bỏ br cho 2 dòng dưới
+                .br-line:not(.title-bold) {
+                    display: inline;
+                }
+            }
+
+            .sub-title-section {
+                text-align: center;
+                max-width: 30rem;
+
+                br {
+                    display: none;
+                }
+            }
+
+            span {
+                text-align: center;
+            }
+        }
+
+        .img-container {
+            width: 100%;
+            max-width: 500px;
+            margin-top: 2rem;
+
+            svg {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+        }
+    }
+
+    // --- AI AGENTS HESINHTHAI ---
+    .ai-agents-hesinhthai {
+        height: auto;
+        min-height: auto;
+        padding: 3rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .row {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .ai-agents-hesinhthai-svg {
+            position: relative;
+            width: 100%;
+            height: auto;
+            margin-top: 2rem;
+        }
+
+        .content {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: auto;
+            top: 70%;
+            margin-top: -2rem; // Điều chỉnh vị trí trong vòng tròn
+            font-size: 1.25rem;
+            line-height: 1.875rem;
+            text-align: center;
+            width: max-content;
+        }
+    }
+
+    // --- AI AGENTS TANGTOC ---
+    .ai-agents-tangtoc {
+        padding: 3rem 0;
+
+        .tangtoc-col {
+            .title-section {
+                width: 100%;
+                text-align: center;
+                .br-line { display: inline; }
+            }
+
+            .animation-tabs {
+                width: fit-content;
+                .items-container {
+                    min-width: max-content;
+                }
+            }
+
+            .animation-tabs-content {
+                height: auto;
+            }
+
+            .tab-content {
+                width: 100%;
+                height: auto;
+
+                .tab-pane {
+                    width: 100%;
+                    flex-direction: column;
+                    gap: 2rem;
+                    padding: 2rem 0;
+
+                    .demo-img {
+                        width: 70%;
+                        max-width: 600px;
+                        margin-left: 0;
+                        order: 1;
+                    }
+
+                    .content {
+                        width: fit-content;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        h2 br {
+                            display: none;
+                            width: fit-content;
+                        }
+                        ul{
+                            width: fit-content;
+                            li{
+                                width: fit-content;
+                            }
+                        }
+                        p {
+                            width: fit-content;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // --- AI AGENTS TICHHOP ---
+    .ai-agents-tichhop {
+        padding: 3rem 0;
+        
+        max-height: 80rem;
+        overflow: hidden;
+
+        .container, .row {
+            height: 100%;
+        }
+    }
+
+    .tichhop-col {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .title-section {
+            width: 100%;
+            text-align: center;
+            margin: 0 0 2rem 0;
+
+            .br-line { display: inline; }
+        }
+
+        .animation-tabs {
+            width: 100%;
+            height: auto;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+
+            // Ẩn .card bằng height 0
+            .card {
+                height: 0 !important;
+                opacity: 0 !important;
+            }
+
+            .items-container {
+                flex-direction: column;
+                gap: 0.5rem;
+                width: 100%;
+
+                .item {
+                    width: 100%;
+                    justify-content: flex-start;
+                    border-radius: 0.5rem;
+                    transition: all 0.5s ease;
+
+                    // Khi active, chuyển màu gradient như .card
+                    &.active {
+                        background-image: linear-gradient(to top, #292D32 0%, #412066 100%);
+                        border-color: transparent;
+                    }
+                }
+            }
+        }
+        .animation-tabs-content {
+            width: 100%;
+        }
+        .tab-content {
+            flex: 1;
+            max-height: none;
+            margin-bottom: 0;
+
+            .tab-pane {
+                height: 0;
+                overflow: hidden;
+
+                &.active {
+                    height: 550px; // Cố định để animation hoạt động
+                }
+
+                .background {
+                    flex-direction: column;
+                    height: 100%;
+                    padding: 1.5rem;
+                    gap: 1.5rem;
+                    align-items: center;
+                }
+
+                .content {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 100%;
+                    padding-left: 0;
+                    order: 2;
+
+                    h2 {
+                        text-align: center;
+                        width: 30rem;
+                        br { display: none; }
+                    }
+
+                    ul {
+                        width: fit-content;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: start;
+                        li{width: fit-content; max-width: 30rem;}
+                    }
+                }
+
+                .demo_image {
+                    width: 100%;
+                    max-width: 400px;
+                    height: auto;
+                    order: 1;
+                }
+            }
+        }
+    }
+
+    // --- AI AGENTS CHUYENDOI ---
+    .ai-agents-chuyendoi {
+        background-position: center;
+        padding: 3rem 0;
+        .title-section {
+            br { display: none; }
+        }
+
+        .container .content {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+
+            .item {
+                width: 100%;
+
+                p br {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    // --- AI AGENTS KIENTAO ---
+    .ai-agents-kientao {
+        .row{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        padding: 3rem 0;
+        .content {
+            flex-direction: column;
+            align-items: center;
+            gap: 2.5rem;
+
+            .item {
+                width: 100%;
+                max-width: 30rem;
+                text-align: center;
+                align-items: center;
+                p{
+                    text-align: center;
+                }
+            }
+
+            .line {
+                width: 80%;
+                height: 1px;
+                background-image: linear-gradient(to right, #ffffff 0%, #E3E3E3 50%, #ffffff 100%);
+            }
+        }
+    }
+}
+
+
+// ============================================
+// RESPONSIVE - AI Agents Page (< 768px)
+// ============================================
+@media (max-width: 767.98px) {
+    .tichhop-col {
+        .tab-content {
+            .tab-pane {
+                &.active {
+                    height: 550px;
+                }
+
+                .background {
+                    padding: 3rem;
+                    gap: 1rem;
+                }
+
+                .demo_image {
+                    max-width: 400px;
+                }
+            }
+        }
+
+        .animation-tabs {
+            .items-container {
+                .item {
+                    font-size: 0.875rem;
+                    padding: 0.75rem 1rem;
+
+                    img {
+                        width: 1rem;
+                        height: 1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .ai-agents-chuyendoi {
+        .container .content {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 3rem;
+            .item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                p {
+                    text-align: center;
+                    max-width: 30rem;
+                }
+            }
+        }
+    }
+}
+
+// ============================================
+// RESPONSIVE - AI Agents Page XS (< 576px)
+// ============================================
+@media (max-width: 575.98px) {
+    .ai-agents-hero {
+        .content {
+            .title-section,
+            .sub-title-section {
+                max-width: 25rem;
+            }
+        }
+    }
+
+    .ai-agents-hesinhthai {
+        .content {
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+        }
+    }
+
+    .ai-agents-tangtoc {
+        .tangtoc-col {
+            .animation-tabs {
+                .items-container {
+                    .item {
+                        img { display: none; }
+                    }
+                }
+            }
+        }
+    }
+
+    .tichhop-col {
+        .tab-content {
+            .tab-pane {
+                .background {
+                    padding: 1rem;
+                }
+                &.active {
+                    height: 400px;
+                }
+                .content {
+                    h2 {
+                        font-size: 1.25rem;
+                        margin-bottom: 1rem;
+                    }
+                }
+
+                .demo_image {
+                    max-width: 250px;
+                }
+            }
+        }
+
+        .animation-tabs {
+            .items-container {
+                .item {
+                    img { display: none; }
+                }
+            }
+        }
+    }
+    .ai-agents-kientao {
+        .title-section {
+            br { display: none; }
+            max-width: 30rem;
+            text-align: center;
         }
     }
 }
