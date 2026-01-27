@@ -49,7 +49,7 @@
 <footer>
     <div class="container footer-content">
         <div class="row top-content">
-            <div class="col-xl-4">
+            <div class="col-4">
                 <div class="left">
                     <h1>CÔNG TY CỔ PHẦN 1OFFICE</h1>
                     <div class='content'>
@@ -76,7 +76,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-8">
+            <div class="col">
                 <?php
                 wp_nav_menu(array(
                     'theme_location' => 'footer_desktop',

@@ -68,9 +68,22 @@
             $('.chatbot_content h2, .chatbot_content .slogan, .chatbot_options, .logo_1office_chatbot').toggleClass('active')
             $('.chatbot_chatbox').removeClass('active')
         })
+
         $('.chatbot_options_chat').click(function () {
             $('.chatbot_chatbox').toggleClass('active')
         })
+
+
+        // Footer Menu (Mobile/Tablet)
+        $(document).on('click', '.foot-menu > .menu-item > a', function(e) {
+            if ($(window).width() < 992) { 
+                if ($(this).parent().find('.sub-menu').length > 0) {
+                    e.preventDefault(); // Stop jump to top or navigation
+                    e.stopPropagation();
+                    $(this).parent().toggleClass('active');
+                }
+            }
+        });
     });
 })(jQuery);
 
