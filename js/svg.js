@@ -57,7 +57,8 @@
             scrollSpeed: 0.0003,
             pauseDuration: 700,
             transformOrigin: 'center',
-            interactive: false
+            interactive: false,
+            triggerSelector: '.TTNS-svg'
         },
         '.js-svg-TTNS-9': {
             keyframes: [
@@ -68,7 +69,8 @@
             scrollSpeed: 0.0003,
             pauseDuration: 700,
             transformOrigin: 'center',
-            interactive: false
+            interactive: false,
+            triggerSelector: '.TTNS-svg'
         },
         '.js-svg-TTNS-8': {
             keyframes: [
@@ -79,7 +81,8 @@
             scrollSpeed: 0.0003,
             pauseDuration: 700,
             transformOrigin: 'center',
-            interactive: false
+            interactive: false,
+            triggerSelector: '.TTNS-svg'
         },
         '.js-svg-TTNS-7': {
             keyframes: [
@@ -90,7 +93,8 @@
             scrollSpeed: 0.0003,
             pauseDuration: 700,
             transformOrigin: 'center',
-            interactive: false
+            interactive: false,
+            triggerSelector: '.TTNS-svg'
         },
         '.js-svg-TTNS-6': {
             keyframes: [
@@ -101,7 +105,8 @@
             scrollSpeed: 0.0003,
             pauseDuration: 700,
             transformOrigin: 'center',
-            interactive: false
+            interactive: false,
+            triggerSelector: '.TTNS-svg'
         },
         '.js-svg-TTNS-5': {
             keyframes: [
@@ -112,7 +117,8 @@
             scrollSpeed: 0.0003,
             pauseDuration: 700,
             transformOrigin: 'center',
-            interactive: false
+            interactive: false,
+            triggerSelector: '.TTNS-svg'
         },
         '.js-svg-TTNS-4': {
             keyframes: [
@@ -123,7 +129,8 @@
             scrollSpeed: 0.0003,
             pauseDuration: 700,
             transformOrigin: 'center',
-            interactive: false
+            interactive: false,
+            triggerSelector: '.TTNS-svg'
         },
         '.js-svg-TTNS-3': {
             keyframes: [
@@ -134,7 +141,8 @@
             scrollSpeed: 0.0003,
             pauseDuration: 700,
             transformOrigin: 'center',
-            interactive: false
+            interactive: false,
+            triggerSelector: '.TTNS-svg'
         },
         '.js-svg-TTNS-2': {
             keyframes: [
@@ -145,7 +153,8 @@
             scrollSpeed: 0.0003,
             pauseDuration: 700,
             transformOrigin: 'center',
-            interactive: false
+            interactive: false,
+            triggerSelector: '.TTNS-svg'
         },
         '.js-svg-TTNS-1': {
             keyframes: [
@@ -156,7 +165,8 @@
             scrollSpeed: 0.0003,
             pauseDuration: 700,
             transformOrigin: 'center',
-            interactive: false
+            interactive: false,
+            triggerSelector: '.TTNS-svg'
         },
     };
 
@@ -179,7 +189,8 @@
                 scrollAxis: 'y',  // Option: 'y', 'x', or 'both' for wheel interaction
                 transformOrigin: null, // New Option: "center center" or "Xpx Ypx"
                 interactive: true, // Option: Allow user drag/wheel (Default is TRUE)
-                startDelay: 0      // Option: Delay before start (Default 0)
+                startDelay: 0,      // Option: Delay before start (Default 0)
+                triggerSelector: null // Option: Selector for external element to trigger animation visibility (Default null: use self)
             };
 
             this.config = $.extend({}, defaults, config);
@@ -278,7 +289,21 @@
                     });
                 }, { threshold: 0 }); // Trigger as soon as 1px is visible
                 
-                this.observer.observe(this.$wrapper[0]);
+                let target = this.$wrapper[0];
+                if (this.config.triggerSelector) {
+                    const $triggers = $(this.config.triggerSelector);
+                    // Filter to find the trigger that actually contains this element (context-aware)
+                    const $closestTrigger = $triggers.filter((i, el) => $.contains(el, this.$element[0]) || el === this.$element[0]);
+                    
+                    if ($closestTrigger.length > 0) {
+                        target = $closestTrigger[0];
+                    } else if ($triggers.length > 0) {
+                        // Fallback: If not contained, just use the first match (global trigger)
+                        target = $triggers[0];
+                    }
+                }
+
+                this.observer.observe(target);
             } else {
                 // Fallback for ancient browsers: Always visible
                 this.isVisible = true;
@@ -410,7 +435,12 @@
                         });
                     }
                 });
+
             } else {
+                // Instant Reset (No Fade)
+                this.setTransform(0);
+                this.state = "AUTO_SCROLL";
+                this.loop();
             }
         }
 
