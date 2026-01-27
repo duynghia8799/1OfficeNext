@@ -625,3 +625,301 @@
     }
 }
 }
+
+
+// ============================================
+// RESPONSIVE - Vanban Page (< 1200px)
+// ============================================
+@media (max-width: 1199.98px) {
+    .vanban_page {
+        // --- VANBAN HERO ---
+        .vanban_hero {
+            .col-12 {
+                .title-section {
+                    br { display: none; }
+                }
+
+                .sub-title-section {
+                    br { display: none; }
+                }
+
+                .demo-img {
+                    width: 100%;
+                    
+                    height: auto;
+                    aspect-ratio: 66.375 / 40.25;
+                    padding-right: 0;
+
+                    .vanban-frame {
+                        width: 35%;
+                        right: 5%;
+
+                        .vanban-content-scroll {
+                            top: 12.3%;
+                        }
+                    }
+                    
+                }
+            }
+        }
+
+        // --- VANBAN LUUTRU ---
+        .vanban_luutru {
+            .col-12 {
+                .tabs-panel {
+                    flex-direction: column;
+                    gap: 2rem;
+
+                    .animation-tabs2 {
+                        width: 100%;
+                        min-width: unset;
+
+                        .items-container {
+                            button {
+                                width: 100%;
+
+                                div {
+                                    p {
+                                        text-align: left;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .animation-tabs-content2 {
+                        width: 100%;
+                        max-width: 500px;
+                    }
+                }
+            }
+        }
+
+        // --- VANBAN TUDONGHOA ---
+        .vanban_tudonghoa {
+            .col-12 {
+                .title-section {
+                    text-align: center;
+                    width: 100%;
+                }
+
+                .tabs-panel {
+                    .animation-tabs {
+                        border: 0;
+                        .card {
+                            display: none;
+                        }
+                        .items-container {
+                            flex-wrap: wrap;
+                            justify-content: center;
+                            .item{
+                                width: 100%;
+                                color: #2B2D33;
+                                &.active{
+                                    background-color: #0F4861;
+                                    color: #fff;
+                                }                                
+                            }
+                        }
+                    }
+
+                    .animation-tabs-content {
+                        .panels-container {
+                            .tab-pane {
+                                flex-direction: column;
+                                align-items: center;
+
+                                div {
+                                    position: relative;
+                                    top: 0;
+                                    width: 100%;
+                                    max-width: 100%;
+                                    align-items: center;
+                                    text-align: center;
+                                    margin-top: 0;
+                                    margin-bottom: 2rem;
+
+                                    p {
+                                        br { display: none; }
+                                    }
+                                }
+
+                                img {
+                                    width: 100%;
+                                    max-width: 500px;
+                                }
+                            }
+                        }
+                    }
+
+                    .tabs-navigation {
+                        position: relative;
+                        bottom: 0;
+                        justify-content: center;
+                        margin-top: 2rem;
+                    }
+                }
+            }
+        }
+
+        // --- VANBAN GIAOVIEC ---
+        .vanban_giaoviec {
+            .col-12 {
+                .title-section {
+                    br { display: none; }
+                }
+
+                .tabs-panel {
+                    flex-direction: column;
+                    height: auto;
+                    gap: 2rem;
+
+                    .animation-tabs2 {
+                        width: 100%;
+
+                        .items-container {
+                            border-left: none;
+                            align-items: center;
+
+                            .item {
+                                padding-left: 0;
+                                align-items: center;
+                                text-align: center;
+
+                                &::before {
+                                    display: none;
+                                }
+
+                                p {
+                                    br { display: none; }
+                                }
+                            }
+                        }
+                    }
+
+                    .animation-tabs-content2 {
+                        width: 100%;
+                        max-width: 500px;
+                    }
+                }
+            }
+        }
+
+        // --- VANBAN LINHHOAT ---
+        .vanban-linhhoat {
+            .col-12 {
+                flex-direction: column;
+                align-items: center;
+                gap: 3rem;
+
+                .left {
+                    width: 100%;
+                    align-items: center;
+
+                    .title-section {
+                        text-align: center;
+
+                        br { display: none; }
+                    }
+
+                    img {
+                        max-width: 400px;
+                    }
+                }
+
+                .right {
+                    width: 100%;
+                    grid-template-columns: 1fr;
+                    gap: 2.5rem;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    .item {
+                        flex-direction: column;
+                        align-items: center;
+                        text-align: center;
+                        width: 80%;
+
+                        .content {
+                            h3 {
+                                text-align: center;
+                            }
+
+                            p {
+                                text-align: center;
+
+                                br { display: none; }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// ============================================
+// RESPONSIVE - Vanban Page (< 768px)
+// ============================================
+@media (max-width: 767.98px) {
+    .vanban_page {
+        .vanban_hero {
+            .col-12 {
+                .demo-img {
+                    .vanban-frame {
+                        width: 30%;
+                    }
+                }
+            }
+        }
+
+        .vanban_tudonghoa {
+            .col-12 {
+                .tabs-panel {
+                    .animation-tabs {
+                        .items-container {
+                            .item {
+                                padding: 0 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// ============================================
+// RESPONSIVE - Vanban Page XS (< 576px)
+// ============================================
+@media (max-width: 575.98px) {
+    .vanban_page {
+        .vanban_hero {
+            .col-12 {
+                .demo-img {
+                    .vanban-frame {
+                        width: 30%;
+                    }
+                }
+            }
+        }
+
+        .vanban_tudonghoa {
+            .col-12 {
+                .tabs-panel {
+                    .animation-tabs {
+                        .items-container {
+                            .item {
+                                width: 100%;
+                                justify-content: center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

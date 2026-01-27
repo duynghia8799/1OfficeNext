@@ -301,7 +301,7 @@ get_template_part('template-parts/callout_parts/tintuong_slider', null, $slider_
     <div class="container">
         <div class="row">
             <div class="content">
-                <h1 class="title-section">Bứt tốc trong kỷ nguyên AI. Khai thác tối đa <span class="br-line">sức mạnh của tự động hoá</span></h1>
+                <h1 class="title-section">Bứt tốc trong kỷ nguyên AI. Khai thác tối đa <br/>sức mạnh của tự động hoá</h1>
                 <?php get_template_part('template-parts/callout_parts/dk_chat_ai', 'template') ?>
             </div>
         </div>
