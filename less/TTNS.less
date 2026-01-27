@@ -529,4 +529,381 @@
 
 
     
+
+} // End .TTNS-page
+
+// ============================================
+// RESPONSIVE - TTNS Page (< 991.98px)
+// ============================================
+@media (max-width: 991.98px) {
+    .TTNS-page {
+        // --- GLOBAL: Hide BR tags ---
+        .title-section, .sub-title-section, .item p, h2 {
+            br { display: none !important; }
+        }
+
+        // --- HERO ---
+        .TTNS-hero {
+            .col-12 {
+                flex-direction: column;
+                padding-top: 4.25rem;
+                gap: 3rem;
+                align-items: center;
+
+                svg {
+                    width: 100%;
+                    height: auto;
+                    transform: none;
+                    top: 10%;
+                }
+
+                .content {
+                    width: 100%;
+                    padding-top: 0;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    
+                    .title-section, .sub-title-section {
+                        text-align: center;
+                    }
+                    transform: translateY(25%);
+                }
+
+                img {
+                    width: 80%;
+                    transform: translateY(25%); // Move image down 25% as requested
+                }
+            }
+        }
+
+        // --- HERO BOTTOM 1 ---
+        .TTNS-hero_bottom1 {
+            .col {
+                flex-direction: column;
+                gap: 2rem;
+                padding: 3rem 0;
+
+                h2 {
+                    text-align: center;
+                    width: 100%;
+                }
+
+                .run-bar {
+                    width: 100%;
+                }
+            }
+        }
+
+        // --- HERO BOTTOM 2 ---
+        .TTNS-hero_bottom2 {
+            .content {
+                grid-template-columns: repeat(2, 1fr);
+                .item{
+                    padding: 1rem;   
+                }
+                
+                // Last item spans 2 cols to look balanced (optional, can be removed if not desired)
+                .item:last-child {
+                    grid-column: span 2;
+                }
+            }
+        }
+
+        // --- XAY DUNG (Side Tabs) ---
+        .TTNS-xaydung {
+            .col-12 {
+                .tabs-wrapper {
+                    flex-direction: column;
+                    margin-top: 0;
+                    
+                    .animation-tabs2 {
+                        margin-top: 3rem;
+                        width: 100%;
+                        .items-container {
+                            width: 100%;
+                            flex-direction: row;
+                            overflow-x: auto;
+                            padding-bottom: 0.5rem;
+                            gap: 1.5rem;
+                            height: 200px;
+                            
+                            .item {
+                                min-width: 20rem;
+                                padding-bottom: 1rem;
+                                border-bottom: 2px solid #EDEFEF;
+                                border-right: none;
+                                
+                                &.active {
+                                    gap: 1rem;
+                                    &:after {
+                                        height: 2px;
+                                        bottom: -2px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .animation-tabs-content2 {
+                        width: 100%;
+                        .tab-content {
+                            .tab-pane {
+                                align-self: center;
+                                justify-self: center;
+                                width: 80%;
+                                img {
+                                    transform: scale(1);
+                                    width: 100%;
+                                    max-width: 600px;
+                                    margin: 0 auto;
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // --- CHUAN HOA (Top Tabs) ---
+        .TTNS-chuanhoa {
+            .col-12 {
+                .title-section { margin-bottom: 2rem; text-align: center; }
+                .tabs-wrapper {
+                    .animation-tabs {
+                        width: fit-content;
+                        .items-container { // Assuming structure
+                            overflow-x: auto;
+                            justify-content: flex-start;
+                            width: fit-content;
+                        }
+                        // If items are direct children of .animation-tabs (based on provided less structure):
+                        overflow-x: auto;
+                        display: flex;
+                        justify-content: flex-start;
+                        flex-wrap: nowrap;
+                        gap: 1rem;
+                        
+                        .item {
+                            padding: 1rem 2rem;
+                        }
+                        
+                        // Hide card background for simplicity on mobile if needed, or adjust width
+                    }
+
+                    .animation-tabs-content {
+                        .tab-content {
+                            .tab-pane {
+                                flex-direction: column-reverse;
+                                gap: 3rem;
+                                
+                                div {
+                                    width: 100%;
+                                    min-width: unset;
+                                    align-items: center;
+                                    
+                                    h2 { text-align: center; }
+                                    p { 
+                                        width: 100%; 
+                                        text-align: center; // Or justify?
+                                    }
+                                }
+
+                                img {
+                                    width: 70%;
+                                    max-width: 600px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // --- LUU TRU ---
+        .TTNS-luutru {
+            .col-12 {
+                .title-section { text-align: center; }
+                .content {
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 2rem;
+                    
+                    .item {
+                        max-width: unset;
+                        width: 100%;
+                        p { width: 100%; }
+                    }
+                }
+                img {
+                    width: 80%;
+                    max-width: 600px;
+                }
+            }
+        }
+
+        // --- HE THONG ---
+        .TTNS-hethong {
+            .col-12 {
+                .title-section, .sub-title-section { text-align: center; width: 80%;}
+                
+                svg {
+                    width: 100%;
+                    height: auto;
+                    transform: none;
+                    top: 10%;
+                    left: 0;
+                }
+                
+                img {
+                    width: 80%;
+                }
+            }
+        }
+
+        // --- LOAI BO ---
+        .TTNS-loaibo {
+            .col-12 {
+                .title-section { text-align: center; margin-bottom: 2rem; }
+                
+                .box-content {
+                    flex-direction: column-reverse;
+                    gap: 3rem;
+                    padding-top: 0;
+                    
+                    .title-section { max-width: 100%; text-align: center; }
+                    
+                    .content {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        .item {
+                            width: 80%;
+                            min-width: 30rem;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            div {
+                                h3,p{
+                                    text-align: center;
+                                }
+                            }
+                        }
+                    }
+                    
+                    .demo {
+                        width: 80%;
+                        max-width: 600px;
+                    }
+                }
+            }
+        }
+
+        // --- TRUY CAP ---
+        .TTNS-truycap {
+            .col-12 {
+                .top {
+                    flex-direction: column;
+                    text-align: center;
+                    gap: 1rem;
+                }
+                
+                .bottom {
+                    flex-direction: column;
+                    gap: 1.5rem;
+                    
+                    .img1, .img2 {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        
+         // --- TOP FOOTER ---
+        .top-footer {
+            .title-section { 
+                text-align: center !important;
+            }
+        }
+    }
+}
+
+// ============================================
+// RESPONSIVE - TTNS Page (< 576px)
+// ============================================
+@media (max-width: 575.98px) {
+    .TTNS-page {
+        // --- HERO BOTTOM 2 ---
+        .TTNS-hero_bottom2 {
+            .content {
+                grid-template-columns: repeat(1, 1fr);
+                 .item:last-child {
+                    grid-column: auto;
+                }
+            }
+        }
+
+        // --- LUU TRU ---
+        .TTNS-luutru {
+            .col-12 {
+                .content {
+                    grid-template-columns: repeat(1, 1fr);
+                }
+            }
+        }
+        .TTNS-chuanhoa {
+            .col-12 {
+                .title-section { margin-bottom: 2rem; text-align: center; }
+                .tabs-wrapper {
+                    .animation-tabs {
+                        width: fit-content;
+                        .items-container { // Assuming structure
+                            overflow-x: auto;
+                            justify-content: flex-start;
+                            width: fit-content;
+                        }
+                        // If items are direct children of .animation-tabs (based on provided less structure):
+                        overflow-x: auto;
+                        display: flex;
+                        justify-content: flex-start;
+                        flex-wrap: nowrap;
+                        gap: 1rem;
+                        
+                        .item {
+                            width: 100%;
+                        }
+                        
+                        // Hide card background for simplicity on mobile if needed, or adjust width
+                    }
+
+                    .animation-tabs-content {
+                        .tab-content {
+                            .tab-pane {
+                                flex-direction: column-reverse;
+                                gap: 3rem;
+                                
+                                div {
+                                    width: 100%;
+                                    min-width: unset;
+                                    align-items: center;
+                                    
+                                    h2 { text-align: center; }
+                                    p { 
+                                        width: 100%; 
+                                        text-align: center; // Or justify?
+                                    }
+                                }
+
+                                img {
+                                    width: 70%;
+                                    max-width: 600px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
