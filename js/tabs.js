@@ -208,6 +208,7 @@
         initTabs('.DGNS-caithien-tabs', { startIndex: 0 });
         initTabs('.tinhluong-tudonghoa-tabs', { startIndex: 0 });
         initTabs('.tinhluong-chitra-tabs', { startIndex: 0 });
+        initTabs('.nocode-tuduy-tabs', { startIndex: 0 });
 
         
 

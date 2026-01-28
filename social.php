@@ -206,7 +206,7 @@ get_header(); ?>
                         'content_panel' => $content_duytri2
                     ],
                     [
-                        'title' => 'phối hợp', // Assuming title based on content
+                        'title' => 'Phối hợp', // Assuming title based on content
                         'icon' => '',
                         'content_panel' => $content_duytri3
                     ]

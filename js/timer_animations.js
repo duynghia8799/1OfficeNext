@@ -185,6 +185,7 @@
         initAutoTabs('DGNS-hethong-tabs', 8000);
         initAutoTabs('tinhluong-tudonghoa-tabs', 8000);
         initAutoTabs('tinhluong-chitra-tabs', 8000);
+        initAutoTabs('nocode-tuduy-tabs', 8000);
 
     });
 })(jQuery);
