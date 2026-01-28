@@ -569,3 +569,339 @@
 @keyframes process__sohoa_items_loader { from { width: 0%; } to { width: 100%; } }
 
 @keyframes thietke_items_bg_loader {from { background-size: 0% 100%; }to   { background-size: 100% 100%; }}
+
+
+// ============================================
+// RESPONSIVE - Process Page (< 1200px)
+// ============================================
+@media (max-width: 1199.98px) {
+    .process-page {
+        // --- PROCESS HERO ---
+        .process-hero {
+            .title-section {
+                height: auto;
+            }
+
+            .sub-title-section {
+                br { display: none; }
+            }
+
+            .demo {
+                height: fit-content;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+
+                svg {
+                    width: auto;
+                    height: 100%;
+                }
+            }
+        }
+
+        // --- PROCESS DIEMNGHEN ---
+        .process-diemnghen {
+            .title-section {
+                br { display: none; }
+            }
+
+            .content-container {
+                flex-direction: column;
+                border: none;
+
+                .content-item {
+                    width: 100%;
+                    border-right: none;
+                    padding: 2rem 0;
+
+                    &:first-child {
+                        border-bottom: 1px solid #DEDEDE;
+                    }
+
+                    .flex-center {
+                        align-items: center;
+
+                        h2 {
+                            text-align: center;
+                        }
+
+                        .content {
+                            align-items: center;
+
+                            p {
+                                text-align: center;
+                            }
+                        }
+
+                        .img-content {
+                            max-width: 100%;
+                            width: auto;
+                            height: auto;
+                        }
+                    }
+                }
+            }
+
+            .content-bottom {
+                flex-direction: column;
+                align-items: center;
+                gap: 2.5rem;
+                padding: 2.5rem;
+
+                .left {
+                    h2 {
+                        text-align: center;
+
+                        br { display: none; }
+                    }
+                }
+
+                .right {
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    gap: 2rem;
+
+                    .item {
+                        padding: 0 1.5rem;
+                        align-items: center;
+                        border-right: none;
+
+                        p {
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+
+        // --- PROCESS SOHOA ---
+        .process-sohoa {
+            .col-12 {
+                .tabs-panel {
+                    flex-direction: column;
+                    height: auto;
+                }
+
+                .animation-tabs2 {
+                    width: 100%;
+                    min-width: unset;
+                    max-width: 100%;
+
+                    .items-container {
+                        width: 100%;
+                        align-items: center;
+
+                        .item {
+                            width: 100%;
+                            align-items: center;
+
+                            h2 {
+                                text-align: center;
+                            }
+
+                            .content {
+                                align-items: center;
+
+                                div {
+                                    p {
+                                        text-align: center;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .animation-tabs-content2 {
+                    width: 100%;
+                    max-width: 500px;
+
+                    .tab-content {
+                        .tab-pane {
+                            img {
+                                max-width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // --- PROCESS THIETKE ---
+        .process-thietke {
+            .tabs-panel {
+                flex-direction: column;
+            }
+
+            .animation-tabs2 {
+                width: 100%;
+                max-width: 100%;
+
+                .items-container {
+                    width: 100%;
+
+                    .item {
+                        width: 100%;
+
+                        .tab-item {
+                            width: 100%;
+
+                            h2 {
+                                text-align: center;
+                                width: 100%;
+                            }
+
+                            p {
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .animation-tabs-content2 {
+                width: 100%;
+                overflow: hidden;
+                height: fit-content;
+
+                .tab-content {
+                    .tab-pane {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: fit-content;
+                        img {
+                            transform: scale(0.8);
+                            transition: all 0.3s ease-in-out;
+                            max-width: 80%;
+                            height: auto;
+                        }
+                        &.active {
+                            img {
+                                transform: scale(1);
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // --- PROCESS WORKFLOW ---
+        .process-workflow {
+            .title-section {
+                br { display: none; }
+            }
+
+            .content-container {
+                grid-template-columns: 1fr;
+
+                .item {
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                    padding: 2rem;
+
+                    .content {
+                        align-items: center;
+
+                        h2 {
+                            text-align: center;
+                        }
+
+                        p {
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+
+        // --- PROCESS LUACHON ---
+        .process-luachon {
+            .content-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 3rem;
+
+                .left {
+                    width: 100%;
+                    align-items: center;
+
+                    .item {
+                        flex-direction: column;
+                        align-items: center;
+
+                        .content {
+                            align-items: center;
+
+                            h2 {
+                                text-align: center;
+                            }
+
+                            p {
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+
+                .right {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+
+// ============================================
+// RESPONSIVE - Process Page (< 768px)
+// ============================================
+@media (max-width: 767.98px) {
+    .process-page {
+        .process-diemnghen {
+            .content-bottom {
+                .right {
+                    .item {
+                        width: calc(50% - 1rem);
+                        padding: 1rem 0;
+                    }
+                }
+            }
+        }
+
+        .process-workflow {
+            .content-container {
+                .item {
+                    padding: 1.5rem;
+
+                    img {
+                        width: 4rem;
+                        height: 4rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// ============================================
+// RESPONSIVE - Process Page XS (< 576px)
+// ============================================
+@media (max-width: 575.98px) {
+    .process-page {
+        .process-diemnghen {
+            .content-bottom {
+                .right {
+                    .item {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

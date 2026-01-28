@@ -55,6 +55,9 @@
                 justify-content: space-between;
                 .item{
                     width: 24rem;
+                    @media (max-width: 87.4375rem) {
+                        width: 20rem;
+                    }
                     display: flex;
                     flex-direction: column;
                     align-items: center;
@@ -425,3 +428,312 @@
 
 }
     
+// ============================================
+// RESPONSIVE - Tinh Luong Page (<1199.98px)
+// ============================================
+@media (max-width: 1199.98px) {
+    .tinhluong-page {
+        .tinhluong-tudonghoa {
+            .col {
+                .tabs-wrapper {
+                    width: 80%;
+                    .animation-tabs {
+                        width: 100%;
+                        margin-top: 2rem;
+                        
+                        .items-container {
+                            width: 100%;
+                            display: grid;
+                            grid-template-columns: repeat(2, 1fr);
+                            padding-bottom: 0.5rem;
+                            
+                            .item {
+                                padding: 0.5rem 1rem;
+                                font-size: 1.125rem;
+                                width: 100%;
+                                justify-content: center;
+                                transition: background-color 0.5s ease;
+                                &.active{
+                                    background-color: #F6F5EE;
+                                }
+                            }
+                        }
+                    }
+                    
+                    .animation-tabs-content {
+                        width: 100%;
+                        .tab-pane {
+                            justify-self: center;
+                            align-self: center;
+                            width: 80%;
+                            img {
+                                width: 100%;
+                                max-width: 600px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// ============================================
+// RESPONSIVE - Tinh Luong Page (< 991.98px)
+// ============================================
+@media (max-width: 991.98px) {
+    .tinhluong-page {
+        
+        // --- GLOBAL: Hide BR tags ---
+        .title-section, .sub-title-section, .item p, h3 {
+            br { display: none !important; }
+        }
+
+        // --- HERO ---
+        .tinhluong-hero {
+            .col {
+                padding-top: 2rem;
+                .title-section {
+                    font-size: 2rem;
+                    line-height: 2.75rem;
+                    text-align: center;
+                }
+                .sub-title-section { text-align: center; }
+                
+                img {
+                    width: 100%;
+                    max-width: 600px;
+                }
+            }
+        }
+
+        // --- LOAI BO ---
+        .tinhluong-loaibo {
+            .col {
+                .content {
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 3rem;
+                    
+                    .item {
+                        width: 100%;
+                        max-width: 30rem;
+                        
+                        img { margin: 1rem 0 1.5rem; }
+                        h3 { text-align: center; margin-bottom: 1rem; }
+                        p { text-align: center;}
+                    }
+                }
+            }
+        }
+
+        // --- TU DONG HOA (Tabs Top) ---
+        
+
+        // --- CHI TRA (Side Tabs -> Top Scroll Tabs) ---
+        .tinhluong-chitra {
+            .col {
+                .tabs-wrapper {
+                    flex-direction: column;
+                    margin-top: 3rem;
+                    gap: 2rem;
+                    
+                    .animation-tabs2 {
+                        max-width: 100%;
+                        .items-container {
+                            display: grid;
+                            grid-template-columns: repeat(2, 1fr);
+                            .item {
+                                &.active {
+                            
+                                }
+
+                                h3 {
+                            
+                                }
+                                p {
+                                    
+                                }
+                            }
+                        }
+                    }
+                    
+                    .animation-tabs-content2 {
+                        width: 100%;
+                        .tab-pane {
+                            width: 50%;
+                            
+                            justify-self: center;
+                            img {
+                                width: 100%;
+                                max-width: 600px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // --- KIEM SOAT ---
+        .tinhluong-kiemsoat {
+            .col {
+                .content {
+                    width: 100%;
+                    flex-wrap: wrap;
+                    gap: 2rem;
+                    justify-content: center;
+                    
+                    .item {
+                        width: 45%; // 2 columns
+                        align-items: center;
+                        p { text-align: center; }
+                        img { margin: 0 auto; }
+                    }
+                }
+                
+                img {
+                    width: 100%;
+                    max-width: 600px;
+                }
+            }
+        }
+
+        // --- PHIEU LUONG ---
+        .tinhluong-phieuluong {
+            .col {
+                flex-direction: column;
+                margin-top: 0;
+                
+                .left {
+                    width: 100%;
+                    margin: 2rem 0;
+                    padding: 0 1rem;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    
+                    .title-section { text-align: center; }
+                    
+                    .content {
+                        width: fit-content;
+                        align-items: start;
+                        
+                        
+                    }
+                    
+                    .btn-container {
+                        justify-content: center;
+                    }
+                }
+                
+                .right {
+                    width: 100%;
+                    margin: 0;
+                    img {
+                        width: 50%;
+                        max-width: 600px;
+                    }
+                }
+            }
+        }
+        
+         // --- TOP FOOTER ---
+        .top-footer {
+            .title-section { 
+                text-align: center !important;
+            }
+        }
+    }
+}
+
+// ============================================
+// RESPONSIVE - Tinh Luong Page (<767.98px)
+// ============================================
+@media (max-width: 767.98px) {
+    .tinhluong-page {
+        .tinhluong-tudonghoa {
+            .col {
+                .tabs-wrapper {
+                    width: 100%;
+                    .animation-tabs {
+                        .items-container {
+                            grid-template-columns: repeat(1, 1fr);              
+                            .item {
+                                padding: 0.5rem 1rem;
+                                font-size: 1.125rem;
+                                width: 100%;
+                                justify-content: center;
+                                transition: background-color 0.5s ease;
+                                &.active{
+                                    background-color: #F6F5EE;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .tinhluong-chitra {
+            .col {
+                .tabs-wrapper {
+                    flex-direction: column;
+                    margin-top: 3rem;
+                    gap: 2rem;
+                    
+                    .animation-tabs2 {
+                        max-width: 100%;
+                        .items-container {
+                            display: grid;
+                            grid-template-columns: repeat(1, 1fr);
+                            .item {}
+                        }
+                    }
+                    .animation-tabs-content2 {
+                        width: 100%;
+                        .tab-pane {
+                            width: 80%;
+                            
+                            justify-self: center;
+                            img {
+                                width: 100%;
+                                max-width: 600px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .tinhluong-phieuluong {
+            .col {
+                .right {
+                    width: 100%;
+                    margin: 0;
+                    img {
+                        width: 80%;
+                        max-width: 600px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ============================================
+// RESPONSIVE - Tinh Luong Page (< 576px)
+// ============================================
+@media (max-width: 575.98px) {
+    .tinhluong-page {
+        // --- KIEM SOAT ---
+        .tinhluong-kiemsoat {
+            .col {
+                .content {
+                    flex-direction: column;
+                    align-items: center;
+                    .item {
+                        width: 100%;
+                        max-width: 20rem;
+                    }
+                }
+            }
+        }
+    }
+}

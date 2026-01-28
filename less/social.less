@@ -210,6 +210,7 @@
                 font-weight: 500;
                 color: #fff;
                 margin: -0.3125rem 0;
+                text-align: center;
                 span{
                     font-weight: 700;
                 }
@@ -690,5 +691,319 @@
     }
 }
 
-    
+// ============================================
+// RESPONSIVE - Dưới 1200px
+// ============================================
+@media (max-width: 1199.98px) {
+
+    // --- SOCIAL HERO ---
+    .social-hero {
+        height: auto;
+        padding: 3rem 0 4rem 0;
+
+        .col-12 {
+            flex-direction: column;
+            align-items: center;
+
+            .content {
+                width: 100%;
+                align-items: center;
+                text-align: center;
+
+                .title-section {
+                    text-align: center;
+                    br { display: none; }
+                }
+                .sub-title-section {
+                    text-align: center;
+                    br { display: none; }
+                }
+            }
+
+            .demo-container {
+                width: 100%;
+                max-width: 600px;
+                margin-top: 2.5rem;
+            }
+        }
+    }
+
+    // --- SOCIAL HERO UNDER ---
+    .social-hero-under {
+        .col-12 {
+            padding-top: 6rem;
+
+            .content-container {
+                width: 100%;
+                height: auto;
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+                margin-bottom: 3rem;
+
+                .item {
+                    justify-self: center !important;
+                    align-self: auto !important;
+                    align-items: center !important;
+                    text-align: center !important;
+                    p {
+                        br { display: none; }
+                    }
+                }
+            }
+        }
+
+        .award-container {
+            .stats {
+                height: auto;
+                flex-wrap: wrap;
+
+                .item {
+                    width: 50%;
+                    padding: 1.5rem 0;
+                }
+            }
+        }
+
+        .run-bar {
+            height: 6rem;
+            .demo-img {
+                height: 4rem;
+            }
+        }
+    }
+
+    // --- SOCIAL DUYTRI ---
+    .social-duytri {
+        .duytri.panels-container {
+            .tab-pane {
+                flex-direction: column;
+                gap: 2rem;
+
+                .animation-tabs2 {
+                    width: 100%;
+
+                    .items-container button {
+                        h2, p {
+                            br { display: none; }
+                        }
+                    }
+                }
+
+                .animation-tabs-content2 {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    // --- SOCIAL CHIASE ---
+    .social-chiase {
+        .content-container {
+            flex-direction: column;
+            gap: 2.5rem;
+
+            img {
+                width: 100%;
+                max-width: 600px;
+            }
+
+            .content {
+                width: 100%;
+
+                .item p {
+                    br { display: none; }
+                }
+            }
+        }
+    }
+
+    // --- SOCIAL HATNHAN ---
+    .social-hatnhan {
+        .social-hatnhan-content {
+            flex-direction: column;
+            gap: 2.5rem;
+
+            .animation-tabs2 {
+                width: 100%;
+
+                .items-container {
+                    width: 100%;
+
+                    .item {
+                        width: 100%;
+
+                        p {
+                            br { display: none; }
+                        }
+                    }
+                }
+            }
+
+            .animation-tabs-content2 {
+                width: 100%;
+                height: auto; // override height: 100%
+
+                .panels-container {
+                    width: 100%;
+                    height: auto;
+
+                    .tab-pane {
+                        width: 100%;
+                        height: auto; // override height: 100%
+
+                        img, svg {
+                            width: 100%;
+                            height: auto; // override height: 100%
+                            object-fit: contain; // thay vì cover
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // --- SOCIAL MOITRUONG ---
+    // Viết lại hoàn toàn - không kế thừa transform từ desktop
+    .social-moitruong {
+        .social-expand-container {
+            display: flex !important;
+            flex-direction: column !important;
+            height: auto !important;
+            gap: 0.75rem !important;
+
+            // RESET HOÀN TOÀN - áp dụng cho tất cả .expand-item
+            .expand-item {
+                // Reset base
+                width: 100% !important;
+                border-radius: 0.5rem !important;
+                overflow: hidden !important;
+                transition: height 0.5s ease !important;
+                background-position: left bottom !important;
+
+                // Mặc định là THU NHỎ
+                height: 5rem !important;
+
+                .content {
+                    // Layout mới hoàn toàn
+                    display: flex !important;
+                    flex-direction: column !important;
+                    align-items: flex-start !important; // Title luôn ở start
+                    justify-content: flex-start !important;
+                    width: 100% !important;
+                    height: 100% !important;
+                    padding: 2rem 0 0 2rem !important; // Padding giống nhau cho cả 2 trạng thái
+                    box-sizing: border-box !important;
+
+                    // TITLE - reset hoàn toàn
+                    h2 {
+                        position: static !important;
+                        top: auto !important;
+                        right: auto !important;
+                        left: auto !important;
+                        bottom: auto !important;
+                        transform: none !important;
+                        transform-origin: unset !important;
+
+                        // Style
+                        font-size: 1.25rem !important;
+                        font-weight: 700 !important;
+                        color: #fff !important;
+                        text-align: left !important;
+                        white-space: normal !important;
+                        line-height: 1rem !important;
+                        margin: 0 !important;
+                        padding: 0 !important;
+                        align-self: flex-start !important;
+                    }
+
+                    // DESCRIPTION - reset hoàn toàn
+                    p {
+                        position: static !important;
+                        top: auto !important;
+                        right: auto !important;
+                        left: auto !important;
+                        bottom: auto !important;
+                        transform: none !important;
+
+                        // Style
+                        font-size: 1rem !important;
+                        font-weight: 400 !important;
+                        color: #fff !important;
+                        text-align: left !important;
+                        line-height: 1.75rem !important;
+                        width: 100% !important;
+                        height: auto !important;
+                        margin: 1rem 0 0 0 !important;
+                        padding: 0 !important;
+
+                        // Mặc định: ẩn (cho thẻ thu nhỏ)
+                        opacity: 0 !important;
+                        max-height: 0 !important;
+                        overflow: hidden !important;
+                        transition: opacity 0.5s ease, max-height 0.5s ease !important;
+
+                        br { display: none; }
+                    }
+                }
+
+                // THẺ PHÓNG TO
+                &.active {
+                    height: 18rem !important;
+
+                    .content {
+                        justify-content: flex-start !important; // Title ở trên cùng
+
+                        p {
+                            opacity: 1 !important;
+                            max-height: 10rem !important;
+                            // Delay 0.5s - chờ height animation xong
+                            transition: opacity 0.5s ease 0.5s, max-height 0.5s ease 0.5s !important;
+                        }
+                    }
+                }
+                &:not(.active) {
+                    &.bg1 { background-position: right bottom !important; }
+                    &.bg2 { background-position: right bottom !important; }
+                    &.bg3 { background-position: right bottom !important; }
+                    &.bg4 { background-position: right bottom !important; }
+                }
+            }
+        }
+    }
+
+} // End @media max-width: 1199.98px
+
+// ============================================
+// RESPONSIVE - Mobile XS (< 576px)
+// ============================================
+
+@media (max-width: 575.98px) {
+    .social-hero-under {
+        .content-container {
+            .item {
+                p {
+                    max-width: 25rem;
+                }
+            }
+        }
+        
+    }
+}
+@media (max-width: 360px) {
+    .social-hero-under {
+        .award-container {
+            .stats {
+                .item {
+                    width: 100% !important; // 1 cột thay vì 2 cột
+                }
+            }
+            .bottom{
+                h2{
+                    width: 15rem;
+                }
+            }
+        }
+    }
+}
+
 }

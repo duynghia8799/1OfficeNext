@@ -689,13 +689,13 @@
             flex-direction: column;
             align-items: center;
             gap: 1.5rem;
-            
+
             .number {
                 font-size: 2.25rem;
                 font-weight: 700;
                 color: #0156A1;
                 line-height: 1.625rem;
-                
+
             }
 
             .desc {
@@ -707,5 +707,367 @@
         }
     }
 }
-    
+
+}
+
+
+// ============================================
+// RESPONSIVE - Work Page (< 1200px)
+// ============================================
+@media (max-width: 1199.98px) {
+    .work-page {
+        // --- WORK HERO ---
+        .work-hero {
+            .title-section {
+                br { display: none; }
+            }
+            overflow: hidden;
+
+            .line2 {
+                white-space: nowrap;
+
+                .title-section.scroll {
+                    white-space: nowrap;
+
+                    span {
+                        white-space: nowrap;
+                    }
+                }
+            }
+
+            .sub-title-section {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            .img-fluid {
+                width: 100%;
+                height: auto;
+                max-width: 600px;
+            }
+        }
+
+        // --- WORK BENEFITS ---
+        .work-benefits {
+            .title-section {
+                br { display: none; }
+            }
+
+            .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        // --- WORK COMPARISON ---
+        .work-comparison {
+            .comparison-container {
+                flex-direction: column;
+                padding: 0;
+
+                .comparison-card {
+                    .card-image img {
+                        max-width: 60%;
+                    }
+                }
+            }
+        }
+
+        // --- WORK DIEUPHOI ---
+        .work-dieuphoi {
+            .title-section {
+                br { display: none; }
+            }
+
+            .animation-tabs {
+                .items-container {
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+            }
+
+            .animation-tabs-content {
+                height: auto;
+            }
+
+            .tab-content {
+                height: auto;
+
+                .tab-pane {
+                    flex-direction: column;
+                    height: auto;
+                    gap: 2rem;
+                    padding: 2rem 0;
+
+                    .demo-img {
+                        max-width: 100%;
+                        width: 100%;
+                        height: auto;
+                        order: 1;
+                    }
+
+                    ul {
+                        width: 100%;
+                        order: 2;
+
+                        li p br { display: none; }
+                    }
+                }
+            }
+        }
+
+        // --- WORK LIENKET ---
+        .work-lienket {
+            .col {
+                .title-section {
+                    br { display: none; }
+                }
+
+                .animation-tabs {
+                    .items-container {
+                        flex-wrap: wrap;
+                        .item {
+                            width: fit-content;
+                            padding:0.5rem 1rem;
+                        }
+                    }
+                }
+
+                .animation-tabs-content {
+                    height: auto;
+
+                    .tab-content {
+                        height: auto;
+
+                        .tab-pane {
+                            flex-direction: column;
+                            height: auto;
+                            gap: 2rem;
+                            padding: 2rem 0;
+
+                            .demo-container {
+                                width: 100%;
+                                max-width: 100%;
+                                height: auto;
+                                order: 1;
+
+                                img {
+                                    max-width: 500px;
+                                }
+                            }
+
+                            .content {
+                                width: 100%;
+                                align-items: center;
+                                order: 2;
+
+                                h2 {
+                                    text-align: center;
+                                }
+
+                                ul {
+                                    width: fit-content;
+
+                                    li {
+                                        width: fit-content;
+                                    }
+                                }
+                            }
+
+                            &.active {
+                                .demo-container img {
+                                    width: 100%;
+                                    height: auto;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // --- WORK TUDONGHOA ---
+        .work-tudonghoa {
+            .title-section {
+                br { display: none; }
+            }
+
+            .col {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .left {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .content-container {
+                    padding: 2rem 0;
+                    margin-top: 2rem;
+                    opacity: 1;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    .title {
+                        text-align: center;
+                    }
+
+                    .content {
+                        width: fit-content;
+                    }
+                }
+            }
+
+            .right {
+                display: none;
+            }
+        }
+
+        // --- WORK CHUYENDOI ---
+        .work-chuyendoi {
+            .col {
+                .title-section {
+                    br { display: none; }
+                }
+
+                .content-container {
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 2rem;
+
+                    .img-fluid {
+                        width: 100%;
+                        height: auto;
+                        max-width: 500px;
+                    }
+
+                    .content {
+                        width: 100%;
+
+                        p {
+                            justify-content: center;
+                        }
+                    }
+                }
+            }
+        }
+
+        // --- WORK DASHBOARD ---
+        .work-dashboard {
+            .top {
+                .col {
+                    .title-section {
+                        br { display: none; }
+                    }
+
+                    .sub-title-section {
+                        .br-line { display: inline; }
+                    }
+                    img{
+                        max-width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+
+        // --- WORK STATS ---
+        .work-stats {
+            .stats-grid {
+                justify-content: center;
+                gap: 2rem;
+
+                .stat-item {
+                    width: calc(33.33% - 2rem);
+                    min-width: 8rem;
+                }
+            }
+        }
+    }
+}
+
+
+// ============================================
+// RESPONSIVE - Work Page (< 768px)
+// ============================================
+@media (max-width: 767.98px) {
+    .work-page {
+        .work-hero {
+            .sub-title-section {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        .work-benefits {
+            .benefits-grid {
+                grid-template-columns: 1fr;
+                max-width: 25rem;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        .work-dieuphoi {
+            .animation-tabs {
+                .items-container {
+                    .item {
+                        padding: 0 1rem;
+                    }
+                }
+            }
+        }
+
+        .work-stats {
+            .stats-grid {
+                .stat-item {
+                    width: calc(50% - 2rem);
+                }
+            }
+        }
+    }
+}
+
+
+// ============================================
+// RESPONSIVE - Work Page XS (< 576px)
+// ============================================
+@media (max-width: 575.98px) {
+    .work-page {
+        .work-stats {
+            .stats-grid {
+                .stat-item {
+                    width: 100%;
+                }
+            }
+        }
+
+        .work-lienket {
+            .col {
+                .animation-tabs {
+                    .items-container {
+                        .item {
+                            width: fit-content;
+                            justify-content: center;
+                            padding: 0.5rem 1rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        .work-dieuphoi {
+            .animation-tabs {
+                .items-container {
+                    .item {
+                        width: 100%;
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+    }
 }

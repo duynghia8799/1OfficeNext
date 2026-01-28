@@ -417,4 +417,244 @@
             background-color: #D1D1D1;
         }
     }
+
+
+
+
+
+
 }
+// ============================================
+// RESPONSIVE - Tuyendung Page (< 991.98px)
+// ============================================
+@media (max-width: 991.98px) {
+    .tuyendung-page {
+        
+        // --- GLOBAL: Hide BR tags ---
+        .title-section, .sub-title-section, .item p, h2 {
+            br { display: none !important; }
+        }
+
+        // --- HERO ---
+        .tuyendung-hero {
+            .container-custom.top {
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+                
+                .col {
+                    width: 100%;
+                    padding: 0 1rem;
+                    
+                    .title-section {
+                        font-size: 2rem;
+                        line-height: 2.75rem;
+                    }
+                }
+            }
+
+            .col-12 {
+                .content {
+                    grid-template-columns: repeat(2, 1fr);
+                    .item {
+                        padding: 2rem 1rem;
+                    }
+                }
+            }
+        }
+
+        // --- TU CONG HOA ---
+        .tuyendung-tuconghoa {
+            .title-section {
+                padding: 0 1rem;
+                text-align: center;
+                margin-bottom: 2rem;
+            }
+
+            .box-content {
+                flex-direction: column;
+                border-width: 0px;
+                
+                .left, .right {
+                    width: 100% !important;
+                    padding: 2.5rem 1.5rem;
+                    align-items: center;
+                    
+                    h2 {
+                        text-align: center;
+                    }
+
+                    .content {
+                        width: 100%;
+                        max-width: 30rem;
+                    }
+
+                    > img {
+                        width: 100%;
+                        max-width: 20rem;
+                        height: auto;
+                        margin-top: 2rem;
+                    }
+                }
+            }
+        }
+
+        // --- QUAN LY ---
+        .tuyendung-quanly {
+            .col-12 {
+                .title-section {
+                    text-align: center;
+                    padding: 0 1rem;
+                }
+
+                .animation-tabs {
+                    width: 100%;
+                    .items-container {
+                        width: 100%;
+                        overflow-x: auto;
+                        justify-content: flex-start;
+                        padding-bottom: 0.5rem;
+                        
+                        .item {
+                            white-space: nowrap;
+                            padding: 1rem 1.5rem;
+                        }
+                    }
+                }
+
+                .animation-tabs-content {
+                    width: 100%;
+                    .panels-container {
+                        width: 100%;
+                        .tab-pane {
+                            flex-direction: column-reverse;
+                            gap: 3rem;
+                            
+                            .box-content {
+                                width: 100%;
+                                align-items: center;
+                                
+                                h2 {
+                                    text-align: center;
+                                    margin-bottom: 1rem;
+                                }
+
+                                .content {
+                                    width: 100%;
+                                    max-width: 35rem;
+                                }
+                            }
+                            
+                            > img {
+                                width: 100%;
+                                max-width: 600px;
+                                transform: scale(1);
+                                box-shadow: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // --- THONG MINH ---
+        .tuyendung-thongminh {
+            .col-12 {
+                flex-direction: column-reverse;
+                gap: 3rem;
+                
+                > .content {
+                    width: 100%;
+                    padding: 0 1rem;
+                    align-items: center;
+
+                    .title-section {
+                        text-align: center;
+                        margin-bottom: 0;
+                    }
+                    
+                    .content {
+                        width: 100%;
+                        max-width: 35rem;
+                    }
+                }
+                
+                > img {
+                    width: 100%;
+                    max-width: 600px;
+                }
+            }
+        }
+        
+        // --- HE THONG ---
+        .tuyendung-hethong {
+             .col-12 {
+                 .sub-title-section { 
+                     text-align: center;
+                     padding: 0 1rem;
+                 }
+                 
+                 img {
+                     width: 100%;
+                 }
+             }
+        }
+        
+        // --- TOP FOOTER ---
+        .top-footer {
+            .title-section { 
+                text-align: center !important;
+            }
+        }
+    }
+}
+@media (max-width: 767.98px){
+    .tuyendung-page{
+        .tuyendung-quanly{
+            .col-12{
+                .tabs-wrapper{
+                    .animation-tabs{
+                        width: fit-content;
+                        .items-container{
+                            width: fit-content;
+                            height: fit-content;
+                            padding: 0;
+                            .item{
+                                .icon-wrapper{
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}
+@media (max-width: 575.98px){
+    .tuyendung-page{
+        .tuyendung-quanly{
+            .col-12{
+                .tabs-wrapper{
+                    .animation-tabs{
+                        width: fit-content;
+                        .items-container{
+                            width: fit-content;
+                            height: fit-content;
+                            padding: 0;
+                            .item{
+                                .icon-wrapper{
+                                    display: none;
+
+                                }
+                                padding:0.25rem 0.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}
+

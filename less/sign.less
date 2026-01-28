@@ -166,7 +166,7 @@
 
             .line {
                 position: absolute;
-                top: 50%;
+                top: 5.0625rem; // img(2.5) + margin(1.75) + half-dot(0.8125)
                 left: 0;
                 transform: translateY(-50%);
                 width: 100%;
@@ -178,8 +178,8 @@
 
             .line-active {
                 position: absolute;
-                top: 50%;
-                left: 0; 
+                top: 5.0625rem; // img(2.5) + margin(1.75) + half-dot(0.8125)
+                left: 0;
                 transform: translateY(-50%);
                 width: 0;
                 height: 3px;
@@ -813,7 +813,7 @@
         .items-container {
             border-bottom: 1px solid #ddd;
             gap: 20px;
-            
+
             .item {
                 font-size: 1.25rem;
                 padding: 10px 20px;
@@ -861,35 +861,445 @@
             display: flex !important; // Override bootstrap 'none'
             opacity: 1; // Default visible for logic
             transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.6s ease;
-            
+
             // Logic States (Will be controlled by JS Classes usually, but we set defaults)
-            // By default, assume they are 'waiting' below if they are not active? 
+            // By default, assume they are 'waiting' below if they are not active?
             // actually JS will initialize positions.
-            
+
             // Initial State in CSS: All 'active' in BS5 are display:block, others none.
             // We need to override this: All must be block/flex.
-            
+
             transform: translateY(100%); // Default position: Waiting below
-            
+
             &.active-view {
                 transform: translateY(0%);
             }
-            
+
             &.behind-view {
                 transform: translateY(0%); // Sitting behind
                 z-index: -1; // Specific fix ensuring it does not block clicks if top layer has transparent parts (though data shows full Cards)
             }
-            
+
             // Content styling
             .content {
                 width: 50%;
                 h2 { margin-bottom: 20px; font-size: 24px; color: #333; }
-                ul { 
-                    list-style: none; padding: 0; 
+                ul {
+                    list-style: none; padding: 0;
                     li { margin-bottom: 15px; display: flex; gap: 10px; color: #666; }
                 }
             }
             .demo { width: 50%; object-fit: contain; }
+        }
+    }
+}
+
+
+// ============================================
+// RESPONSIVE - Sign Page (< 1200px)
+// ============================================
+@media (max-width: 1199.98px) {
+    .sign-page {
+        // --- SIGN HERO ---
+        .sign-hero {
+            height: 100vh;
+            min-height: 40rem;
+            padding: 2rem 0 0 0;
+            position: relative;
+            overflow: hidden;
+
+            .col {
+                height: auto;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .content-container {
+                padding-left: 0;
+                align-items: center;
+                text-align: center;
+
+                .title-section {
+                    text-align: center;
+                    max-width: 100%;
+
+                    br { display: none; }
+                }
+
+                .sub-title-section {
+                    text-align: center;
+
+                    br { display: none; }
+                }
+            }
+
+            .img-container {
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 100%;
+                max-width: 30rem;
+                height: auto;
+                margin-top: 0;
+
+                .laptop {
+                    position: relative;
+                    width: 100%;
+                    height: auto;
+                    transform: none;
+                    opacity: 1;
+                }
+
+                .hand {
+                    width: 17rem;
+                    left: auto;
+                    right: -3rem;
+                    bottom: 3rem;
+                    transform: rotate(68deg) translateX(72%) translateY(58%);
+                }
+            }
+
+            &.start-anim .img-container {
+                .laptop {
+                    transform: none;
+                }
+                .hand {
+                    transform: rotate(68deg) translate(0, 0);
+                }
+            }
+        }
+
+        // --- SIGN BOTTOM HERO ---
+        .sign-bottom-hero {
+            .col {
+                margin: 3rem 0;
+            }
+
+            .title {
+                text-align: center;
+                line-height: 2rem;
+
+                br { display: none; }
+            }
+
+            .content-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 4rem;
+
+                .item {
+                    width: 100%;
+                    max-width: 25rem;
+
+                    img {
+                        margin-top: 2rem;
+                        margin-bottom: 1.5rem;
+                    }
+
+                    p br { display: none; }
+                }
+            }
+        }
+
+        // --- SIGN QUYTRINH ---
+        .sign-quytrinh {
+            .title-process {
+                br { display: none; }
+            }
+            .process-steps {
+                .step-item {
+                    p {
+                        text-align: center;
+                        height: auto;
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+
+        // --- SIGN QUYTRINH BOTTOM ---
+        .sign-quytrinh-bottom {
+            padding-top: 3rem;
+
+            .comparison-wrapper {
+                flex-direction: column;
+            }
+
+            .comp-card {
+                padding: 2.5rem;
+
+                h3 {
+                    text-align: center;
+                }
+
+                ul {
+                    li p {
+                        br { display: none; }
+                    }
+                }
+
+                .img-container {
+                    height: auto;
+                    justify-content: center !important;
+                    padding: 0 !important;
+                    margin-top: 2rem;
+
+                    img {
+                        max-width: 300px;
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+
+        // --- SIGN KYKET ---
+        .sign-kyket {
+            padding: 3rem 0;
+
+            .title-section {
+                br { display: none; }
+            }
+
+            .animation-tabs {
+                margin-top: 2rem;
+
+                .items-container {
+                    width: 100%;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    gap: 1rem;
+
+                    .item {
+                        width: auto;
+                    }
+                }
+            }
+
+            .animation-tabs-content {
+                .tab-content {
+                    .tab-pane {
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 2rem;
+
+                        .demo {
+                            width: 100%;
+                            max-width: 500px;
+                        }
+
+                        .content {
+                            width: 100%;
+                            align-items: center;
+                            h2 {
+                                text-align: center;
+
+                                br { display: none; }
+                            }
+
+                            ul {
+                                width: fit-content;
+
+                                li {
+                                    width: fit-content;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // --- SIGN DASHBOARD ---
+        .sign-dashboard {
+            .col {
+                padding: 3rem 0 0 0;
+            }
+
+            .title-section {
+                br { display: none; }
+            }
+
+            .content-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 1.5rem;
+                margin: 2.5rem 0 2rem;
+
+                .item {
+                    justify-content: center;
+
+                    p {
+                        width: auto;
+                        text-align: center;
+
+                        br { display: none; }
+                    }
+                }
+            }
+
+            .dashboard-image img {
+                width: 100%;
+                max-width: 600px;
+            }
+        }
+
+        // --- SIGN LUUTRU ---
+        .sign-luutru {
+            .col {
+                padding: 3rem 0;
+            }
+
+            .title-section {
+                br { display: none; }
+            }
+
+            .content-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 2.5rem;
+
+                .left {
+                    align-items: center;
+
+                    h2 {
+                        text-align: center;
+                    }
+
+                    ul li {
+                        p {
+                            width: 100%;
+                            max-width: 30rem;
+                        }
+                    }
+                }
+
+                .right {
+                    width: 100%;
+                    max-width: 500px;
+                }
+            }
+        }
+
+        // --- SIGN STATS ---
+        .sign-stats {
+            padding: 3rem 0;
+
+            .stats-container {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 2rem;
+
+                .stat-item {
+                    width: calc(33.33% - 2rem);
+                    min-width: 8rem;
+                }
+            }
+        }
+
+        // --- SIGN DANGKY AI ---
+        .sign-dangky-ai {
+            .col {
+                padding: 3rem 0;
+
+                .title-section {
+                    br { display: none; }
+                }
+            }
+        }
+
+        // --- SIGN FAQ ---
+        .sign-faq {
+            padding: 3rem 0;
+
+            .faq-container {
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+// ============================================
+// RESPONSIVE - Sign Page (< 768px)
+// ============================================
+@media (max-width: 767.98px) {
+    .sign-page {
+        .sign-quytrinh {
+            .process-steps {
+                .step-item {
+                    width: calc(50% - 2rem);
+                }
+            }
+        }
+
+        .sign-stats {
+            .stats-container {
+                .stat-item {
+                    width: calc(50% - 2rem);
+
+                    .desc {
+                        white-space: normal;
+                    }
+                }
+            }
+        }
+
+        .sign-kyket {
+            .animation-tabs {
+                .items-container {
+                    .item {
+                        width: calc(50% - 1rem);
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+
+        .sign-faq {
+            .faq-container {
+                .faq-item {
+                    .body .content {
+                        padding-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// ============================================
+// RESPONSIVE - Sign Page XS (< 576px)
+// ============================================
+@media (max-width: 575.98px) {
+    .sign-page {
+        .sign-quytrinh {
+            .process-steps {
+                .step-item {
+                    width: 100%;
+                    max-width: 10rem;
+                }
+            }
+        }
+
+        .sign-stats {
+            .stats-container {
+                .stat-item {
+                    width: 100%;
+                }
+            }
+        }
+
+        .sign-kyket {
+            .animation-tabs {
+                .items-container {
+                    .item {
+                        width: 100%;
+                    }
+                }
+            }
         }
     }
 }
