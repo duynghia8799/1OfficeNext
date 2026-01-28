@@ -1,11 +1,9 @@
-@import "mixin/mixin.less";
-@import "variable/variable.less";
+
 
 .page-pricing {
     padding-top: 50px;
     padding-bottom: 80px;
     background-color: #f7f9fa;
-    font-family: @font-base;
 
     .pricing-container {
         max-width: 1300px;
@@ -58,7 +56,7 @@
                 padding: 15px;
                 
                 // MÃ u sáº¯c dynamic sáº½ Ä‘Æ°á»£c inline style hoáº·c class riÃªng
-                &.text-primary { color: @color-primary; }
+                
             }
 
             .header-plan {
@@ -91,7 +89,7 @@
                     transition: all 0.3s;
 
                     &:hover {
-                        background: @color-primary;
+                        
                         transform: translateY(-2px);
                     }
                 }
@@ -179,7 +177,7 @@
                     }
                     .text-value {
                         font-weight: 600;
-                        color: @color-primary;
+                        
                     }
                 }
             }
@@ -286,22 +284,22 @@
 
 /* NESTED TABLE LAYOUT FIXES (To make columns align) */
 .page-pricing .pricing-table {
-    table-layout: fixed; // B?t bu?c ð? fix c?ng ð? r?ng
+    table-layout: fixed; // B?t bu?c ï¿½? fix c?ng ï¿½? r?ng
     
-    // Ð?NH NGH?A Ð? R?NG C?T (QUAN TR?NG)
-    // C?t ð?u tiên (Tên tính nãng)
+    // ï¿½?NH NGH?A ï¿½? R?NG C?T (QUAN TR?NG)
+    // C?t ï¿½?u tiï¿½n (Tï¿½n tï¿½nh nï¿½ng)
     th:first-child, td:first-child, .col-feature {
-        width: 300px; // Fix c?ng pixel ð? không b? l?ch
+        width: 300px; // Fix c?ng pixel ï¿½? khï¿½ng b? l?ch
         min-width: 300px;
     }
     
-    // Các c?t d? li?u
+    // Cï¿½c c?t d? li?u
     .header-plan, .col-data {
         width: 150px;
         min-width: 150px;
     }
     
-    // Cãn ch?nh Nested Table cho kh?p
+    // Cï¿½n ch?nh Nested Table cho kh?p
     .table-nested {
         width: 100%;
         table-layout: fixed; // C?ng ph?i fixed

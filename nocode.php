@@ -11,14 +11,12 @@ get_header();?>
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h1 class="title-section">Xây dựng và tuỳ chỉnh ứng dụng của <br/>riêng bạn với No-codeNo-code 1OfficeNext</h1>
+                <h1 class="title-section">Xây dựng và tuỳ chỉnh ứng dụng của <br/>riêng bạn với No-code</h1>
                 <p class="sub-title-section">Nền tảng No-code cho phép doanh nghiệp tùy chỉnh ứng dụng và quy trình bằng <br/>kéo-thả trực quan, rút ngắn thời gian triển khai, tối ưu chi phí, mở rộng linh hoạt và <br/>giảm phụ thuộc vào IT</p>
                 <?php get_template_part('template-parts/callout_parts/dk_chat_ai','button')?>
                 <div class="video-container">
-                    <img src="<?php echo get_template_directory_uri()?>/assets/images/nocode_hero_fakevideo.svg" alt="">
-                    <div class="video-frame">
-                        
-                    </div>
+                    <img src="<?php echo get_template_directory_uri()?>/assets/images/nocode_hero_videoframe.svg" alt="">
+                    <button class="play-button"><img src="<?php echo get_template_directory_uri()?>/assets/images/icons/playbtn_white.svg" alt=""></button>
                 </div>
             </div>
         </div>
@@ -74,6 +72,7 @@ get_header();?>
             <div class="col-12">
                 <h1 class="title-section">Tự động hóa quy trình kinh doanh</h1>
                 <p class="sub-title-section"></p>
+                <div class="tabs-wrapper">
                 <?php get_template_part('template-parts/tabs/animation_tab',null, array('name' => 'nocode-tuduy-tabs','tabs' => array(
                     [
                         'title' => 'Khởi tạo',
@@ -206,6 +205,7 @@ get_header();?>
                         ',
                     ],
                 )))?>
+                </div>
             </div>
         </div>
     </div>
