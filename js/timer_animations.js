@@ -99,13 +99,20 @@
                 
                 var $active = $tabsContainer.find('.items-container .item.active');
                 if ($active.length) {
+                    var targetId = $active.attr('data-bs-target');
+                    var $targetPanel = targetId ? $(targetId) : $();
+
                     // Force instant reset (bypass CSS transition)
                     $active.addClass('resetting').removeClass('active');
+                    $targetPanel.addClass('resetting').removeClass('active');
+                    
                     void $active[0].offsetWidth; 
+                    if ($targetPanel.length) void $targetPanel[0].offsetWidth;
 
                     // Wait 50ms for repaint, then restart
                     setTimeout(function() {
                         $active.removeClass('resetting').addClass('active');
+                        $targetPanel.removeClass('resetting').addClass('active');
                         startInterval();
                     }, 50); 
                 } else {
