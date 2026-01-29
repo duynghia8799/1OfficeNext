@@ -320,20 +320,6 @@ get_header();?>
     </div>
 </div>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var modal = document.getElementById('nocodeVideoModal');
-        var iframe = document.getElementById('nocodeVideoIframe');
-        // Lưu lại src gốc để reset khi đóng
-        var src = iframe.src;
-
-        modal.addEventListener('hidden.bs.modal', function () {
-            // Reset src để dừng video
-            iframe.src = ''; 
-            iframe.src = src;
-        });
-    });
-</script>
 
 </div>
 <?php get_footer();?>
