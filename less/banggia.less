@@ -1,0 +1,331 @@
+
+
+.page-pricing {
+    padding-top: 50px;
+    padding-bottom: 80px;
+    background-color: #f7f9fa;
+
+    .pricing-container {
+        max-width: 1300px;
+        margin: 0 auto;
+        padding: 0 15px;
+        overflow-x: auto; // Cho phép scroll ngang trên mobile
+
+        // Tùy chỉnh thanh cuộn
+        &::-webkit-scrollbar {
+            height: 8px;
+        }
+        &::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: #ccc;
+            border-radius: 4px;
+        }
+    }
+
+    .pricing-table {
+        width: 100%;
+        min-width: 1100px; // Đảm bảo bảng không bị co quá nhỏ
+        border-collapse: separate;
+        border-spacing: 0;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        overflow: hidden;
+
+        // --- HEADERS ---
+        thead {
+            th {
+                background: #fff;
+                text-align: center;
+                border-right: 1px solid #eee;
+                border-bottom: 1px solid #eee;
+                padding: 15px 10px;
+                vertical-align: middle;
+
+                &:last-child {
+                    border-right: none;
+                }
+            }
+
+            .header-product {
+                font-size: 20px;
+                font-weight: 800;
+                text-transform: uppercase;
+                padding: 15px;
+                
+                // Màu sắc dynamic sẽ được inline style hoặc class riêng
+                
+            }
+
+            .header-plan {
+                padding: 20px 10px;
+                
+                .plan-name {
+                    font-size: 14px;
+                    color: #555;
+                    font-weight: 600;
+                    margin-bottom: 5px;
+                    display: block;
+                }
+                .plan-price {
+                    font-size: 22px;
+                    color: #222;
+                    font-weight: 800;
+                    display: block;
+                    margin-bottom: 15px;
+                }
+                .btn-select {
+                    display: inline-block;
+                    padding: 8px 16px;
+                    background: #333;
+                    color: #fff;
+                    font-size: 12px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    border-radius: 4px;
+                    text-decoration: none;
+                    transition: all 0.3s;
+
+                    &:hover {
+                        
+                        transform: translateY(-2px);
+                    }
+                }
+            }
+            // Empty cell top-left
+            .empty-corner {
+                border-top-left-radius: 12px;
+            }
+        }
+
+        // --- BODY ---
+        tbody {
+            // Group Header Row
+            .row-group-header {
+                background-color: #f9f9f9;
+                
+                td {
+                    padding: 12px 20px;
+                    text-align: left;
+                    font-weight: 700;
+                    font-size: 14px;
+                    color: #222;
+                    text-transform: uppercase;
+                    border-bottom: 1px solid #eee;
+                    border-top: 1px solid #eee;
+                    
+                    i, svg {
+                        margin-right: 8px;
+                        color: #666;
+                        vertical-align: middle;
+                    }
+                    
+                    // Span across all columns
+                }
+            }
+
+            // Data Rows
+            tr:not(.row-group-header) {
+                &:hover {
+                    background-color: #fafafa;
+                }
+
+                td {
+                    padding: 12px 10px;
+                    border-right: 1px solid #f5f5f5;
+                    border-bottom: 1px solid #f5f5f5;
+                    text-align: center;
+                    vertical-align: middle;
+                    font-size: 14px;
+                    color: #444;
+
+                    &:first-child {
+                        text-align: left;
+                        padding-left: 20px;
+                        font-weight: 500;
+                        color: #333;
+                    }
+
+                    &:last-child {
+                        border-right: none;
+                    }
+
+                    // Icon statuses
+                    .icon-check {
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 50%;
+                        background: #27ae60;
+                        color: #fff;
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 12px;
+                    }
+                    .icon-cross {
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 50%;
+                        border: 1px solid #e74c3c;
+                        color: #e74c3c;
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 10px;
+                    }
+                    .text-value {
+                        font-weight: 600;
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Mobile responsive adjustments
+@media (max-width: 768px) {
+    .page-pricing {
+        padding-top: 30px;
+        
+        // Sticky first column for mobile
+        .pricing-table {
+            th:first-child, td:first-child {
+                position: sticky;
+                left: 0;
+                background: #fff;
+                z-index: 2;
+                box-shadow: 2px 0 5px rgba(0,0,0,0.05);
+            }
+            .row-group-header td {
+                position: sticky;
+                left: 0;
+                z-index: 3;
+            }
+        }
+    }
+}
+
+
+
+// Accordion Styles - Max-Height Logic (User Requested)
+.pricing-group-body {
+    // Bắt buộc phải chuyển sang block để max-height hoạt động
+    // Lưu ý: Có thể gây mất đồng bộ cột một chút, nhưng đạt hiệu ứng slide
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    
+    // Chiều cao khi đóng (bằng chiều cao tr header)
+    max-height: 50px; 
+    
+    // Hiệu ứng trượt 2s
+    transition: max-height 2s ease-in-out;
+
+    .group-header {
+        cursor: pointer;
+        user-select: none;
+        
+        // Đảm bảo header luôn hiển thị đúng
+        height: 50px; 
+        
+        td {
+            padding: 0 !important;
+        }
+
+        .group-header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 20px;
+            height: 100%;
+        }
+    }
+
+    .group-item {
+        // Reset các transition cũ
+        td {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            line-height: normal;
+            font-size: 14px;
+            color: #444;
+            opacity: 1;
+            border-bottom: 1px solid #f5f5f5;
+        }
+    }
+
+    // Trạng thái MỞ
+    &.active {
+        // Giá trị đủ lớn để chứa hết nội dung
+        max-height: 3000px;
+        
+        .icon-toggle {
+            transform: rotate(0deg);
+        }
+    }
+
+    // Icon toggle header
+    .icon-toggle {
+        transform: rotate(-90deg);
+        transition: transform 0.5s ease;
+    }
+    
+    // --- XỬ LÝ LAYOUT KHI TBODY LÀ BLOCK ---
+    // Để các dòng bên trong vẫn trải full 100% width
+    tr {
+        display: table;
+        width: 100%;
+        table-layout: fixed; // Cố gắng giữ layout
+    }
+}
+
+/* NESTED TABLE LAYOUT FIXES (To make columns align) */
+.page-pricing .pricing-table {
+    table-layout: fixed; // B?t bu?c �? fix c?ng �? r?ng
+    
+    // �?NH NGH?A �? R?NG C?T (QUAN TR?NG)
+    // C?t �?u ti�n (T�n t�nh n�ng)
+    th:first-child, td:first-child, .col-feature {
+        width: 300px; // Fix c?ng pixel �? kh�ng b? l?ch
+        min-width: 300px;
+    }
+    
+    // C�c c?t d? li?u
+    .header-plan, .col-data {
+        width: 150px;
+        min-width: 150px;
+    }
+    
+    // C�n ch?nh Nested Table cho kh?p
+    .table-nested {
+        width: 100%;
+        table-layout: fixed; // C?ng ph?i fixed
+        margin: 0;
+        
+        td {
+            border-bottom: 1px solid #f5f5f5;
+            padding: 12px 10px;
+            vertical-align: middle;
+            text-align: center;
+            height: 50px; // Chi?u cao d?ng chu?n
+        }
+        
+        .col-feature {
+            text-align: left;
+            padding-left: 20px;
+            font-weight: 500;
+            color: #333;
+        }
+    }
+    
+    .icon-toggle {
+        transition: transform 0.3s;
+    }
+    .icon-toggle.rotated {
+        transform: rotate(180deg);
+    }
+}
+

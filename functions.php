@@ -54,7 +54,7 @@ add_action('after_setup_theme', function () {
 });
 
 add_action('wp_enqueue_scripts', function () {
-    $ver = '3.5';
+    $ver = '3.7';
     wp_enqueue_style('theme-main-style', get_stylesheet_uri(), array(), $ver);
     wp_enqueue_style('bootstrap-css', get_template_directory_uri() . '/assets/libs/bootstrap/css/bootstrap.min.css', array(), '5.3.8');
     wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/assets/libs/bootstrap/js/bootstrap.bundle.min.js', array('jquery'), '5.3.8', true);
@@ -66,10 +66,8 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_script('sign-js', get_stylesheet_directory_uri() . '/js/sign.js', array('jquery'), '1.0.0', true);
     wp_enqueue_script('social-js', get_stylesheet_directory_uri() . '/js/social.js', array('jquery'), '1.0.0', true);
     wp_enqueue_script('svg-js', get_stylesheet_directory_uri() . '/js/svg.js', array('jquery'), '1.0.0', true);
-    
-    if (is_page_template('banggia.php')) {
-        wp_enqueue_script('banggia-js', get_stylesheet_directory_uri() . '/js/banggia.js', array('jquery'), '1.0.0', true);
-    }
+    wp_enqueue_script('base-js', get_stylesheet_directory_uri() . '/js/base.js', array('jquery'), '1.0.0', true);
+
 
     wp_dequeue_style('wp-block-library');
     wp_dequeue_style('wp-block-library-theme');

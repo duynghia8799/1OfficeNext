@@ -349,50 +349,64 @@
             }
         }
 
-        loop() {
-            if (!this.isVisible) return; // Optimization: Stop running when off-screen
+        loop(currentTime) {
+            if (this.rafId) cancelAnimationFrame(this.rafId);
+
+            if (!this.isVisible) return; 
             if (this.state === "PAUSED" || this.state === "WAITING") return; 
+
+            // Initialize or Resume time tracking
+            if (!this.lastFrameTime || !currentTime) {
+                this.lastFrameTime = currentTime || performance.now();
+                this.rafId = requestAnimationFrame((t) => this.loop(t));
+                return;
+            }
+
+            const deltaTime = currentTime - this.lastFrameTime;
+            this.lastFrameTime = currentTime;
+
+            // Cap extremely large deltas (e.g. after tab switch) to prevent jumping
+            // Treat anything > 100ms as a single frame (16ms)
+            const safeDelta = (deltaTime > 100 || deltaTime < 0) ? 16.67 : deltaTime;
             
+            // Normalize speed to 60FPS target (16.667ms per frame)
+            const fpsFactor = safeDelta / 16.667; 
+
             if (this.state === "AUTO_SCROLL") {
-                // Advance distance
-                const nextPos = this.currentPos + this.speed;
+                const nextPos = this.currentPos + (this.speed * fpsFactor);
                 
-                // Check if we crossed a segment boundary that has a pause
                 const currentSegIdx = this.pathInterpolator.getSegmentIndex(this.currentPos);
                 const nextSegIdx = this.pathInterpolator.getSegmentIndex(nextPos);
                 
                 if (currentSegIdx !== -1 && nextSegIdx > currentSegIdx) {
                     const segment = this.pathInterpolator.segments[currentSegIdx];
                     if (segment.pause && segment.pause > 0) {
-                        // Hit a pause point!
-                        // Snap to end of segment
                         this.setTransform(segment.accumulatedStart + segment.length);
                         this.state = "PAUSED";
+                        this.lastFrameTime = 0; // Reset time tracking on pause
                         
                         setTimeout(() => {
                             if (this.state === "PAUSED") {
                                 this.state = "AUTO_SCROLL";
-                                this.setTransform(nextPos); // Resume
-                                this.loop();
+                                this.setTransform(nextPos);
+                                this.loop(performance.now());
                             }
                         }, segment.pause);
-                        return; // Stop loop for now
+                        return;
                     }
                 }
 
                 this.setTransform(nextPos);
 
                 if (this.currentPos >= this.maxScroll) {
-                     // End of Animation Reached
                      if (this.config.interactive) {
                         this.enterInteractiveMode();
                      } else {
-                        // If not interactive, just enter a waiting state before reset
                         this.state = "WAITING";
                         this.startResetTimer();
                      }
                 } else {
-                    requestAnimationFrame(() => this.loop());
+                    this.rafId = requestAnimationFrame((t) => this.loop(t));
                 }
             }
         }
