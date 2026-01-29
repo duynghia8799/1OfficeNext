@@ -42,7 +42,24 @@
          * HƯỚNG DẪN TÍCH HỢP CSS (QUAN TRỌNG):
          * Để thanh progress chạy mượt và reset đúng, cần cấu hình CSS như sau:
          * 
+         * ví dụ có thanh progress như sau:
+         * 
+         *                  &::after {
+                                position: absolute;
+                                content: '';
+                                display: block;
+                                width: 0;
+                                height: 0.1875rem;
+                                background-color: #F0500A;
+                                transition: width 0.5s ease;
+                                bottom: 0;
+                                left: 0;
+                            }
+         * 
+         * 
+         * 
          * 1. Cấu hình Transition (Chạy):
+         * 
          *    opacity: 0;
          *    transition: opacity 0.3s ease, width 0s linear 0.3s;
          *    &.active {
@@ -53,7 +70,8 @@
          *       }
          *    }
          * 
-         * 2. Cấu hình Reset Mượt (.resetting):
+         * 2. Cấu hình Reset Mượt (thêm class .resetting):
+         * 
          *    &.resetting {
          *       &::after {
          *           width: 0 !important;
@@ -193,6 +211,7 @@
         initAutoTabs('tinhluong-tudonghoa-tabs', 8000);
         initAutoTabs('tinhluong-chitra-tabs', 8000);
         initAutoTabs('nocode-tuduy-tabs', 8000);
+        initAutoTabs('KPI-tudong-tabs', 8000);
 
     });
 })(jQuery);
