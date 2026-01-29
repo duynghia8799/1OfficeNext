@@ -443,7 +443,243 @@
         }
         
     }
+}
 
 
-
+@media (max-width: 991.98px) {
+    .nocode-page{
+        .nocode-hero{
+            .col-12{
+                .video-container{
+                    width: 100%;
+                    img{
+                        width: 100%;
+                        height: auto;
+                        object-fit: contain;
+                    }
+                }
+            }
+        }
+        .nocode-visao{
+            .col-12{
+                .content-container{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 3rem;
+                    margin-top: 3.75rem;
+                    
+                    .content{
+                        width: 36.625rem;
+                        color: #fff;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 2.5rem;
+                        .item{
+                            display: flex;
+                            gap: 1.5rem;
+                            img{
+                                width: 2.5rem;
+                                height: 2.5rem;
+                            }
+                            > div{
+                                display: flex;
+                                flex-direction: column;
+                                width: 31.125rem;
+                                gap:1.75rem;
+                                h3{
+                                    font-size: 1.5rem;
+                                    line-height: 1rem;
+                                    margin: 0;
+                                }
+                                p{
+                                    font-size: 1rem;
+                                    line-height: 1.75rem;
+                                    margin: -0.5rem 0;
+                                }
+                            }
+                        }
+                    }
+                    > img{
+                        flex: 1;
+                        min-width: 80%;
+                        width: 80%;
+                        height: auto;
+                        object-fit: contain;
+                    }
+                }
+            }
+        }
+        .nocode-tuduy{
+            .col-12{
+                .tabs-wrapper{
+                    .animation-tabs-content{
+                        .tab-content{
+                            .tab-pane{
+                                .content-panel{
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    padding: 3rem 0;
+                                    .panel{
+                                    
+                                        margin: 0 0 2rem;
+                                    }
+                                    > img{
+                                        flex: 1;
+                                        min-width: 80%;
+                                        width: 80%;
+                                        height: auto;
+                                        border: 1px solid #a8a8a8;
+                                        border-radius: 0.5rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .nocode-phuhop{
+            .col-12{
+                padding: 4.25rem 2rem 0;
+                .content{
+                    grid-template-columns: repeat(2, 1fr);
+                    @media (max-width: 420px) {
+                        grid-template-columns: repeat(1, 1fr);
+                        
+                    }
+                    .item{
+                        background-size:100% auto;
+                        &:hover{
+                            background-size: 110% auto;
+                        }
+                        
+                    }
+                }
+            }
+        }
+        .nocode-lamchu{
+            .col-12{
+                padding: 5rem 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .left{
+                    width: 34.875rem;
+                    margin-right: 0;
+                    .title-section{
+                        text-align: center;
+                    }
+                }
+                .right{
+                    flex: 1;
+                    min-width: 80%;
+                    width: 80%;
+                    margin-top: 3rem;
+                    img{
+                        width: 100%;
+                        height: auto;
+                        object-fit: contain;
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+@media (max-width: 575.98px) {
+    .nocode-page{
+        .nocode-hero{
+            .col-12{
+                .title-section{
+                    width: 100%;
+                    br{display: none;}
+                    padding: 0 2rem;
+                }
+                .sub-title-section{
+                    width: 100%;
+                    br{display: none;}
+                    padding: 0 2rem;
+                }
+                .video-container{
+                    padding: 0 2rem;
+                }
+            }
+        }
+        .nocode-visao{
+            .col-12{
+                .content-container{                    
+                    .content{
+                        width: 100%;
+                        padding: 0 2rem;
+                        .item{
+                            display: flex;
+                            gap: 1.5rem;
+                            > div{
+                                width: 100%;
+                            }
+                            img{
+                                width: 2.5rem;
+                                height: 2.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .nocode-tuduy{
+            .col-12{
+                .title-section{
+                    padding: 0 2rem;
+                    br{display: none;}   
+                }
+                .sub-title-section{
+                    padding: 0 2rem;
+                    br{display: none;}   
+                }
+                .tabs-wrapper{
+                    .animation-tabs{
+                        .items-container{
+                            .item{
+                                padding: 0.25rem 0.75rem;
+                                font-size: 0.75rem;
+                            }
+                        }
+                    }
+                    .animation-tabs-content{
+                        .tab-content{
+                            .tab-pane{
+                                width: 100%;
+                                .content-panel{
+                                    width: 100%;
+                                    .panel{
+                                        min-width: 100%;
+                                        width: 100%;
+                                        padding: 0 2rem;
+                                        .content{
+                                            gap: 1rem;
+                                            .item{
+                                                height: fit-content;
+                                                align-items: start;
+                                                p{line-height: 1.5rem; margin: -0.25rem 0;}
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .nocode-lamchu{
+            .col-12{
+                .left{
+                    width: 100%;
+                    padding: 0 2rem;
+                }
+            }
+        }
+    }
 }
