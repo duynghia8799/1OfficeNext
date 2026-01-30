@@ -209,6 +209,8 @@
         initTabs('.tinhluong-tudonghoa-tabs', { startIndex: 0 });
         initTabs('.tinhluong-chitra-tabs', { startIndex: 0 });
         initTabs('.nocode-tuduy-tabs', { startIndex: 0 });
+        initTabs('.KPI-tudong-tabs', { startIndex: 0 });
+        initTabs('.KPI-ketnoi-tabs', { startIndex: 0 });
 
         
 
