@@ -50,7 +50,7 @@ get_header();?>
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h1 class="title-section">Tự động hóa quy trình kinh doanh</h1>
+                <h1 class="title-section">Tự động xây dựng mẫu đánh giá KPI với hỗ trợ của AI</h1>
                 <div class="tabs-wrapper">
                 <?php get_template_part('template-parts/tabs/animation_tab',null, array('name' => 'KPI-tudong-tabs','tabs' => array(
                     [
@@ -227,14 +227,28 @@ get_header();?>
                 <div class="left">
                     <h1 class="title-section">Theo dõi KPI theo thời gian thực</h1>
                     <p>Nhân viên luôn nắm rõ tiến độ KPI của mình theo ngày, theo tuần, theo giai đoạn. Dữ liệu được cập nhật liên tục, giúp chủ động điều chỉnh ưu tiên công việc, cải thiện hiệu suất và bám sát mục tiêu đã cam kết </p>
-                    <div class="btn-container">
-                        <button><img src="<?= get_template_directory_uri(); ?>/assets/images/applestore_btn.svg" alt=""></button>
-                        <button><img src="<?= get_template_directory_uri(); ?>/assets/images/googlestore_btn.svg" alt=""></button>
-                    </div>
+                    <?php get_template_part('template-parts/callout_parts/app_btn','button') ?>
                 </div>
                 <div class="right">
                     <img src="<?= get_template_directory_uri() ?>/assets/images/demo/KPI_theodoi.svg" alt="">
                 </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<?php 
+$slider_data_source = require get_template_directory() . '/data/slider_data.php';
+get_template_part('template-parts/callout_parts/tintuong_slider', null, $slider_data_source['data3']); 
+?>
+
+<section class="top-footer">
+    <img class="top-footer-bg" src="<?= get_template_directory_uri() . '/assets/images/ai_lights_mint.svg' ?>" alt="">
+    <div class="container">
+        <div class="row">
+            <div class="content">
+                <h1 class="title-section">Khai thác dữ liệu và phân tích thông minh, hỗ trợ <br/>quản trị hiệu suất hiệu quả hơn</h1>
+                <?php get_template_part('template-parts/callout_parts/dk_chat_ai', 'template') ?>
             </div>
         </div>
     </div>

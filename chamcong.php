@@ -235,10 +235,7 @@ get_header(); ?>
             <div class="col-6 left">
                 <h1 class="title-section">Chấm công nhanh chóng, <br/>linh hoạt</h1>
                 <img src="<?= get_template_directory_uri(); ?>/assets/images/demo/chamcong_antuong.svg" alt="">
-                <div class="btn-container">
-                    <button><img src="<?= get_template_directory_uri(); ?>/assets/images/applestore_btn.svg" alt=""></button>
-                    <button><img src="<?= get_template_directory_uri(); ?>/assets/images/googlestore_btn.svg" alt=""></button>
-                </div>
+                <?php get_template_part('template-parts/callout_parts/app_btn','button') ?>
             </div>
             <div class="col-6 right">
                 <h1 class="title-section">Những con số <br/>ấn tượng</h1>
@@ -303,7 +300,7 @@ get_template_part('template-parts/callout_parts/tintuong_slider', null, $slider_
     <div class="container">
         <div class="row">
             <div class="content">
-                <h1 class="title-section">Giúp việc tìm kiếm và tuyển dụng nhân tài <br/>trở nên dễ dàng hơn</h1>
+                <h1 class="title-section">Trải nghiệm hệ thống chấm công - phân ca - quản lý <br/>đơn từ tập trung, minh bạch và dễ mở rộng</h1>
                 <?php get_template_part('template-parts/callout_parts/dk_chat_ai', 'template') ?>
             </div>
         </div>

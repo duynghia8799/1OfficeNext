@@ -201,10 +201,7 @@ get_header(); ?>
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/V_circle_white_bg_orange.svg" alt="">
                         <p>Lưu trữ tài liệu đa nguồn</p>
                     </div>
-                    <div class="buttons">
-                        <button><img src="<?php echo get_template_directory_uri(); ?>/assets/images/tailieu_phone_btn1.svg" alt=""></button>
-                        <button><img src="<?php echo get_template_directory_uri(); ?>/assets/images/tailieu_phone_btn2.svg" alt=""></button>
-                    </div>
+                    <?php get_template_part('template-parts/callout_parts/app_btn','button') ?>
                 </div>
                 <img class="phones" src="<?php echo get_template_directory_uri(); ?>/assets/images/tailieu_phone.svg" alt="">
             </div>

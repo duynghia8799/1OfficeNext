@@ -137,7 +137,7 @@ get_header(); ?>
                             <div>
                             <img src="' . get_template_directory_uri() . '/assets/images/icons/TTNS_chuanhoa_item1.svg" alt="icon">
                                 <h2>Số hoá và lưu trữ hồ sơ tập trung</h2>
-                                <p>Số hoá toàn bộ hồ sơ nhân sự, bao gồm thông tin cá nhân, <br/>quá trình làm việc, hợp đồng, bảo hiểm và phúc lợi,...trên một <br/>hệ thống thống nhất</p>
+                                <p>Lưu trữ toàn bộ hợp đồng lao động trên một nền tảng thống nhất, <br/>giúp dễ dàng tra cứu, theo dõi trạng thái hiệu lực, lịch sử ký kết và <br/>các thông tin liên quan, giảm rủi ro thất lạc hồ sơ và sai sót trong <br/>quản lý</p>
                             </div>
                             <img src="' . get_template_directory_uri() . '/assets/images/demo/TTNS_chuanhoa_1.svg" alt="icon">
                         ',
@@ -286,7 +286,14 @@ get_header(); ?>
                 </div>
                 <div class="bottom">
                     <img class="img1" src="<?php echo get_template_directory_uri()?>/assets/images/TTNS_truycap_1.svg" alt="">
-                    <img class="img2" src="<?php echo get_template_directory_uri()?>/assets/images/TTNS_truycap_2.svg" alt="">
+                    <div class="img2">
+                        <img src="<?php echo get_template_directory_uri()?>/assets/images/TTNS_truycap_2.svg" alt="">
+                        <div class="app-btn">
+                            <a href="https://play.google.com/store/apps/details?id=vn.oneoffice.oneoffice&hl=vi&gl=US"><img src="<?php echo get_template_directory_uri()?>/assets/images/app_btn_google_white.svg" alt=""></a>
+                            <a href="https://apps.apple.com/vn/app/1office/id1272801903?l=vi"><img src="<?php echo get_template_directory_uri()?>/assets/images/app_btn_apple_white.svg" alt=""></a>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
         </div>

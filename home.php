@@ -139,10 +139,8 @@ get_header();
                         switchLayer('root');
                     });
                 </script>
-            </div>
-
+            </div> 
         </div>
-
     </div>
     <div class="section-together">
         <div class="container">
@@ -599,7 +597,7 @@ get_header();
     <div class="section-solution">
         <div class="container">
             <div class="section-title">
-                <span class="title">Giải pháp quản trị toàn diện, đáng tin cậy</span>
+                <span class="title">Giải pháp quản trị toàn diện, <br class="br991"/>đáng tin cậy</span>
                 <span class="desc">Kiến tạo hệ thống vận hành tự động, nơi doanh nghiệp làm chủ quy trình, dữ liệu và
                     toàn
                     bộ hoạt động - hướng đến môi trường làm việc thông minh, linh hoạt</span>
