@@ -324,6 +324,7 @@
             .title {
                 font-size: 40px;
                 font-weight: var(--font-weight-semibold);
+                .br991{display: none;}
             }
 
             .desc {
@@ -979,5 +980,224 @@
             }
         }
     }
+}
 
+@media (max-width: 1399px) {
+    .home-page{
+        .section-solution{
+            .list-solution{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 80px;
+                .item{
+                    width: 550px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 24px;
+                    .thumb{
+                        flex-basis: auto;
+                        width: 100%;
+                        aspect-ratio: 410 / 302;
+                    }
+                    .content{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        .desc{
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+        .section-module{
+            .container{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .module-tab{
+                .module-item{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 40px;
+                    .content{width: 466px;}
+                    .thumb{
+                       height: fit-content; 
+                       flex-basis: auto;
+                    }
+                }
+            }
+        }
+        .section-ai-agent {
+            .list-agents {
+                height: fit-content;
+                svg{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+        .section-nocode{
+            .nocode-tab {
+                gap:40px
+            }                       
+        }
+        .section-value {
+            .value-company {
+                .list-values{
+                    gap: 40px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1199px) {
+    .home-page{
+        .section-module {
+            .module-tab {
+                .module-nav{
+                    gap:0;
+                }
+            }
+        }
+        .section-nocode{
+            .nocode-tab {
+                display: flex;
+                flex-direction: column;
+            }                       
+        }
+        .section-value {
+            .value-company {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .list-values{
+                    display: flex;
+                    flex-direction: column;
+                    .box-value{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        max-width: 550px;
+                        .content{text-align: center;}
+                    }
+                }
+            }
+        }
+    }
+    
+}
+@media (max-width: 991.98px) {
+    .home-page{
+        .section-module .module-tab .module-nav .nav-link{
+            .icon{
+                display: none;
+            }
+            padding: 11px 16px;
+        }
+        .section-banner {
+            .section-title {
+                br{display: none;}
+            }
+        }
+        .section-module{
+            .module-tab{
+                .module-nav{
+                    gap: 0;
+                }
+            }
+        }
+        .section-solution{
+            .section-title{
+                .title{
+                    line-height: 64px;
+                    .br991{display:block;}
+                }
+            }
+        }
+        .section-story-customer{
+            .list-story{
+                .row{gap: 24px;}
+            }
+        }
+        .section-call2action{
+            .container{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .section-title{
+                    width: 100%;
+                    text-align: center;
+                }
+                
+            }
+        }
+    }
+}
+@media (max-width: 767.98px) {
+    .home-page{
+        .section-module{
+            .module-tab{
+                .module-nav{
+                    .card{display: none;}
+                    display: flex;
+                    flex-direction: column;
+                    .nav-link{
+                        .icon{
+                            display: visible;
+                        }
+                        padding: 11px 0;
+                        width: 100%;
+                        background-color: transparent;
+                        transition: background-color 0.5s ease;
+                        &.active{
+                            background-color: #FFD730;
+                        }
+                    }
+                }
+            }
+        }
+        .section-together .section-numbers{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            .item{&::after{display: none;}}
+        }
+    }
+}
+@media (max-width: 575.98px){
+    .home-page{
+        .section-together .list-number{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .title-list-number{
+                max-width: 330px;
+            }
+            .box-numbers{
+                margin-top: 70px;
+                .item{
+                    width: 50%;
+                }
+            }
+        } 
+        .section-module {
+            .section-title{
+                line-height: 60px;
+                text-align: center;
+            }
+            .module-tab{
+                .module-item{
+                    .content{ width: 100%;}
+                }
+            }
+        }
+        .section-solution .list-solution .item{
+            width: 100%;
+        }
+    }
 }
