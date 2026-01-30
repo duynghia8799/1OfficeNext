@@ -97,7 +97,7 @@ get_header(); ?>
                             'icon' => '',
                             'content_panel' => '
                                 <div>
-                                    <p>Quản lý toàn bộ danh sách tài sản doanh nghiệp trên một hệ thống, hiển thị đầy đủ <br/>thông tin từ mã tài sản, loại, nguyên giá, vị trí đến tình trạng sử dụng,...</p>
+                                    <p>Hỗ trợ phân loại tài sản theo nhiều nhóm như máy móc, thiết bị, dụng cụ,… giúp sắp xếp <br/>khoa học, quản lý rõ ràng và thuận tiện trong quá trình theo dõi, báo cáo</p>
                                     <img src="' . get_template_directory_uri() . '/assets/images/demo/taisan_quanly_2.svg" alt="icon">
                                 </div>
                             ',
@@ -107,7 +107,7 @@ get_header(); ?>
                             'icon' => '',
                             'content_panel' => '
                                 <div>
-                                    <p>Quản lý toàn bộ danh sách tài sản doanh nghiệp trên một hệ thống, hiển thị đầy đủ <br/>thông tin từ mã tài sản, loại, nguyên giá, vị trí đến tình trạng sử dụng,...</p>
+                                    <p>Tổng hợp, thống kê và theo dõi tài sản theo trạng thái: đang sử dụng, hỏng, mất, <br/>bảo dưỡng,...giúp nắm bắt nhanh hiện trạng và chủ động lên kế hoạch xử lý</p>
                                     <img src="' . get_template_directory_uri() . '/assets/images/demo/taisan_quanly_3.svg" alt="icon">
                                 </div>
                             ',
@@ -238,7 +238,7 @@ get_template_part('template-parts/callout_parts/tintuong_slider', null, $slider_
     <div class="container">
         <div class="row">
             <div class="content">
-                <h1 class="title-section" style="text-align: start !important;">Bắt đầu xây dựng hệ thống quản lý tài sản <br/>chuyên nghiệp, hiệu quả ngay hôm nay</h1>
+                <h1 class="title-section">Bắt đầu xây dựng hệ thống quản lý tài sản <br/>chuyên nghiệp, hiệu quả ngay hôm nay</h1>
                 <?php get_template_part('template-parts/callout_parts/dk_chat_ai', 'template') ?>
             </div>
         </div>

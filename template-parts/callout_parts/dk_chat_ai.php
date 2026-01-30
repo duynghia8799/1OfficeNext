@@ -1,9 +1,9 @@
 <div class="dk-chat-ai">
-    <button class="btn-hover-bg-LTR orange">
+    <button class="btn-hover-bg-LTR orange" data-toggle="modal" data-target="#lead-form-new">
         <p>ĐĂNG KÝ NGAY</p>
         <div></div>
     </button>
-    <button class="btn-hover-bg-LTR">
+    <button class="btn-hover-bg-LTR" data-toggle="modal" data-target="#lead-form-new">
         <p>CHAT VỚI 1AI</p>
         <div></div>
     </button>

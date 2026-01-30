@@ -15,8 +15,8 @@ get_header(); ?>
             <h1 class="title-section">Thu hút ứng viên chất lượng với giải pháp <br/>tự động hóa quy trình tuyển dụng</h1>
             <p class="sub-title-section">Rút ngắn thời gian, nâng cao chất lượng tuyển dụng, chuẩn hóa quy trình xuyên suốt từ nộp <br/>hồ sơ cho đến onboard với hệ thống tuyển dụng chuyên nghiệp và tự động</p>
             <?php get_template_part('template-parts/callout_parts/dk_chat_ai', 'button'); ?>
-            <img src="<?= get_template_directory_uri(); ?>/assets/images/demo/tuyendung_hero.svg" alt="">
         </div>
+        <img src="<?= get_template_directory_uri(); ?>/assets/images/demo/tuyendung_hero.svg" alt="">
     </div>
     <div class="container">
         <div class="row">
