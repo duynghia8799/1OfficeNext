@@ -195,10 +195,7 @@ get_header(); ?>
                             <p>Thông tin lương, thu nhập và khấu trừ hiển thị rõ ràng</p>
                         </div>
                     </div>
-                    <div class="btn-container">
-                        <button><img src="<?= get_template_directory_uri(); ?>/assets/images/applestore_btn.svg" alt=""></button>
-                        <button><img src="<?= get_template_directory_uri(); ?>/assets/images/googlestore_btn.svg" alt=""></button>
-                    </div>
+                    <?php get_template_part('template-parts/callout_parts/app_btn','button') ?>
                 </div>
                 <div class="right">
                     <img src="<?= get_template_directory_uri() ?>/assets/images/demo/tinhluong_phieuluong.svg" alt="">

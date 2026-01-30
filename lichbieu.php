@@ -214,10 +214,7 @@ get_header();
                 <div class="right">
                     <h1 class="title-section">Sử dụng linh hoạt, hiệu quả, mọi lúc mọi nơi</h1>
                     <img class="phone" src=" <?php echo get_template_directory_uri(); ?>/assets/images/lichbieu_linhhoat.svg" alt="">
-                    <div class="app-container">
-                        <img src=" <?php echo get_template_directory_uri(); ?>/assets/images/app_btn_google.svg" alt="">
-                        <img src=" <?php echo get_template_directory_uri(); ?>/assets/images/app_btn_apple.svg" alt="">
-                    </div>
+                    <?php get_template_part('template-parts/callout_parts/app_btn','button') ?>
                 </div>
             </div>
         </div>

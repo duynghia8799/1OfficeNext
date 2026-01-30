@@ -219,10 +219,7 @@ get_header(); ?>
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/taisan_theodoi_item.svg" alt="">
                     <h1 class="title-section">Theo dõi và kiểm soát tài sản minh bạch, rõ ràng</h1>
                     <p>Mọi tài sản được quản lý tập trung trên một hệ thống thống nhất, toàn bộ quy trình từ cấp phát, đến thu hồi đều được chuẩn hóa, dữ liệu cập nhật theo thời gian thực giúp dễ dàng truy xuất, đối soát và kiểm soát minh bạch</p>
-                    <div class="buttons">
-                        <button><img src="<?php echo get_template_directory_uri(); ?>/assets/images/tailieu_phone_btn1.svg" alt=""></button>
-                        <button><img src="<?php echo get_template_directory_uri(); ?>/assets/images/tailieu_phone_btn2.svg" alt=""></button>
-                    </div>
+                    <?php get_template_part('template-parts/callout_parts/app_btn','button') ?>
                 </div>
             </div>
         </div>

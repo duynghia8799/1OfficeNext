@@ -227,10 +227,7 @@ get_header();?>
                 <div class="left">
                     <h1 class="title-section">Theo dõi KPI theo thời gian thực</h1>
                     <p>Nhân viên luôn nắm rõ tiến độ KPI của mình theo ngày, theo tuần, theo giai đoạn. Dữ liệu được cập nhật liên tục, giúp chủ động điều chỉnh ưu tiên công việc, cải thiện hiệu suất và bám sát mục tiêu đã cam kết </p>
-                    <div class="btn-container">
-                        <button><img src="<?= get_template_directory_uri(); ?>/assets/images/applestore_btn.svg" alt=""></button>
-                        <button><img src="<?= get_template_directory_uri(); ?>/assets/images/googlestore_btn.svg" alt=""></button>
-                    </div>
+                    <?php get_template_part('template-parts/callout_parts/app_btn','button') ?>
                 </div>
                 <div class="right">
                     <img src="<?= get_template_directory_uri() ?>/assets/images/demo/KPI_theodoi.svg" alt="">

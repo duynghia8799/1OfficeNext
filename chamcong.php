@@ -235,10 +235,7 @@ get_header(); ?>
             <div class="col-6 left">
                 <h1 class="title-section">Chấm công nhanh chóng, <br/>linh hoạt</h1>
                 <img src="<?= get_template_directory_uri(); ?>/assets/images/demo/chamcong_antuong.svg" alt="">
-                <div class="btn-container">
-                    <button><img src="<?= get_template_directory_uri(); ?>/assets/images/applestore_btn.svg" alt=""></button>
-                    <button><img src="<?= get_template_directory_uri(); ?>/assets/images/googlestore_btn.svg" alt=""></button>
-                </div>
+                <?php get_template_part('template-parts/callout_parts/app_btn','button') ?>
             </div>
             <div class="col-6 right">
                 <h1 class="title-section">Những con số <br/>ấn tượng</h1>
