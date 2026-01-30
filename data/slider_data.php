@@ -26,6 +26,7 @@ return [
                     "Nắm bắt từng bước trong quy trình công việc",
                     "Đánh giá hiệu suất chính xác, minh bạch hơn",
                 ],
+                'iframe' => '<iframe width="560" height="315" src="https://www.youtube.com/embed/4VKmS5IYTxM?si=qyGBaEgoWWzkJEv_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
             ],
             [
                 'color' => 'original',
@@ -47,6 +48,7 @@ return [
                     "Xây dựng một nền tảng thông tin thống nhất, dễ tiếp cận",
                     "Rút ngắn thời gian xử lý văn bản, giảm thiểu chi phí vận hành",
                 ],
+                'iframe' => '<iframe width="560" height="315" src="https://www.youtube.com/embed/BIEon3nAEyY?si=B5TcXzs1GSunquUv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
             ],
             [
                 'color'=> 'yellow',
@@ -68,6 +70,7 @@ return [
                     "Số hoá được toàn bộ quy trình trong công ty",
                     "Xử lý công việc quy trình linh hoạt, kể cả quy trình rẽ nhánh",
                 ],    
+                'iframe' => '<iframe width="560" height="315" src="https://www.youtube.com/embed/BuQnrGjfHAg?si=AH_M6JuHWjewbLpu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
             ],
         ],
     ],
@@ -94,6 +97,7 @@ return [
                     "Nhân viên thực hiện nhanh chóng các bước thanh toán, chuyển hàng,..",
                     "Công việc các phòng ban phối hợp chặt chẽ, nhịp nhàng",
                 ],
+                'iframe' => '<iframe width="560" height="315" src="https://www.youtube.com/embed/korKe43bcII?si=x-gTpJnR80Xqvku-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
             ],
             [
                 'color' => 'original',
@@ -107,7 +111,7 @@ return [
                     'avatar'=> get_template_directory_uri().'/assets/images/demo/slider_demo_data/item2_avatar.svg',
                     'name'=> 'Trần Trọng Nam',
                     'danhxung'=> 'Ông',
-                        'position'=> 'PGĐ Công ty TNHH MathExpress',
+                    'position'=> 'PGĐ Công ty TNHH MathExpress',
                 ],
                 'ketqua'=> [
                     "Quản lý nhiệm vụ, kế hoạch, tiến độ công việc rõ ràng",
@@ -115,6 +119,7 @@ return [
                     "Xây dựng một nền tảng thông tin thống nhất, dễ tiếp cận",
                     "Rút ngắn thời gian xử lý văn bản, giảm thiểu chi phí vận hành",
                 ],
+                'iframe' => '<iframe width="560" height="315" src="https://www.youtube.com/embed/BIEon3nAEyY?si=B5TcXzs1GSunquUv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
             ],
             [
                 'color'=> 'original',
@@ -135,6 +140,7 @@ return [
                     "Các hoạt động thanh toán, … đều được quản lý trên phần mềm",
                     "Tài liệu, hợp đồng được lưu trữ tập trung và dễ dàng tra cứu",
                 ],    
+                'iframe' => '<iframe width="560" height="315" src="https://www.youtube.com/embed/korKe43bcII?si=x-gTpJnR80Xqvku-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
             ],
         ]
     ],
@@ -162,6 +168,7 @@ return [
                     "Tổng hợp bảng công, bảng lương nhanh chóng",
                     "Giao - nhận - đo lường hiệu suất công việc ngay trên hệ thống",
                 ],
+                'iframe' => '<iframe width="560" height="315" src="https://www.youtube.com/embed/HKn0QTaHN2I?si=bkSx9srlS1ZSJq5R" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
             ],
             [
                 'color' => 'original',
@@ -175,7 +182,7 @@ return [
                     'avatar'=> get_template_directory_uri().'/assets/images/demo/slider_demo_data/item7_avatar.svg',
                     'name'=> 'Nguyễn Kim Anh',
                     'danhxung'=> 'Chị',
-                        'position'=> 'Trưởng phòng nhân sự Ahamove',
+                    'position'=> 'Trưởng phòng nhân sự Ahamove',
                 ],
                 'ketqua'=> [
                     "Giảm thiểu hao phí thời gian nhân sự ",
@@ -183,6 +190,7 @@ return [
                     "Dễ dàng tra cứu toàn bộ thông tin, dữ liệu",
                     "Ra quyết định nhân sự nhanh chóng, chính xác",
                 ],
+                'iframe' => '<iframe width="560" height="315" src="https://www.youtube.com/embed/yIu4hGlExyk?si=q-UVsQiJxL1qloGL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
             ],
             [
                 'color'=> 'red',
@@ -204,6 +212,7 @@ return [
                     "Đơn từ tự tạo và duyệt tự động trên phần mềm",
                     "Giảm thiểu sai sót và thời gian tính lương",
                 ],    
+                'iframe' => '<iframe width="560" height="315" src="https://www.youtube.com/embed/lVzp_pxruts?si=tK7vl80E_miRK8K4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
             ],
         ]
     ],

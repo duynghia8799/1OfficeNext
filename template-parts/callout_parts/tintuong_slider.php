@@ -1,12 +1,21 @@
 <?php
 $all_data = require get_template_directory() . '/data/slider_data.php';
-$slider_data = $all_data['data1'] ?? [];
 
-if (!empty($args) && is_array($args)) {
-    $slider_data = $args;
+// Try to determine the slider ID/Name from args, or fallback to 'data1'
+$slider_uid = $args['name'] ?? 'data1';
+$slider_data = $args ?? ($all_data[$slider_uid] ?? []);
+
+// If still empty (e.g. invalid name passed), fallback to data1 from file
+if (empty($slider_data) || !isset($slider_data['slides'])) {
+    $slider_data = $all_data['data1'];
 }
 
-if (empty($slider_data)) return;
+// Generate a unique ID suffix for this slider instance to prevent conflicts
+$unique_suffix = uniqid(); 
+
+// Array to collect modal HTML content
+$modals_html = [];
+
 ?>
 
 <section class="tintuong-slider">
@@ -26,16 +35,44 @@ if (empty($slider_data)) return;
                         ];
                         
                         foreach ($slider_data['slides'] as $index => $slide) : 
-                            $color_hex = isset($color_map[$slide['color']]) ? $color_map[$slide['color']] : '#000000'; // Default to black or any fallback
-                        ?>
+                            $color_hex = isset($color_map[$slide['color']]) ? $color_map[$slide['color']] : '#000000';
+                            
+                            // Generate unique modal ID for this specific slide
+                            $modal_id = "modal-video-{$slider_uid}-{$index}-{$unique_suffix}";
+                            
+                            // Prepare Modal HTML and store it in array (to be rendered outside the loop)
+                            // Note: Added data-bs-dismiss="modal" to .modal-content click (optional for convenience) or ensure clicking outside works
+                            ob_start(); 
+                            ?>
+                            <div class="modal fade" id="<?= $modal_id ?>" tabindex="-1" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-xl">
+                                    <div class="modal-content" style="background: transparent; border: none;">
+                                        <div class="modal-body p-0">
+                                            <div class="ratio ratio-16x9">
+                                                <?= $slide['iframe'] ?? '' ?>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <?php
+                            $modals_html[] = ob_get_clean();
+                            ?>
+
                             <div class="slide-item">
                                 <div class="video-container">
-                                    <!-- sau thay thành video --> 
-                                    <img src="<?= esc_url($slide['video-url']) ?>" alt="">
+                                    <!-- Thumbnail triggers Modal -->
+                                    <button type="button" class="btn-video-trigger" data-bs-toggle="modal" data-bs-target="#<?= $modal_id ?>" style="border: none; padding: 0; background: none;">
+                                        <img src="<?= esc_url($slide['video-url']) ?>" alt="">
+                                    </button>
+                                    
                                     <div class="button-container">
                                         <div class="content-button">
                                             <div class="mini-box"></div>
-                                            <button><img src="<?= get_template_directory_uri() . '/assets/images/icons/tintuong_arrow_btn.svg'?>" alt=""></button>
+                                            <!-- Arrow Button (keeps original purpose) -->
+                                            <button>
+                                                <img src="<?= get_template_directory_uri() . '/assets/images/icons/tintuong_arrow_btn.svg'?>" alt="">
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
@@ -75,7 +112,6 @@ if (empty($slider_data)) return;
                                             <?php endforeach; ?>
                                         </ul>
                                     </div>
-                                    
                                 </div>
                             </div>
                         <?php endforeach; ?>
@@ -91,3 +127,10 @@ if (empty($slider_data)) return;
         </div>
     </div>
 </section>
+
+<!-- Render Modals Outside the Slider Container -->
+<?php 
+foreach ($modals_html as $modal) {
+    echo $modal;
+}
+?>

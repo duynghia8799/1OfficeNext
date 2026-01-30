@@ -304,13 +304,9 @@ get_header();?>
 
 
 <!-- Modal Video -->
-<div class="modal fade" id="nocodeVideoModal" tabindex="-1" aria-labelledby="nocodeVideoModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+<div class="modal fade" id="nocodeVideoModal" tabindex="-1" aria-labelledby="nocodeVideoModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-xl">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="nocodeVideoModalLabel">Video giới thiệu</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
+        <div class="modal-content" style="background: transparent; border: none;">
             <div class="modal-body p-0">
                 <div class="ratio ratio-16x9">
                     <iframe id="nocodeVideoIframe" width="560" height="315" src="https://www.youtube.com/embed/korKe43bcII?si=x-gTpJnR80Xqvku-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -319,6 +315,8 @@ get_header();?>
         </div>
     </div>
 </div>
+
+
 
 
 </div>
