@@ -216,7 +216,7 @@ get_header();
     </div>
     <div class="section-module">
         <div class="container">
-            <span class="section-title">Hệ sinh thái với 100+ ứng dụng thông minh</span>
+            <span class="section-title">Hệ sinh thái <br/> với 100+ ứng dụng thông minh</span>
             <div class="module-tab animation-tabs">
                 <div class="module-nav nav items-container">
                     <div class="card"></div>
@@ -426,50 +426,6 @@ get_header();
                                 <a class="btn-action">
                                     <span>Tìm hiểu thêm</span>
                                 </a>
-                                <div class="list-module">
-                                    <div class="item">
-                                        <div class="icon">
-                                            <img src="<?= get_template_directory_uri(); ?>/assets/images/home/icon-duan.svg"
-                                                alt="">
-                                        </div>
-                                        <div class="label">Dự án</div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="icon">
-                                            <img src="<?= get_template_directory_uri(); ?>/assets/images/home/icon-congviec.svg"
-                                                alt="">
-                                        </div>
-                                        <div class="label">Công việc</div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="icon">
-                                            <img src="<?= get_template_directory_uri(); ?>/assets/images/home/icon-tailieu.svg"
-                                                alt="">
-                                        </div>
-                                        <div class="label">Tài liệu</div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="icon">
-                                            <img src="<?= get_template_directory_uri(); ?>/assets/images/home/icon-lichbieu.svg"
-                                                alt="">
-                                        </div>
-                                        <div class="label">Lịch biểu</div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="icon">
-                                            <img src="<?= get_template_directory_uri(); ?>/assets/images/home/icon-taisan.svg"
-                                                alt="">
-                                        </div>
-                                        <div class="label">Tài sản</div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="icon">
-                                            <img src="<?= get_template_directory_uri(); ?>/assets/images/home/icon-vanban.svg"
-                                                alt="">
-                                        </div>
-                                        <div class="label">Văn bản</div>
-                                    </div>
-                                </div>
                             </div>
                             <div class="thumb">
                                 <img src="<?= esc_url(get_template_directory_uri() . '/assets/images/home/img-module-3.svg'); ?>"
@@ -585,7 +541,7 @@ get_header();
                                 </a>
                             </div>
                             <div class="thumb">
-                                <img src="<?= esc_url(get_template_directory_uri() . '/assets/images/home/img-module-6.svg'); ?>"
+                                <img src="<?= esc_url(get_template_directory_uri() . '/assets/images/home/img-module-7.svg'); ?>"
                                     alt="">
                             </div>
                         </div>
@@ -725,8 +681,7 @@ get_header();
                             alt="">
                         <div class="content">
                             <span class="title">Phân quyền và bảo mật đa tầng</span>
-                            <span class="desc">Kiểm soát quyền truy cập chi tiết đến từng trường dữ liệu, tác vụ, báo
-                                cáo,...</span>
+                            <span class="desc">Kiểm soát quyền truy cập chi tiết đến từng trường dữ liệu, tác vụ, đối tượng và ứng dụng</span>
                         </div>
                     </button>
                 </div>
