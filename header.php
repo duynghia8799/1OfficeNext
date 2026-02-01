@@ -25,14 +25,36 @@
                     </a>
                 </div>
                 <div class="col-xl-7 d-flex">
-                    <?php
-                    wp_nav_menu(array(
-                        'theme_location' => 'navbar_desktop',
-                        'container' => 'nav',
-                        'container_class' => 'main-nav',
-                        'menu_class' => 'nav-menu',
-                    ));
-                    ?>
+                    <nav class="main-nav">
+                        <ul class="nav-menu">
+                            <li class="menu-item menu-item-has-children">
+                                <a href="#">Tính năng</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="">AI Agents</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="">No-code</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="">Bảng giá</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="">Khách hàng</a>
+                            </li>
+                            <li class="menu-item menu-item-has-children">
+                                <a>Tài nguyên</a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item">
+                                        <a href="" class="item-sub-menu">Tri thức quản trị</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="" class="item-sub-menu">Ebook - Biểu mẫu</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
                 <div class="col-xl-3 align-items-center d-flex justify-content-end">
                     <div class="group-action">

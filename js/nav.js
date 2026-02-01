@@ -84,10 +84,6 @@
                 }
             }
         });
-        // Prevent default for links with href="#" in Header and Footer menus to avoid jumping to top
-        $('nav .nav-menu a[href="#"], .foot-menu a[href="#"]').click(function(e) {
-            e.preventDefault();
-        });
     });
 })(jQuery);
 

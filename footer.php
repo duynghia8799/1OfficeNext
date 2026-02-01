@@ -5,7 +5,7 @@
         <h2>1Office</h2>
         <p class="slogan">Trợ lý 1AI sẵn sàng hỗ trợ bạn!</p>
         <div class="chatbot_options">
-            <?php 
+            <?php
             /*
             // Tạm ẩn vì chưa có tính năng này
             <button class="chatbot_options_chat">
@@ -41,7 +41,6 @@
         <img class="open" src="<?= get_template_directory_uri() ?>/assets/images/chatbot_btn.svg" alt="">
         <img class="close" src="<?= get_template_directory_uri() ?>/assets/images/chatbot_btn_close.svg" alt="">
     </button>
-    <!--demo-->
     <img class="chatbot_chatbox" src="<?= get_template_directory_uri() ?>/assets/images/demo/chatbot_chatbox.svg"
         alt="">
 </div>
@@ -77,15 +76,45 @@
                 </div>
             </div>
             <div class="col">
-                <?php
-                wp_nav_menu(array(
-                    'theme_location' => 'footer_desktop',
-                    'container' => 'div',
-                    'container_class' => 'menu-footer',
-                    'menu_class' => 'foot-menu',
-                    'depth' => 2,
-                ));
-                ?>
+                <div class="menu-footer">
+                    <ul class="foot-menu">
+                        <li class="menu-item">
+                            <a href="#">1OFFICE</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Giới thiệu</a></li>
+                                <li><a href="#">Roadmap</a></li>
+                                <li><a href="#">Truyền thông</a></li>
+                                <li><a href="#">Sự kiện</a></li>
+                                <li><a href="#">Đối tác</a></li>
+                                <li><a href="#">Tuyển dụng</a></li>
+                                <li><a href="#">Hỗ trợ</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">SẢN PHẨM</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">AI Agents</a></li>
+                                <li><a href="#">No-code</a></li>
+                                <li><a href="#">Công việc</a></li>
+                                <li><a href="#">Nhân sự</a></li>
+                                <li><a href="#">Khách hàng</a></li>
+                                <li><a href="#">1Sign</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">BLOG</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Chuyển đổi số</a></li>
+                                <li><a href="#">Quản trị - Điều hành</a></li>
+                                <li><a href="#">Quản trị nhân sự</a></li>
+                                <li><a href="#">Quản trị dự án</a></li>
+                                <li><a href="#">Bán hàng - Tài chính</a></li>
+                                <li><a href="#">Ebook và Biểu mẫu</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="line"></div>
@@ -107,15 +136,15 @@
                 </div>
             </div>
             <div class="col-8">
-                <?php
-                wp_nav_menu(array(
-                    'theme_location' => 'footer_desktop_2',
-                    'container' => 'div',
-                    'container_class' => 'menu-footer-2',
-                    'menu_class' => 'foot-menu-2',
-                    'depth' => 1,
-                ));
-                ?>
+                <div class="menu-footer-2">
+                    <ul class="foot-menu-2">
+                        <li class="menu-item"><a href="#">Điều khoản sử dụng</a></li>
+                        <li class="menu-item"><a href="#">Chính sách bảo mật</a></li>
+                        <li class="menu-item"><a href="#">Cam kết SLA</a></li>
+                        <li class="menu-item"><a href="#">Câu hỏi thường gặp</a></li>
+                        <li class="menu-item"><a href="#">Software update</a></li>
+                    </ul>
+                </div>
             </div>
             <div class="col-2">
                 <div class="quality-container">
